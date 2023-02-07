@@ -1,7 +1,7 @@
 # Training SwiftUI
 ## Giới thiệu
 
-Chào mừng bạn đến với Repo học SwiftUI này.
+Chào mừng bạn đến với **Repo học SwiftUI**.
 
 ![0001](./_img/0001.jpeg)
 
