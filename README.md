@@ -7,18 +7,18 @@ Chào mừng bạn đến với Repo học SwiftUI này.
 
 Chi tiết về **SwiftUI** thì bạn có thể tự tìm hiểu nhóe. Còn về repo này, đơn giản chỉ là:
 
-> Cơ hội thứ 2 cho bạn mà thôi!
+> Cơ hội thứ 2 cho bạn
 
-Cơ hội thứ 2 để bắt đầu lại việc học lập trình iOS nói riêng hoặc mobile nói chung. Bạn cần phải thay đổi cách suy nghĩ một chút để hợp SwiftUI hay hợp với xu thế lập trình mới bây giờ. 
+Cơ hội thứ 2 để bắt đầu lại việc học lập trình **iOS** nói riêng hoặc **mobile** nói chung. Bạn cần phải thay đổi cách suy nghĩ một chút để hợp với *SwiftUI* hay hợp với *xu thế lập trình* mới bây giờ. 
 
-Cuối cùng, bạn cũng không cần quá lo lắng. Mình code tới đây thì fix bugs tới đó thôi. EZ!
+Cuối cùng, bạn cũng không cần quá lo lắng. Mình *code* tới đâu thì *fix bugs* tới đó thôi. EZ!
 
 ## Mục tiêu
 
-Mục tiêu của việc training lần này cũng khá là đơn giản. Tóm gọn với 2 ý sau:
+Mục tiêu của việc *training* lần này cũng khá là đơn giản. Tóm gọn với 2 ý sau:
 
-* Lập trình ứng dụng iOS với SwiftUI
-* Phát triển toàn bộ một project bằng SwiftUI
+* **Lập trình ứng dụng iOS với SwiftUI**
+* **Phát triển toàn bộ một project bằng SwiftUI**
 
 Về người học, bạn cần có kiến thức **Lập trình iOS cơ bản** là đủ rồi. Tiếp theo, bạn cần có sự kiên trì, tích cực và chủ động tương tác. Cuối cùng, bạn cần có ...
 
@@ -28,13 +28,13 @@ Vì **SwiftUI** chính là *giao diện*, một suy nghĩ trong sáng & một t�
 
 ## Hướng dẫn
 
-Về mặt thiết bị và phần mềm sử dụng thì cần cập nhật tất cả lên version mới nhất hiện tại. Cụ thể:
+Về mặt thiết bị và phần mềm sử dụng, bạn cần cập nhật tất cả lên *version* mới nhất hiện tại. Cụ thể:
 
 * Xcode 14 (trở lên)
 * SwiftUI 4.0
 * Swift 5.7
 
-Về mặt traing sẽ tập trung vào việc học thông qua các ví dụ. Cụ thể, bạn sẽ hoàn thành 14 phần bài tập khác nhau. Mỗi phần sẽ có nhiều bài tập nhỏ. Tất cả bài tập được sắp xếp theo lộ trình và có mục đích cụ thể rồi. Do đó, bạn cần tuần thủ 2 điều.
+Về mặt training,  sẽ tập trung vào việc học thông qua các ví dụ. Cụ thể, bạn sẽ hoàn thành **14 phần bài tập** *(sau này sẽ cập nhật thêm nữa, nên đừng lo lắng nha)* khác nhau. Mỗi phần sẽ có nhiều bài tập nhỏ. Tất cả bài tập được sắp xếp theo **lộ trình** và có **ý đồ** cụ thể rồi. Do đó, bạn cần tuần thủ 2 điều.
 
 * Làm theo thứ tự các phần bài tập
 * Không bỏ bước hoặc đốt cháy giai đoạn
@@ -72,8 +72,8 @@ Nếu có vấn đề hay thắc mắc gì thì hãy gửi **issues** nhóe. Và
 * Website: [fxstudio.dev](https://fxstudio.dev/)
 * [SwiftUI Series](https://fxstudio.dev/category/code/swiftui/) (Fx Studio)
 * [SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui) (Apple Developer)
-* *Và nhiều trang web khác ... sẽ được bổ sung sau*
+* *(Và nhiều trang web khác ... sẽ được bổ sung sau)*
 
 ---
 
-*( Vui lòng sử dụng tài liệu trong repo này với mục đích học tập. Nghiêm cấm việc sử dụng hay lợi dụng cho các mục đích thương mai. Vì một cộng đồng SwiftUI phát triễn vững mạnh. Cảm ơn bạn đã quan tâm tới.)*
+*( Vui lòng sử dụng tài liệu trong repo này với mục đích học tập. Nghiêm cấm việc sử dụng hay lợi dụng cho các mục đích thương mai. Vì một cộng đồng SwiftUI phát triển vững mạnh. Cảm ơn bạn đã đọc & quan tâm tới.)*
