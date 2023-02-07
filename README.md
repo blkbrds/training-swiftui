@@ -74,6 +74,11 @@ Nếu có vấn đề hay thắc mắc gì thì hãy gửi **issues** nhóe. Và
 * [SwiftUI Tutorial](https://developer.apple.com/tutorials/swiftui) (Apple Developer)
 * *(Và nhiều trang web khác ... sẽ được bổ sung sau)*
 
+## Liên hệ
+
+* Website: <https://fxstudio.dev/contact/>
+* Email: [lephuongtien.dev@gmail.com](mailto:lephuongtien.dev@gmail.com)
+
 ---
 
 *( Vui lòng sử dụng tài liệu trong repo này với mục đích học tập. Nghiêm cấm việc sử dụng hay lợi dụng cho các mục đích thương mai. Vì một cộng đồng SwiftUI phát triển vững mạnh. Cảm ơn bạn đã đọc & quan tâm tới.)*
