@@ -12,6 +12,7 @@
 		8A45CC392994D4D500D1E91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A45CC382994D4D500D1E91F /* Assets.xcassets */; };
 		8A45CC3C2994D4D500D1E91F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A45CC3B2994D4D500D1E91F /* Preview Assets.xcassets */; };
 		8A45CC432994D4FA00D1E91F /* LifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45CC422994D4FA00D1E91F /* LifeCycleApp.swift */; };
+		8A45CC672994E5D600D1E91F /* DeepLinkUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45CC662994E5D600D1E91F /* DeepLinkUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		8A45CC382994D4D500D1E91F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A45CC3B2994D4D500D1E91F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A45CC422994D4FA00D1E91F /* LifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleApp.swift; sourceTree = "<group>"; };
+		8A45CC612994DA4600D1E91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A45CC662994E5D600D1E91F /* DeepLinkUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkUrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +56,13 @@
 		8A45CC332994D4D400D1E91F /* SwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
+				8A45CC612994DA4600D1E91F /* Info.plist */,
 				8A45CC342994D4D400D1E91F /* SwiftUIAppApp.swift */,
 				8A45CC362994D4D400D1E91F /* ContentView.swift */,
 				8A45CC382994D4D500D1E91F /* Assets.xcassets */,
 				8A45CC3A2994D4D500D1E91F /* Preview Content */,
 				8A45CC422994D4FA00D1E91F /* LifeCycleApp.swift */,
+				8A45CC662994E5D600D1E91F /* DeepLinkUrl.swift */,
 			);
 			path = SwiftUIApp;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				8A45CC372994D4D400D1E91F /* ContentView.swift in Sources */,
 				8A45CC432994D4FA00D1E91F /* LifeCycleApp.swift in Sources */,
 				8A45CC352994D4D400D1E91F /* SwiftUIAppApp.swift in Sources */,
+				8A45CC672994E5D600D1E91F /* DeepLinkUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +279,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +308,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
