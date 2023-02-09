@@ -13,7 +13,9 @@ Ngoài ra, ý nghĩa của `Hello world` chính là kiểm tra:
 
 Hi vọng, bạn sẽ `Hello world` một cách có tâm nhóe. Chứ đừng suy nghĩ cho chạy là xong.
 
-## Kiến thức cần nắm
+## Chuẩn bị
+
+### Lý thuyết
 
 * SwiftUI Interface
 * ScenceDelegate
@@ -22,37 +24,43 @@ Hi vọng, bạn sẽ `Hello world` một cách có tâm nhóe. Chứ đừng su
 * Preview & Live Preview & Canvas
 * Opaque types với từ khóa `some`
 
-## Bài tập
+### Môi trường
 
-### Bài 1 - Hello SwiftUI
+* Xcode 14
+* SwiftUI 4
+* Swift 5.7
 
-#### Yêu cầu
+### Tham khảo
+
+* [Opaque Type](https://fxstudio.dev/opaque-type-trong-10-phut-swift/)
+* [Hello world! - SwiftUI Notes](https://fxstudio.dev/hello-world-swiftui-notes-1/)
+
+
+
+## Bài 1 - Hello SwiftUI
+
+### Yêu cầu
 
 * Tạo mới một project SwiftUI. Có thể dùng Life-cycle mới hoặc cũ, nhưng ưu tiên sử dụng **SwiftUI App Life Cycle**
 * 1 Button có title là `Tap`
 * Kích vào Button thì sẽ đổi màu nền của màn hình
 
-#### Mô tả
+### Mô tả
 
 > *(chưa cập nhật ... )*
 
-### Bài 2 - Live Preview
+## Bài 2 - Live Preview
 
-#### Yêu cầu
+### Yêu cầu
 
 * Sử dụng lại project ở bài 1
 * Thay đổi loại thiết bị của Preview (iPhone, iPad, watch ...)
 * Thêm Preview
 * Custom kích thước của Preview
 
-#### Mô tả
+### Mô tả
 
 > *(chưa cập nhật ... )*
-
-## Tham khảo
-
-* [Opaque Type](https://fxstudio.dev/opaque-type-trong-10-phut-swift/)
-* [Hello world! - SwiftUI Notes](https://fxstudio.dev/hello-world-swiftui-notes-1/)
 
 ---
 
