@@ -35,7 +35,7 @@ Hi vọng, bạn sẽ `Hello world` một cách có tâm nhóe. Chứ đừng su
 * [Opaque Type](https://fxstudio.dev/opaque-type-trong-10-phut-swift/)
 * [Hello world! - SwiftUI Notes](https://fxstudio.dev/hello-world-swiftui-notes-1/)
 
-
+---
 
 ## Bài 1 - Hello SwiftUI
 
