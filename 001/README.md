@@ -44,6 +44,7 @@ Hi vọng, bạn sẽ `Hello world` một cách có tâm nhóe. Chứ đừng su
 * Tạo mới một project SwiftUI. Có thể dùng Life-cycle mới hoặc cũ, nhưng ưu tiên sử dụng **SwiftUI App Life Cycle**
 * 1 Button có title là `Tap`
 * Kích vào Button thì sẽ đổi màu nền của màn hình
+* Màu sắc có thể random hoặc theo 1 array có sẵn nào đó
 
 ### Mô tả
 
