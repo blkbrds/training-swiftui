@@ -9,6 +9,8 @@
 import SwiftUI
 @main
 struct DeepLinkUrl: App {
+    
+    @UIApplicationDelegateAdaptor(MyAppDelegate.self) private var appDelegate
     @Environment(\.scenePhase) private var scenePhase
     @State var name: String = ""
     
@@ -22,10 +24,12 @@ struct DeepLinkUrl: App {
             switch phase {
             case .background:
                 print("App State : Background")
+                appDelegate.applicationDidEnterBackground(UIApplication.shared)
             case .inactive:
                 print("App State : Inactive")
             case .active:
                 print("App State : Active")
+                appDelegate.applicationDidBecomeActive(UIApplication.shared)
             @unknown default:
                 print("App State : Unknown")
             }

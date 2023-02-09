@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A408A8A2994E6F700079705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A408A892994E6F700079705 /* AppDelegate.swift */; };
 		8A45CC352994D4D400D1E91F /* SwiftUIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45CC342994D4D400D1E91F /* SwiftUIAppApp.swift */; };
 		8A45CC372994D4D400D1E91F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45CC362994D4D400D1E91F /* ContentView.swift */; };
 		8A45CC392994D4D500D1E91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A45CC382994D4D500D1E91F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A408A892994E6F700079705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A45CC312994D4D400D1E91F /* SwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45CC342994D4D400D1E91F /* SwiftUIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppApp.swift; sourceTree = "<group>"; };
 		8A45CC362994D4D400D1E91F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8A45CC3A2994D4D500D1E91F /* Preview Content */,
 				8A45CC422994D4FA00D1E91F /* LifeCycleApp.swift */,
 				8A45CC662994E5D600D1E91F /* DeepLinkUrl.swift */,
+				8A408A892994E6F700079705 /* AppDelegate.swift */,
 			);
 			path = SwiftUIApp;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				8A45CC372994D4D400D1E91F /* ContentView.swift in Sources */,
 				8A45CC432994D4FA00D1E91F /* LifeCycleApp.swift in Sources */,
 				8A45CC352994D4D400D1E91F /* SwiftUIAppApp.swift in Sources */,
+				8A408A8A2994E6F700079705 /* AppDelegate.swift in Sources */,
 				8A45CC672994E5D600D1E91F /* DeepLinkUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
