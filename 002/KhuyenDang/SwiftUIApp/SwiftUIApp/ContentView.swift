@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+
     let name: String
     @Environment(\.colorScheme) var colorScheme
+    @State private var showingAlert = false
 
     var body: some View {
         VStack {
@@ -20,6 +22,13 @@ struct ContentView: View {
                 .foregroundColor(Color.blue)
                 .padding()
             Text(colorScheme == .dark ? "In dark mode" : "In light mode")
+            Button("Tap me for a surprise") {
+                showingAlert = true
+            }
+                .padding()
+                .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Important message"), message: Text("You are so beautiful"), dismissButton: .default(Text("Got it!")))
+            }
         }
     }
 }
