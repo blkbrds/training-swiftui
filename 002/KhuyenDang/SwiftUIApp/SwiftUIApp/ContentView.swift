@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let name: String
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         VStack {
@@ -18,6 +19,7 @@ struct ContentView: View {
                 .font(.title)
                 .foregroundColor(Color.blue)
                 .padding()
+            Text(colorScheme == .dark ? "In dark mode" : "In light mode")
         }
     }
 }
