@@ -15,11 +15,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button {
-                guard let element = colors.randomElement() else {
-                    backgroundColor = .red
-                    return
-                }
-                backgroundColor = element
+                backgroundColor = colors.randomElement() ?? .red
             } label: {
                 Text("Tap")
                     .padding()
