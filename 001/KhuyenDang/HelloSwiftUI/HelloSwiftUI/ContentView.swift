@@ -19,7 +19,15 @@ struct ContentView: View {
                 green = Double.random(in: 0...1)
                 blue = Double.random(in: 0...1)
             }) {
-                Text("Tap me").font(.system(size: 30)).foregroundColor(.black)
+                Text("Tap me!")
+                    .foregroundColor(.white)
+                    .font(.system(size: 25))
+                    .fontWeight(.bold)
+                    .padding()
+                    .background(.green)
+                    .cornerRadius(30)
+                    .padding(10)
+                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(.green, lineWidth: 5))
             }
         }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
