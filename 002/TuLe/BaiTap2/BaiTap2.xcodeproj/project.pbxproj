@@ -20,6 +20,7 @@
 		10C4CA0D2995F2AD00721217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C4CA0F2995F2AD00721217 /* BaiTap2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTap2.entitlements; sourceTree = "<group>"; };
 		10C4CA112995F2AD00721217 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10C4CA182995FF8A00721217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		10C4CA082995F2A900721217 /* BaiTap2 */ = {
 			isa = PBXGroup;
 			children = (
+				10C4CA182995FF8A00721217 /* Info.plist */,
 				10C4CA092995F2A900721217 /* BaiTap2App.swift */,
 				10C4CA0B2995F2A900721217 /* ContentView.swift */,
 				10C4CA0D2995F2AD00721217 /* Assets.xcassets */,
@@ -267,6 +269,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BaiTap2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -303,6 +306,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BaiTap2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

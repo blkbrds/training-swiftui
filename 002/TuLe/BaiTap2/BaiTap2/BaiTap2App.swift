@@ -11,10 +11,14 @@ import SwiftUI
 struct BaiTap2App: App {
 
     @Environment(\.scenePhase) private var scenePhase
-
+    @State var name: String = ""
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(name: name)
+                .onOpenURL(perform: { url in
+                    name = url.valueOf("name") ?? ""
+                })
         }.onChange(of: scenePhase) { phase in
             switch phase {
             case .background:
@@ -27,5 +31,12 @@ struct BaiTap2App: App {
                 print("App State : Unknown")
             }
         }
+    }
+}
+
+extension URL {
+    func valueOf(_ queryParamaterName: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == queryParamaterName })?.value
     }
 }
