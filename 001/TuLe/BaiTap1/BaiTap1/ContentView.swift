@@ -16,6 +16,7 @@ struct ContentView: View {
         VStack {
             Button {
                 guard let element = colors.randomElement() else {
+                    backgroundColor = .red
                     return
                 }
                 backgroundColor = element
