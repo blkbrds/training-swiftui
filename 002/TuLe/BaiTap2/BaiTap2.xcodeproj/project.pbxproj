@@ -11,6 +11,8 @@
 		10C8464A2999ECF0000E465A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C846492999ECF0000E465A /* ContentView.swift */; };
 		10C8464C2999ECF3000E465A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C8464B2999ECF3000E465A /* Assets.xcassets */; };
 		10C846502999ECF3000E465A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C8464F2999ECF3000E465A /* Preview Assets.xcassets */; };
+		10C8465C2999F54A000E465A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8465B2999F54A000E465A /* SecondView.swift */; };
+		10C8465E299A26E7000E465A /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8465D299A26E6000E465A /* DeeplinkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		10C8464B2999ECF3000E465A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C8464D2999ECF3000E465A /* BaiTap2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTap2.entitlements; sourceTree = "<group>"; };
 		10C8464F2999ECF3000E465A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10C8465A2999F3CE000E465A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		10C8465B2999F54A000E465A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		10C8465D299A26E6000E465A /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +57,14 @@
 		10C846462999ECF0000E465A /* BaiTap2 */ = {
 			isa = PBXGroup;
 			children = (
+				10C8465A2999F3CE000E465A /* Info.plist */,
 				10C846472999ECF0000E465A /* BaiTap2App.swift */,
 				10C846492999ECF0000E465A /* ContentView.swift */,
 				10C8464B2999ECF3000E465A /* Assets.xcassets */,
 				10C8464D2999ECF3000E465A /* BaiTap2.entitlements */,
 				10C8464E2999ECF3000E465A /* Preview Content */,
+				10C8465B2999F54A000E465A /* SecondView.swift */,
+				10C8465D299A26E6000E465A /* DeeplinkManager.swift */,
 			);
 			path = BaiTap2;
 			sourceTree = "<group>";
@@ -139,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C8465C2999F54A000E465A /* SecondView.swift in Sources */,
 				10C8464A2999ECF0000E465A /* ContentView.swift in Sources */,
 				10C846482999ECF0000E465A /* BaiTap2App.swift in Sources */,
+				10C8465E299A26E7000E465A /* DeeplinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +277,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BaiTap2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -303,6 +314,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BaiTap2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BaiTap2/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SecondView.swift
 //  BaiTap2
 //
 //  Created by Tu Le C. [2] VN.Danang on 13/02/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SecondView: View {
 
     let name: String
 
@@ -16,7 +16,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, second view")
                 .padding()
             Text((name != "") ? name : "...")
                 .font(.title)
@@ -27,8 +27,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(name: "")
+        SecondView(name: "")
     }
 }

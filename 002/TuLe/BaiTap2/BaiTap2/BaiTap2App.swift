@@ -9,9 +9,26 @@ import SwiftUI
 
 @main
 struct BaiTap2App: App {
+
+    @State var deeplinkTarget: DeeplinkManager.DeeplinkTarget?
+        
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                switch self.deeplinkTarget {
+                case .home(let name):
+                    ContentView(name: name)
+                case .details(let name):
+                    SecondView  (name: name)
+                case .none:
+                    ContentView(name: "")
+                }
+            }
+            .onOpenURL { url in
+                let deeplinkManager = DeeplinkManager()
+                let deeplink = deeplinkManager.manage(url)
+                self.deeplinkTarget = deeplink
+            }
         }
     }
 }
