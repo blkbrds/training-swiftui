@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @State private var isShowAlert = false
     let name: String
 
     var body: some View {
@@ -37,6 +38,20 @@ struct ContentView: View {
                 .font(.title)
                 .foregroundColor(Color.blue)
                 .padding()
+
+            Button {
+                isShowAlert = true
+            } label: {
+                Text("Tap me")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
+            }
+            .alert(isPresented: $isShowAlert) {
+                Alert(title: Text("Show alert"), message: Text("Hello alert"), dismissButton: .default(Text("Got it!")))
+            }
+
         }
         .padding()
     }
