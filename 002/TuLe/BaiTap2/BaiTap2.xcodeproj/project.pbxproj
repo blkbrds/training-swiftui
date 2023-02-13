@@ -13,6 +13,7 @@
 		10C846502999ECF3000E465A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C8464F2999ECF3000E465A /* Preview Assets.xcassets */; };
 		10C8465C2999F54A000E465A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8465B2999F54A000E465A /* SecondView.swift */; };
 		10C8465E299A26E7000E465A /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8465D299A26E6000E465A /* DeeplinkManager.swift */; };
+		10C84660299A274E000E465A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8465F299A274E000E465A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		10C8465A2999F3CE000E465A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		10C8465B2999F54A000E465A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		10C8465D299A26E6000E465A /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
+		10C8465F299A274E000E465A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				10C8464E2999ECF3000E465A /* Preview Content */,
 				10C8465B2999F54A000E465A /* SecondView.swift */,
 				10C8465D299A26E6000E465A /* DeeplinkManager.swift */,
+				10C8465F299A274E000E465A /* AppDelegate.swift */,
 			);
 			path = BaiTap2;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				10C8465C2999F54A000E465A /* SecondView.swift in Sources */,
 				10C8464A2999ECF0000E465A /* ContentView.swift in Sources */,
 				10C846482999ECF0000E465A /* BaiTap2App.swift in Sources */,
+				10C84660299A274E000E465A /* AppDelegate.swift in Sources */,
 				10C8465E299A26E7000E465A /* DeeplinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
