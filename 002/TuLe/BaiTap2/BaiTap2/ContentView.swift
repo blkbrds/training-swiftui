@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     let name: String
 
     var body: some View {
@@ -17,6 +18,20 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+                .background(colorScheme == .dark ? Color(.black) : Color(.white))
+                .padding()
+
+            Text("My name is Lê Công Tú")
+                .padding()
+                .overlay {
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(colorScheme == .dark ? Color(.white) : Color(.blue), lineWidth: 4)
+                }
+            
+            Text("Default an environment variable value for Text")
+                .multilineTextAlignment(.center)
+                .environment(\.colorScheme, .light)
+                .padding()
             
             Text((name != "") ? name : "....")
                 .font(.title)
