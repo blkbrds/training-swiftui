@@ -12,6 +12,7 @@ struct BaiTap2App: App {
 
     @Environment(\.scenePhase) private var scenePhase
     @State var name: String = ""
+    @UIApplicationDelegateAdaptor(MyAppDelegate.self) private var appDelegate
     
     var body: some Scene {
         WindowGroup {
@@ -23,10 +24,12 @@ struct BaiTap2App: App {
             switch phase {
             case .background:
                 print("App State : Background")
+                appDelegate.applicationDidEnterBackground(UIApplication.shared)
             case .inactive:
                 print("App State : Inactive")
             case .active:
                 print("App State : Active")
+                appDelegate.applicationDidBecomeActive(UIApplication.shared)
             @unknown default:
                 print("App State : Unknown")
             }

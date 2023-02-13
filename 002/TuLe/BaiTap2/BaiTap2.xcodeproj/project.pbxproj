@@ -11,6 +11,7 @@
 		10C4CA0C2995F2A900721217 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4CA0B2995F2A900721217 /* ContentView.swift */; };
 		10C4CA0E2995F2AD00721217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C4CA0D2995F2AD00721217 /* Assets.xcassets */; };
 		10C4CA122995F2AD00721217 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C4CA112995F2AD00721217 /* Preview Assets.xcassets */; };
+		10C8463A299620CB000E465A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C84639299620CB000E465A /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		10C4CA0F2995F2AD00721217 /* BaiTap2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTap2.entitlements; sourceTree = "<group>"; };
 		10C4CA112995F2AD00721217 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10C4CA182995FF8A00721217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		10C84639299620CB000E465A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				10C4CA0D2995F2AD00721217 /* Assets.xcassets */,
 				10C4CA0F2995F2AD00721217 /* BaiTap2.entitlements */,
 				10C4CA102995F2AD00721217 /* Preview Content */,
+				10C84639299620CB000E465A /* AppDelegate.swift */,
 			);
 			path = BaiTap2;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C8463A299620CB000E465A /* AppDelegate.swift in Sources */,
 				10C4CA0C2995F2A900721217 /* ContentView.swift in Sources */,
 				10C4CA0A2995F2A900721217 /* BaiTap2App.swift in Sources */,
 			);
