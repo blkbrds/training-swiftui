@@ -23,7 +23,7 @@ struct BaiTap2App: App {
                 case .details(let name):
                     SecondView  (name: name)
                 case .none:
-                    ContentView(name: "")
+                    LightAndDarkMode2View()
                 }
             }
             .onOpenURL { url in
