@@ -15,17 +15,22 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Hello, world!")
-                .padding()
-            Text((name != "") ? name : "---")
-                .font(.title)
-                .foregroundColor(Color.blue)
-                .padding()
-            Text(colorScheme == .dark ? "In dark mode" : "In light mode")
+            Text("I am a cute dog, welcome \(name != "" ? name : "you") to SwiftUI class")
+                .multilineTextAlignment(.leading)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
+
+            Image("My dog")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height / 2)
+
             Button("Tap me for a surprise") {
                 showingAlert = true
             }
+                .foregroundColor(.white)
                 .padding()
+                .background(Color.blue)
+                .cornerRadius(30)
                 .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Important message"), message: Text("You are so beautiful"), dismissButton: .default(Text("Got it!")))
             }
