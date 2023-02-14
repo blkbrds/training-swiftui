@@ -27,19 +27,20 @@ struct ContentView: View {
             Button("Tap me for a surprise") {
                 showingAlert = true
             }
-            .foregroundColor(Color("TextColor"))
+                .foregroundColor(Color("TextColor"))
                 .padding()
                 .background(Color("BackgroundButton"))
                 .cornerRadius(30)
                 .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Important message"), message: Text("You are so beautiful"), dismissButton: .default(Text("Got it!")))
             }
+                .environment(\.colorScheme, .light)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(name: "").environment(\.colorScheme, .light)
+        ContentView(name: "")
     }
 }

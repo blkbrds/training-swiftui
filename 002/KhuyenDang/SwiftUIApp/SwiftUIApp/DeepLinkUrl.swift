@@ -17,7 +17,6 @@ struct DeepLinkUrl: App {
     var body: some Scene {
         WindowGroup {
             ContentView(name: name)
-                .environment(\.colorScheme, .light)
                 .onOpenURL(perform: { url in
                     name = url.valueOf("name")  ?? ""
                 })
