@@ -9,18 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var presentAlert = false
-    @State private var myTextField: String = ""
-    @State private var myText: String = "Hello, word!"
+    @State private var isPresentAlert = false
+    @State private var userName: String = ""
+    @State private var myString: String = "Hello, word!"
     let name: String
-    let gradient = LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+    let gradientButton = LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text(myText)
+            Text(myString)
                 .padding()
             Text((name != "") ? name : "...")
                 .font(.title)
@@ -28,18 +28,18 @@ struct ContentView: View {
                 .padding()
             
             Button {
-                presentAlert = true
+                isPresentAlert = true
             } label: {
                 Text("Tap me")
                     .padding()
             }
             .background(Capsule()
-            .stroke(gradient, lineWidth: 5)
+            .stroke(gradientButton, lineWidth: 5)
             .saturation(1.8))
-            .alert("Enter your text", isPresented: $presentAlert, actions: {
-                TextField("Username", text: $myTextField)
+            .alert("Enter your text", isPresented: $isPresentAlert, actions: {
+                TextField("Username", text: $userName)
                 Button("Ok", action: {
-                    myText = myTextField
+                    myString = userName
                 })
                 Button("Cancel", role: .cancel, action: {})
             })
