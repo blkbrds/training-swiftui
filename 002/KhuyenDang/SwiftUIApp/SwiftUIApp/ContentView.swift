@@ -17,7 +17,7 @@ struct ContentView: View {
         VStack {
             Text("I am a cute dog, welcome \(name != "" ? name : "you") to SwiftUI class")
                 .multilineTextAlignment(.leading)
-                .foregroundColor(colorScheme == .dark ? .white : .black)
+                .foregroundColor(Color("TextColor"))
 
             Image("My dog")
                 .resizable()
@@ -27,9 +27,9 @@ struct ContentView: View {
             Button("Tap me for a surprise") {
                 showingAlert = true
             }
-                .foregroundColor(.white)
+            .foregroundColor(Color("TextColor"))
                 .padding()
-                .background(Color.blue)
+                .background(Color("BackgroundButton"))
                 .cornerRadius(30)
                 .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Important message"), message: Text("You are so beautiful"), dismissButton: .default(Text("Got it!")))
@@ -40,6 +40,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(name: "")
+        ContentView(name: "").environment(\.colorScheme, .light)
     }
 }
