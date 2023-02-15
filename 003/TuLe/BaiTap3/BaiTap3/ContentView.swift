@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var name = "Lê Công Tú"
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Spacer()
+            Image("no-avatar")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+                .clipShape(Circle())
+                .padding()
+                .background(Color.brown)
+                .clipShape(Circle())
+                .shadow(radius: 20)
+                .overlay {
+                    Text(name)
+                        .font(.title)
+                        .offset(x: 0, y: 90)
+                }
+                .onTapGesture {
+                    print(name)
+                }
+            Spacer()
+            
         }
-        .padding()
     }
 }
 
