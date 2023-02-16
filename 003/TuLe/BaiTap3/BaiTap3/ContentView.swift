@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var name = "Lê Công Tú"
 
     var body: some View {
         VStack {
-            Spacer()
+            ForEach(0..<3) { i in
+                ListAvatarView(list: [i * 3 + 1, i * 3 + 2, i * 3 + 3])
+            }
+        }
+        .padding()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct AvatarView: View {
+
+    var name: String
+
+    var body: some View {
+        VStack {
             Image("no-avatar")
+                .resizable()
+                .aspectRatio(1, contentMode: .fit)
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
                 .clipShape(Circle())
@@ -22,22 +41,23 @@ struct ContentView: View {
                 .background(Color.brown)
                 .clipShape(Circle())
                 .shadow(radius: 20)
-                .overlay {
-                    Text(name)
-                        .font(.title)
-                        .offset(x: 0, y: 90)
-                }
                 .onTapGesture {
                     print(name)
                 }
-            Spacer()
-            
+            Text(name)
+                .font(.title)
+                .multilineTextAlignment(.center)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ListAvatarView: View {
+    var list: [Int]
+    var body: some View {
+        HStack {
+            ForEach(list, id: \.self) { item in
+                AvatarView(name: "Tú \(item)")
+            }
+        }
     }
 }
