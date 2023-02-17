@@ -11,7 +11,7 @@ import SwiftUI
 struct BaiTap3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CaculatorView()
         }
     }
 }
