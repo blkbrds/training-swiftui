@@ -17,6 +17,7 @@
 		10EE2BD9299F772900A15636 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BD8299F772900A15636 /* SliderView.swift */; };
 		10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BDD299F78D300A15636 /* ShowImageView.swift */; };
 		10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE029A3001500A15636 /* ShowTextField.swift */; };
+		10EE2BE429A3188400A15636 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE329A3188400A15636 /* TextFieldModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		10EE2BD8299F772900A15636 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		10EE2BDD299F78D300A15636 /* ShowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageView.swift; sourceTree = "<group>"; };
 		10EE2BE029A3001500A15636 /* ShowTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTextField.swift; sourceTree = "<group>"; };
+		10EE2BE329A3188400A15636 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		10EE2BB8299C711900A15636 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				10EE2BE229A3090700A15636 /* Modifiers */,
 				10EE2BDF29A2FFFE00A15636 /* TextFieldStyle */,
 				10EE2BDA299F77A000A15636 /* ShowImage */,
 				10EE2BD3299F657200A15636 /* Slider */,
@@ -117,6 +120,14 @@
 				10EE2BE029A3001500A15636 /* ShowTextField.swift */,
 			);
 			path = TextFieldStyle;
+			sourceTree = "<group>";
+		};
+		10EE2BE229A3090700A15636 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				10EE2BE329A3188400A15636 /* TextFieldModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				10EE2BD9299F772900A15636 /* SliderView.swift in Sources */,
 				10EE2BCB299DC7E900A15636 /* CaculatorView.swift in Sources */,
 				10EE2BBC299C711900A15636 /* ContentView.swift in Sources */,
+				10EE2BE429A3188400A15636 /* TextFieldModifier.swift in Sources */,
 				10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */,
 				10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */,
 			);

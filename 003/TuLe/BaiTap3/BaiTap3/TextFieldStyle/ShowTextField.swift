@@ -15,28 +15,10 @@ struct ShowTextField: View {
     var body: some View {
         VStack {
             TextField("nhập Username", text: $userName)
-                .font(.system(size: 15))
-                .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
-                .background(.white)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 192 / 255, green: 192 / 255, blue: 192 / 255), lineWidth: 3)
-                        .shadow(radius: 5)
-                }
-                .multilineTextAlignment(.leading)
-                .padding()
+                .modifierTextField()
             
             SecureField("nhập password", text: $password)
-                .font(.system(size: 15))
-                .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
-                .background(.white)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 192 / 255, green: 192 / 255, blue: 192 / 255), lineWidth: 3)
-                        .shadow(radius: 5)
-                }
-                .multilineTextAlignment(.leading)
-                .padding()
+                .modifierTextField()
         }
     }
 }
@@ -44,5 +26,14 @@ struct ShowTextField: View {
 struct ShowTextField_Previews: PreviewProvider {
     static var previews: some View {
         ShowTextField()
+    }
+}
+
+extension View  {
+    func modifierTextField() -> some View {
+        ModifiedContent(
+            content: self,
+            modifier: TextFieldModifier()
+        )
     }
 }
