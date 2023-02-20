@@ -16,6 +16,7 @@
 		10EE2BD7299F6FB900A15636 /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BD6299F6FB900A15636 /* ColorSliderView.swift */; };
 		10EE2BD9299F772900A15636 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BD8299F772900A15636 /* SliderView.swift */; };
 		10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BDD299F78D300A15636 /* ShowImageView.swift */; };
+		10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE029A3001500A15636 /* ShowTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		10EE2BD6299F6FB900A15636 /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 		10EE2BD8299F772900A15636 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		10EE2BDD299F78D300A15636 /* ShowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageView.swift; sourceTree = "<group>"; };
+		10EE2BE029A3001500A15636 /* ShowTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		10EE2BB8299C711900A15636 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				10EE2BDF29A2FFFE00A15636 /* TextFieldStyle */,
 				10EE2BDA299F77A000A15636 /* ShowImage */,
 				10EE2BD3299F657200A15636 /* Slider */,
 				10EE2BCC299DC7F500A15636 /* Caculator */,
@@ -106,6 +109,14 @@
 				10EE2BDD299F78D300A15636 /* ShowImageView.swift */,
 			);
 			path = ShowImage;
+			sourceTree = "<group>";
+		};
+		10EE2BDF29A2FFFE00A15636 /* TextFieldStyle */ = {
+			isa = PBXGroup;
+			children = (
+				10EE2BE029A3001500A15636 /* ShowTextField.swift */,
+			);
+			path = TextFieldStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */,
 				10EE2BD7299F6FB900A15636 /* ColorSliderView.swift in Sources */,
 				10EE2BCE299DD83100A15636 /* InputCaculatorView.swift in Sources */,
 				10EE2BD9299F772900A15636 /* SliderView.swift in Sources */,
