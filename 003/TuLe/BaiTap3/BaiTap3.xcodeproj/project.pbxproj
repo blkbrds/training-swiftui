@@ -18,6 +18,9 @@
 		10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BDD299F78D300A15636 /* ShowImageView.swift */; };
 		10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE029A3001500A15636 /* ShowTextField.swift */; };
 		10EE2BE429A3188400A15636 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE329A3188400A15636 /* TextFieldModifier.swift */; };
+		10EE2BE729A31F7E00A15636 /* ShowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE629A31F7E00A15636 /* ShowButtonView.swift */; };
+		10EE2BE929A34EE800A15636 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE829A34EE800A15636 /* ButtonModifier.swift */; };
+		10EE2BEB29A3516000A15636 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BEA29A3516000A15636 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		10EE2BDD299F78D300A15636 /* ShowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageView.swift; sourceTree = "<group>"; };
 		10EE2BE029A3001500A15636 /* ShowTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTextField.swift; sourceTree = "<group>"; };
 		10EE2BE329A3188400A15636 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		10EE2BE629A31F7E00A15636 /* ShowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowButtonView.swift; sourceTree = "<group>"; };
+		10EE2BE829A34EE800A15636 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		10EE2BEA29A3516000A15636 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		10EE2BB8299C711900A15636 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				10EE2BE529A31A8800A15636 /* Buttons */,
 				10EE2BE229A3090700A15636 /* Modifiers */,
 				10EE2BDF29A2FFFE00A15636 /* TextFieldStyle */,
 				10EE2BDA299F77A000A15636 /* ShowImage */,
@@ -126,8 +133,18 @@
 			isa = PBXGroup;
 			children = (
 				10EE2BE329A3188400A15636 /* TextFieldModifier.swift */,
+				10EE2BE829A34EE800A15636 /* ButtonModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		10EE2BE529A31A8800A15636 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				10EE2BE629A31F7E00A15636 /* ShowButtonView.swift */,
+				10EE2BEA29A3516000A15636 /* ButtonView.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +219,12 @@
 			files = (
 				10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */,
 				10EE2BD7299F6FB900A15636 /* ColorSliderView.swift in Sources */,
+				10EE2BEB29A3516000A15636 /* ButtonView.swift in Sources */,
 				10EE2BCE299DD83100A15636 /* InputCaculatorView.swift in Sources */,
+				10EE2BE929A34EE800A15636 /* ButtonModifier.swift in Sources */,
 				10EE2BD9299F772900A15636 /* SliderView.swift in Sources */,
 				10EE2BCB299DC7E900A15636 /* CaculatorView.swift in Sources */,
+				10EE2BE729A31F7E00A15636 /* ShowButtonView.swift in Sources */,
 				10EE2BBC299C711900A15636 /* ContentView.swift in Sources */,
 				10EE2BE429A3188400A15636 /* TextFieldModifier.swift in Sources */,
 				10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */,
