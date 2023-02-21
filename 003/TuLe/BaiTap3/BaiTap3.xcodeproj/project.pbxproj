@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105A802D29A476AD00B9704F /* LoginTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */; };
+		105A802F29A4791E00B9704F /* BackgroundLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A802E29A4791E00B9704F /* BackgroundLoginView.swift */; };
+		105A803129A482E800B9704F /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803029A482E800B9704F /* LoginButtonView.swift */; };
+		105A803329A4831B00B9704F /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803229A4831B00B9704F /* LoginTextFieldView.swift */; };
 		10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BB9299C711900A15636 /* BaiTap3App.swift */; };
 		10EE2BBC299C711900A15636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BBB299C711900A15636 /* ContentView.swift */; };
 		10EE2BBE299C711D00A15636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EE2BBD299C711D00A15636 /* Assets.xcassets */; };
@@ -21,9 +25,15 @@
 		10EE2BE729A31F7E00A15636 /* ShowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE629A31F7E00A15636 /* ShowButtonView.swift */; };
 		10EE2BE929A34EE800A15636 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BE829A34EE800A15636 /* ButtonModifier.swift */; };
 		10EE2BEB29A3516000A15636 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BEA29A3516000A15636 /* ButtonView.swift */; };
+		10EE2BEE29A3758000A15636 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BED29A3758000A15636 /* LoginView.swift */; };
+		10EE2BF029A45A7200A15636 /* TypeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BEF29A45A7200A15636 /* TypeLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldModifier.swift; sourceTree = "<group>"; };
+		105A802E29A4791E00B9704F /* BackgroundLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLoginView.swift; sourceTree = "<group>"; };
+		105A803029A482E800B9704F /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
+		105A803229A4831B00B9704F /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
 		10EE2BB6299C711900A15636 /* BaiTap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EE2BB9299C711900A15636 /* BaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3App.swift; sourceTree = "<group>"; };
 		10EE2BBB299C711900A15636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		10EE2BE629A31F7E00A15636 /* ShowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowButtonView.swift; sourceTree = "<group>"; };
 		10EE2BE829A34EE800A15636 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		10EE2BEA29A3516000A15636 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		10EE2BED29A3758000A15636 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		10EE2BEF29A45A7200A15636 /* TypeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 		10EE2BB8299C711900A15636 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				10EE2BEC29A374A300A15636 /* Login */,
 				10EE2BE529A31A8800A15636 /* Buttons */,
 				10EE2BE229A3090700A15636 /* Modifiers */,
 				10EE2BDF29A2FFFE00A15636 /* TextFieldStyle */,
@@ -147,6 +160,19 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		10EE2BEC29A374A300A15636 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				10EE2BED29A3758000A15636 /* LoginView.swift */,
+				10EE2BEF29A45A7200A15636 /* TypeLoginView.swift */,
+				105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */,
+				105A802E29A4791E00B9704F /* BackgroundLoginView.swift */,
+				105A803029A482E800B9704F /* LoginButtonView.swift */,
+				105A803229A4831B00B9704F /* LoginTextFieldView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,14 +246,20 @@
 				10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */,
 				10EE2BD7299F6FB900A15636 /* ColorSliderView.swift in Sources */,
 				10EE2BEB29A3516000A15636 /* ButtonView.swift in Sources */,
+				105A802D29A476AD00B9704F /* LoginTextFieldModifier.swift in Sources */,
 				10EE2BCE299DD83100A15636 /* InputCaculatorView.swift in Sources */,
 				10EE2BE929A34EE800A15636 /* ButtonModifier.swift in Sources */,
+				105A803329A4831B00B9704F /* LoginTextFieldView.swift in Sources */,
 				10EE2BD9299F772900A15636 /* SliderView.swift in Sources */,
+				105A803129A482E800B9704F /* LoginButtonView.swift in Sources */,
 				10EE2BCB299DC7E900A15636 /* CaculatorView.swift in Sources */,
+				105A802F29A4791E00B9704F /* BackgroundLoginView.swift in Sources */,
 				10EE2BE729A31F7E00A15636 /* ShowButtonView.swift in Sources */,
 				10EE2BBC299C711900A15636 /* ContentView.swift in Sources */,
 				10EE2BE429A3188400A15636 /* TextFieldModifier.swift in Sources */,
+				10EE2BEE29A3758000A15636 /* LoginView.swift in Sources */,
 				10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */,
+				10EE2BF029A45A7200A15636 /* TypeLoginView.swift in Sources */,
 				10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
