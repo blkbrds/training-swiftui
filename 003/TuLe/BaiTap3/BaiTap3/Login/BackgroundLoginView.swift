@@ -13,7 +13,7 @@ struct BackgroundLoginView: View {
             ZStack {
                 Image("Vector 2")
                     .resizable()
-                    .frame(width: .infinity, height: UIScreen.main.bounds.height * 0.3755)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.3755)
                 
                 HStack {
                     Spacer()

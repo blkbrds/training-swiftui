@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct WelcomeView: View {
+
+    @EnvironmentObject var appRouter: AppRouter
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: "swift")
+                .resizable()
+                .foregroundColor(.orange)
+                .frame(width: 50, height: 50)
+            Text("Hello, welcome to swiftUI")
+                .padding()
+                .font(.title3)
+            Button{
+                appRouter.state = .login
+            } label: {
+                Text("Start")
+                    .padding()
+                    .foregroundColor(.white)
+            }
+            .padding(.horizontal, 10)
+            .background(.blue)
+        .clipShape(Capsule())
+        }
     }
 }
 

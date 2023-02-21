@@ -9,9 +9,32 @@ import SwiftUI
 
 @main
 struct BaiTap3App: App {
-    var body: some Scene {
-        WindowGroup {
-            CaculatorView()
+
+    @StateObject var appRouter = AppRouter()
+
+    @ViewBuilder
+    var rootView: some View {
+        switch appRouter.state {
+        case .welcome:
+            WelcomeView()
+        case .login:
+            LoginView()
         }
     }
+
+    var body: some Scene {
+        WindowGroup {
+            rootView
+                .environmentObject(appRouter)
+        }
+    }
+}
+
+class AppRouter: ObservableObject {
+    @Published var state: AppState = .welcome
+}
+
+enum AppState {
+    case welcome
+    case login
 }

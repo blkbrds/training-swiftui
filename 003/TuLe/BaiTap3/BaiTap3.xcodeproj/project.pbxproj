@@ -11,6 +11,7 @@
 		105A802F29A4791E00B9704F /* BackgroundLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A802E29A4791E00B9704F /* BackgroundLoginView.swift */; };
 		105A803129A482E800B9704F /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803029A482E800B9704F /* LoginButtonView.swift */; };
 		105A803329A4831B00B9704F /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803229A4831B00B9704F /* LoginTextFieldView.swift */; };
+		105A803629A4A43600B9704F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803529A4A43600B9704F /* WelcomeView.swift */; };
 		10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BB9299C711900A15636 /* BaiTap3App.swift */; };
 		10EE2BBC299C711900A15636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BBB299C711900A15636 /* ContentView.swift */; };
 		10EE2BBE299C711D00A15636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EE2BBD299C711D00A15636 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		105A802E29A4791E00B9704F /* BackgroundLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLoginView.swift; sourceTree = "<group>"; };
 		105A803029A482E800B9704F /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		105A803229A4831B00B9704F /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
+		105A803529A4A43600B9704F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		10EE2BB6299C711900A15636 /* BaiTap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EE2BB9299C711900A15636 /* BaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3App.swift; sourceTree = "<group>"; };
 		10EE2BBB299C711900A15636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105A803429A4A42900B9704F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				105A803529A4A43600B9704F /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		10EE2BAD299C711900A15636 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		10EE2BB8299C711900A15636 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				105A803429A4A42900B9704F /* Welcome */,
 				10EE2BEC29A374A300A15636 /* Login */,
 				10EE2BE529A31A8800A15636 /* Buttons */,
 				10EE2BE229A3090700A15636 /* Modifiers */,
@@ -261,6 +272,7 @@
 				10EE2BDE299F78D300A15636 /* ShowImageView.swift in Sources */,
 				10EE2BF029A45A7200A15636 /* TypeLoginView.swift in Sources */,
 				10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */,
+				105A803629A4A43600B9704F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
