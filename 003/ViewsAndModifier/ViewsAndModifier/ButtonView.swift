@@ -10,11 +10,13 @@ import SwiftUI
 struct ButtonView: View {
 
     var icon: String?
-    var title: String = ""
+    @State var title: Int = 0
     var subtitle: String?
 
     var body: some View {
-        Button(action: { }
+        Button(action: {
+            title += 1
+        }
             , label: {
                 VStack(spacing: 0) {
                     HStack(spacing: 10) {
@@ -23,7 +25,7 @@ struct ButtonView: View {
                                 .resizable()
                                 .frame(width: 40, height: 40)
                         }
-                        Text(title)
+                        Text("\(title)")
                             .font(.title)
                     }
                     if let subtitle = subtitle {

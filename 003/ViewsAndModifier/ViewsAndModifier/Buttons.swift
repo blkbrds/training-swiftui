@@ -11,9 +11,9 @@ struct Buttons: View {
     
     var body: some View {
         VStack(spacing: 30) {
-            ButtonView(icon: "cart", title: "BUY NOW", subtitle: "Thinking")
-            ButtonView(icon: "cart", title: "BUY NOW")
-            ButtonView(title: "BUY NOW")
+            ButtonView(icon: "cart", subtitle: "Thinking")
+            ButtonView(icon: "cart")
+            ButtonView()
         }
     }
 }
