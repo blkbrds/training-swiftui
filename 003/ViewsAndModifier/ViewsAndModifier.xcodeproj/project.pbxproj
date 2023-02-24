@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A22EF2C29A5F35C004EC000 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF2B29A5F35C004EC000 /* TextField.swift */; };
+		8A22EF3229A657CD004EC000 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3129A657CD004EC000 /* TextFieldView.swift */; };
+		8A22EF3429A6599D004EC000 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3329A6599D004EC000 /* Login.swift */; };
+		8A22EF3629A661FA004EC000 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3529A661FA004EC000 /* ButtonView.swift */; };
+		8A22EF3829A6655C004EC000 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3729A6655C004EC000 /* ButtonModifier.swift */; };
+		8A22EF3D29A72A6D004EC000 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3C29A72A6D004EC000 /* Buttons.swift */; };
+		8A22EF4129A74C5A004EC000 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */; };
 		8A4186EE299F77460027DEC4 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186ED299F77460027DEC4 /* CalculatorView.swift */; };
 		8A4186F529A360350027DEC4 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186F429A360350027DEC4 /* SliderView.swift */; };
 		8A4186F729A453430027DEC4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186F629A453430027DEC4 /* ImageView.swift */; };
@@ -19,7 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A22EF2B29A5F35C004EC000 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		8A22EF3129A657CD004EC000 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		8A22EF3329A6599D004EC000 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8A22EF3529A661FA004EC000 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		8A22EF3729A6655C004EC000 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		8A22EF3C29A72A6D004EC000 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		8A4186ED299F77460027DEC4 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		8A4186F429A360350027DEC4 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		8A4186F629A453430027DEC4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -69,7 +79,12 @@
 				8A4186ED299F77460027DEC4 /* CalculatorView.swift */,
 				8A4186F429A360350027DEC4 /* SliderView.swift */,
 				8A4186F629A453430027DEC4 /* ImageView.swift */,
-				8A22EF2B29A5F35C004EC000 /* TextField.swift */,
+				8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */,
+				8A22EF3129A657CD004EC000 /* TextFieldView.swift */,
+				8A22EF3329A6599D004EC000 /* Login.swift */,
+				8A22EF3529A661FA004EC000 /* ButtonView.swift */,
+				8A22EF3729A6655C004EC000 /* ButtonModifier.swift */,
+				8A22EF3C29A72A6D004EC000 /* Buttons.swift */,
 			);
 			path = ViewsAndModifier;
 			sourceTree = "<group>";
@@ -153,12 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD1EF32299CC2D7004562DF /* ListAvatarView.swift in Sources */,
+				8A22EF3429A6599D004EC000 /* Login.swift in Sources */,
+				8A22EF3D29A72A6D004EC000 /* Buttons.swift in Sources */,
 				8AD1EF1F299C75F6004562DF /* AvatarView.swift in Sources */,
-				8A22EF2C29A5F35C004EC000 /* TextField.swift in Sources */,
 				8A4186EE299F77460027DEC4 /* CalculatorView.swift in Sources */,
+				8A22EF3829A6655C004EC000 /* ButtonModifier.swift in Sources */,
+				8A22EF4129A74C5A004EC000 /* TextFieldModifier.swift in Sources */,
+				8A22EF3629A661FA004EC000 /* ButtonView.swift in Sources */,
 				8A4186F529A360350027DEC4 /* SliderView.swift in Sources */,
 				8A4186F729A453430027DEC4 /* ImageView.swift in Sources */,
 				8AD1EF11299C709D004562DF /* ViewsAndModifierApp.swift in Sources */,
+				8A22EF3229A657CD004EC000 /* TextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +314,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
