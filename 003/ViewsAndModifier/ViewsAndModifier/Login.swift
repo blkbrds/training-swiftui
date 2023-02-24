@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+func NameBear() -> HStack<TupleView<(Text, Text)>> {
+    return HStack {
+        Text("bear")
+            .font(.system(size: 65, weight: .bold))
+            .foregroundColor(Color("bearColor"))
+        Text(".")
+            .font(.system(size: 62, weight: .bold))
+    }
+}
+
 struct Login: View {
 
     @State var userName: String = ""
@@ -21,16 +31,10 @@ struct Login: View {
                 .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
         }
     }
-
+    
     var body: some View {
         VStack {
-            HStack {
-                Text("bear")
-                    .font(.system(size: 65, weight: .bold))
-                    .foregroundColor(Color("bearColor"))
-                Text(".")
-                    .font(.system(size: 62, weight: .bold))
-            }
+            NameBear()
 
             Text("Log in on bear :)")
                 .font(.system(size: 30, weight: .light))

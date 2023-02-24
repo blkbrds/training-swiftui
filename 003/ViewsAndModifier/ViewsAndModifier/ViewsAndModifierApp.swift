@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct ViewsAndModifierApp: App {
+    @StateObject var appRouter = AppRouter()
+
     var body: some Scene {
         WindowGroup {
-            AvatarView()
+            rootView
+                .environmentObject(appRouter)
+        }
+    }
+    @ViewBuilder
+    var rootView: some View {
+        switch appRouter.state {
+        case .tutorial:
+            WelcomeScreen()
+        case .login:
+            Login()
         }
     }
 }

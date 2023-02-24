@@ -13,6 +13,8 @@
 		8A22EF3829A6655C004EC000 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3729A6655C004EC000 /* ButtonModifier.swift */; };
 		8A22EF3D29A72A6D004EC000 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF3C29A72A6D004EC000 /* Buttons.swift */; };
 		8A22EF4129A74C5A004EC000 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */; };
+		8A22EF4429A85693004EC000 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22EF4329A85693004EC000 /* WelcomeScreen.swift */; };
+		8A2DC61A29A86AA000B4CCEF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DC61929A86AA000B4CCEF /* AppRouter.swift */; };
 		8A4186EE299F77460027DEC4 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186ED299F77460027DEC4 /* CalculatorView.swift */; };
 		8A4186F529A360350027DEC4 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186F429A360350027DEC4 /* SliderView.swift */; };
 		8A4186F729A453430027DEC4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4186F629A453430027DEC4 /* ImageView.swift */; };
@@ -30,6 +32,8 @@
 		8A22EF3729A6655C004EC000 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		8A22EF3C29A72A6D004EC000 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		8A22EF4329A85693004EC000 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		8A2DC61929A86AA000B4CCEF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		8A4186ED299F77460027DEC4 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		8A4186F429A360350027DEC4 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		8A4186F629A453430027DEC4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				8A22EF3529A661FA004EC000 /* ButtonView.swift */,
 				8A22EF3729A6655C004EC000 /* ButtonModifier.swift */,
 				8A22EF3C29A72A6D004EC000 /* Buttons.swift */,
+				8A22EF4329A85693004EC000 /* WelcomeScreen.swift */,
+				8A2DC61929A86AA000B4CCEF /* AppRouter.swift */,
 			);
 			path = ViewsAndModifier;
 			sourceTree = "<group>";
@@ -171,7 +177,9 @@
 				8A22EF3429A6599D004EC000 /* Login.swift in Sources */,
 				8A22EF3D29A72A6D004EC000 /* Buttons.swift in Sources */,
 				8AD1EF1F299C75F6004562DF /* AvatarView.swift in Sources */,
+				8A2DC61A29A86AA000B4CCEF /* AppRouter.swift in Sources */,
 				8A4186EE299F77460027DEC4 /* CalculatorView.swift in Sources */,
+				8A22EF4429A85693004EC000 /* WelcomeScreen.swift in Sources */,
 				8A22EF3829A6655C004EC000 /* ButtonModifier.swift in Sources */,
 				8A22EF4129A74C5A004EC000 /* TextFieldModifier.swift in Sources */,
 				8A22EF3629A661FA004EC000 /* ButtonView.swift in Sources */,
