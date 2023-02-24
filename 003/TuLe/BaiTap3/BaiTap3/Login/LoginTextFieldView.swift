@@ -14,13 +14,32 @@ struct LoginTextFieldView: View {
     var isShowPassword: Bool?
     
     var body: some View {
-        if let isShowPassword = isShowPassword, isShowPassword {
+        if isShowPassword ?? false {
             SecureField(placeholder, text: $data)
                 .loginTextFieldModifier()
         } else {
             TextField(placeholder, text: $data)
                 .loginTextFieldModifier()
         }
+    }
+    
+    struct LoginTextFieldModifier: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .padding()
+                .background(Color(red: 238 / 255, green: 238 / 255, blue: 238 / 255))
+                .cornerRadius(10)
+                .padding(.top, 20)
+                .padding(.horizontal, 40)
+                .font(.system(size: 15))
+        }
+    }
+    
+    func loginTextFieldModifier() -> some View {
+        ModifiedContent(
+            content: self,
+            modifier: LoginTextFieldModifier()
+        )
     }
 }
 
@@ -30,5 +49,17 @@ extension View  {
             content: self,
             modifier: LoginTextFieldModifier()
         )
+    }
+}
+
+struct LoginTextFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color(red: 238 / 255, green: 238 / 255, blue: 238 / 255))
+            .cornerRadius(10)
+            .padding(.top, 20)
+            .padding(.horizontal, 40)
+            .font(.system(size: 15))
     }
 }

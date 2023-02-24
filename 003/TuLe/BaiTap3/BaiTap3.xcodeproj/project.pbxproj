@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		105A802D29A476AD00B9704F /* LoginTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */; };
 		105A802F29A4791E00B9704F /* BackgroundLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A802E29A4791E00B9704F /* BackgroundLoginView.swift */; };
 		105A803129A482E800B9704F /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803029A482E800B9704F /* LoginButtonView.swift */; };
 		105A803329A4831B00B9704F /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803229A4831B00B9704F /* LoginTextFieldView.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldModifier.swift; sourceTree = "<group>"; };
 		105A802E29A4791E00B9704F /* BackgroundLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLoginView.swift; sourceTree = "<group>"; };
 		105A803029A482E800B9704F /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		105A803229A4831B00B9704F /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 			children = (
 				10EE2BED29A3758000A15636 /* LoginView.swift */,
 				10EE2BEF29A45A7200A15636 /* TypeLoginView.swift */,
-				105A802C29A476AD00B9704F /* LoginTextFieldModifier.swift */,
 				105A802E29A4791E00B9704F /* BackgroundLoginView.swift */,
 				105A803029A482E800B9704F /* LoginButtonView.swift */,
 				105A803229A4831B00B9704F /* LoginTextFieldView.swift */,
@@ -257,7 +254,6 @@
 				10EE2BE129A3001500A15636 /* ShowTextField.swift in Sources */,
 				10EE2BD7299F6FB900A15636 /* ColorSliderView.swift in Sources */,
 				10EE2BEB29A3516000A15636 /* ButtonView.swift in Sources */,
-				105A802D29A476AD00B9704F /* LoginTextFieldModifier.swift in Sources */,
 				10EE2BCE299DD83100A15636 /* InputCaculatorView.swift in Sources */,
 				10EE2BE929A34EE800A15636 /* ButtonModifier.swift in Sources */,
 				105A803329A4831B00B9704F /* LoginTextFieldView.swift in Sources */,

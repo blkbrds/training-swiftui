@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ShowTextField: View {
 
-    @State var userName: String = ""
+    @State var username: String = ""
     @State var password: String = ""
 
     var body: some View {
         VStack {
-            TextField("nhập Username", text: $userName)
-                .modifierTextField()
+            TextField("Username", text: $username)
+                .exercise6TextFieldModifier()
             
-            SecureField("nhập password", text: $password)
-                .modifierTextField()
+            SecureField("Password", text: $password)
+                .exercise6TextFieldModifier()
         }
     }
 }
@@ -30,7 +30,7 @@ struct ShowTextField_Previews: PreviewProvider {
 }
 
 extension View  {
-    func modifierTextField() -> some View {
+    func exercise6TextFieldModifier() -> some View {
         ModifiedContent(
             content: self,
             modifier: TextFieldModifier()

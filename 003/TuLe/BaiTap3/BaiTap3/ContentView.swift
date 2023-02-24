@@ -12,8 +12,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ForEach(0..<3) { i in
-                ListAvatarView(list: [i * 3 + 1, i * 3 + 2, i * 3 + 3])
+                HStack(spacing: 5) {
+                    AvatarView(name: "Tú \(i * 3 + 1)")
+                    AvatarView(name: "Tú \(i * 3 + 2)")
+                    AvatarView(name: "Tú \(i * 3 + 3)")
+                }
+                .frame(maxWidth: .infinity ,alignment: .leading)
             }
+            
         }
         .padding()
     }
@@ -28,6 +34,7 @@ struct ContentView_Previews: PreviewProvider {
 struct AvatarView: View {
 
     var name: String
+    let widthAvatar = (UIScreen.main.bounds.width - 40) / 3
 
     var body: some View {
         VStack {
@@ -38,6 +45,7 @@ struct AvatarView: View {
                 .foregroundColor(.accentColor)
                 .clipShape(Circle())
                 .padding()
+                .frame(maxWidth: widthAvatar)
                 .background(Color.brown)
                 .clipShape(Circle())
                 .shadow(radius: 20)
@@ -47,17 +55,6 @@ struct AvatarView: View {
             Text(name)
                 .font(.title)
                 .multilineTextAlignment(.center)
-        }
-    }
-}
-
-struct ListAvatarView: View {
-    var list: [Int]
-    var body: some View {
-        HStack {
-            ForEach(list, id: \.self) { item in
-                AvatarView(name: "Tú \(item)")
-            }
         }
     }
 }

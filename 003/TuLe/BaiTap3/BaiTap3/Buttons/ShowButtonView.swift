@@ -14,8 +14,8 @@ struct ShowButtonView: View {
 
     var body: some View {
         VStack {
-            ButtonView(title: $title1)
-            ButtonView(title: $title2, subTitle: "SubTitle")
+            ButtonView(title: $title1, image: Image(systemName: "swift"))
+            ButtonView(title: $title2, subTitle: "SubTitle", image: Image(systemName: "swift"))
         }
     }
 }

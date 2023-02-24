@@ -11,13 +11,14 @@ struct ButtonView: View {
 
     @Binding var title: Int
     var subTitle: String?
+    var image: Image?
 
     var body: some View {
         Button {
             title += 1
         } label: {
             HStack() {
-                Image(systemName: "swift")
+                image?
                     .resizable()
                     .frame(width: 30, height: 30)
                 VStack(alignment: .leading) {
