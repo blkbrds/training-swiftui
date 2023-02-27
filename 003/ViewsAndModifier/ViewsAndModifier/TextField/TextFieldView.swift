@@ -30,11 +30,11 @@ struct TextFieldView: View {
         switch type {
         case .userName:
             TextField(type.value().0, text: $data)
-                .textFieldModifier(type: type)
+                .myTextFieldModifier(type: type)
         case .password:
             if isShowPass {
                 TextField(type.value().0, text: $data)
-                    .textFieldModifier(type: type)
+                    .myTextFieldModifier(type: type)
                     .overlay(
                     Button(action: { isShowPass.toggle() }) {
                         Image(systemName: isShowPass ? "eye" : "eye.slash")
@@ -43,7 +43,7 @@ struct TextFieldView: View {
                 )
             } else {
                 SecureField(type.value().0, text: $data)
-                    .textFieldModifier(type: type)
+                    .myTextFieldModifier(type: type)
                     .overlay(
                     Button(action: { isShowPass.toggle() }) {
                         Image(systemName: isShowPass ? "eye" : "eye.slash")

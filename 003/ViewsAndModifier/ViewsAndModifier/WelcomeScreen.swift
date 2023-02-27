@@ -13,7 +13,7 @@ struct WelcomeScreen: View {
     
     var body: some View {
         VStack {
-            NameBear()
+            nameBear()
             Spacer()
             Image("bear_welcome")
                 .resizable()
@@ -27,7 +27,7 @@ struct WelcomeScreen: View {
                 {
                     Text("START DISCOVERING BEAR")
                 })
-                .buttonModifier()
+                .myButtonModifier()
                 .padding(.top, 10)
             Spacer()
             Text("By continue you agree to our")

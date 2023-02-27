@@ -24,6 +24,7 @@ struct CalculatorView: View {
                 Spacer()
                 Text("0")
                     .font(.system(size: 60))
+                    .padding(.trailing, 30)
             }
             VStack {
                 let height = (UIScreen.main.bounds.width - 5 * 12) / 4

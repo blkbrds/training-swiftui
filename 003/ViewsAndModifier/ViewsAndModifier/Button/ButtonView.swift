@@ -34,6 +34,6 @@ struct ButtonView: View {
                     }
                 }
             })
-            .buttonModifier()
+            .myButtonModifier()
     }
 }

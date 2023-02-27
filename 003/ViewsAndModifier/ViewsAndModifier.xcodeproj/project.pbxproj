@@ -56,6 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ACDFFE329AC9DB8002A10A9 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */,
+				8A22EF3129A657CD004EC000 /* TextFieldView.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		8ACDFFE429AC9E5F002A10A9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8A22EF3529A661FA004EC000 /* ButtonView.swift */,
+				8A22EF3729A6655C004EC000 /* ButtonModifier.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		8AD1EF04299C709D004562DF = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +93,8 @@
 		8AD1EF0F299C709D004562DF /* ViewsAndModifier */ = {
 			isa = PBXGroup;
 			children = (
+				8ACDFFE429AC9E5F002A10A9 /* Button */,
+				8ACDFFE329AC9DB8002A10A9 /* TextField */,
 				8AD1EF10299C709D004562DF /* ViewsAndModifierApp.swift */,
 				8AD1EF14299C709E004562DF /* Assets.xcassets */,
 				8AD1EF16299C709E004562DF /* Preview Content */,
@@ -83,12 +103,8 @@
 				8A4186ED299F77460027DEC4 /* CalculatorView.swift */,
 				8A4186F429A360350027DEC4 /* SliderView.swift */,
 				8A4186F629A453430027DEC4 /* ImageView.swift */,
-				8A22EF4029A74C5A004EC000 /* TextFieldModifier.swift */,
-				8A22EF3129A657CD004EC000 /* TextFieldView.swift */,
-				8A22EF3329A6599D004EC000 /* Login.swift */,
-				8A22EF3529A661FA004EC000 /* ButtonView.swift */,
-				8A22EF3729A6655C004EC000 /* ButtonModifier.swift */,
 				8A22EF3C29A72A6D004EC000 /* Buttons.swift */,
+				8A22EF3329A6599D004EC000 /* Login.swift */,
 				8A22EF4329A85693004EC000 /* WelcomeScreen.swift */,
 				8A2DC61929A86AA000B4CCEF /* AppRouter.swift */,
 			);

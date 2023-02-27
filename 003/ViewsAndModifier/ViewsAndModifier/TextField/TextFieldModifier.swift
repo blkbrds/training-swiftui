@@ -35,7 +35,7 @@ struct TextFieldModifier: ViewModifier {
 }
 
 extension View {
-    func textFieldModifier(type: TypeOfField) -> some View {
+    func myTextFieldModifier(type: TypeOfField) -> some View {
         self.modifier(TextFieldModifier(type: type))
     }
 }

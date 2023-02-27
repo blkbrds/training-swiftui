@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-func NameBear() -> HStack<TupleView<(Text, Text)>> {
+func nameBear() -> HStack<TupleView<(Text, Text)>> {
     return HStack {
         Text("bear")
             .font(.system(size: 65, weight: .bold))
@@ -19,10 +19,10 @@ func NameBear() -> HStack<TupleView<(Text, Text)>> {
 
 struct Login: View {
 
-    @State var userName: String = ""
+    @State var username: String = ""
     @State var password: String = ""
 
-    fileprivate func OtherInformation(infor: String, action: String) -> HStack<TupleView<(Text, Text)>> {
+    fileprivate func otherInformation(infor: String, action: String) -> HStack<TupleView<(Text, Text)>> {
         return HStack {
             Text(infor)
                 .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
@@ -34,7 +34,7 @@ struct Login: View {
     
     var body: some View {
         VStack {
-            NameBear()
+            nameBear()
 
             Text("Log in on bear :)")
                 .font(.system(size: 30, weight: .light))
@@ -43,11 +43,11 @@ struct Login: View {
                 .padding(.top)
                 .padding(.bottom)
 
-            TextFieldView(data: $userName, type: .userName)
+            TextFieldView(data: $username, type: .userName)
             TextFieldView(data: $password, type: .password)
 
             HStack {
-                OtherInformation(infor: "Forgot Password?", action: "Click here")
+                otherInformation(infor: "Forgot Password?", action: "Click here")
                     .padding(.leading, 20)
                 Spacer()
             }
@@ -58,12 +58,12 @@ struct Login: View {
                         Text("LOGIN")
                     })
                     .frame(width: UIScreen.main.bounds.width / 2 - 60)
-                    .buttonModifier()
+                    .myButtonModifier()
                     .padding(.top)
-                    .disabled(userName.isEmpty || password.isEmpty)
+                    .disabled(username.isEmpty || password.isEmpty)
 
                 Button(action: {
-                    userName = ""
+                    username = ""
                     password = ""
                 }
                     , label: {
@@ -82,7 +82,7 @@ struct Login: View {
             }
 
             Spacer()
-            OtherInformation(infor: "Didn't have an account?", action: "Sign Up")
+            otherInformation(infor: "Didn't have an account?", action: "Sign Up")
         }
     }
 }

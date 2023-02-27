@@ -23,7 +23,7 @@ struct ButtonModifier: ViewModifier {
 }
 
 extension View {
-    func buttonModifier() -> some View {
+    func myButtonModifier() -> some View {
         self.modifier(ButtonModifier())
     }
 }
