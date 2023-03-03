@@ -12,6 +12,7 @@
 		8ACDFFD629A8BC1D002A10A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFFD529A8BC1D002A10A9 /* Assets.xcassets */; };
 		8ACDFFD929A8BC1D002A10A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFFD829A8BC1D002A10A9 /* Preview Assets.xcassets */; };
 		8ACDFFE729ACA921002A10A9 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFFE629ACA921002A10A9 /* MySliderView.swift */; };
+		8AFA61A429B05681002E86D3 /* MyMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA61A329B05681002E86D3 /* MyMonkey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8ACDFFD529A8BC1D002A10A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ACDFFD829A8BC1D002A10A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8ACDFFE629ACA921002A10A9 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		8AFA61A329B05681002E86D3 /* MyMonkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonkey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ABD8A3E29B055450093B85B /* MyMonkey */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA61A329B05681002E86D3 /* MyMonkey.swift */,
+			);
+			path = MyMonkey;
+			sourceTree = "<group>";
+		};
 		8ACDFFC529A8BC1B002A10A9 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +63,7 @@
 		8ACDFFD029A8BC1B002A10A9 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				8ABD8A3E29B055450093B85B /* MyMonkey */,
 				8ACDFFE529ACA907002A10A9 /* MySliderView */,
 				8ACDFFD129A8BC1B002A10A9 /* GestureApp.swift */,
 				8ACDFFD529A8BC1D002A10A9 /* Assets.xcassets */,
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFA61A429B05681002E86D3 /* MyMonkey.swift in Sources */,
 				8ABD8A3829AF2BB50093B85B /* MyTextField.swift in Sources */,
 				8ACDFFE729ACA921002A10A9 /* MySliderView.swift in Sources */,
 				8ACDFFD229A8BC1B002A10A9 /* GestureApp.swift in Sources */,
