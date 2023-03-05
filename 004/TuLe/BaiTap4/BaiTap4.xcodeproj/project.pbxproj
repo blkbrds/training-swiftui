@@ -12,6 +12,7 @@
 		105A804829A511E400B9704F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105A804729A511E400B9704F /* Assets.xcassets */; };
 		105A804C29A511E400B9704F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105A804B29A511E400B9704F /* Preview Assets.xcassets */; };
 		107104B429ACEC5E00C62A83 /* MySliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107104B329ACEC5E00C62A83 /* MySliderView.swift */; };
+		10D2184629B4C6AD00BDF38A /* MonkeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D2184529B4C6AD00BDF38A /* MonkeyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		105A804929A511E400B9704F /* BaiTap4.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaiTap4.entitlements; sourceTree = "<group>"; };
 		105A804B29A511E400B9704F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		107104B329ACEC5E00C62A83 /* MySliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderView.swift; sourceTree = "<group>"; };
+		10D2184529B4C6AD00BDF38A /* MonkeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		105A804229A511E000B9704F /* BaiTap4 */ = {
 			isa = PBXGroup;
 			children = (
+				10D2184429B4C67900BDF38A /* Monkey */,
 				107104B229ACEC4100C62A83 /* CustomSlider */,
 				105A804329A511E000B9704F /* BaiTap4App.swift */,
 				105A804529A511E000B9704F /* ContentView.swift */,
@@ -78,6 +81,14 @@
 				107104B329ACEC5E00C62A83 /* MySliderView.swift */,
 			);
 			path = CustomSlider;
+			sourceTree = "<group>";
+		};
+		10D2184429B4C67900BDF38A /* Monkey */ = {
+			isa = PBXGroup;
+			children = (
+				10D2184529B4C6AD00BDF38A /* MonkeyView.swift */,
+			);
+			path = Monkey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				107104B429ACEC5E00C62A83 /* MySliderView.swift in Sources */,
+				10D2184629B4C6AD00BDF38A /* MonkeyView.swift in Sources */,
 				105A804629A511E000B9704F /* ContentView.swift in Sources */,
 				105A804429A511E000B9704F /* BaiTap4App.swift in Sources */,
 			);
