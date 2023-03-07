@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AB7C41829B6E69900CD8243 /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB7C41729B6E69900CD8243 /* MySlider.swift */; };
 		8ABD8A3829AF2BB50093B85B /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD8A3729AF2BB50093B85B /* MyTextField.swift */; };
 		8ACDFFD229A8BC1B002A10A9 /* GestureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFFD129A8BC1B002A10A9 /* GestureApp.swift */; };
 		8ACDFFD629A8BC1D002A10A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFFD529A8BC1D002A10A9 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8AB7C41729B6E69900CD8243 /* MySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
 		8ABD8A3729AF2BB50093B85B /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		8ACDFFCE29A8BC1B002A10A9 /* Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACDFFD129A8BC1B002A10A9 /* GestureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureApp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				8ACDFFE629ACA921002A10A9 /* MySliderView.swift */,
 				8ABD8A3729AF2BB50093B85B /* MyTextField.swift */,
+				8AB7C41729B6E69900CD8243 /* MySlider.swift */,
 			);
 			path = MySliderView;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				8AFA61A429B05681002E86D3 /* MyMonkey.swift in Sources */,
 				8ABD8A3829AF2BB50093B85B /* MyTextField.swift in Sources */,
+				8AB7C41829B6E69900CD8243 /* MySlider.swift in Sources */,
 				8ACDFFE729ACA921002A10A9 /* MySliderView.swift in Sources */,
 				8ACDFFD229A8BC1B002A10A9 /* GestureApp.swift in Sources */,
 			);
