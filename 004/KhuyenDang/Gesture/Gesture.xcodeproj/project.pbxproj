@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A83267629B717C0002E94D4 /* MyMonkeyVer1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A83267529B717C0002E94D4 /* MyMonkeyVer1.swift */; };
 		8AB7C41829B6E69900CD8243 /* MySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB7C41729B6E69900CD8243 /* MySlider.swift */; };
 		8ABD8A3829AF2BB50093B85B /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD8A3729AF2BB50093B85B /* MyTextField.swift */; };
 		8ACDFFD229A8BC1B002A10A9 /* GestureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFFD129A8BC1B002A10A9 /* GestureApp.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A83267529B717C0002E94D4 /* MyMonkeyVer1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonkeyVer1.swift; sourceTree = "<group>"; };
 		8AB7C41729B6E69900CD8243 /* MySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySlider.swift; sourceTree = "<group>"; };
 		8ABD8A3729AF2BB50093B85B /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		8ACDFFCE29A8BC1B002A10A9 /* Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				8AFA61A329B05681002E86D3 /* MyMonkey.swift */,
+				8A83267529B717C0002E94D4 /* MyMonkeyVer1.swift */,
 			);
 			path = MyMonkey;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				8AFA61A429B05681002E86D3 /* MyMonkey.swift in Sources */,
 				8ABD8A3829AF2BB50093B85B /* MyTextField.swift in Sources */,
+				8A83267629B717C0002E94D4 /* MyMonkeyVer1.swift in Sources */,
 				8AB7C41829B6E69900CD8243 /* MySlider.swift in Sources */,
 				8ACDFFE729ACA921002A10A9 /* MySliderView.swift in Sources */,
 				8ACDFFD229A8BC1B002A10A9 /* GestureApp.swift in Sources */,
