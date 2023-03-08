@@ -41,29 +41,20 @@ struct MonkeyView: View {
                             }
                         }
                 )
-                .onLongPressGesture(minimumDuration: 5.0) {
-                    scale = 1
-                    rotate = .degrees(0)
-                }
-                .onTapGesture {
-                    count += 1
-                    switch count {
-                    case 1:
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            if count == 1 {
-                                handleTap(mess: "Tôi là khỉ")
-                            }
+                .simultaneousGesture(
+                    TapGesture(count: 2).onEnded {
+                        handleTap(mess: "Khỉ là tôi")
+                    }.exclusively(before: TapGesture(count: 1).onEnded {
+                        handleTap(mess: "Tôi là khỉ")
+                    })
+                )
+                .simultaneousGesture(
+                    LongPressGesture(minimumDuration: 5.0)
+                        .onEnded { _ in
+                            scale = 1
+                            rotate = .degrees(0)
                         }
-                    case 2:
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            if count == 2 {
-                                handleTap(mess: "Khỉ là tôi")
-                            }
-                        }
-                    default:
-                        count = 0
-                    }
-                }
+                )
 
             if isShowView {
                 Text(message)

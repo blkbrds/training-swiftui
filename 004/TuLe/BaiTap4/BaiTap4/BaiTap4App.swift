@@ -11,7 +11,7 @@ import SwiftUI
 struct BaiTap4App: App {
     var body: some Scene {
         WindowGroup {
-            MonkeyView()
+            MySliderView()
         }
     }
 }

@@ -17,7 +17,7 @@ struct MySliderView: View {
                 .frame(width: .infinity)
             Spacer()
             SliderView(value: $valueSlider)
-                .frame(width:40, height:350)
+                .frame(width:20, height:350)
             Spacer()
         }
     }
@@ -42,13 +42,16 @@ struct SliderView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: radius)
                     .foregroundColor(.gray)
+                    .frame(width: gr.size.width, height: gr.size.height)
                 RoundedRectangle(cornerRadius: radius)
-                    .foregroundColor(.green)
+                    .fill(
+                        LinearGradient(gradient: Gradient(colors: [.red, .green]), startPoint: .top, endPoint: .bottom)
+                    )
                     .offset(y: (heightGR + yOffSet) / 2)
                     .frame(width: gr.size.width, height: (value / 100) * gr.size.height)
                 Circle()
                     .foregroundColor(Color.red)
-                    .frame(width: thumbSize, height: thumbSize)
+                    .frame(width: thumbSize * 2.5, height: thumbSize * 2.5)
                     .offset(y: yOffSet)
                     .gesture(
                         DragGesture(minimumDistance: 0)
