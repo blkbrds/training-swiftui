@@ -22,7 +22,7 @@ struct MyMonkey: View {
         }
     }
 
-    fileprivate func handleTap(count: Int, content: String) {
+    fileprivate func handleTap(content: String) {
         isShowMessage = true
         contentText = content
         hideMessage()
@@ -32,11 +32,11 @@ struct MyMonkey: View {
 
         let tapGesture = TapGesture(count: 2)
             .onEnded {
-            handleTap(count: 2, content: "Monkey is me")
+            handleTap(content: "Monkey is me")
         }
             .exclusively(before: TapGesture(count: 1)
                 .onEnded {
-                handleTap(count: 1, content: "I am Monkey")
+                handleTap(content: "I am Monkey")
             })
 
         GeometryReader { geo in
