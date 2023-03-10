@@ -9,17 +9,13 @@ import SwiftUI
 
 struct MyMonkey: View {
 
-    @State private var scale = 1.0
-    @State private var lastScale = 1.0
-    @State private var rotation: Angle = .zero
     @State private var isShowMessage: Bool = false
     @State private var contentText: String = ""
-    @State private var tapCount = 0
     @State private var timer: Timer?
-    @State private var tempCount = 0
 
     fileprivate func hideMessage() {
-        timer = Timer.scheduledTimer(withTimeInterval: 4.7, repeats: false) { _ in
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
             withAnimation {
                 isShowMessage = false
             }
@@ -27,95 +23,23 @@ struct MyMonkey: View {
     }
 
     fileprivate func handleTap(count: Int, content: String) {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { _ in
-            if tapCount == count {
-                if !isShowMessage {
-                    isShowMessage = true
-                }
-                contentText = content
-                tapCount = 0
-                hideMessage()
-            }
-        }
+        isShowMessage = true
+        contentText = content
+        hideMessage()
     }
 
     var body: some View {
 
-        let magnificationGesture = MagnificationGesture()
-            .onChanged { newValue in // newValue là tỉ lệ scale so với kích thước ban đầu
-            switch newValue {
-            case ..<0.5:
-                scale = 0.5
-            case 0.5...2.0:
-                scale = newValue
-            default:
-                scale = 2.0
-            }
-        }
-
-        // state là tỉ lệ tăng giảm so với lần scale trước
-
-//            .onChanged { state in
-//            let delta = state / lastScale
-//            switch scale * delta {
-//            case ..<0.5:
-//                scale = 0.5
-//            case 0.5...2.0:
-//                scale *= delta
-//            default:
-//                scale = 2.0
-//            }
-//            lastScale = state
-//        }
-//            .onEnded { state in
-//            lastScale = 1.0
-//        }
-
-        let rotationGesture = RotationGesture()
-            .onChanged { value in
-            rotation = value
-        }
-
-        let longPressGesture = LongPressGesture(minimumDuration: 5.0)
-            .onEnded { _ in
-            scale = 1.0
-            rotation = .zero
-        }
-
-        let tapGesture = TapGesture()
+        let tapGesture = TapGesture(count: 2)
             .onEnded {
-            tapCount += 1
-            switch tapCount {
-            case 1:
-                handleTap(count: tapCount, content: "I am Monkey")
-            case 2:
-                handleTap(count: tapCount, content: "Monkey is me")
-            default:
-                timer?.invalidate()
-                timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { _ in
-                    if tapCount == tempCount {
-                        tapCount = 0
-                        hideMessage()
-                    }
-                }
-               tempCount = tapCount
-            }
+            handleTap(count: 2, content: "Monkey is me")
         }
+            .exclusively(before: TapGesture(count: 1)
+                .onEnded {
+                handleTap(count: 1, content: "I am Monkey")
+            })
 
-        VStack {
-            Image("monkey")
-                .resizable()
-                .frame(width: 250, height: 250)
-                .mask(Circle())
-                .rotationEffect(rotation)
-                .scaleEffect(scale)
-                .position(x: UIScreen.main.bounds.width / 2, y: 300)
-                .simultaneousGesture(magnificationGesture)
-                .simultaneousGesture(rotationGesture)
-                .simultaneousGesture(longPressGesture)
-                .simultaneousGesture(tapGesture)
-
+        GeometryReader { geo in
             if isShowMessage {
                 ZStack {
                     Image("message")
@@ -127,8 +51,15 @@ struct MyMonkey: View {
                         .font(.system(size: 30))
                         .foregroundColor(.white)
                 }
-                    .position(x: UIScreen.main.bounds.width / 2, y: 130)
+                    .offset(y: 120)
             }
+
+            Image("monkey")
+                .resizable()
+                .frame(width: 250, height: 250)
+                .mask(Circle())
+                .simultaneousGesture(tapGesture)
+                .position(x: geo.size.width / 2, y: geo.size.height / 2)
         }
     }
 }
