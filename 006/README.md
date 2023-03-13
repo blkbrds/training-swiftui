@@ -1,4 +1,4 @@
-# State & Data flow
+# 006 - State & Data flow
 
 Tới được đây thì cũng khá là bầm dập rồi. Tuy nhiên, chúng ta mới gọi là làm quen với **SwiftUI** nhóe. Phần bài tập này sẽ tập trung vào dữ liệu. Chủ đề là **State & Data flow**. Đây cũng được xem là trend mới của các nền tảng lập trình hiện tại. Với khái niệm **The single source of truth** sẽ là xuyên suốt trong cả quá trình học và làm *SwiftUI*. Nên đoạn đường đau khổ sẽ bắt đầu từ đây nhóe.
 
