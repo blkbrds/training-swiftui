@@ -11,7 +11,7 @@ import SwiftUI
 struct BasicLayoutsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BadgeNumberView()
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E129C023850045C4D0 /* BadgeNumberView.swift */; };
 		10D7789029B97A8100F3A8D3 /* BasicLayoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */; };
 		10D7789229B97A8100F3A8D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D7789129B97A8100F3A8D3 /* ContentView.swift */; };
 		10D7789429B97A8400F3A8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D7789329B97A8400F3A8D3 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102538E129C023850045C4D0 /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
 		10D7788C29B97A8100F3A8D3 /* BasicLayouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicLayouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayoutsApp.swift; sourceTree = "<group>"; };
 		10D7789129B97A8100F3A8D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102538E029C0228C0045C4D0 /* BadgeNumber */ = {
+			isa = PBXGroup;
+			children = (
+				102538E129C023850045C4D0 /* BadgeNumberView.swift */,
+			);
+			path = BadgeNumber;
+			sourceTree = "<group>";
+		};
 		10D7788329B97A8100F3A8D3 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		10D7788E29B97A8100F3A8D3 /* BasicLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				102538E029C0228C0045C4D0 /* BadgeNumber */,
 				10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */,
 				10D7789129B97A8100F3A8D3 /* ContentView.swift */,
 				10D7789329B97A8400F3A8D3 /* Assets.xcassets */,
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */,
 				10D7789229B97A8100F3A8D3 /* ContentView.swift in Sources */,
 				10D7789029B97A8100F3A8D3 /* BasicLayoutsApp.swift in Sources */,
 			);
