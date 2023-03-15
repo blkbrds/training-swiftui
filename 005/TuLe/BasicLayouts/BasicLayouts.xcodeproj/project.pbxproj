@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E129C023850045C4D0 /* BadgeNumberView.swift */; };
+		102538E529C174B50045C4D0 /* OneSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E429C174B50045C4D0 /* OneSquareView.swift */; };
+		102538E729C182120045C4D0 /* TwoSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E629C182120045C4D0 /* TwoSquareView.swift */; };
+		102538EB29C182EB0045C4D0 /* ThreeSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538EA29C182EB0045C4D0 /* ThreeSquareView.swift */; };
+		102538ED29C184D20045C4D0 /* SquaresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538EC29C184D20045C4D0 /* SquaresView.swift */; };
 		10D7789029B97A8100F3A8D3 /* BasicLayoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */; };
 		10D7789229B97A8100F3A8D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D7789129B97A8100F3A8D3 /* ContentView.swift */; };
 		10D7789429B97A8400F3A8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D7789329B97A8400F3A8D3 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		102538E129C023850045C4D0 /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
+		102538E429C174B50045C4D0 /* OneSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSquareView.swift; sourceTree = "<group>"; };
+		102538E629C182120045C4D0 /* TwoSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareView.swift; sourceTree = "<group>"; };
+		102538EA29C182EB0045C4D0 /* ThreeSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSquareView.swift; sourceTree = "<group>"; };
+		102538EC29C184D20045C4D0 /* SquaresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresView.swift; sourceTree = "<group>"; };
 		10D7788C29B97A8100F3A8D3 /* BasicLayouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicLayouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayoutsApp.swift; sourceTree = "<group>"; };
 		10D7789129B97A8100F3A8D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,17 @@
 			path = BadgeNumber;
 			sourceTree = "<group>";
 		};
+		102538E329C027980045C4D0 /* JustifySquare */ = {
+			isa = PBXGroup;
+			children = (
+				102538E429C174B50045C4D0 /* OneSquareView.swift */,
+				102538E629C182120045C4D0 /* TwoSquareView.swift */,
+				102538EA29C182EB0045C4D0 /* ThreeSquareView.swift */,
+				102538EC29C184D20045C4D0 /* SquaresView.swift */,
+			);
+			path = JustifySquare;
+			sourceTree = "<group>";
+		};
 		10D7788329B97A8100F3A8D3 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +80,7 @@
 		10D7788E29B97A8100F3A8D3 /* BasicLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				102538E329C027980045C4D0 /* JustifySquare */,
 				102538E029C0228C0045C4D0 /* BadgeNumber */,
 				10D7788F29B97A8100F3A8D3 /* BasicLayoutsApp.swift */,
 				10D7789129B97A8100F3A8D3 /* ContentView.swift */,
@@ -149,7 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */,
+				102538ED29C184D20045C4D0 /* SquaresView.swift in Sources */,
+				102538EB29C182EB0045C4D0 /* ThreeSquareView.swift in Sources */,
+				102538E529C174B50045C4D0 /* OneSquareView.swift in Sources */,
 				10D7789229B97A8100F3A8D3 /* ContentView.swift in Sources */,
+				102538E729C182120045C4D0 /* TwoSquareView.swift in Sources */,
 				10D7789029B97A8100F3A8D3 /* BasicLayoutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
