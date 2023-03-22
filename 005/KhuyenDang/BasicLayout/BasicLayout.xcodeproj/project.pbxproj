@@ -19,6 +19,7 @@
 		8A1B2B0D29CA9D5100CDBF8A /* RighBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2B0C29CA9D5100CDBF8A /* RighBarItem.swift */; };
 		8A1B2B0F29CAA21700CDBF8A /* CenterBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2B0E29CAA21700CDBF8A /* CenterBarItem.swift */; };
 		8A1B2B1129CAA5B100CDBF8A /* MyTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2B1029CAA5B100CDBF8A /* MyTabbarView.swift */; };
+		8A1B2B1329CAFA4A00CDBF8A /* SquareBlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2B1229CAFA4A00CDBF8A /* SquareBlueView.swift */; };
 		8A3E039629BB1B6C009C5437 /* BasicLayoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E039529BB1B6C009C5437 /* BasicLayoutApp.swift */; };
 		8A3E039A29BB1B6D009C5437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E039929BB1B6D009C5437 /* Assets.xcassets */; };
 		8A3E039D29BB1B6D009C5437 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E039C29BB1B6D009C5437 /* Preview Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		8A1B2B0C29CA9D5100CDBF8A /* RighBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RighBarItem.swift; sourceTree = "<group>"; };
 		8A1B2B0E29CAA21700CDBF8A /* CenterBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterBarItem.swift; sourceTree = "<group>"; };
 		8A1B2B1029CAA5B100CDBF8A /* MyTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabbarView.swift; sourceTree = "<group>"; };
+		8A1B2B1229CAFA4A00CDBF8A /* SquareBlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareBlueView.swift; sourceTree = "<group>"; };
 		8A3E039229BB1B6C009C5437 /* BasicLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3E039529BB1B6C009C5437 /* BasicLayoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayoutApp.swift; sourceTree = "<group>"; };
 		8A3E039929BB1B6D009C5437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				8A3E03B329C01AF9009C5437 /* Exercise1.swift */,
 				8A3E03B529C01BCE009C5437 /* Exercise2.swift */,
+				8A1B2B1229CAFA4A00CDBF8A /* SquareBlueView.swift */,
 			);
 			path = AlignTheSquares;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				8A1B2B0D29CA9D5100CDBF8A /* RighBarItem.swift in Sources */,
 				8A1B2AFD29C98F0A00CDBF8A /* MyScrollView.swift in Sources */,
 				8A1B2AFF29C9934400CDBF8A /* MyAvartarView.swift in Sources */,
+				8A1B2B1329CAFA4A00CDBF8A /* SquareBlueView.swift in Sources */,
 				8A1B2B0629C9B12A00CDBF8A /* MyItemView.swift in Sources */,
 				8A1B2B1129CAA5B100CDBF8A /* MyTabbarView.swift in Sources */,
 				8A3E039629BB1B6C009C5437 /* BasicLayoutApp.swift in Sources */,
