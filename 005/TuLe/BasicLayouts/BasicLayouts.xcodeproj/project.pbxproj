@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100BE7A629CC3A6A00428592 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100BE7A529CC3A6A00428592 /* ProfileView.swift */; };
 		102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E129C023850045C4D0 /* BadgeNumberView.swift */; };
 		102538E529C174B50045C4D0 /* OneSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E429C174B50045C4D0 /* OneSquareView.swift */; };
 		102538E729C182120045C4D0 /* TwoSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102538E629C182120045C4D0 /* TwoSquareView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100BE7A529CC3A6A00428592 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		102538E129C023850045C4D0 /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
 		102538E429C174B50045C4D0 /* OneSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSquareView.swift; sourceTree = "<group>"; };
 		102538E629C182120045C4D0 /* TwoSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100BE7A429CC3A4600428592 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				100BE7A529CC3A6A00428592 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		102538E029C0228C0045C4D0 /* BadgeNumber */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		10D7788E29B97A8100F3A8D3 /* BasicLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				100BE7A429CC3A4600428592 /* Profile */,
 				102538F729C870300045C4D0 /* ScrollView */,
 				102538F429C2FD4F0045C4D0 /* StacksView */,
 				102538F129C1A41C0045C4D0 /* LayoutChanges */,
@@ -216,6 +227,7 @@
 				102538F929C870490045C4D0 /* BtScrollView.swift in Sources */,
 				102538E229C023850045C4D0 /* BadgeNumberView.swift in Sources */,
 				102538F329C1A47E0045C4D0 /* Bai4View.swift in Sources */,
+				100BE7A629CC3A6A00428592 /* ProfileView.swift in Sources */,
 				102538ED29C184D20045C4D0 /* SquaresView.swift in Sources */,
 				102538EB29C182EB0045C4D0 /* ThreeSquareView.swift in Sources */,
 				102538F629C2FD610045C4D0 /* StacksView.swift in Sources */,
