@@ -9,19 +9,23 @@ import SwiftUI
 
 struct Exercise2: View {
 
+    var numberOfSquare: Int = 4
+    var widthOfSquare: CGFloat = 70
+    
     var body: some View {
-
-        HStack(spacing: 20) {
-            SquareBlueView()
-            SquareBlueView()
-            SquareBlueView()
+        let spaceForAll = UIScreen.main.bounds.width - (CGFloat(numberOfSquare) * widthOfSquare)
+        let space: CGFloat = spaceForAll / CGFloat((2 + numberOfSquare - 1))
+        HStack(spacing: space) {
+            ForEach(0 ..< numberOfSquare, id: \.self) { _ in
+                SquareBlueView()
+            }
         }
-        .padding([.leading, .trailing], 20)
+        .padding([.leading, .trailing], space)
     }
 }
 
 struct Exercise2_Previews: PreviewProvider {
     static var previews: some View {
-        Exercise2().previewDevice("iPhone SE (3rd generation)")
+        Exercise2().previewDevice("iPhone 8")
     }
 }
