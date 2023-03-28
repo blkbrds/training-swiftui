@@ -9,18 +9,11 @@ import SwiftUI
 
 struct BadgeNumberView: View {
 
-    var topRightPosition: CGPoint = CGPoint(x: 50, y: -25)
-    var topLeftPosition: CGPoint = CGPoint(x: -50, y: -25)
-    var topCenterPosition: CGPoint = CGPoint(x: 0, y: -25)
-    var bottomRightPosition: CGPoint = CGPoint(x: 50, y: 25)
-    var bottomLeftPosition: CGPoint = CGPoint(x: -50, y: 25)
-    var bottomLeftPositionCenterPosition: CGPoint = CGPoint(x: 0, y: 25)
-
     var body: some View {
         VStack(spacing: 30) {
-            ButtonBadgeView(title: "Email", backgroundColor: .blue, badgeTitle: "1", position: topRightPosition)
-            ButtonBadgeView(title: "Friends", backgroundColor: .yellow, badgeTitle: "100", position: topLeftPosition)
-            ButtonBadgeView(title: "Photos", backgroundColor: .purple, badgeTitle: "20", position: topCenterPosition)
+            ButtonBadgeView(title: "Email", backgroundColor: .blue, badgeTitle: "1", alignment: .topTrailing)
+            ButtonBadgeView(title: "Friends", backgroundColor: .yellow, badgeTitle: "100", alignment: .topLeading)
+            ButtonBadgeView(title: "Photos", backgroundColor: .purple, badgeTitle: "20", alignment: .top)
         }
         .padding()
     }
@@ -37,25 +30,39 @@ struct ButtonBadgeView: View {
     var title: String
     var backgroundColor: Color
     var badgeTitle: String
-    var position: CGPoint
+    var alignment: Alignment
     
     var body: some View {
-        Button(title) {
-            print("Button pressed!")
+        ZStack(alignment: alignment) {
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 140, height: 80)
+                .overlay {
+                    Button(title) {
+                        print("Button pressed!")
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .frame(width: 130, height: 60)
+                    .background(backgroundColor)
+                    .clipShape(Capsule())
+                }
+            
+            BadgeView(title: badgeTitle)
         }
-        .padding()
-        .foregroundColor(.white)
-        .frame(width: 130, height: 60)
-        .background(backgroundColor)
-        .clipShape(Capsule())
-        .overlay {
-            Text(badgeTitle)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 3)
-                .background(.red)
-                .clipShape(Capsule())
-                .foregroundColor(.white)
-                .offset(x: position.x, y: position.y)
-        }
+    }
+}
+
+struct BadgeView: View {
+    
+    var title: String
+    
+    var body: some View {
+        Text(title)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 3)
+            .background(.red)
+            .clipShape(Capsule())
+            .foregroundColor(.white)
     }
 }
