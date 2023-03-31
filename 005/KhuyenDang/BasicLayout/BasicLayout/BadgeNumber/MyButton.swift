@@ -65,20 +65,21 @@ struct MyButton: View {
     }
 
     var body: some View {
-        Button(action: { }, label: {
-                Text(typeButton.value().title)
-                    .font(.system(size: 40))
-                    .foregroundColor(.white)
-            })
-            .frame(width: sizeButton.width, height: sizeButton.height)
-            .background(typeButton.value().backgroundColor)
-            .cornerRadius(10)
-            .overlay(
-            ZStack {
+        ZStack {
+            Button(action: { }, label: {
+                    Text(typeButton.value().title)
+                        .font(.system(size: 40))
+                        .foregroundColor(.white)
+                })
+                .frame(width: sizeButton.width, height: sizeButton.height)
+                .background(typeButton.value().backgroundColor)
+                .cornerRadius(10)
+                .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(typeButton.value().borderColor)
-                Mybadge(numberBadge: numberBadge)
-                    .offset(x: badgePosition().x, y: badgePosition().y)
-            })
+            )
+            Mybadge(numberBadge: numberBadge)
+                .offset(x: badgePosition().x, y: badgePosition().y)
+        }
     }
 }
