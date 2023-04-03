@@ -12,26 +12,23 @@ struct PhotoView: View {
 
     var body: some View {
         let width = (UIScreen.main.bounds.width - 10 * 2) / 3
-        ScrollView(showsIndicators: false) {
-            VStack {
-                ForEach(0..<4) { i in
-                    HStack(spacing: 10) {
-                        Image(images[i * 3])
-                            .resizable()
-                            .frame(width: width, height: width)
-                            .scaledToFill()
-                        Image(images[i * 3 + 1])
-                            .resizable()
-                            .frame(width: width, height: width)
-                            .scaledToFill()
-                        Image(images[i * 3 + 2])
-                            .resizable()
-                            .frame(width: width, height: width)
-                            .scaledToFill()
-                    }
+        VStack {
+            ForEach(0..<4) { i in
+                HStack(spacing: 10) {
+                    Image(images[i * 3])
+                        .resizable()
+                        .frame(width: width, height: width)
+                        .scaledToFill()
+                    Image(images[i * 3 + 1])
+                        .resizable()
+                        .frame(width: width, height: width)
+                        .scaledToFill()
+                    Image(images[i * 3 + 2])
+                        .resizable()
+                        .frame(width: width, height: width)
+                        .scaledToFill()
                 }
             }
         }
-        .padding([.leading, .trailing], 10)
     }
 }

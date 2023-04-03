@@ -45,7 +45,7 @@ struct ProfileScreenView: View {
                     MyInfoView(name: "Posts", value: "115")
                 }
                     .padding(.bottom, 20)
-                MyTabInfoView()
+                Tabs()
             }
         }
             .ignoresSafeArea()
