@@ -72,7 +72,7 @@ struct LoginView: View {
                 let isLogin = try await model.loadData(value: User(email: email, password: password))
                 isShowIndicator = false
                 if isLogin {
-                    appRouter.state = .home
+                    appRouter.state = .home(data: User(email: email, password: password))
                 } else {
                     isShowAlert = true
                 }

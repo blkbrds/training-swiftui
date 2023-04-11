@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct HomeView: View {
+
+    @State var data: User
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack(spacing: 20) {
+                Text(data.email)
+                Text(data.password)
+                NavigationLink {
+                    EditView(dataBinding: $data, data: data)
+                } label: {
+                    Text("Edit")
+                        .padding(.horizontal, 25)
+                        .padding(.vertical, 10)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .navigationTitle("HomeScreen")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(data: User(email: "123", password: "456"))
     }
 }

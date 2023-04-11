@@ -15,8 +15,8 @@ struct StateAndDataFlowApp: App {
     @ViewBuilder
     var rootView: some View {
         switch appRouter.state {
-        case .home:
-            HomeView()
+        case .home(let data):
+            HomeView(data: data)
         case .login:
             LoginView()
         }
@@ -35,6 +35,6 @@ class AppRouter: ObservableObject {
 }
 
 enum AppState {
-    case home
+    case home(data: User)
     case login
 }
