@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103CC2AE29E410A000B3F2EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CC2AD29E410A000B3F2EC /* DataManager.swift */; };
+		103CC2B029E478D900B3F2EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CC2AF29E478D900B3F2EC /* HomeView.swift */; };
+		104643B029D57172004737AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104643AF29D57172004737AD /* LoginView.swift */; };
 		10FA925A29D06D3800B88929 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FA925929D06D3800B88929 /* StateAndDataFlowApp.swift */; };
 		10FA925C29D06D3800B88929 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FA925B29D06D3800B88929 /* ContentView.swift */; };
 		10FA925E29D06D3B00B88929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FA925D29D06D3B00B88929 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103CC2AD29E410A000B3F2EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		103CC2AF29E478D900B3F2EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		104643AF29D57172004737AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		10FA925629D06D3800B88929 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FA925929D06D3800B88929 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		10FA925B29D06D3800B88929 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104643AE29D57134004737AD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				104643AF29D57172004737AD /* LoginView.swift */,
+				103CC2AD29E410A000B3F2EC /* DataManager.swift */,
+				103CC2AF29E478D900B3F2EC /* HomeView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		10FA924D29D06D3800B88929 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +67,7 @@
 		10FA925829D06D3800B88929 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				104643AE29D57134004737AD /* Login */,
 				10FA925929D06D3800B88929 /* StateAndDataFlowApp.swift */,
 				10FA925B29D06D3800B88929 /* ContentView.swift */,
 				10FA925D29D06D3B00B88929 /* Assets.xcassets */,
@@ -137,7 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104643B029D57172004737AD /* LoginView.swift in Sources */,
+				103CC2AE29E410A000B3F2EC /* DataManager.swift in Sources */,
 				10FA925C29D06D3800B88929 /* ContentView.swift in Sources */,
+				103CC2B029E478D900B3F2EC /* HomeView.swift in Sources */,
 				10FA925A29D06D3800B88929 /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

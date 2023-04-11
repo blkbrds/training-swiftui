@@ -9,9 +9,32 @@ import SwiftUI
 
 @main
 struct StateAndDataFlowApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    
+    @StateObject var appRouter = AppRouter()
+    
+    @ViewBuilder
+    var rootView: some View {
+        switch appRouter.state {
+        case .home:
+            HomeView()
+        case .login:
+            LoginView()
         }
     }
+    
+    var body: some Scene {
+        WindowGroup {
+            rootView
+                .environmentObject(appRouter)
+        }
+    }
+}
+
+class AppRouter: ObservableObject {
+    @Published var state: AppState = .login
+}
+
+enum AppState {
+    case home
+    case login
 }
