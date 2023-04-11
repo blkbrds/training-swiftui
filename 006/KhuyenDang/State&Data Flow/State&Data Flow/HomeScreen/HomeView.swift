@@ -8,13 +8,51 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @State var account: Account
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+    fileprivate func MyText(value: String) -> Text {
+        return Text(value)
+            .font(.system(size: 20))
+    }
+
+    var body: some View {
+        NavigationView {
+            VStack {
+
+                Image("avatar")
+                    .resizable()
+                    .scaledToFit()
+                    .mask(Circle())
+                    .frame(width: 150)
+                    .padding(.top, 100)
+                    .padding(.bottom, 50)
+                    .background(.white)
+
+                HStack(spacing: 20) {
+                    VStack(alignment: .leading) {
+                        MyText(value: "Fullname:")
+                        MyText(value: "Age:")
+                        MyText(value: "Address:")
+                    }
+                    VStack(alignment: .leading) {
+                        MyText(value: account.fullname)
+                        MyText(value: "\(account.age)")
+                        MyText(value: account.address)
+                    }
+                }
+                Spacer()
+            }
+                .toolbar {
+                NavigationLink(destination: EditView(fullname: $account.fullname, address: $account.address, age: $account.age)) {
+                    Text("Edit")
+                }
+            }
+                .background(
+                Image("bear")
+                    .resizable()
+                    .scaledToFill()
+            )
+                .ignoresSafeArea()
+        }
     }
 }

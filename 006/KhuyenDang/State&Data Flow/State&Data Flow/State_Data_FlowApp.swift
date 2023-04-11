@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct State_Data_FlowApp: App {
+
+    @StateObject var appRouter = AppRouter()
+
     var body: some Scene {
         WindowGroup {
+            rootView
+                .environmentObject(appRouter)
+        }
+    }
+
+    @ViewBuilder
+    var rootView: some View {
+        switch appRouter.state {
+        case .login:
             LoginView()
+        case .home(let account):
+            HomeView(account: account)
         }
     }
 }

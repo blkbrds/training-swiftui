@@ -8,22 +8,30 @@
 import SwiftUI
 
 final class LoginModel: ObservableObject {
-    
+
     @Published var isLoading: Bool = false
-    
+    @Published var account: Account?
+
     func isValidAccount(username: String, password: String) async -> Bool {
         DispatchQueue.main.async {
             self.isLoading = true
         }
-        
-        let isValidate = DataManager().accounts.contains { $0.0 == username && $0.1 == password }
+
         do {
-            try await Task.sleep(nanoseconds: 3 * 1000000000)
+            for account in DataManager().accounts {
+                if account.username == username && account.password == password {
+                    DispatchQueue.main.async {
+                        self.account = account
+                    }
+                    break
+                }
+            }
+            try await Task.sleep(nanoseconds: 2 * 1000000000)
         } catch { }
-        
+
         DispatchQueue.main.async {
             self.isLoading = false
         }
-        return isValidate
+        return account != nil
     }
 }

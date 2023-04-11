@@ -15,7 +15,6 @@ struct MyButtonModifier: ViewModifier {
         content
             .font(.system(size: 24))
             .foregroundColor(.white)
-            .padding(.all)
             .background(isEnabled ? Color("bearColor") : Color(red: 0.624, green: 0.475, blue: 0.347, opacity: 0.523))
             .cornerRadius(30)
             .shadow(radius: 5)

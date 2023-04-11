@@ -27,17 +27,13 @@ fileprivate func otherInformation(infor: String, action: String) -> HStack<Tuple
     }
 }
 
-enum Login {
-    case success
-    case fail
-}
-
 struct LoginView: View {
 
-    @StateObject var model = LoginModel()
+    @EnvironmentObject var appRouter: AppRouter
+    @ObservedObject var model = LoginModel()
     @State var username: String = ""
     @State var password: String = ""
-    @State var isLogin: Login?
+    @State var isLoginFail: Bool = false
     @State var isLoading: Bool = true
 
     var body: some View {
@@ -67,33 +63,24 @@ struct LoginView: View {
                         Button(action: {
                             Task {
                                 if await model.isValidAccount(username: username, password: password) {
-                                    isLogin = .success
+                                    guard let account = model.account else { return }
+                                    appRouter.state = .home(account: account)
                                 } else {
-                                    isLogin = .fail
+                                    isLoginFail = true
                                 }
                             }
                         }
                             , label: {
                                 Text("LOGIN")
+                                .padding(.all)
+                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
                             })
-                            .frame(width: UIScreen.main.bounds.width / 2 - 60)
+                            
                             .myButtonModifier()
                             .padding(.top)
                             .disabled(username.isEmpty || password.isEmpty)
-                            .alert(isPresented: Binding<Bool>(
-                            get: { self.isLogin == .fail },
-                            set: { _ in
-                                self.isLogin = .none
-                            }
-                            )) {
+                            .alert(isPresented: $isLoginFail) {
                             Alert(title: Text("Login Failed"), message: Text("Invalid username or password"))
-                        }
-                            .navigationDestination(isPresented: Binding<Bool>(
-                            get: { self.isLogin == .success },
-                            set: { _ in }
-                            )) {
-                            HomeView()
-                                    .navigationBarBackButtonHidden(true)
                         }
 
                         Button(action: {
@@ -102,11 +89,11 @@ struct LoginView: View {
                         }
                             , label: {
                                 Text("Cancel")
+                                .padding(.all)
+                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
                             })
-                            .frame(width: UIScreen.main.bounds.width / 2 - 60)
                             .font(.system(size: 24))
                             .foregroundColor(Color("bearColor"))
-                            .padding(.all)
                             .cornerRadius(30)
                             .overlay(
                             RoundedRectangle(cornerRadius: 30)
@@ -125,17 +112,16 @@ struct LoginView: View {
                 }
             }
         }
-        .disabled(model.isLoading)
-        .onTapGesture {
+            .disabled(model.isLoading)
+            .onTapGesture {
             self.endEditing()
         }
     }
-    
-    private func endEditing() {
-           UIApplication.shared.endEditing()
-       }
-}
 
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
+}
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {

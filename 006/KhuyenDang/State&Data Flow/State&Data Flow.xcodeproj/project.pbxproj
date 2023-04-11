@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A04FA8429E3A53000617EA5 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A04FA8329E3A53000617EA5 /* AppRouter.swift */; };
+		8A5B290629E4149A008FDEC5 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B290529E4149A008FDEC5 /* EditView.swift */; };
 		8AB6048129DAC3DC000B52F1 /* State_Data_FlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6048029DAC3DC000B52F1 /* State_Data_FlowApp.swift */; };
 		8AB6048329DAC3DC000B52F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6048229DAC3DC000B52F1 /* ContentView.swift */; };
 		8AB6048529DAC3DE000B52F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6048429DAC3DE000B52F1 /* Assets.xcassets */; };
@@ -15,13 +17,14 @@
 		8AB6049329DACF63000B52F1 /* MyTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049229DACF63000B52F1 /* MyTextFieldModifier.swift */; };
 		8AB6049529DACF7F000B52F1 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049429DACF7F000B52F1 /* TextFieldView.swift */; };
 		8AB6049729DACFBE000B52F1 /* MyButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049629DACFBE000B52F1 /* MyButtonModifier.swift */; };
-		8AB6049929DACFD9000B52F1 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049829DACFD9000B52F1 /* ButtonView.swift */; };
 		8AB6049B29DAD4BB000B52F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049A29DAD4BB000B52F1 /* DataManager.swift */; };
 		8AB604A029DBC5A4000B52F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049F29DBC5A4000B52F1 /* HomeView.swift */; };
 		8AB604A629DC07E5000B52F1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB604A529DC07E5000B52F1 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A04FA8329E3A53000617EA5 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		8A5B290529E4149A008FDEC5 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		8AB6047D29DAC3DC000B52F1 /* State&Data Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "State&Data Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB6048029DAC3DC000B52F1 /* State_Data_FlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State_Data_FlowApp.swift; sourceTree = "<group>"; };
 		8AB6048229DAC3DC000B52F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,7 +34,6 @@
 		8AB6049229DACF63000B52F1 /* MyTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldModifier.swift; sourceTree = "<group>"; };
 		8AB6049429DACF7F000B52F1 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		8AB6049629DACFBE000B52F1 /* MyButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonModifier.swift; sourceTree = "<group>"; };
-		8AB6049829DACFD9000B52F1 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		8AB6049A29DAD4BB000B52F1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8AB6049F29DBC5A4000B52F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8AB604A529DC07E5000B52F1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A5B290429E4147E008FDEC5 /* EditScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B290529E4149A008FDEC5 /* EditView.swift */,
+			);
+			path = EditScreen;
+			sourceTree = "<group>";
+		};
 		8AB6047429DAC3DC000B52F1 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		8AB6047F29DAC3DC000B52F1 /* State&Data Flow */ = {
 			isa = PBXGroup;
 			children = (
+				8A5B290429E4147E008FDEC5 /* EditScreen */,
 				8AB6049E29DBC58F000B52F1 /* HomeScreen */,
 				8AB6049129DACF35000B52F1 /* Modifier */,
 				8AB6048E29DACE77000B52F1 /* LoginScreen */,
@@ -75,6 +86,7 @@
 				8AB6048429DAC3DE000B52F1 /* Assets.xcassets */,
 				8AB6048629DAC3DE000B52F1 /* Preview Content */,
 				8AB6049A29DAD4BB000B52F1 /* DataManager.swift */,
+				8A04FA8329E3A53000617EA5 /* AppRouter.swift */,
 			);
 			path = "State&Data Flow";
 			sourceTree = "<group>";
@@ -102,7 +114,6 @@
 				8AB6049229DACF63000B52F1 /* MyTextFieldModifier.swift */,
 				8AB6049429DACF7F000B52F1 /* TextFieldView.swift */,
 				8AB6049629DACFBE000B52F1 /* MyButtonModifier.swift */,
-				8AB6049829DACFD9000B52F1 /* ButtonView.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -191,10 +202,11 @@
 				8AB6048329DAC3DC000B52F1 /* ContentView.swift in Sources */,
 				8AB6049529DACF7F000B52F1 /* TextFieldView.swift in Sources */,
 				8AB604A629DC07E5000B52F1 /* LoginModel.swift in Sources */,
+				8A5B290629E4149A008FDEC5 /* EditView.swift in Sources */,
 				8AB6049029DACE96000B52F1 /* LoginView.swift in Sources */,
+				8A04FA8429E3A53000617EA5 /* AppRouter.swift in Sources */,
 				8AB6049329DACF63000B52F1 /* MyTextFieldModifier.swift in Sources */,
 				8AB6048129DAC3DC000B52F1 /* State_Data_FlowApp.swift in Sources */,
-				8AB6049929DACFD9000B52F1 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"State&Data Flow/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -351,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"State&Data Flow/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
