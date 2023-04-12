@@ -10,15 +10,21 @@ import SwiftUI
 @main
 struct StateAndDataFlowApp: App {
     
-    @StateObject var appRouter = AppRouter()
+    @StateObject var appRouter = StorageData()
     
     @ViewBuilder
     var rootView: some View {
-        switch appRouter.state {
-        case .home(let data):
-            HomeView(data: data)
+        switch appRouter.appState {
+        case .home:
+            let decoder = JSONDecoder()
+            if let data = appRouter.dataLogin.data(using: .utf8),
+               let user = try? decoder.decode(User.self, from: data) {
+                HomeView(data: user)
+            }
         case .login:
             LoginView()
+        case .tutorial:
+            TutorialView()
         }
     }
     
@@ -30,11 +36,13 @@ struct StateAndDataFlowApp: App {
     }
 }
 
-class AppRouter: ObservableObject {
-    @Published var state: AppState = .login
+class StorageData: ObservableObject {
+    @AppStorage("appState") var appState: AppState = .tutorial
+    @AppStorage("loginUser") var dataLogin: String = ""
 }
 
-enum AppState {
-    case home(data: User)
+enum AppState: String, Codable, CaseIterable {
+    case home
     case login
+    case tutorial
 }

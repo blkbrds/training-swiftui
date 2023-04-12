@@ -30,7 +30,7 @@ class DataManager: ObservableObject {
     }
 }
 
-struct User {
+struct User: Codable {
     var email: String
     var password: String
     

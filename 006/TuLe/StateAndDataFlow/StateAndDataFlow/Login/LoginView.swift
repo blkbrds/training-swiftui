@@ -13,7 +13,7 @@ struct LoginView: View {
     @State var password: String = ""
     @State var isShowIndicator: Bool = false
     @State var isShowAlert: Bool = false
-    @EnvironmentObject var appRouter: AppRouter
+    @EnvironmentObject var appRouter: StorageData
     var model = DataManager()
 
     var body: some View {
@@ -72,7 +72,12 @@ struct LoginView: View {
                 let isLogin = try await model.loadData(value: User(email: email, password: password))
                 isShowIndicator = false
                 if isLogin {
-                    appRouter.state = .home(data: User(email: email, password: password))
+                    let user = User(email: email, password: password)
+                    let encoder = JSONEncoder()
+                    if let encoded = try? encoder.encode(user) {
+                        appRouter.dataLogin = String(data: encoded, encoding: .utf8)!
+                    }
+                    appRouter.appState = .home
                 } else {
                     isShowAlert = true
                 }

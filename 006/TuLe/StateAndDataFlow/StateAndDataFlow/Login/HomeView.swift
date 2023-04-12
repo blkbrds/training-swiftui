@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
 
     @State var data: User
+    @EnvironmentObject var appRouter: StorageData
 
     var body: some View {
         NavigationStack {
@@ -26,6 +27,18 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                Button {
+                    appRouter.dataLogin = ""
+                    appRouter.appState = .login
+                } label: {
+                    Text("Log out")
+                        .padding(.horizontal, 25)
+                        .padding(.vertical, 10)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+
             }
             .navigationTitle("HomeScreen")
             .navigationBarTitleDisplayMode(.inline)
