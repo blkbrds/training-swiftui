@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var account: Account
+    
+    @EnvironmentObject var appRouter: AppRouter
+    @EnvironmentObject var account: Account
 
     fileprivate func MyText(value: String) -> Text {
         return Text(value)
@@ -35,15 +37,32 @@ struct HomeView: View {
                         MyText(value: "Address:")
                     }
                     VStack(alignment: .leading) {
-                        MyText(value: account.fullname)
-                        MyText(value: "\(account.age)")
-                        MyText(value: account.address)
+                            if let account = account {
+                                MyText(value: account.fullname ?? "")
+                                MyText(value: "\(account.age ?? 0)")
+                                MyText(value: account.address ?? "")
+                        }
                     }
                 }
+                
+                Button(action: {
+                    resetUser()
+                    appRouter.state = .login
+                }
+                       , label: {
+                    HStack {
+                        Text("Logout")
+                            .foregroundColor(Color("primaryColor"))
+                            .font(.system(size: 20))
+                        Image("logout")
+                            .resizable()
+                            .frame(width: 40, height: 35)
+                    }
+                })
                 Spacer()
             }
                 .toolbar {
-                NavigationLink(destination: EditView(fullname: $account.fullname, address: $account.address, age: $account.age)) {
+                NavigationLink(destination: EditView()) {
                     Text("Edit")
                 }
             }
@@ -54,5 +73,13 @@ struct HomeView: View {
             )
                 .ignoresSafeArea()
         }
+    }
+    
+    private func resetUser () {
+        account.username = nil
+        account.fullname = nil
+        account.password = nil
+        account.age = nil
+        account.address = nil
     }
 }

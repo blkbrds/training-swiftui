@@ -31,6 +31,7 @@ struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @ObservedObject var model = LoginModel()
+    @EnvironmentObject var account: Account
     @State var username: String = ""
     @State var password: String = ""
     @State var isLoginFail: Bool = false
@@ -64,7 +65,12 @@ struct LoginView: View {
                             Task {
                                 if await model.isValidAccount(username: username, password: password) {
                                     guard let account = model.account else { return }
-                                    appRouter.state = .home(account: account)
+                                    self.account.username = account.username
+                                    self.account.fullname = account.fullname
+                                    self.account.password = account.password
+                                    self.account.age = account.age
+                                    self.account.address = account.address
+                                    appRouter.state = .home
                                 } else {
                                     isLoginFail = true
                                 }
@@ -72,10 +78,10 @@ struct LoginView: View {
                         }
                             , label: {
                                 Text("LOGIN")
-                                .padding(.all)
-                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
+                                    .padding(.all)
+                                    .frame(width: UIScreen.main.bounds.width / 2 - 30)
                             })
-                            
+
                             .myButtonModifier()
                             .padding(.top)
                             .disabled(username.isEmpty || password.isEmpty)
@@ -89,8 +95,8 @@ struct LoginView: View {
                         }
                             , label: {
                                 Text("Cancel")
-                                .padding(.all)
-                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
+                                    .padding(.all)
+                                    .frame(width: UIScreen.main.bounds.width / 2 - 30)
                             })
                             .font(.system(size: 24))
                             .foregroundColor(Color("bearColor"))

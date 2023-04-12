@@ -8,12 +8,21 @@
 import Foundation
 import SwiftUI
 
-struct Account {
-    var username: String
-    var password: String
-    var fullname: String
-    var age: Int
-    var address: String
+class Account: ObservableObject {
+
+    @Published var username: String?
+    @Published var password: String?
+    @Published var fullname: String?
+    @Published var age: Int?
+    @Published var address: String?
+
+    init(username: String? = nil, password: String? = nil, fullname: String? = nil, age: Int? = nil, address: String? = nil) {
+        self.username = username
+        self.password = password
+        self.fullname = fullname
+        self.age = age
+        self.address = address
+    }
 }
 
 class DataManager {

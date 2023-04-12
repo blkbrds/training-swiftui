@@ -9,23 +9,22 @@ import SwiftUI
 
 struct EditView: View {
 
-    @Binding var fullname: String
-    @Binding var address: String
-    @Binding var age: Int
     @State var previousFullname: String = ""
     @State var previousAddress: String = ""
     @State var previousAge: Int = 0
+    @EnvironmentObject var account: Account
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
-            MyEditView(type: "FullName", name: $fullname)
-            MyEditViewNumber(type: "Age", value: $age)
-            MyEditView(type: "Address", name: $address)
+
+            MyEditView(type: "FullName", name: $account.fullname.toUnwrapped(defaultValue: ""))
+            MyEditViewNumber(type: "Age", value: $account.age.toUnwrapped(defaultValue: 0))
+            MyEditView(type: "Address", name: $account.address.toUnwrapped(defaultValue: ""))
 
             Button(action: {
-                fullname = previousFullname
-                address = previousAddress
-                age = previousAge
+                account.fullname = previousFullname
+                account.address = previousAddress
+                account.age = previousAge
             }
                 , label: {
                     Text("Cancel")
@@ -46,9 +45,9 @@ struct EditView: View {
             .padding(.top, 100)
             .padding([.leading, .trailing], 25)
             .onAppear {
-            previousFullname = fullname
-            previousAddress = address
-            previousAge = age
+            previousFullname = account.fullname ?? ""
+            previousAddress = account.address ?? ""
+            previousAge = account.age ?? 0
         }
     }
 }
@@ -90,7 +89,8 @@ struct MyEditViewNumber: View {
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(.brown)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            TextField(type, value: $value, formatter: NumberFormatter())
+
+            TextField("\(value)", value: $value, formatter: NumberFormatter())
                 .autocorrectionDisabled(true)
                 .textInputAutocapitalization(.never)
                 .font(.system(size: 20))
@@ -105,4 +105,8 @@ struct MyEditViewNumber: View {
     }
 }
 
-
+extension Binding {
+    func toUnwrapped<T>(defaultValue: T) -> Binding<T> where Value == Optional<T> {
+        Binding<T>(get: { self.wrappedValue ?? defaultValue }, set: { self.wrappedValue = $0 })
+    }
+}
