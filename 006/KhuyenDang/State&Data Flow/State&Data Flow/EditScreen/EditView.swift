@@ -32,11 +32,11 @@ struct EditView: View {
                         .frame(width: UIScreen.main.bounds.width - 100)
                 })
                 .font(.system(size: 24))
-                .foregroundColor(Color("bearColor"))
+                .foregroundColor(Color("primaryColor"))
                 .cornerRadius(20)
                 .overlay(
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(red: 0.683, green: 0.597, blue: 0.501), lineWidth: 1)
+                    .stroke(Color("primaryColor50%"), lineWidth: 1)
             )
                 .padding(.top, 50)
             Spacer()
@@ -61,7 +61,7 @@ struct MyEditView: View {
         VStack(alignment: .leading) {
             Text(type)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.brown)
+                .foregroundColor(Color("primaryColor50%"))
                 .frame(maxWidth: .infinity, alignment: .leading)
             TextField(name, text: $name)
                 .autocorrectionDisabled(true)
@@ -70,7 +70,7 @@ struct MyEditView: View {
                 .overlay(
                 Rectangle()
                     .frame(height: 2)
-                    .foregroundColor(.brown)
+                    .foregroundColor(Color("primaryColor50%"))
                     .offset(y: 15)
             )
                 .padding(.top, -8)
@@ -87,7 +87,7 @@ struct MyEditViewNumber: View {
         VStack(alignment: .leading) {
             Text(type)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.brown)
+                .foregroundColor(Color("primaryColor50%"))
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             TextField("\(value)", value: $value, formatter: NumberFormatter())
@@ -97,7 +97,7 @@ struct MyEditViewNumber: View {
                 .overlay(
                 Rectangle()
                     .frame(height: 2)
-                    .foregroundColor(.brown)
+                    .foregroundColor(Color("primaryColor50%"))
                     .offset(y: 15)
             )
                 .padding(.top, -8)

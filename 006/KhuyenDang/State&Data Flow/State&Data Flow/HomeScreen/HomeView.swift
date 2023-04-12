@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     @EnvironmentObject var appRouter: AppRouter
     @EnvironmentObject var account: Account
 
@@ -26,7 +26,7 @@ struct HomeView: View {
                     .scaledToFit()
                     .mask(Circle())
                     .frame(width: 150)
-                    .padding(.top, 100)
+                    .padding(.top, 130)
                     .padding(.bottom, 50)
                     .background(.white)
 
@@ -37,28 +37,30 @@ struct HomeView: View {
                         MyText(value: "Address:")
                     }
                     VStack(alignment: .leading) {
-                            if let account = account {
-                                MyText(value: account.fullname ?? "")
-                                MyText(value: "\(account.age ?? 0)")
-                                MyText(value: account.address ?? "")
+                        if let account = account {
+                            MyText(value: account.fullname ?? "")
+                            MyText(value: "\(account.age ?? 0)")
+                            MyText(value: account.address ?? "")
                         }
                     }
                 }
-                
+
                 Button(action: {
                     resetUser()
                     appRouter.state = .login
                 }
-                       , label: {
-                    HStack {
-                        Text("Logout")
-                            .foregroundColor(Color("primaryColor"))
-                            .font(.system(size: 20))
-                        Image("logout")
-                            .resizable()
-                            .frame(width: 40, height: 35)
-                    }
-                })
+                    , label: {
+                        HStack {
+                            Text("Logout")
+                                .foregroundColor(Color("primaryColor"))
+                                .font(.system(size: 20))
+                            Image("logout")
+                                .resizable()
+                                .frame(width: 40, height: 35)
+                        }
+                    })
+                    .padding(.top, 30)
+
                 Spacer()
             }
                 .toolbar {
@@ -67,14 +69,18 @@ struct HomeView: View {
                 }
             }
                 .background(
-                Image("bear")
-                    .resizable()
-                    .scaledToFill()
+                VStack {
+                    Spacer()
+                    Image("cherry_blossom")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 3)
+                }
             )
                 .ignoresSafeArea()
         }
     }
-    
+
     private func resetUser () {
         account.username = nil
         account.fullname = nil

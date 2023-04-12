@@ -19,7 +19,7 @@ struct MyTextFieldModifier: ViewModifier {
             .padding(.all, 15.0)
             .padding(.leading, 30)
             .font(.system(size: 23))
-            .background(Color(red: 0.952, green: 0.942, blue: 0.938))
+            .background(Color(red: 0.952, green: 0.942, blue: 0.938, opacity: 0.3))
             .cornerRadius(30)
             .overlay(
             HStack {
@@ -31,7 +31,7 @@ struct MyTextFieldModifier: ViewModifier {
         )
             .overlay(
             RoundedRectangle(cornerRadius: 30)
-                .stroke(Color(red: 0.683, green: 0.597, blue: 0.501), lineWidth: 1)
+                .stroke(Color("primaryColor"), lineWidth: 1)
         )
             .padding([.leading, .trailing, .top])
     }

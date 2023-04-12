@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-func nameBear() -> HStack<TupleView<(Text, Text)>> {
+func green() -> HStack<TupleView<(Text, Text)>> {
     return HStack {
-        Text("bear")
+        Text("green")
             .font(.system(size: 65, weight: .bold))
-            .foregroundColor(Color("bearColor"))
+            .foregroundColor(Color("primaryColor"))
         Text(".")
             .font(.system(size: 62, weight: .bold))
     }
@@ -42,12 +42,13 @@ struct LoginView: View {
         NavigationStack {
             ZStack {
                 VStack {
-                    nameBear()
+                    green()
 
-                    Text("Log in on bear :)")
+                    Text("Log in on green :)")
                         .font(.system(size: 30, weight: .light))
 
-                    Image("bear_login")
+                    Image("tree")
+                        .resizable()
                         .padding(.top)
                         .padding(.bottom)
 
@@ -99,11 +100,11 @@ struct LoginView: View {
                                     .frame(width: UIScreen.main.bounds.width / 2 - 30)
                             })
                             .font(.system(size: 24))
-                            .foregroundColor(Color("bearColor"))
+                            .foregroundColor(Color("primaryColor"))
                             .cornerRadius(30)
                             .overlay(
                             RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color(red: 0.683, green: 0.597, blue: 0.501), lineWidth: 1)
+                                .stroke(Color("primaryColor"), lineWidth: 1)
                         )
                             .padding(.top)
                     }
