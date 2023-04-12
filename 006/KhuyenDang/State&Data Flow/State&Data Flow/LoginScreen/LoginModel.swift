@@ -13,10 +13,6 @@ final class LoginModel: ObservableObject {
     @Published var account: Account?
 
     func isValidAccount(username: String, password: String) async -> Bool {
-        DispatchQueue.main.async {
-            self.isLoading = true
-        }
-
         do {
             for account in DataManager().accounts {
                 if account.username == username && account.password == password {
@@ -28,10 +24,6 @@ final class LoginModel: ObservableObject {
             }
             try await Task.sleep(nanoseconds: 2 * 1000000000)
         } catch { }
-
-        DispatchQueue.main.async {
-            self.isLoading = false
-        }
         return account != nil
     }
 }

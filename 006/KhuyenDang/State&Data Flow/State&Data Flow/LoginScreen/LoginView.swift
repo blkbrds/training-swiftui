@@ -35,7 +35,7 @@ struct LoginView: View {
     @State var username: String = ""
     @State var password: String = ""
     @State var isLoginFail: Bool = false
-    @State var isLoading: Bool = true
+    @State var isLoading: Bool = false
 
     var body: some View {
 
@@ -64,6 +64,7 @@ struct LoginView: View {
                     HStack {
                         Button(action: {
                             Task {
+                                isLoading = true
                                 if await model.isValidAccount(username: username, password: password) {
                                     guard let account = model.account else { return }
                                     self.account.username = account.username
@@ -71,6 +72,7 @@ struct LoginView: View {
                                     self.account.password = account.password
                                     self.account.age = account.age
                                     self.account.address = account.address
+                                    isLoading = false
                                     appRouter.state = .home
                                 } else {
                                     isLoginFail = true
@@ -112,14 +114,14 @@ struct LoginView: View {
                     otherInformation(infor: "Didn't have an account?", action: "Sign Up")
                 }
 
-                if model.isLoading {
+                if isLoading {
                     ProgressView()
-                        .scaleEffect(2.0)
-                        .tint(.brown)
+                        .scaleEffect(3.0)
+                        .tint(Color("primaryColor"))
                 }
             }
         }
-            .disabled(model.isLoading)
+            .disabled(isLoading)
             .onTapGesture {
             self.endEditing()
         }
