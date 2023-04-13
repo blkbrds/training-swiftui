@@ -72,11 +72,11 @@ struct LoginView: View {
                                     self.account.password = account.password
                                     self.account.age = account.age
                                     self.account.address = account.address
-                                    isLoading = false
                                     appRouter.state = .home
                                 } else {
                                     isLoginFail = true
                                 }
+                                isLoading = false
                             }
                         }
                             , label: {
