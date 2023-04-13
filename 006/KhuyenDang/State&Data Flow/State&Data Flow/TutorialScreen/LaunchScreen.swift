@@ -11,9 +11,11 @@ struct LaunchScreen: View {
 
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @EnvironmentObject var appRouter: AppRouter
+    @EnvironmentObject var account: Account
     @State var isShowMainView: Bool = false
     @State var size = 0.7
     @State var opacity = 0.5
+    var localStorage = LocalStorage()
 
     var body: some View {
         ZStack {
@@ -35,10 +37,15 @@ struct LaunchScreen: View {
             }
         }
             .onChange(of: isShowMainView) { newValue in
-            if isFirstLaunch, newValue {
+            if isFirstLaunch {
                 appRouter.state = .tutorial
             } else {
-                appRouter.state = .login
+                if localStorage.fullname.isEmpty {
+                    appRouter.state = .login
+                } else {
+                    account.setUser(fullname: localStorage.fullname, age: localStorage.age, address: localStorage.address)
+                    appRouter.state = .home
+                }
             }
         }
     }

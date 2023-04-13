@@ -13,21 +13,28 @@ struct EditView: View {
     @State var previousAddress: String = ""
     @State var previousAge: Int = 0
     @EnvironmentObject var account: Account
+    private var localStorage = LocalStorage()
+    @Environment(\.presentationMode) var presentationMode
+    @State var isShowAlert: Bool = false
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
 
-            MyEditView(type: "FullName", name: $account.fullname.toUnwrapped(defaultValue: ""))
-            MyEditViewNumber(type: "Age", value: $account.age.toUnwrapped(defaultValue: 0))
-            MyEditView(type: "Address", name: $account.address.toUnwrapped(defaultValue: ""))
+            MyEditView(type: "FullName", name: $previousFullname)
+            MyEditViewNumber(type: "Age", value: $previousAge)
+            MyEditView(type: "Address", name: $previousAddress)
 
             Button(action: {
-                account.fullname = previousFullname
-                account.address = previousAddress
-                account.age = previousAge
+                if isValidateEdit() {
+                    account.setUser(fullname: previousFullname, age: previousAge, address: previousAddress)
+                    localStorage.setUser(fullname: previousFullname, age: previousAge, address: previousAddress)
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    isShowAlert = true
+                }
             }
                 , label: {
-                    Text("Cancel")
+                    Text("Done")
                         .padding([.top, .bottom], 10)
                         .frame(width: UIScreen.main.bounds.width - 100)
                 })
@@ -39,6 +46,9 @@ struct EditView: View {
                     .stroke(Color("primaryColor50%"), lineWidth: 1)
             )
                 .padding(.top, 50)
+                .alert(isPresented: $isShowAlert) {
+                    Alert(title: Text("Edit Failed"), message: Text("Your infomation is invalid"))
+                }
             Spacer()
         }
             .navigationTitle("Edit your profile")
@@ -49,6 +59,10 @@ struct EditView: View {
             previousAddress = account.address ?? ""
             previousAge = account.age ?? 0
         }
+    }
+    
+    private func isValidateEdit() -> Bool {
+        return !previousFullname.isEmpty && previousAge != 0 && !previousAddress.isEmpty
     }
 }
 

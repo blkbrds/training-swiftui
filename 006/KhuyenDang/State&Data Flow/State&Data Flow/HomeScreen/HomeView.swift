@@ -11,6 +11,7 @@ struct HomeView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @EnvironmentObject var account: Account
+    private var localStorage = LocalStorage()
 
     fileprivate func MyText(value: String) -> Text {
         return Text(value)
@@ -46,7 +47,7 @@ struct HomeView: View {
                 }
 
                 Button(action: {
-                    resetUser()
+                    localStorage.resetUser()
                     appRouter.state = .login
                 }
                     , label: {
@@ -79,13 +80,5 @@ struct HomeView: View {
             )
                 .ignoresSafeArea()
         }
-    }
-
-    private func resetUser () {
-        account.username = nil
-        account.fullname = nil
-        account.password = nil
-        account.age = nil
-        account.address = nil
     }
 }

@@ -30,12 +30,14 @@ fileprivate func otherInformation(infor: String, action: String) -> HStack<Tuple
 struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
-    @ObservedObject var model = LoginModel()
+    @ObservedObject var dataManager = DataManager()
     @EnvironmentObject var account: Account
     @State var username: String = ""
     @State var password: String = ""
-    @State var isLoginFail: Bool = false
+    @State var isShowErrorAlert: Bool = false
     @State var isLoading: Bool = false
+    private var localStorage = LocalStorage()
+    @State var contentAlert: (String, String) = ("", "")
 
     var body: some View {
 
@@ -65,16 +67,19 @@ struct LoginView: View {
                         Button(action: {
                             Task {
                                 isLoading = true
-                                if await model.isValidAccount(username: username, password: password) {
-                                    guard let account = model.account else { return }
-                                    self.account.username = account.username
-                                    self.account.fullname = account.fullname
-                                    self.account.password = account.password
-                                    self.account.age = account.age
-                                    self.account.address = account.address
-                                    appRouter.state = .home
-                                } else {
-                                    isLoginFail = true
+                                do {
+                                    if try await dataManager.isValidAccount(username: username, password: password) {
+                                        guard let newAccount = dataManager.account else { return }
+                                        localStorage.setUser(fullname: newAccount.fullname ?? "", age: newAccount.age ?? 0, address: newAccount.address ?? "")
+                                        self.account.setUser(fullname: newAccount.fullname ?? "", age: newAccount.age ?? 0, address: newAccount.address ?? "")
+                                        appRouter.state = .home
+                                    } else {
+                                        contentAlert = ("Login Failed", "Invalid username or password")
+                                        isShowErrorAlert = true
+                                    }
+                                } catch {
+                                    contentAlert = ("Request Failed", "We can't connect to server")
+                                    isShowErrorAlert = true
                                 }
                                 isLoading = false
                             }
@@ -88,8 +93,8 @@ struct LoginView: View {
                             .myButtonModifier()
                             .padding(.top)
                             .disabled(username.isEmpty || password.isEmpty)
-                            .alert(isPresented: $isLoginFail) {
-                            Alert(title: Text("Login Failed"), message: Text("Invalid username or password"))
+                            .alert(isPresented: $isShowErrorAlert) {
+                                Alert(title: Text(contentAlert.0), message: Text(contentAlert.1))
                         }
 
                         Button(action: {

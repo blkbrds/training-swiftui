@@ -21,7 +21,6 @@
 		8AB6049729DACFBE000B52F1 /* MyButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049629DACFBE000B52F1 /* MyButtonModifier.swift */; };
 		8AB6049B29DAD4BB000B52F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049A29DAD4BB000B52F1 /* DataManager.swift */; };
 		8AB604A029DBC5A4000B52F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6049F29DBC5A4000B52F1 /* HomeView.swift */; };
-		8AB604A629DC07E5000B52F1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB604A529DC07E5000B52F1 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		8AB6049629DACFBE000B52F1 /* MyButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonModifier.swift; sourceTree = "<group>"; };
 		8AB6049A29DAD4BB000B52F1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8AB6049F29DBC5A4000B52F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		8AB604A529DC07E5000B52F1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				8AB6048F29DACE96000B52F1 /* LoginView.swift */,
-				8AB604A529DC07E5000B52F1 /* LoginModel.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 				8AB6049B29DAD4BB000B52F1 /* DataManager.swift in Sources */,
 				8AB6048329DAC3DC000B52F1 /* ContentView.swift in Sources */,
 				8AB6049529DACF7F000B52F1 /* TextFieldView.swift in Sources */,
-				8AB604A629DC07E5000B52F1 /* LoginModel.swift in Sources */,
 				8A5B290629E4149A008FDEC5 /* EditView.swift in Sources */,
 				8AB6049029DACE96000B52F1 /* LoginView.swift in Sources */,
 				8A92082529E55C60002AC970 /* TutorialView.swift in Sources */,
