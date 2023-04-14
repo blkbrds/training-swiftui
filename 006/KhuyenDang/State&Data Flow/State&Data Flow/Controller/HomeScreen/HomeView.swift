@@ -11,7 +11,7 @@ struct HomeView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @EnvironmentObject var account: Account
-    private var localStorage = LocalStorage()
+    @StateObject var viewModel = HomeViewModel()
 
     fileprivate func MyText(value: String) -> Text {
         return Text(value)
@@ -37,17 +37,16 @@ struct HomeView: View {
                         MyText(value: "Age:")
                         MyText(value: "Address:")
                     }
+
                     VStack(alignment: .leading) {
-                        if let account = account {
-                            MyText(value: account.fullname ?? "")
-                            MyText(value: "\(account.age ?? 0)")
-                            MyText(value: account.address ?? "")
-                        }
+                        MyText(value: viewModel.account?.fullname ?? "")
+                        MyText(value: "\(viewModel.account?.age ?? 0)")
+                        MyText(value: viewModel.account?.address ?? "")
                     }
                 }
 
                 Button(action: {
-                    localStorage.resetUser()
+                    viewModel.logout()
                     appRouter.state = .login
                 }
                     , label: {
@@ -64,8 +63,11 @@ struct HomeView: View {
 
                 Spacer()
             }
+                .onAppear {
+                viewModel.loadData()
+            }
                 .toolbar {
-                NavigationLink(destination: EditView()) {
+                NavigationLink(destination: EditView(viewModel: viewModel.viewModelForEdit())) {
                     Text("Edit")
                 }
             }

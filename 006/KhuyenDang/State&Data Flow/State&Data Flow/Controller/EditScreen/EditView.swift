@@ -9,28 +9,20 @@ import SwiftUI
 
 struct EditView: View {
 
-    @State var previousFullname: String = ""
-    @State var previousAddress: String = ""
-    @State var previousAge: Int = 0
-    @EnvironmentObject var account: Account
-    private var localStorage = LocalStorage()
     @Environment(\.presentationMode) var presentationMode
-    @State var isShowAlert: Bool = false
+    @StateObject var viewModel: EditViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
 
-            MyEditView(type: "FullName", name: $previousFullname)
-            MyEditViewNumber(type: "Age", value: $previousAge)
-            MyEditView(type: "Address", name: $previousAddress)
+            MyEditView(type: "FullName", name: $viewModel.previousFullname)
+            MyEditViewNumber(type: "Age", value: $viewModel.previousAge)
+            MyEditView(type: "Address", name: $viewModel.previousAddress)
 
             Button(action: {
-                if isValidateEdit() {
-                    account.setUser(fullname: previousFullname, age: previousAge, address: previousAddress)
-                    localStorage.setUser(fullname: previousFullname, age: previousAge, address: previousAddress)
+                viewModel.handleEditProfile()
+                if !viewModel.isShowAlert {
                     presentationMode.wrappedValue.dismiss()
-                } else {
-                    isShowAlert = true
                 }
             }
                 , label: {
@@ -46,23 +38,14 @@ struct EditView: View {
                     .stroke(Color("primaryColor50%"), lineWidth: 1)
             )
                 .padding(.top, 50)
-                .alert(isPresented: $isShowAlert) {
-                    Alert(title: Text("Edit Failed"), message: Text("Your infomation is invalid"))
-                }
+                .alert(isPresented: $viewModel.isShowAlert) {
+                Alert(title: Text("Edit Failed"), message: Text("Your infomation is invalid"))
+            }
             Spacer()
         }
             .navigationTitle("Edit your profile")
             .padding(.top, 100)
             .padding([.leading, .trailing], 25)
-            .onAppear {
-            previousFullname = account.fullname ?? ""
-            previousAddress = account.address ?? ""
-            previousAge = account.age ?? 0
-        }
-    }
-    
-    private func isValidateEdit() -> Bool {
-        return !previousFullname.isEmpty && previousAge != 0 && !previousAddress.isEmpty
     }
 }
 

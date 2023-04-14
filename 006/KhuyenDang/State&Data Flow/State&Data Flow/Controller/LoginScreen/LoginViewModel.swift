@@ -1,0 +1,39 @@
+//
+//  LoginViewModel.swift
+//  State&Data Flow
+//
+//  Created by Khuyen Dang T.T. VN.Danang on 14/04/2023.
+//
+
+import Foundation
+
+class LoginViewModel: ObservableObject {
+
+    @Published var username: String = ""
+    @Published var password: String = ""
+    @Published var isLoginSuccess: Bool = false
+    @Published var isShowErrorAlert: Bool = false
+    @Published var contentAlert: (String, String) = ("", "")
+    private var localStorage = LocalStorage()
+
+    func isValidAccount() async {
+        await DataManager().isValidAccount(username: username, password: password) { [weak self](account, error) in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                if let _ = error {
+                    this.contentAlert = ("Request Failed", "We can't connect to server")
+                    this.isShowErrorAlert = true
+                    return
+                } else {
+                    guard let account = account else {
+                        this.contentAlert = ("Login Failed", "Invalid username or password")
+                        this.isShowErrorAlert = true
+                        return
+                    }
+                    this.isLoginSuccess = true
+                    this.localStorage.setUser(fullname: account.fullname ?? "", age: account.age ?? 0, address: account.address ?? "")
+                }
+            }
+        }
+    }
+}
