@@ -28,7 +28,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                 }
                 Button {
-                    appRouter.dataLogin = ""
+                    appRouter.dataLogin = nil
                     appRouter.appState = .login
                 } label: {
                     Text("Log out")

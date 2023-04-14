@@ -15,9 +15,13 @@ class DataManager: ObservableObject {
     ]
     
     func loadData(value: User) async throws -> Bool {
-        try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
-        let result = await checkUser(value: value)
-        return result
+        do {
+            try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+            let result = await checkUser(value: value)
+            return result
+        } catch {
+            throw error
+        }
     }
     
     func checkUser(value: User) async -> Bool {

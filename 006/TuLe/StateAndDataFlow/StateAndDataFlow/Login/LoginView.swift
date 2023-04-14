@@ -13,6 +13,8 @@ struct LoginView: View {
     @State var password: String = ""
     @State var isShowIndicator: Bool = false
     @State var isShowAlert: Bool = false
+    @State var titleError: String = ""
+    @State var contentError: String = ""
     @EnvironmentObject var appRouter: StorageData
     var model = DataManager()
 
@@ -47,7 +49,7 @@ struct LoginView: View {
                     .padding(.top, 30)
                     .disabled((email == "") || (password == "") || !email.isOpacity())
                     .alert(isPresented: $isShowAlert) {
-                        Alert(title: Text("Đăng nhập thất bại"), message: Text("Email hoặc mật khẩu không đúng"), dismissButton: .default(Text("Ok")))
+                        Alert(title: Text(titleError), message: Text(contentError), dismissButton: .default(Text("Ok")))
                     }
 
                 }
@@ -67,21 +69,26 @@ struct LoginView: View {
     
     private func handleLogin() {
         Task {
+            isShowIndicator = true
             do {
-                isShowIndicator = true
                 let isLogin = try await model.loadData(value: User(email: email, password: password))
-                isShowIndicator = false
                 if isLogin {
                     let user = User(email: email, password: password)
                     let encoder = JSONEncoder()
-                    if let encoded = try? encoder.encode(user) {
-                        appRouter.dataLogin = String(data: encoded, encoding: .utf8)!
-                    }
+                    let data = try encoder.encode(user)
+                    appRouter.dataLogin = data
                     appRouter.appState = .home
                 } else {
+                    titleError = "Login failed"
+                    contentError = "Tài khoản hoặc mật khẩu không đúng"
                     isShowAlert = true
                 }
+            } catch {
+                titleError = "Login failed"
+                contentError = "Không thể kết nối tới sever"
+                isShowAlert = true
             }
+            isShowIndicator = false
         }
     }
 }
@@ -127,6 +134,7 @@ struct InputLoginView: View {
 
     @Binding var email: String
     @Binding var password: String
+    @State var isShowPassword: Bool = false
 
     var body: some View {
         VStack(spacing: email.isOpacity() ? 0 : 20) {
@@ -135,6 +143,7 @@ struct InputLoginView: View {
                     .font(.system(size: 17, weight: .bold))
                 TextField("Enter your email", text: $email)
                     .padding()
+                    .textInputAutocapitalization(.never)
                     .overlay {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.orange, lineWidth: 2)
@@ -147,12 +156,34 @@ struct InputLoginView: View {
             VStack(alignment: .leading) {
                 Text("Password")
                     .font(.system(size: 17, weight: .bold))
-                TextField("Enter your Password", text: $password)
-                    .padding()
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.orange, lineWidth: 2)
+                ZStack(alignment: .trailing) {
+                    if isShowPassword {
+                        TextField("Enter your Password", text: $password)
+                            .padding()
+                            .textInputAutocapitalization(.never)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.orange, lineWidth: 2)
+                            }
+                    } else {
+                        SecureField("Enter your Password", text: $password)
+                            .padding()
+                            .textInputAutocapitalization(.never)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.orange, lineWidth: 2)
+                            }
                     }
+                    
+                    Button {
+                        isShowPassword = !isShowPassword
+                    } label: {
+                        Image(systemName: isShowPassword ? "eye.slash" : "eye")
+                            .foregroundColor(.black)
+                    }
+                    .padding(.trailing, 5)
+
+                }
             }
         }
     }

@@ -17,7 +17,7 @@ struct StateAndDataFlowApp: App {
         switch appRouter.appState {
         case .home:
             let decoder = JSONDecoder()
-            if let data = appRouter.dataLogin.data(using: .utf8),
+            if let data = appRouter.dataLogin,
                let user = try? decoder.decode(User.self, from: data) {
                 HomeView(data: user)
             }
@@ -38,7 +38,7 @@ struct StateAndDataFlowApp: App {
 
 class StorageData: ObservableObject {
     @AppStorage("appState") var appState: AppState = .tutorial
-    @AppStorage("loginUser") var dataLogin: String = ""
+    @AppStorage("loginUser") var dataLogin: Data?
 }
 
 enum AppState: String, Codable, CaseIterable {
