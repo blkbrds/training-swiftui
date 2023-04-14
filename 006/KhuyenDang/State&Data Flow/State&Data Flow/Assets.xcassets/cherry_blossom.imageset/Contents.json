@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "wphb_76hf_220629.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
