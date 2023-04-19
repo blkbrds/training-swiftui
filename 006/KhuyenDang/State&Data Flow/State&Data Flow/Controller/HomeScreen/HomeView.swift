@@ -29,7 +29,7 @@ struct HomeView: View {
                     .frame(width: 150)
                     .padding(.top, 130)
                     .padding(.bottom, 50)
-                    .background(.white)
+                    .background(.clear)
 
                 HStack(spacing: 20) {
                     VStack(alignment: .leading) {
@@ -39,9 +39,9 @@ struct HomeView: View {
                     }
 
                     VStack(alignment: .leading) {
-                        MyText(value: viewModel.account?.fullname ?? "")
-                        MyText(value: "\(viewModel.account?.age ?? 0)")
-                        MyText(value: viewModel.account?.address ?? "")
+                        MyText(value: account.fullname ?? "")
+                        MyText(value: "\(account.age ?? 0)")
+                        MyText(value: account.address ?? "")
                     }
                 }
 
@@ -64,22 +64,20 @@ struct HomeView: View {
                 Spacer()
             }
                 .onAppear {
-                viewModel.loadData()
+                viewModel.loadData(account: account)
             }
                 .toolbar {
-                NavigationLink(destination: EditView(viewModel: viewModel.viewModelForEdit())) {
-                    Text("Edit")
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: EditView(viewModel: viewModel.viewModelForEdit(account: account))) {
+                        Text("Edit")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingView()) {
+                        Text("Setting")
+                    }
                 }
             }
-                .background(
-                VStack {
-                    Spacer()
-                    Image("cherry_blossom")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 3)
-                }
-            )
                 .ignoresSafeArea()
         }
     }

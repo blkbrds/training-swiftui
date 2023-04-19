@@ -16,6 +16,9 @@
 		8A92083029E90955002AC970 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92082F29E90955002AC970 /* Account.swift */; };
 		8A92083229E9098E002AC970 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92083129E9098E002AC970 /* LocalStorage.swift */; };
 		8A92083529E90FD1002AC970 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92083429E90FD1002AC970 /* EditViewModel.swift */; };
+		8A92083929ECE706002AC970 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92083829ECE705002AC970 /* SettingView.swift */; };
+		8A92083B29ECEB3D002AC970 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92083A29ECEB3D002AC970 /* SettingCell.swift */; };
+		8A92083D29ED3BAF002AC970 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A92083C29ED3BAF002AC970 /* Setting.swift */; };
 		8AB6048129DAC3DC000B52F1 /* State_Data_FlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6048029DAC3DC000B52F1 /* State_Data_FlowApp.swift */; };
 		8AB6048329DAC3DC000B52F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6048229DAC3DC000B52F1 /* ContentView.swift */; };
 		8AB6048529DAC3DE000B52F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6048429DAC3DE000B52F1 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		8A92082F29E90955002AC970 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		8A92083129E9098E002AC970 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8A92083429E90FD1002AC970 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		8A92083829ECE705002AC970 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		8A92083A29ECEB3D002AC970 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		8A92083C29ED3BAF002AC970 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		8AB6047D29DAC3DC000B52F1 /* State&Data Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "State&Data Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB6048029DAC3DC000B52F1 /* State_Data_FlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State_Data_FlowApp.swift; sourceTree = "<group>"; };
 		8AB6048229DAC3DC000B52F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		8A92082E29E90905002AC970 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8A92083629ECE6E0002AC970 /* Setting */,
 				8A92082329E55C4D002AC970 /* TutorialScreen */,
 				8A5B290429E4147E008FDEC5 /* EditScreen */,
 				8AB6049E29DBC58F000B52F1 /* HomeScreen */,
@@ -107,6 +114,16 @@
 				8AB6049A29DAD4BB000B52F1 /* DataManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8A92083629ECE6E0002AC970 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				8A92083829ECE705002AC970 /* SettingView.swift */,
+				8A92083A29ECEB3D002AC970 /* SettingCell.swift */,
+				8A92083C29ED3BAF002AC970 /* Setting.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		8AB6047429DAC3DC000B52F1 = {
@@ -249,11 +266,14 @@
 				8A92082729E59E86002AC970 /* LaunchScreen.swift in Sources */,
 				8AB604A029DBC5A4000B52F1 /* HomeView.swift in Sources */,
 				8AB6049729DACFBE000B52F1 /* MyButtonModifier.swift in Sources */,
+				8A92083929ECE706002AC970 /* SettingView.swift in Sources */,
 				8AB6049B29DAD4BB000B52F1 /* DataManager.swift in Sources */,
 				8A92083529E90FD1002AC970 /* EditViewModel.swift in Sources */,
 				8AB6048329DAC3DC000B52F1 /* ContentView.swift in Sources */,
 				8A92083029E90955002AC970 /* Account.swift in Sources */,
 				8AB6049529DACF7F000B52F1 /* TextFieldView.swift in Sources */,
+				8A92083B29ECEB3D002AC970 /* SettingCell.swift in Sources */,
+				8A92083D29ED3BAF002AC970 /* Setting.swift in Sources */,
 				8A92082C29E8F37E002AC970 /* LoginViewModel.swift in Sources */,
 				8A5B290629E4149A008FDEC5 /* EditView.swift in Sources */,
 				8AB6049029DACE96000B52F1 /* LoginView.swift in Sources */,

@@ -31,6 +31,7 @@ struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @State var isLoading: Bool = false
+    @EnvironmentObject var account: Account
     @StateObject var viewModel = LoginViewModel()
 
     var body: some View {
@@ -63,6 +64,7 @@ struct LoginView: View {
                                 isLoading = true
                                 await viewModel.isValidAccount()
                                 if viewModel.isLoginSuccess {
+                                    viewModel.saveData(account: account)
                                     appRouter.state = .home
                                 }
                                 isLoading = false
@@ -110,6 +112,9 @@ struct LoginView: View {
                 }
             }
         }
+            .onAppear {
+            viewModel.checkSaveData()
+        }
             .disabled(isLoading)
             .onTapGesture {
             self.endEditing()
@@ -118,12 +123,6 @@ struct LoginView: View {
 
     private func endEditing() {
         UIApplication.shared.endEditing()
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }
 

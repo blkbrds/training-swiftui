@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
 
@@ -15,6 +16,20 @@ class LoginViewModel: ObservableObject {
     @Published var isShowErrorAlert: Bool = false
     @Published var contentAlert: (String, String) = ("", "")
     private var localStorage = LocalStorage()
+    @AppStorage("isSaveData") var isSaveData: Bool = false
+    var account: Account?
+
+    func checkSaveData() {
+        if isSaveData {
+            username = localStorage.username
+            password = localStorage.password
+        }
+    }
+
+    func saveData(account: Account) {
+        guard let accountLogin = self.account else { return }
+        account.updateUser(fullname: accountLogin.fullname ?? "", age: accountLogin.age ?? 0, address: accountLogin.address ?? "")
+    }
 
     func isValidAccount() async {
         await DataManager().isValidAccount(username: username, password: password) { [weak self](account, error) in
@@ -31,7 +46,8 @@ class LoginViewModel: ObservableObject {
                         return
                     }
                     this.isLoginSuccess = true
-                    this.localStorage.setUser(fullname: account.fullname ?? "", age: account.age ?? 0, address: account.address ?? "")
+                    this.account = account
+                    this.localStorage.setUser(username: account.username ?? "", password: account.password ?? "", fullname: account.fullname ?? "", age: account.age ?? 0, address: account.address ?? "")
                 }
             }
         }

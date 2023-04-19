@@ -13,12 +13,14 @@ struct State_Data_FlowApp: App {
     @StateObject var appRouter = AppRouter()
     @AppStorage("isFirstLaunch") var isFirstLaunch: Bool = true
     @StateObject var account = Account()
+    @AppStorage("isDarkMode") var isDarkMode: Bool = false
 
     var body: some Scene {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
                 .environmentObject(account)
+                .environment(\.colorScheme, isDarkMode ? .dark : .light)
         }
     }
 

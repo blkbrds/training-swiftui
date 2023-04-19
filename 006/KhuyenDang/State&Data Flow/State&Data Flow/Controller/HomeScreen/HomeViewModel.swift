@@ -9,19 +9,18 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
 
-    @Published var account: Account?
     private var localStorage = LocalStorage()
 
-    func loadData() {
-        account = Account(fullname: localStorage.fullname, age: localStorage.age, address: localStorage.address)
+    func loadData(account: Account) {
+        guard localStorage.fullname.isEmpty == false else { return }
+        account.updateUser(fullname: localStorage.fullname, age: localStorage.age, address: localStorage.address)
     }
 
     func logout() {
         localStorage.resetUser()
     }
 
-    func viewModelForEdit() -> EditViewModel {
-
-        return EditViewModel(previousFullname: account?.fullname ?? "", previousAddress: account?.address ?? "", previousAge: account?.age ?? 0)
+    func viewModelForEdit(account: Account) -> EditViewModel {
+        return EditViewModel(previousFullname: account.fullname ?? "", previousAddress: account.address ?? "", previousAge: account.age ?? 0)
     }
 }

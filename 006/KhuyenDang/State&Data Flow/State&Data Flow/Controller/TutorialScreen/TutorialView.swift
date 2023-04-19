@@ -30,6 +30,27 @@ struct TutorialView: View {
             Image("tutorial3")
                 .resizable()
                 .scaleEffect(1.02)
+                .overlay(
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            appRouter.state = .login
+                        }
+                            , label: {
+                                Text("Let's get started")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 24))
+                                    .padding(.all)
+                            })
+                            .background(Color(red: 0.2784313725490196, green: 0.45098039215686275, blue: 0.30196078431372547))
+                            .cornerRadius(20)
+                            .padding(.trailing, 30)
+                    }
+                        .padding(.bottom, 100)
+                }
+            )
                 .ignoresSafeArea()
                 .tag(0)
         }

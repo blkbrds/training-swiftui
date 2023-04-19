@@ -14,7 +14,6 @@ class EditViewModel: ObservableObject {
     @Published var previousAddress: String
     @Published var previousAge: Int
     @Published var isShowAlert: Bool = false
-    @EnvironmentObject var account: Account
     private var localStorage = LocalStorage()
 
     init(previousFullname: String, previousAddress: String, previousAge: Int) {

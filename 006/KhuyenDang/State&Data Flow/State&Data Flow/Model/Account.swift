@@ -22,4 +22,10 @@ class Account: ObservableObject {
         self.age = age
         self.address = address
     }
+    
+    func updateUser(fullname: String, age: Int, address: String) {
+        self.fullname = fullname
+        self.age = age
+        self.address = address
+    }
 }
