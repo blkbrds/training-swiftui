@@ -36,80 +36,79 @@ struct LoginView: View {
 
     var body: some View {
 
-        NavigationStack {
-            ZStack {
-                VStack {
-                    green()
+        ZStack {
+            VStack {
+                green()
 
-                    Text("Log in on green :)")
-                        .font(.system(size: 30, weight: .light))
+                Text("Log in on green :)")
+                    .font(.system(size: 30, weight: .light))
 
-                    Image("tree")
-                        .resizable()
-                        .padding(.top)
-                        .padding(.bottom)
+                Image("tree")
+                    .resizable()
+                    .padding(.top)
+                    .padding(.bottom)
 
-                    TextFieldView(data: $viewModel.username, type: .userName)
-                    TextFieldView(data: $viewModel.password, type: .password)
+                TextFieldView(data: $viewModel.username, type: .userName)
+                TextFieldView(data: $viewModel.password, type: .password)
 
-                    HStack {
-                        otherInformation(infor: "Forgot Password?", action: "Click here")
-                            .padding(.leading, 20)
-                        Spacer()
-                    }
-
-                    HStack {
-                        Button(action: {
-                            Task {
-                                isLoading = true
-                                await viewModel.isValidAccount()
-                                if viewModel.isLoginSuccess {
-                                    viewModel.saveData(account: account)
-                                    appRouter.state = .home
-                                }
-                                isLoading = false
-                            }
-                        }
-                            , label: {
-                                Text("LOGIN")
-                                    .padding(.all)
-                                    .frame(width: UIScreen.main.bounds.width / 2 - 30)
-                            })
-
-                            .myButtonModifier()
-                            .padding(.top)
-                            .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
-                            .alert(isPresented: $viewModel.isShowErrorAlert) {
-                            Alert(title: Text(viewModel.contentAlert.0), message: Text(viewModel.contentAlert.1))
-                        }
-
-                        Button(action: {
-                            viewModel.username = ""
-                            viewModel.password = ""
-                        }
-                            , label: {
-                                Text("Cancel")
-                                    .padding(.all)
-                                    .frame(width: UIScreen.main.bounds.width / 2 - 30)
-                            })
-                            .font(.system(size: 24))
-                            .foregroundColor(Color("primaryColor"))
-                            .cornerRadius(30)
-                            .overlay(
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color("primaryColor"), lineWidth: 1)
-                        )
-                            .padding(.top)
-                    }
+                HStack {
+                    otherInformation(infor: "Forgot Password?", action: "Click here")
+                        .padding(.leading, 20)
                     Spacer()
-                    otherInformation(infor: "Didn't have an account?", action: "Sign Up")
                 }
 
-                if isLoading {
-                    ProgressView()
-                        .scaleEffect(3.0)
-                        .tint(Color("primaryColor"))
+                HStack {
+                    Button(action: {
+                        Task {
+                            isLoading = true
+                            await viewModel.isValidAccount()
+                            if viewModel.isLoginSuccess {
+                                viewModel.saveData(account: account)
+                                appRouter.state = .home
+                                viewModel.reset()
+                            }
+                            isLoading = false
+                        }
+                    }
+                        , label: {
+                            Text("LOGIN")
+                                .padding(.all)
+                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
+                        })
+
+                        .myButtonModifier()
+                        .padding(.top)
+                        .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
+                        .alert(isPresented: $viewModel.isShowErrorAlert) {
+                        Alert(title: Text(viewModel.contentAlert.0), message: Text(viewModel.contentAlert.1))
+                    }
+
+                    Button(action: {
+                        viewModel.username = ""
+                        viewModel.password = ""
+                    }
+                        , label: {
+                            Text("Cancel")
+                                .padding(.all)
+                                .frame(width: UIScreen.main.bounds.width / 2 - 30)
+                        })
+                        .font(.system(size: 24))
+                        .foregroundColor(Color("primaryColor"))
+                        .cornerRadius(30)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color("primaryColor"), lineWidth: 1)
+                    )
+                        .padding(.top)
                 }
+                Spacer()
+                otherInformation(infor: "Didn't have an account?", action: "Sign Up")
+            }
+
+            if isLoading {
+                ProgressView()
+                    .scaleEffect(3.0)
+                    .tint(Color("primaryColor"))
             }
         }
             .onAppear {

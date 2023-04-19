@@ -52,4 +52,10 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+
+    func reset() {
+        username = ""
+        password = ""
+        isLoginSuccess = false
+    }
 }

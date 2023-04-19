@@ -24,7 +24,7 @@ class EditViewModel: ObservableObject {
 
     func handleEditProfile() {
         if isValidEdit() {
-            localStorage.setUser(fullname: previousFullname, age: previousAge, address: previousAddress)
+            localStorage.updateUser(fullname: previousFullname, age: previousAge, address: previousAddress)
         } else {
             isShowAlert = true
         }
