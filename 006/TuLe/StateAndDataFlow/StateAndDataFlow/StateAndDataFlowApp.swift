@@ -28,6 +28,7 @@ struct StateAndDataFlowApp: App {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
+                .environment(\.colorScheme, (appRouter.isDarkMode ?? false) ? .dark : .light)
         }
     }
 }
@@ -35,6 +36,8 @@ struct StateAndDataFlowApp: App {
 class StorageData: ObservableObject {
     @AppStorage("appState") var appState: AppState = .tutorial
     @AppStorage("loginUser") var dataLogin: Data?
+    @AppStorage("darkMode") var isDarkMode: Bool?
+    @AppStorage("nortify") var nortify: Bool?
 }
 
 enum AppState: String, Codable, CaseIterable {

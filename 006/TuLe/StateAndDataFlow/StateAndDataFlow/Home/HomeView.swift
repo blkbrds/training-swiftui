@@ -27,6 +27,16 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                NavigationLink {
+                    SettingView(viewModel: SettingViewModel(user: appRouter.dataLogin?.loadData(), isNortify: appRouter.nortify, isDarkMode: appRouter.isDarkMode))
+                } label: {
+                    Text("Setting")
+                        .padding(.horizontal, 25)
+                        .padding(.vertical, 10)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
                 Button {
                     appRouter.dataLogin = nil
                     appRouter.appState = .login
