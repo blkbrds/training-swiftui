@@ -16,11 +16,7 @@ struct StateAndDataFlowApp: App {
     var rootView: some View {
         switch appRouter.appState {
         case .home:
-            let decoder = JSONDecoder()
-            if let data = appRouter.dataLogin,
-               let user = try? decoder.decode(User.self, from: data) {
-                HomeView(data: user)
-            }
+            HomeView()
         case .login:
             LoginView()
         case .tutorial:

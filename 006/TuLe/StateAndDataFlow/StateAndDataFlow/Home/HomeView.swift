@@ -9,16 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
 
-    @State var data: User
+    @StateObject var viewModel = HomeViewModel()
     @EnvironmentObject var appRouter: StorageData
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text(data.email)
-                Text(data.password)
+                Text(viewModel.user?.email ?? "123")
+                Text(viewModel.user?.password ?? "456")
                 NavigationLink {
-                    EditView(dataBinding: $data, data: data)
+                    EditView()
                 } label: {
                     Text("Edit")
                         .padding(.horizontal, 25)
@@ -40,6 +40,9 @@ struct HomeView: View {
                 }
 
             }
+            .onAppear {
+                viewModel.loadData(data: appRouter.dataLogin)
+            }
             .navigationTitle("HomeScreen")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -48,6 +51,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(data: User(email: "123", password: "456"))
+        HomeView()
     }
 }

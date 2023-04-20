@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum Result<T> {
+    case success(T)
+    case failure(String)
+}
+
 class DataManager: ObservableObject {
     private var loginAccounts: [User] = [
         User(email: "lecongtu123@gmail.com", password: "123456"),
@@ -14,13 +19,22 @@ class DataManager: ObservableObject {
         User(email: "lecongtu789@gmail.com", password: "123456")
     ]
     
-    func loadData(value: User) async throws -> Bool {
+    func loadData(value: User, completion: @escaping (Result<User>) -> Void) async {
         do {
             try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
             let result = await checkUser(value: value)
-            return result
+            DispatchQueue.main.async {
+                if result {
+                    completion(.success(value))
+                } else {
+                    completion(.failure("Tài khoản hoặc mật khẩu không đúng"))
+                }
+            }
         } catch {
-            throw error
+            DispatchQueue.main.async {
+                completion(.failure(error.localizedDescription))
+            }
+            
         }
     }
     
@@ -31,16 +45,5 @@ class DataManager: ObservableObject {
             }
         }
         return false
-    }
-}
-
-struct User: Codable {
-    var email: String
-    var password: String
-    
-    static func ==(lhs: User, rhs: User) -> Bool {
-        return
-            lhs.email == rhs.email &&
-            lhs.password == rhs.password
     }
 }

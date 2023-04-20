@@ -11,17 +11,17 @@ struct TutorialView: View {
     
     @State private var pageIndex = 0
     @EnvironmentObject var appRouter: StorageData
-    private let pages: [TutorialModel] = TutorialModel.samplePages
+    @StateObject var viewModel = TutorialViewModel()
     private let dotAppearance = UIPageControl.appearance()
     
     var body: some View {
         TabView(selection: $pageIndex) {
-            ForEach(pages) { page in
+            ForEach(viewModel.pages) { page in
                 VStack {
                     Spacer()
                     PageView(page: page)
                     Spacer()
-                    if page == pages.last {
+                    if viewModel.handlePage(page: page) {
                         Button("Login!", action: goToLogin)
                             .buttonStyle(.bordered)
                     } else {
