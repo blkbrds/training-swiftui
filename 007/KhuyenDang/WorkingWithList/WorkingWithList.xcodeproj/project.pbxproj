@@ -19,6 +19,8 @@
 		8AC74E6429F677380092B648 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6329F677380092B648 /* User.swift */; };
 		8AC74E6829F67CCF0092B648 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6729F67CCF0092B648 /* UserCell.swift */; };
 		8AC74E6A29F67CE00092B648 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6929F67CE00092B648 /* UserList.swift */; };
+		8AC74E6E29F76DC50092B648 /* DynamicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6D29F76DC50092B648 /* DynamicListView.swift */; };
+		8AC74E7029F76E1F0092B648 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6F29F76E1F0092B648 /* UserDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		8AC74E6329F677380092B648 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8AC74E6729F67CCF0092B648 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		8AC74E6929F67CE00092B648 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		8AC74E6D29F76DC50092B648 /* DynamicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListView.swift; sourceTree = "<group>"; };
+		8AC74E6F29F76E1F0092B648 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		8AC74E4529F663420092B648 /* WorkingWithList */ = {
 			isa = PBXGroup;
 			children = (
+				8AC74E6B29F76D920092B648 /* Dynamic List */,
 				8AC74E6229F677280092B648 /* Model */,
 				8AC74E5729F669920092B648 /* MyButton */,
 				8AC74E5429F663B60092B648 /* Simple List */,
@@ -121,6 +126,15 @@
 				8AC74E6929F67CE00092B648 /* UserList.swift */,
 			);
 			path = UsersList;
+			sourceTree = "<group>";
+		};
+		8AC74E6B29F76D920092B648 /* Dynamic List */ = {
+			isa = PBXGroup;
+			children = (
+				8AC74E6D29F76DC50092B648 /* DynamicListView.swift */,
+				8AC74E6F29F76E1F0092B648 /* UserDetail.swift */,
+			);
+			path = "Dynamic List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,10 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC74E6A29F67CE00092B648 /* UserList.swift in Sources */,
+				8AC74E7029F76E1F0092B648 /* UserDetail.swift in Sources */,
 				8AC74E6129F676920092B648 /* LoopItemsViewModel.swift in Sources */,
 				8AC74E5929F669AA0092B648 /* HeartButton.swift in Sources */,
 				8AC74E4929F663420092B648 /* ContentView.swift in Sources */,
 				8AC74E5D29F671EC0092B648 /* LoopItemsList.swift in Sources */,
+				8AC74E6E29F76DC50092B648 /* DynamicListView.swift in Sources */,
 				8AC74E6429F677380092B648 /* User.swift in Sources */,
 				8AC74E6829F67CCF0092B648 /* UserCell.swift in Sources */,
 				8AC74E4729F663420092B648 /* WorkingWithListApp.swift in Sources */,

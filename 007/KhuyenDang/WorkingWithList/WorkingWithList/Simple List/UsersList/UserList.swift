@@ -12,13 +12,21 @@ struct UserList: View {
     @StateObject private var viewModel = LoopItemsViewModel()
 
     var body: some View {
-        List {
-            ForEach(viewModel.users, id: \.name) { user in
+        NavigationView {
+            List(viewModel.users) { user in
                 UserCell(user: user)
                     .listRowSeparator(.hidden)
+                    .overlay(
+                    NavigationLink(destination: UserDetail(user: user), label: {
+                            EmptyView()
+                        })
+                        .opacity(0)
+                )
+                    .listRowBackground(Color.white)
             }
+                .listStyle(.plain)
+                .navigationTitle("List users")
         }
-            .listStyle(.plain)
     }
 }
 
