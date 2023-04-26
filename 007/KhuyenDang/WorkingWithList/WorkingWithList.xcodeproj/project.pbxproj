@@ -23,6 +23,10 @@
 		8AC74E7029F76E1F0092B648 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E6F29F76E1F0092B648 /* UserDetail.swift */; };
 		8AC74E7529F788750092B648 /* AggregateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E7429F788750092B648 /* AggregateListView.swift */; };
 		8AC74E7729F788FF0092B648 /* AggregateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E7629F788FF0092B648 /* AggregateListViewModel.swift */; };
+		8AC74E7B29F7943E0092B648 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E7A29F7943E0092B648 /* MenuItem.swift */; };
+		8AC74E7D29F794C70092B648 /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E7C29F794C70092B648 /* ExpandableListView.swift */; };
+		8AC74E8129F794EC0092B648 /* ExpandableListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8029F794EC0092B648 /* ExpandableListViewModel.swift */; };
+		8AC74E8329F7B7F40092B648 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8229F7B7F40092B648 /* FoodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		8AC74E6F29F76E1F0092B648 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		8AC74E7429F788750092B648 /* AggregateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregateListView.swift; sourceTree = "<group>"; };
 		8AC74E7629F788FF0092B648 /* AggregateListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregateListViewModel.swift; sourceTree = "<group>"; };
+		8AC74E7A29F7943E0092B648 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		8AC74E7C29F794C70092B648 /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
+		8AC74E8029F794EC0092B648 /* ExpandableListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListViewModel.swift; sourceTree = "<group>"; };
+		8AC74E8229F7B7F40092B648 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		8AC74E4529F663420092B648 /* WorkingWithList */ = {
 			isa = PBXGroup;
 			children = (
+				8AC74E7829F7941E0092B648 /* Expandable List */,
 				8AC74E7129F787910092B648 /* Sections & Groups */,
 				8AC74E6B29F76D920092B648 /* Dynamic List */,
 				8AC74E6229F677280092B648 /* Model */,
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC74E6329F677380092B648 /* User.swift */,
+				8AC74E7A29F7943E0092B648 /* MenuItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +159,16 @@
 				8AC74E7629F788FF0092B648 /* AggregateListViewModel.swift */,
 			);
 			path = "Sections & Groups";
+			sourceTree = "<group>";
+		};
+		8AC74E7829F7941E0092B648 /* Expandable List */ = {
+			isa = PBXGroup;
+			children = (
+				8AC74E7C29F794C70092B648 /* ExpandableListView.swift */,
+				8AC74E8029F794EC0092B648 /* ExpandableListViewModel.swift */,
+				8AC74E8229F7B7F40092B648 /* FoodCell.swift */,
+			);
+			path = "Expandable List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,12 +248,16 @@
 				8AC74E6129F676920092B648 /* LoopItemsViewModel.swift in Sources */,
 				8AC74E5929F669AA0092B648 /* HeartButton.swift in Sources */,
 				8AC74E4929F663420092B648 /* ContentView.swift in Sources */,
+				8AC74E8329F7B7F40092B648 /* FoodCell.swift in Sources */,
 				8AC74E5D29F671EC0092B648 /* LoopItemsList.swift in Sources */,
 				8AC74E6E29F76DC50092B648 /* DynamicListView.swift in Sources */,
+				8AC74E7B29F7943E0092B648 /* MenuItem.swift in Sources */,
 				8AC74E6429F677380092B648 /* User.swift in Sources */,
 				8AC74E6829F67CCF0092B648 /* UserCell.swift in Sources */,
 				8AC74E4729F663420092B648 /* WorkingWithListApp.swift in Sources */,
+				8AC74E8129F794EC0092B648 /* ExpandableListViewModel.swift in Sources */,
 				8AC74E5629F663CA0092B648 /* SimpleListView.swift in Sources */,
+				8AC74E7D29F794C70092B648 /* ExpandableListView.swift in Sources */,
 				8AC74E5B29F671760092B648 /* StaticRowsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
