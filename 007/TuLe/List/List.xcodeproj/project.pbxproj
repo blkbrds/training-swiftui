@@ -11,6 +11,7 @@
 		1057B66829F7920300758C21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1057B66729F7920300758C21 /* ContentView.swift */; };
 		1057B66A29F7920600758C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1057B66929F7920600758C21 /* Assets.xcassets */; };
 		1057B66D29F7920600758C21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1057B66C29F7920600758C21 /* Preview Assets.xcassets */; };
+		1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1057B67429F815DA00758C21 /* SimpleList1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1057B66729F7920300758C21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1057B66929F7920600758C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1057B66C29F7920600758C21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1057B67429F815DA00758C21 /* SimpleList1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleList1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		1057B66429F7920300758C21 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				1057B67329F815AE00758C21 /* SimpleList */,
 				1057B66529F7920300758C21 /* ListApp.swift */,
 				1057B66729F7920300758C21 /* ContentView.swift */,
 				1057B66929F7920600758C21 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				1057B66C29F7920600758C21 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1057B67329F815AE00758C21 /* SimpleList */ = {
+			isa = PBXGroup;
+			children = (
+				1057B67429F815DA00758C21 /* SimpleList1.swift */,
+			);
+			path = SimpleList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1057B66829F7920300758C21 /* ContentView.swift in Sources */,
+				1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */,
 				1057B66629F7920300758C21 /* ListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
