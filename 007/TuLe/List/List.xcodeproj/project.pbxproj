@@ -13,6 +13,7 @@
 		1057B66D29F7920600758C21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1057B66C29F7920600758C21 /* Preview Assets.xcassets */; };
 		1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1057B67429F815DA00758C21 /* SimpleList1.swift */; };
 		1057B67729F8C18400758C21 /* SimpleList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1057B67629F8C18400758C21 /* SimpleList2.swift */; };
+		1057B67929F8CC2300758C21 /* SimpleList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1057B67829F8CC2300758C21 /* SimpleList3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1057B66C29F7920600758C21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1057B67429F815DA00758C21 /* SimpleList1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleList1.swift; sourceTree = "<group>"; };
 		1057B67629F8C18400758C21 /* SimpleList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleList2.swift; sourceTree = "<group>"; };
+		1057B67829F8CC2300758C21 /* SimpleList3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleList3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				1057B67429F815DA00758C21 /* SimpleList1.swift */,
 				1057B67629F8C18400758C21 /* SimpleList2.swift */,
+				1057B67829F8CC2300758C21 /* SimpleList3.swift */,
 			);
 			path = SimpleList;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1057B67929F8CC2300758C21 /* SimpleList3.swift in Sources */,
 				1057B67729F8C18400758C21 /* SimpleList2.swift in Sources */,
 				1057B66829F7920300758C21 /* ContentView.swift in Sources */,
 				1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */,
