@@ -32,6 +32,9 @@
 		8AC74E8C29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8B29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift */; };
 		8AC74E8E29F8DF040092B648 /* DisclosureGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */; };
 		8AC74E9029FA10F60092B648 /* MyArrayOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */; };
+		8AC74E9329FA1CDB0092B648 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E9229FA1CDB0092B648 /* Movie.swift */; };
+		8AC74E9529FA1D130092B648 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E9429FA1D130092B648 /* MovieListView.swift */; };
+		8AC74E9929FA1D550092B648 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E9829FA1D550092B648 /* MovieListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		8AC74E8B29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupListViewModel.swift; sourceTree = "<group>"; };
 		8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupView.swift; sourceTree = "<group>"; };
 		8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArrayOpen.swift; sourceTree = "<group>"; };
+		8AC74E9229FA1CDB0092B648 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8AC74E9429FA1D130092B648 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		8AC74E9829FA1D550092B648 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		8AC74E4529F663420092B648 /* WorkingWithList */ = {
 			isa = PBXGroup;
 			children = (
+				8AC74E9129FA1CA60092B648 /* Editting Mode */,
 				8AC74E8429F8D6AA0092B648 /* Disclosure Group */,
 				8AC74E7829F7941E0092B648 /* Expandable List */,
 				8AC74E7129F787910092B648 /* Sections & Groups */,
@@ -143,6 +150,7 @@
 				8AC74E7A29F7943E0092B648 /* MenuItem.swift */,
 				8AC74E8929F8D8570092B648 /* QAItem.swift */,
 				8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */,
+				8AC74E9229FA1CDB0092B648 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +200,15 @@
 				8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */,
 			);
 			path = "Disclosure Group";
+			sourceTree = "<group>";
+		};
+		8AC74E9129FA1CA60092B648 /* Editting Mode */ = {
+			isa = PBXGroup;
+			children = (
+				8AC74E9429FA1D130092B648 /* MovieListView.swift */,
+				8AC74E9829FA1D550092B648 /* MovieListViewModel.swift */,
+			);
+			path = "Editting Mode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,12 +289,15 @@
 				8AC74E6129F676920092B648 /* LoopItemsViewModel.swift in Sources */,
 				8AC74E5929F669AA0092B648 /* HeartButton.swift in Sources */,
 				8AC74E4929F663420092B648 /* ContentView.swift in Sources */,
+				8AC74E9929FA1D550092B648 /* MovieListViewModel.swift in Sources */,
 				8AC74E8329F7B7F40092B648 /* FoodCell.swift in Sources */,
 				8AC74E5D29F671EC0092B648 /* LoopItemsList.swift in Sources */,
 				8AC74E6E29F76DC50092B648 /* DynamicListView.swift in Sources */,
 				8AC74E7B29F7943E0092B648 /* MenuItem.swift in Sources */,
+				8AC74E9529FA1D130092B648 /* MovieListView.swift in Sources */,
 				8AC74E6429F677380092B648 /* User.swift in Sources */,
 				8AC74E6829F67CCF0092B648 /* UserCell.swift in Sources */,
+				8AC74E9329FA1CDB0092B648 /* Movie.swift in Sources */,
 				8AC74E4729F663420092B648 /* WorkingWithListApp.swift in Sources */,
 				8AC74E8C29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift in Sources */,
 				8AC74E8129F794EC0092B648 /* ExpandableListViewModel.swift in Sources */,
