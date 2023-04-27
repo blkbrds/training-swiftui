@@ -27,6 +27,11 @@
 		8AC74E7D29F794C70092B648 /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E7C29F794C70092B648 /* ExpandableListView.swift */; };
 		8AC74E8129F794EC0092B648 /* ExpandableListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8029F794EC0092B648 /* ExpandableListViewModel.swift */; };
 		8AC74E8329F7B7F40092B648 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8229F7B7F40092B648 /* FoodCell.swift */; };
+		8AC74E8829F8D7020092B648 /* DisclosureGroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8729F8D7020092B648 /* DisclosureGroupListView.swift */; };
+		8AC74E8A29F8D8570092B648 /* QAItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8929F8D8570092B648 /* QAItem.swift */; };
+		8AC74E8C29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8B29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift */; };
+		8AC74E8E29F8DF040092B648 /* DisclosureGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */; };
+		8AC74E9029FA10F60092B648 /* MyArrayOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +56,11 @@
 		8AC74E7C29F794C70092B648 /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		8AC74E8029F794EC0092B648 /* ExpandableListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListViewModel.swift; sourceTree = "<group>"; };
 		8AC74E8229F7B7F40092B648 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		8AC74E8729F8D7020092B648 /* DisclosureGroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupListView.swift; sourceTree = "<group>"; };
+		8AC74E8929F8D8570092B648 /* QAItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAItem.swift; sourceTree = "<group>"; };
+		8AC74E8B29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupListViewModel.swift; sourceTree = "<group>"; };
+		8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupView.swift; sourceTree = "<group>"; };
+		8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyArrayOpen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 		8AC74E4529F663420092B648 /* WorkingWithList */ = {
 			isa = PBXGroup;
 			children = (
+				8AC74E8429F8D6AA0092B648 /* Disclosure Group */,
 				8AC74E7829F7941E0092B648 /* Expandable List */,
 				8AC74E7129F787910092B648 /* Sections & Groups */,
 				8AC74E6B29F76D920092B648 /* Dynamic List */,
@@ -130,6 +141,8 @@
 			children = (
 				8AC74E6329F677380092B648 /* User.swift */,
 				8AC74E7A29F7943E0092B648 /* MenuItem.swift */,
+				8AC74E8929F8D8570092B648 /* QAItem.swift */,
+				8AC74E8F29FA10F60092B648 /* MyArrayOpen.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +182,16 @@
 				8AC74E8229F7B7F40092B648 /* FoodCell.swift */,
 			);
 			path = "Expandable List";
+			sourceTree = "<group>";
+		};
+		8AC74E8429F8D6AA0092B648 /* Disclosure Group */ = {
+			isa = PBXGroup;
+			children = (
+				8AC74E8729F8D7020092B648 /* DisclosureGroupListView.swift */,
+				8AC74E8B29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift */,
+				8AC74E8D29F8DF040092B648 /* DisclosureGroupView.swift */,
+			);
+			path = "Disclosure Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC74E6A29F67CE00092B648 /* UserList.swift in Sources */,
+				8AC74E8829F8D7020092B648 /* DisclosureGroupListView.swift in Sources */,
 				8AC74E7529F788750092B648 /* AggregateListView.swift in Sources */,
 				8AC74E7729F788FF0092B648 /* AggregateListViewModel.swift in Sources */,
 				8AC74E7029F76E1F0092B648 /* UserDetail.swift in Sources */,
@@ -255,10 +279,14 @@
 				8AC74E6429F677380092B648 /* User.swift in Sources */,
 				8AC74E6829F67CCF0092B648 /* UserCell.swift in Sources */,
 				8AC74E4729F663420092B648 /* WorkingWithListApp.swift in Sources */,
+				8AC74E8C29F8D8FF0092B648 /* DisclosureGroupListViewModel.swift in Sources */,
 				8AC74E8129F794EC0092B648 /* ExpandableListViewModel.swift in Sources */,
+				8AC74E8E29F8DF040092B648 /* DisclosureGroupView.swift in Sources */,
 				8AC74E5629F663CA0092B648 /* SimpleListView.swift in Sources */,
 				8AC74E7D29F794C70092B648 /* ExpandableListView.swift in Sources */,
+				8AC74E9029FA10F60092B648 /* MyArrayOpen.swift in Sources */,
 				8AC74E5B29F671760092B648 /* StaticRowsList.swift in Sources */,
+				8AC74E8A29F8D8570092B648 /* QAItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
