@@ -20,6 +20,7 @@
 		10BA5F4C2A0360D400F82701 /* SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F4B2A0360D400F82701 /* SectionListView.swift */; };
 		10BA5F4F2A036BC000F82701 /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F4E2A036BC000F82701 /* ExpandableListView.swift */; };
 		10BA5F522A038CB400F82701 /* DisclosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F512A038CB400F82701 /* DisclosureView.swift */; };
+		10BA5F592A03BF8700F82701 /* EditingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F582A03BF8700F82701 /* EditingListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		10BA5F4B2A0360D400F82701 /* SectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListView.swift; sourceTree = "<group>"; };
 		10BA5F4E2A036BC000F82701 /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		10BA5F512A038CB400F82701 /* DisclosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureView.swift; sourceTree = "<group>"; };
+		10BA5F582A03BF8700F82701 /* EditingListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		1057B66429F7920300758C21 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				10BA5F572A03BF8700F82701 /* Editing Mode */,
 				10BA5F502A038C8E00F82701 /* DisclosureGroup */,
 				10BA5F4D2A0369CC00F82701 /* Expandable List */,
 				10BA5F4A2A035E0100F82701 /* Sections & Groups */,
@@ -132,6 +135,14 @@
 				10BA5F512A038CB400F82701 /* DisclosureView.swift */,
 			);
 			path = DisclosureGroup;
+			sourceTree = "<group>";
+		};
+		10BA5F572A03BF8700F82701 /* Editing Mode */ = {
+			isa = PBXGroup;
+			children = (
+				10BA5F582A03BF8700F82701 /* EditingListView.swift */,
+			);
+			path = "Editing Mode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				1057B67929F8CC2300758C21 /* SimpleList3.swift in Sources */,
 				10BA5F4C2A0360D400F82701 /* SectionListView.swift in Sources */,
 				1057B67729F8C18400758C21 /* SimpleList2.swift in Sources */,
+				10BA5F592A03BF8700F82701 /* EditingListView.swift in Sources */,
 				109BA20B29FA595600B27D65 /* DynamicListView.swift in Sources */,
 				1057B66829F7920300758C21 /* ContentView.swift in Sources */,
 				1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */,
