@@ -124,7 +124,6 @@ extension LoginView {
                 .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
         }
     }
-
 }
 
 extension UIApplication {
