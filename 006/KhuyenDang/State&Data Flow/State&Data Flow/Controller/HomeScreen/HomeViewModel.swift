@@ -16,8 +16,14 @@ class HomeViewModel: ObservableObject {
         account.updateUser(fullname: localStorage.fullname, age: localStorage.age, address: localStorage.address)
     }
 
-    func logout() {
-        localStorage.resetUser()
+    func logout() async -> Bool {
+        do {
+            localStorage.resetUser()
+            try await Task.sleep(nanoseconds: 1_000_000_000)
+            return true
+        } catch {
+            return false
+        }
     }
 
     func viewModelForEdit(account: Account) -> EditViewModel {

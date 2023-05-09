@@ -7,26 +7,6 @@
 
 import SwiftUI
 
-func green() -> HStack<TupleView<(Text, Text)>> {
-    return HStack {
-        Text("green")
-            .font(.system(size: 65, weight: .bold))
-            .foregroundColor(Color("primaryColor"))
-        Text(".")
-            .font(.system(size: 62, weight: .bold))
-    }
-}
-
-fileprivate func otherInformation(infor: String, action: String) -> HStack<TupleView<(Text, Text)>> {
-    return HStack {
-        Text(infor)
-            .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
-        Text(action)
-            .bold()
-            .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
-    }
-}
-
 struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
@@ -38,7 +18,7 @@ struct LoginView: View {
 
         ZStack {
             VStack {
-                green()
+                nameApp()
 
                 Text("Log in on green :)")
                     .font(.system(size: 30, weight: .light))
@@ -65,7 +45,7 @@ struct LoginView: View {
                             if viewModel.isLoginSuccess {
                                 viewModel.saveData(account: account)
                                 appRouter.state = .home
-                                viewModel.reset()
+                                viewModel.resetData()
                             }
                             isLoading = false
                         }
@@ -84,8 +64,7 @@ struct LoginView: View {
                     }
 
                     Button(action: {
-                        viewModel.username = ""
-                        viewModel.password = ""
+                        viewModel.resetData()
                     }
                         , label: {
                             Text("Cancel")
@@ -112,7 +91,7 @@ struct LoginView: View {
             }
         }
             .onAppear {
-            viewModel.checkSaveData()
+            viewModel.getData()
         }
             .disabled(isLoading)
             .onTapGesture {
@@ -123,6 +102,29 @@ struct LoginView: View {
     private func endEditing() {
         UIApplication.shared.endEditing()
     }
+}
+
+extension LoginView {
+    func nameApp() -> HStack<TupleView<(Text, Text)>> {
+        return HStack {
+            Text("green")
+                .font(.system(size: 65, weight: .bold))
+                .foregroundColor(Color("primaryColor"))
+            Text(".")
+                .font(.system(size: 62, weight: .bold))
+        }
+    }
+    
+    func otherInformation(infor: String, action: String) -> HStack<TupleView<(Text, Text)>> {
+        return HStack {
+            Text(infor)
+                .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
+            Text(action)
+                .bold()
+                .foregroundColor(Color(red: 0.345, green: 0.325, blue: 0.309))
+        }
+    }
+
 }
 
 extension UIApplication {

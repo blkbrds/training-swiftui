@@ -19,11 +19,10 @@ class LoginViewModel: ObservableObject {
     @AppStorage("isSaveData") var isSaveData: Bool = false
     var account: Account?
 
-    func checkSaveData() {
-        if isSaveData {
-            username = localStorage.username
-            password = localStorage.password
-        }
+    func getData() {
+        guard isSaveData else { return }
+        username = localStorage.username
+        password = localStorage.password
     }
 
     func saveData(account: Account) {
@@ -32,28 +31,28 @@ class LoginViewModel: ObservableObject {
     }
 
     func isValidAccount() async {
-        await DataManager().isValidAccount(username: username, password: password) { [weak self](account, error) in
-            guard let this = self else { return }
+        do {
+            let account = try await DataManager().isValidAccount(username: username, password: password)
             DispatchQueue.main.async {
-                if let _ = error {
-                    this.contentAlert = ("Request Failed", "We can't connect to server")
-                    this.isShowErrorAlert = true
+                guard let account = account else {
+                    self.contentAlert = ("Login Failed", "Invalid username or password")
+                    self.isShowErrorAlert = true
                     return
-                } else {
-                    guard let account = account else {
-                        this.contentAlert = ("Login Failed", "Invalid username or password")
-                        this.isShowErrorAlert = true
-                        return
-                    }
-                    this.isLoginSuccess = true
-                    this.account = account
-                    this.localStorage.setUser(username: account.username ?? "", password: account.password ?? "", fullname: account.fullname ?? "", age: account.age ?? 0, address: account.address ?? "")
                 }
+                self.isLoginSuccess = true
+                self.account = account
+
+                self.localStorage.setUser(username: account.username ?? "", password: account.password ?? "", fullname: account.fullname ?? "", age: account.age ?? 0, address: account.address ?? "")
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.contentAlert = ("Request Failed", "We can't connect to server")
+                self.isShowErrorAlert = true
             }
         }
     }
 
-    func reset() {
+    func resetData() {
         username = ""
         password = ""
         isLoginSuccess = false

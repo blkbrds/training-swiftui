@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var appRouter: AppRouter
     @EnvironmentObject var account: Account
     @StateObject var viewModel = HomeViewModel()
+    @State var isLoading: Bool = false
 
     fileprivate func MyText(value: String) -> Text {
         return Text(value)
@@ -20,48 +21,63 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            ZStack {
+                VStack {
+                    Image("avatar")
+                        .resizable()
+                        .scaledToFit()
+                        .mask(Circle())
+                        .frame(width: 150)
+                        .padding(.top, 130)
+                        .padding(.bottom, 50)
+                        .background(.clear)
 
-                Image("avatar")
-                    .resizable()
-                    .scaledToFit()
-                    .mask(Circle())
-                    .frame(width: 150)
-                    .padding(.top, 130)
-                    .padding(.bottom, 50)
-                    .background(.clear)
-
-                HStack(spacing: 20) {
-                    VStack(alignment: .leading) {
-                        MyText(value: "Fullname:")
-                        MyText(value: "Age:")
-                        MyText(value: "Address:")
-                    }
-
-                    VStack(alignment: .leading) {
-                        MyText(value: account.fullname ?? "")
-                        MyText(value: "\(account.age ?? 0)")
-                        MyText(value: account.address ?? "")
-                    }
-                }
-
-                Button(action: {
-                    viewModel.logout()
-                    appRouter.state = .login
-                }
-                    , label: {
-                        HStack {
-                            Text("Logout")
-                                .foregroundColor(Color("primaryColor"))
-                                .font(.system(size: 20))
-                            Image("logout")
-                                .resizable()
-                                .frame(width: 40, height: 35)
+                    HStack(spacing: 20) {
+                        VStack(alignment: .leading) {
+                            MyText(value: "Fullname:")
+                            MyText(value: "Age:")
+                            MyText(value: "Address:")
                         }
-                    })
-                    .padding(.top, 30)
 
-                Spacer()
+                        VStack(alignment: .leading) {
+                            MyText(value: account.fullname ?? "")
+                            MyText(value: "\(account.age ?? 0)")
+                            MyText(value: account.address ?? "")
+                        }
+                    }
+
+                    Button(action: {
+
+                        Task {
+                            isLoading = true
+                            guard await viewModel.logout() else {
+                                isLoading = false
+                                return
+                            }
+                            appRouter.state = .login
+                            isLoading = false
+                        }
+                    }
+                        , label: {
+                            HStack {
+                                Text("Logout")
+                                    .foregroundColor(Color("primaryColor"))
+                                    .font(.system(size: 20))
+                                Image("logout")
+                                    .resizable()
+                                    .frame(width: 40, height: 35)
+                            }
+                        })
+                        .padding(.top, 30)
+
+                    Spacer()
+                }
+
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(3.0)
+                        .tint(Color("primaryColor"))
+                }
             }
                 .onAppear {
                 viewModel.loadData(account: account)
@@ -80,5 +96,6 @@ struct HomeView: View {
             }
                 .ignoresSafeArea()
         }
+            .disabled(isLoading)
     }
 }

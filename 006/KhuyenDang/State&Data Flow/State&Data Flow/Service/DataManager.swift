@@ -16,19 +16,17 @@ class DataManager: ObservableObject {
         Account(username: "user3", password: "password3", fullname: "Đặng Thị Khuyên", age: 22, address: "Quảng Bình")
     ]
 
-    func isValidAccount(username: String, password: String, _ completion: @escaping (_ account: Account?, _ error: Error?) -> Void) async {
+    func isValidAccount(username: String, password: String) async throws -> Account? {
         do {
             try await Task.sleep(nanoseconds: 2 * 1000000000)
             for account in accounts {
                 if account.username == username && account.password == password {
-                    completion(account, nil)
-                    return
+                    return account
                 }
             }
-            completion(nil, nil)
-            return
+            return nil
         } catch {
-            completion(nil, error)
+            throw error
         }
     }
 }
