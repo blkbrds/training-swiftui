@@ -43,7 +43,6 @@ struct LaunchScreen: View {
                 if localStorage.fullname.isEmpty {
                     appRouter.state = .login
                 } else {
-                    account.setUser(fullname: localStorage.fullname, age: localStorage.age, address: localStorage.address)
                     appRouter.state = .home
                 }
             }
