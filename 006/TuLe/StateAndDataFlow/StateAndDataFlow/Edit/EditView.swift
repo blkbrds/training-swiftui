@@ -11,7 +11,7 @@ struct EditView: View {
 
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var appRouter: StorageData
-    @StateObject var viewModel = EditViewModel()
+    @StateObject var viewModel: EditViewModel
 
     var body: some View {
         VStack {
@@ -39,6 +39,9 @@ struct EditView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
+            .alert(isPresented: $viewModel.isShowAlert) {
+                Alert(title: Text("Save Data fail"), message: Text("Tài khoản or mật khẩu không được để trống"), dismissButton: .default(Text("Ok")))
+            }
         }
         .padding()
         .navigationBarBackButtonHidden(true)
@@ -54,9 +57,6 @@ struct EditView: View {
                     }
                 }
             }
-        }
-        .onAppear {
-            viewModel.loadData(data: appRouter.dataLogin)
         }
     }
 }

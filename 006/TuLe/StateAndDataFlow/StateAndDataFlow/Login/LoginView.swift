@@ -34,16 +34,12 @@ struct LoginView: View {
                     Button {
                         Task {
                             isShowIndicator = true
-                            await viewModel.handleLogin(completion: { result in
-                                switch result {
-                                case .success(let data):
-                                    appRouter.dataLogin = data
-                                    appRouter.appState = .home
-                                case .failure:
-                                    break
-                                }
-                                self.isShowIndicator = false
-                            })
+                            let data = await viewModel.handleLogin()
+                            if let data = data {
+                                appRouter.dataLogin = data
+                                appRouter.appState = .home
+                            }
+                            self.isShowIndicator = false
                         }
                     } label: {
                         ZStack {

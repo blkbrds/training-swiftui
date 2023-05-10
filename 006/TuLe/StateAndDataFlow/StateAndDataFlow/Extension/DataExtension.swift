@@ -8,11 +8,13 @@
 import Foundation
 
 extension Data {
-    func loadData() -> User {
-        let decoder = JSONDecoder()
-        guard let userData = try? decoder.decode(User.self, from: self) else {
-            return User(email: "", password: "")
+    func loadData() async throws -> User {
+        do {
+            let decoder = JSONDecoder()
+            let userData = try decoder.decode(User.self, from: self)
+            return userData
+        } catch {
+            throw error
         }
-        return userData
     }
 }

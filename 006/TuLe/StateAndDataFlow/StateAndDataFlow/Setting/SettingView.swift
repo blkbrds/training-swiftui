@@ -46,15 +46,19 @@ struct SettingView: View {
             }
             
             Button {
+                guard let data = viewModel.saveData() else { return }
                 appRouter.isDarkMode = viewModel.isDarkMode
                 appRouter.nortify = viewModel.isNortify
-                appRouter.dataLogin = viewModel.saveData()
+                appRouter.dataLogin = data
                 dismiss()
             } label: {
                 Text("Lưu")
                     .padding(.horizontal, 7)
             }
             .buttonStyle(.borderedProminent)
+            .alert(isPresented: $viewModel.isShowAlert) {
+                Alert(title: Text("Save Data fail"), message: Text("Tài khoản or mật khẩu không được để trống"), dismissButton: .default(Text("Ok")))
+            }
 
         }
         .padding()

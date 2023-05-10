@@ -11,7 +11,15 @@ class HomeViewModel: ObservableObject {
     
     @Published var user: User?
     
-    func loadData(data: Data?) {
-        user = data?.loadData()
+    @MainActor
+    func loadData(data: Data?) async {
+        do {
+            guard let data = try await data?.loadData() else {
+                return
+            }
+            user = data
+        } catch {
+            print(error)
+        }
     }
 }

@@ -19,22 +19,13 @@ class DataManager: ObservableObject {
         User(email: "lecongtu789@gmail.com", password: "123456")
     ]
     
-    func loadData(value: User, completion: @escaping (Result<User>) -> Void) async {
+    func loadData(value: User) async throws -> Bool {
         do {
             try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
             let result = await checkUser(value: value)
-            DispatchQueue.main.async {
-                if result {
-                    completion(.success(value))
-                } else {
-                    completion(.failure("Tài khoản hoặc mật khẩu không đúng"))
-                }
-            }
+            return result
         } catch {
-            DispatchQueue.main.async {
-                completion(.failure(error.localizedDescription))
-            }
-            
+            throw error
         }
     }
     

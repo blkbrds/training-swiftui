@@ -22,4 +22,8 @@ struct User: Codable {
         let data = try? encoder.encode(self)
         return data
     }
+    
+    func isValidUser() -> Bool {
+        return !self.email.isEmpty && !self.password.isEmpty
+    }
 }

@@ -9,14 +9,19 @@ import Foundation
 
 class EditViewModel: ObservableObject {
     
-    @Published var user: User = User(email: "", password: "")
+    @Published var user: User
+    @Published var isShowAlert: Bool = false
     
-    func loadData(data: Data?) {
-        guard let dataUser = data?.loadData() else { return }
-        user = dataUser
+    init(user: User) {
+        self.user = user
     }
     
     func saveData() -> Data? {
-        return user.saveData()
+        if user.isValidUser() {
+            return user.saveData()
+        } else {
+            isShowAlert = true
+            return nil
+        }
     }
 }

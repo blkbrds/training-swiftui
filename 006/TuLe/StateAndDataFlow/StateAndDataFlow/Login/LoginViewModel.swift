@@ -15,21 +15,22 @@ class LoginViewModel: ObservableObject {
     @Published var titleError: String = ""
     @Published var contentError: String = ""
     
-    func handleLogin(completion: @escaping (Result<Data>) -> Void) async {
-        Task {
-            await DataManager().loadData(value: User(email: email, password: password), completion: { [weak self] result in
-                guard let this = self else { return }
-                switch result {
-                case .success:
-                    let user = User(email: this.email, password: this.password)
-                    completion(.success(user.saveData() ?? Data()))
-                case .failure(let error):
-                    this.titleError = "Login failed"
-                    this.contentError = error
-                    this.isShowAlert = true
-                    completion(.failure(error))
-                }
-            })
+    @MainActor
+    func handleLogin() async -> Data? {
+        do {
+            let user = User(email: email, password: password)
+            let isLogin = try await DataManager().loadData(value: user)
+            if isLogin {
+                return user.saveData()
+            } else {
+                isShowAlert = true
+                titleError = "Tài khoản hoặc mật khẩu không đúng"
+                return nil
+            }
+        } catch {
+            isShowAlert = true
+            titleError = "Không thể kết nối tới server"
+            return nil
         }
     }
 }

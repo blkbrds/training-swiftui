@@ -9,17 +9,23 @@ import Foundation
 
 class SettingViewModel: ObservableObject {
     
-    @Published var user: User = User(email: "", password: "")
-    @Published var isNortify: Bool = false
-    @Published var isDarkMode: Bool = false
+    @Published var user: User
+    @Published var isNortify: Bool
+    @Published var isDarkMode: Bool
+    @Published var isShowAlert: Bool = false
     
-    init(user: User?, isNortify: Bool?, isDarkMode: Bool?) {
-        self.user = user ?? User(email: "", password: "")
-        self.isNortify = isNortify ?? false
-        self.isDarkMode = isDarkMode ?? false
+    init(user: User, isNortify: Bool, isDarkMode: Bool) {
+        self.user = user
+        self.isNortify = isNortify
+        self.isDarkMode = isDarkMode
     }
     
     func saveData() -> Data? {
-        return user.saveData()
+        if user.isValidUser() {
+            return user.saveData()
+        } else {
+            isShowAlert = true
+            return nil
+        }
     }
 }
