@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
 
+    @EnvironmentObject var appRouter: AppRouter
     @State var email: String = ""
     @State var password: String = ""
     @State var error: Bool = false
@@ -52,7 +53,9 @@ struct LoginView: View {
                     }
                         .padding(.top, 10)
                         .padding(.bottom, 20)
-                    Button(action: { },
+                    Button(action: {
+                        appRouter.state = .tabbar
+                    },
                         label: {
                             Text("Log In")
                                 .myButtonModifier()

@@ -14,4 +14,5 @@ class AppRouter: ObservableObject {
 
 enum AppState {
     case login
+    case tabbar
 }

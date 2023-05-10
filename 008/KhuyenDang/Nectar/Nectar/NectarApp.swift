@@ -26,6 +26,8 @@ struct NectarApp: App {
         switch appRouter.state {
         case .login:
             LoginView()
+        case .tabbar:
+            MyTabView()
         }
     }
 }
