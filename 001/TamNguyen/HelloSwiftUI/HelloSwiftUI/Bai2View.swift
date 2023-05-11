@@ -8,17 +8,42 @@
 import SwiftUI
 
 struct Bai2View: View {
+    
+    // MARK: - Environment
+    @Environment (\.colorScheme) var colorScheme
+    @State private var isDarkMode = false
+    
+    // MARK: - Properties
     let name: String
 
     var body: some View {
         VStack {
             Text("Hello World")
                 .padding()
+                .foregroundColor(colorScheme == .dark ? .white : .black)
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(Color.blue)
+                .foregroundColor(colorScheme == .dark ? .white : .blue)
                 .padding()
+            Button {
+                self.isDarkMode.toggle()
+            } label: {
+                Text("Mode")
+                    .padding()
+            }
+            .buttonStyle(MyButtonStyle())
         }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
+    }
+}
+
+struct MyButtonStyle: ButtonStyle {
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 200, height: 50)
+            .background(Color.blue)
+            .cornerRadius(20)
     }
 }
 
