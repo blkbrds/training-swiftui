@@ -8,37 +8,54 @@
 import SwiftUI
 
 struct Bai2View: View {
-    
+
     // MARK: - Environment
     @Environment (\.colorScheme) var colorScheme
+
+    // MARK: - State
     @State private var isDarkMode = false
-    
+    @State private var isShowAlert = false
+    @State private var textFieldText = ""
+
     // MARK: - Properties
     let name: String
 
     var body: some View {
         VStack {
-            Text("Hello World")
+            Text(textFieldText)
                 .padding()
-                .foregroundColor(colorScheme == .dark ? .white : .black)
+                .foregroundColor(colorScheme == .dark ? .blue : .black)
             Text((name != "") ? name : "---")
                 .font(.title)
                 .foregroundColor(colorScheme == .dark ? .white : .blue)
                 .padding()
             Button {
-                self.isDarkMode.toggle()
+                handleTapButton()
             } label: {
                 Text("Mode")
                     .padding()
             }
-            .buttonStyle(MyButtonStyle())
+                .buttonStyle(MyButtonStyle())
+                .alert("Enter name", isPresented: $isShowAlert) {
+                TextField("Enter your name", text: $textFieldText)
+                Button("Cancel", role: .destructive) {
+                }
+                Button("OK", role: .cancel) {
+                }
+            }
         }
-        .preferredColorScheme(isDarkMode ? .dark : .light)
+            .preferredColorScheme(isDarkMode ? .dark : .light)
+    }
+
+    // MARK: - Private func
+    private func handleTapButton() {
+        isDarkMode.toggle()
+        isShowAlert = true
     }
 }
 
 struct MyButtonStyle: ButtonStyle {
-    
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: 200, height: 50)
