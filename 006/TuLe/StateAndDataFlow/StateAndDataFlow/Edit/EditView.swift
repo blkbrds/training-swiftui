@@ -9,19 +9,19 @@ import SwiftUI
 
 struct EditView: View {
 
-    @Binding var dataBinding: User
-    @State var data: User
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var appRouter: StorageData
+    @StateObject var viewModel: EditViewModel
 
     var body: some View {
         VStack {
-            TextField(data.email, text: $data.email)
+            TextField(viewModel.user.email, text: $viewModel.user.email)
                 .padding()
                 .overlay {
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.orange, lineWidth: 2)
                 }
-            TextField(data.password, text: $data.password)
+            TextField(viewModel.user.password, text: $viewModel.user.password)
                 .padding()
                 .overlay {
                     RoundedRectangle(cornerRadius: 20)
@@ -29,7 +29,7 @@ struct EditView: View {
                 }
             
             Button {
-                dataBinding = User(email: data.email, password: data.password)
+                appRouter.dataLogin = viewModel.saveData()
                 dismiss()
             } label: {
                 Text("Update")
@@ -38,6 +38,9 @@ struct EditView: View {
                     .background(.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
+            }
+            .alert(isPresented: $viewModel.isShowAlert) {
+                Alert(title: Text("Save Data fail"), message: Text("Tài khoản or mật khẩu không được để trống"), dismissButton: .default(Text("Ok")))
             }
         }
         .padding()

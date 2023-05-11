@@ -9,14 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var isShowIndicator: Bool = false
-    @State var isShowAlert: Bool = false
-    @State var titleError: String = ""
-    @State var contentError: String = ""
+    @StateObject var viewModel = LoginViewModel()
     @EnvironmentObject var appRouter: StorageData
-    var model = DataManager()
+    @State var isShowIndicator: Bool = false
 
     var body: some View {
         ZStack {
@@ -29,7 +24,7 @@ struct LoginView: View {
                     .padding()
                 
                 VStack {
-                    InputLoginView(email: $email, password: $password)
+                    InputLoginView(email: $viewModel.email, password: $viewModel.password)
                     HStack {
                         Spacer()
                         Text("Forgot Password")
@@ -37,7 +32,15 @@ struct LoginView: View {
                     }
                     
                     Button {
-                        handleLogin()
+                        Task {
+                            isShowIndicator = true
+                            let data = await viewModel.handleLogin()
+                            if let data = data {
+                                appRouter.dataLogin = data
+                                appRouter.appState = .home
+                            }
+                            self.isShowIndicator = false
+                        }
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
@@ -47,9 +50,9 @@ struct LoginView: View {
                     }
                     .frame(height: 50)
                     .padding(.top, 30)
-                    .disabled((email == "") || (password == "") || !email.isOpacity())
-                    .alert(isPresented: $isShowAlert) {
-                        Alert(title: Text(titleError), message: Text(contentError), dismissButton: .default(Text("Ok")))
+                    .disabled((viewModel.email == "") || (viewModel.password == "") || !viewModel.email.isOpacity())
+                    .alert(isPresented: $viewModel.isShowAlert) {
+                        Alert(title: Text(viewModel.titleError), message: Text(viewModel.contentError), dismissButton: .default(Text("Ok")))
                     }
 
                 }
@@ -65,31 +68,6 @@ struct LoginView: View {
             ActivityIndicator(isAnimating: isShowIndicator, style: .large)
         }
         .background(Image("backgroundImage").resizable().ignoresSafeArea(.all))
-    }
-    
-    private func handleLogin() {
-        Task {
-            isShowIndicator = true
-            do {
-                let isLogin = try await model.loadData(value: User(email: email, password: password))
-                if isLogin {
-                    let user = User(email: email, password: password)
-                    let encoder = JSONEncoder()
-                    let data = try encoder.encode(user)
-                    appRouter.dataLogin = data
-                    appRouter.appState = .home
-                } else {
-                    titleError = "Login failed"
-                    contentError = "Tài khoản hoặc mật khẩu không đúng"
-                    isShowAlert = true
-                }
-            } catch {
-                titleError = "Login failed"
-                contentError = "Không thể kết nối tới sever"
-                isShowAlert = true
-            }
-            isShowIndicator = false
-        }
     }
 }
 
@@ -185,23 +163,6 @@ struct InputLoginView: View {
 
                 }
             }
-        }
-    }
-}
-
-extension String {
-    func isValidEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: self)
-    }
-
-    func isOpacity() -> Bool {
-        if self != "" {
-            return self.isValidEmail()
-        } else {
-            return true
         }
     }
 }

@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum Result<T> {
+    case success(T)
+    case failure(String)
+}
+
 class DataManager: ObservableObject {
     private var loginAccounts: [User] = [
         User(email: "lecongtu123@gmail.com", password: "123456"),
@@ -31,16 +36,5 @@ class DataManager: ObservableObject {
             }
         }
         return false
-    }
-}
-
-struct User: Codable {
-    var email: String
-    var password: String
-    
-    static func ==(lhs: User, rhs: User) -> Bool {
-        return
-            lhs.email == rhs.email &&
-            lhs.password == rhs.password
     }
 }

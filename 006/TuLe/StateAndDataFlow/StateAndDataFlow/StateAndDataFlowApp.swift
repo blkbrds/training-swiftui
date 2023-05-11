@@ -16,11 +16,7 @@ struct StateAndDataFlowApp: App {
     var rootView: some View {
         switch appRouter.appState {
         case .home:
-            let decoder = JSONDecoder()
-            if let data = appRouter.dataLogin,
-               let user = try? decoder.decode(User.self, from: data) {
-                HomeView(data: user)
-            }
+            HomeView()
         case .login:
             LoginView()
         case .tutorial:
@@ -32,6 +28,7 @@ struct StateAndDataFlowApp: App {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
+                .environment(\.colorScheme, appRouter.isDarkMode ? .dark : .light)
         }
     }
 }
@@ -39,6 +36,8 @@ struct StateAndDataFlowApp: App {
 class StorageData: ObservableObject {
     @AppStorage("appState") var appState: AppState = .tutorial
     @AppStorage("loginUser") var dataLogin: Data?
+    @AppStorage("darkMode") var isDarkMode: Bool = false
+    @AppStorage("nortify") var nortify: Bool = true
 }
 
 enum AppState: String, Codable, CaseIterable {
