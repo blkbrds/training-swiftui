@@ -19,8 +19,10 @@
 		10BA5F492A03499C00F82701 /* DynamicListDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F482A03499C00F82701 /* DynamicListDetail.swift */; };
 		10BA5F4C2A0360D400F82701 /* SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F4B2A0360D400F82701 /* SectionListView.swift */; };
 		10BA5F4F2A036BC000F82701 /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F4E2A036BC000F82701 /* ExpandableListView.swift */; };
-		10BA5F522A038CB400F82701 /* DisclosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F512A038CB400F82701 /* DisclosureView.swift */; };
+		10BA5F522A038CB400F82701 /* DisclosureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F512A038CB400F82701 /* DisclosureListView.swift */; };
 		10BA5F592A03BF8700F82701 /* EditingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5F582A03BF8700F82701 /* EditingListView.swift */; };
+		10E8A2022A0D62A7002FA9C8 /* DisclosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2012A0D62A7002FA9C8 /* DisclosureView.swift */; };
+		10E8A2042A0D6356002FA9C8 /* DisclosureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2032A0D6356002FA9C8 /* DisclosureListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +39,10 @@
 		10BA5F482A03499C00F82701 /* DynamicListDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListDetail.swift; sourceTree = "<group>"; };
 		10BA5F4B2A0360D400F82701 /* SectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListView.swift; sourceTree = "<group>"; };
 		10BA5F4E2A036BC000F82701 /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
-		10BA5F512A038CB400F82701 /* DisclosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureView.swift; sourceTree = "<group>"; };
+		10BA5F512A038CB400F82701 /* DisclosureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureListView.swift; sourceTree = "<group>"; };
 		10BA5F582A03BF8700F82701 /* EditingListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingListView.swift; sourceTree = "<group>"; };
+		10E8A2012A0D62A7002FA9C8 /* DisclosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureView.swift; sourceTree = "<group>"; };
+		10E8A2032A0D6356002FA9C8 /* DisclosureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 		10BA5F502A038C8E00F82701 /* DisclosureGroup */ = {
 			isa = PBXGroup;
 			children = (
-				10BA5F512A038CB400F82701 /* DisclosureView.swift */,
+				10BA5F512A038CB400F82701 /* DisclosureListView.swift */,
+				10E8A2012A0D62A7002FA9C8 /* DisclosureView.swift */,
+				10E8A2032A0D6356002FA9C8 /* DisclosureListViewModel.swift */,
 			);
 			path = DisclosureGroup;
 			sourceTree = "<group>";
@@ -220,13 +226,15 @@
 				1057B67729F8C18400758C21 /* SimpleList2.swift in Sources */,
 				10BA5F592A03BF8700F82701 /* EditingListView.swift in Sources */,
 				109BA20B29FA595600B27D65 /* DynamicListView.swift in Sources */,
+				10E8A2042A0D6356002FA9C8 /* DisclosureListViewModel.swift in Sources */,
 				1057B66829F7920300758C21 /* ContentView.swift in Sources */,
 				1057B67529F815DA00758C21 /* SimpleList1.swift in Sources */,
 				1057B66629F7920300758C21 /* ListApp.swift in Sources */,
 				10BA5F492A03499C00F82701 /* DynamicListDetail.swift in Sources */,
-				10BA5F522A038CB400F82701 /* DisclosureView.swift in Sources */,
+				10BA5F522A038CB400F82701 /* DisclosureListView.swift in Sources */,
 				10BA5F4F2A036BC000F82701 /* ExpandableListView.swift in Sources */,
 				109BA20D29FA59EA00B27D65 /* Weather.swift in Sources */,
+				10E8A2022A0D62A7002FA9C8 /* DisclosureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

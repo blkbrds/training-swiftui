@@ -16,12 +16,9 @@ struct DynamicListView: View {
                     DynamicListDetail(weather: item)
                 } label: {
                     WeatherRow(weather: item)
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
-                        .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 10))
                 }
             }
-            .navigationBarTitle("DynamicList", displayMode: .inline)
+            .navigationBarTitle("DynamicList")
         }
     }
 }
@@ -37,23 +34,29 @@ struct WeatherRow: View {
     
     var body: some View {
         HStack {
+            Image(weather.imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 70, height: 70)
+                .clipShape(Circle())
+            
             VStack(alignment: .leading) {
-                Text(weather.city)
-                    .font(.title)
-                    .lineLimit(1)
-                Text(weather.country)
-                    .fontWeight(.bold)
+                HStack {
+                    Text(weather.nickname)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.black)
+                    if weather.isBlueTick {
+                        Image(systemName: "checkmark.seal.fill")
+                            .foregroundColor(.blue)
+                    }
+                }
+                Text(weather.name)
+                    .font(.system(size: 15))
+                    .foregroundColor(.gray)
             }
             Spacer()
-            Text("\(weather.temperature)°C")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding(.all)
         }
-        .padding()
-        .background(Image(weather.getStatusString()).resizable().brightness(-0.1))
         .cornerRadius(10)
-        .foregroundColor(.white)
+        .frame(maxWidth: .infinity)
     }
 }
