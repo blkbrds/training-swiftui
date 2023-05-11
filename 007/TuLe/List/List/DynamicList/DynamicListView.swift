@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DynamicListView: View {
-    var weathers = Weather.dummyData()
+    var users = UserInsta.dummyData()
     var body: some View {
         NavigationStack {
-            List(weathers) { item in
+            List(users) { item in
                 NavigationLink {
-                    DynamicListDetail(weather: item)
+                    DynamicListDetail(user: item)
                 } label: {
-                    WeatherRow(weather: item)
+                    UserInstaRow(user: item)
                 }
             }
             .navigationBarTitle("DynamicList")
@@ -29,12 +29,12 @@ struct DynamicListView_Previews: PreviewProvider {
     }
 }
 
-struct WeatherRow: View {
-    var weather: Weather
+struct UserInstaRow: View {
+    var user: UserInsta
     
     var body: some View {
         HStack {
-            Image(weather.imageName)
+            Image(user.imageName)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 70, height: 70)
@@ -42,15 +42,15 @@ struct WeatherRow: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(weather.nickname)
+                    Text(user.nickname)
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(.black)
-                    if weather.isBlueTick {
+                    if user.isBlueTick {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(.blue)
                     }
                 }
-                Text(weather.name)
+                Text(user.name)
                     .font(.system(size: 15))
                     .foregroundColor(.gray)
             }

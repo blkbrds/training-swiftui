@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct DynamicListDetail: View {
-    var weather: Weather
+    var user: UserInsta
     
     var body: some View {
         VStack {
             VStack(alignment: .center) {
-                Image(weather.imageName)
+                Image(user.imageName)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 200, height: 200)
                     .clipShape(Circle())
-                Text(weather.name)
+                Text(user.name)
                     .font(.system(size: 15))
                     .fontWeight(.semibold)
                 
                 HStack {
-                    FollowButton(isFollow: weather.isFollow)
+                    FollowButton(isFollow: user.isFollow)
                         .frame(maxWidth: .infinity)
                     Button {
                         print("")
@@ -42,10 +42,10 @@ struct DynamicListDetail: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 HStack {
-                    Text(weather.nickname)
+                    Text(user.nickname)
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(.black)
-                    if weather.isBlueTick {
+                    if user.isBlueTick {
                         Image(systemName: "checkmark.seal.fill")
                             .foregroundColor(.blue)
                     }
