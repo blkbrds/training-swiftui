@@ -14,6 +14,7 @@
 		60BE78DF2A0CAA9B00D4BAC9 /* BaiTap3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78DE2A0CAA9B00D4BAC9 /* BaiTap3Tests.swift */; };
 		60BE78E92A0CAA9B00D4BAC9 /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78E82A0CAA9B00D4BAC9 /* BaiTap3UITests.swift */; };
 		60BE78EB2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */; };
+		60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		60BE78E42A0CAA9B00D4BAC9 /* BaiTap3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BE78E82A0CAA9B00D4BAC9 /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
 		60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				60BE78CD2A0CAA9A00D4BAC9 /* BaiTap3App.swift */,
+				60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */,
 				60BE78CF2A0CAA9A00D4BAC9 /* ListAvatarView.swift */,
 				60BE78D12A0CAA9B00D4BAC9 /* Assets.xcassets */,
 				60BE78D32A0CAA9B00D4BAC9 /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60BE78D02A0CAA9A00D4BAC9 /* ListAvatarView.swift in Sources */,
+				60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */,
 				60BE78CE2A0CAA9A00D4BAC9 /* BaiTap3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
