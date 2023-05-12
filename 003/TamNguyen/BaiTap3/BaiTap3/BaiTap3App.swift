@@ -12,7 +12,8 @@ struct BaiTap3App: App {
     var body: some Scene {
         WindowGroup {
 //            ListAvatarView()
-            CalculatorView()
+//            CalculatorView()
+            ImageView()
         }
     }
 }

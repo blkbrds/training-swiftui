@@ -15,6 +15,7 @@
 		60BE78E92A0CAA9B00D4BAC9 /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78E82A0CAA9B00D4BAC9 /* BaiTap3UITests.swift */; };
 		60BE78EB2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */; };
 		60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */; };
+		60BE78FF2A0E375500D4BAC9 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78FE2A0E375500D4BAC9 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		60BE78E82A0CAA9B00D4BAC9 /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
 		60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		60BE78FE2A0E375500D4BAC9 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				60BE78CD2A0CAA9A00D4BAC9 /* BaiTap3App.swift */,
 				60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */,
+				60BE78FE2A0E375500D4BAC9 /* ImageView.swift */,
 				60BE78CF2A0CAA9A00D4BAC9 /* ListAvatarView.swift */,
 				60BE78D12A0CAA9B00D4BAC9 /* Assets.xcassets */,
 				60BE78D32A0CAA9B00D4BAC9 /* Preview Content */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BE78FF2A0E375500D4BAC9 /* ImageView.swift in Sources */,
 				60BE78D02A0CAA9A00D4BAC9 /* ListAvatarView.swift in Sources */,
 				60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */,
 				60BE78CE2A0CAA9A00D4BAC9 /* BaiTap3App.swift in Sources */,
