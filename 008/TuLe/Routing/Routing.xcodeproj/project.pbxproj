@@ -19,6 +19,7 @@
 		10E8A20D2A110A92002FA9C8 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20C2A110A92002FA9C8 /* ForgotPasswordViewModel.swift */; };
 		10E8A2102A112CC1002FA9C8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */; };
 		10E8A2152A11429B002FA9C8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2142A11429B002FA9C8 /* ErrorView.swift */; };
+		10E8A2182A11E079002FA9C8 /* BasedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2172A11E079002FA9C8 /* BasedTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		10E8A20C2A110A92002FA9C8 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		10E8A2142A11429B002FA9C8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		10E8A2172A11E079002FA9C8 /* BasedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasedTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		1008FAAF2A08D4DB00DD0D3C /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				10E8A2162A11DF68002FA9C8 /* TabView */,
 				10E8A2132A114289002FA9C8 /* Error */,
 				10E8A20E2A112CA5002FA9C8 /* Extension */,
 				10E8A2072A110A48002FA9C8 /* ForgotPassword */,
@@ -129,6 +132,14 @@
 				10E8A2142A11429B002FA9C8 /* ErrorView.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		10E8A2162A11DF68002FA9C8 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				10E8A2172A11E079002FA9C8 /* BasedTabView.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E8A2182A11E079002FA9C8 /* BasedTabView.swift in Sources */,
 				10E8A20D2A110A92002FA9C8 /* ForgotPasswordViewModel.swift in Sources */,
 				1008FAC02A08E90600DD0D3C /* LoginView.swift in Sources */,
 				10B8036A2A0B390C0054DFDA /* RegisterView.swift in Sources */,
