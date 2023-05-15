@@ -9,11 +9,13 @@ import SwiftUI
 
 struct LoginView: View {
 
+    // MARK: - State
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isSecure: Bool = true
     @State private var isValidate: Bool = false
 
+    // MARK: - Body
     var body: some View {
         ZStack() {
             GeometryReader { geometry in
@@ -85,82 +87,14 @@ struct LoginView: View {
                             .padding(.horizontal, 40)
                             .padding(.top, 20)
                     }
-                    formInputView(geo: geo)
+
+                    // form input
+                    formInputView(email: $email, password: $password, isSecure: isSecure, isValidate: isValidate, geo: geo) {
+                        isSecure.toggle()
+                    }
                 }
             }
         }
-    }
-    
-    @ViewBuilder
-    func formInputView(geo: GeometryProxy) -> some View {
-        VStack(spacing: 20) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Email")
-                    .foregroundColor(.gray)
-                    .font(.headline)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-
-                HStack {
-                    TextField(Strings.Login.placeHolderEmail, text: $email)
-                        .padding(.horizontal, 20)
-                    Button(action: {
-                        isSecure.toggle()
-                    }) {
-                        Image(isValidate ? "check" : "")
-                    }
-                    .padding(.trailing, 20)
-                }
-            }
-            .frame(height: geo.size.height * 0.07)
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Password")
-                    .foregroundColor(.gray)
-                    .font(.headline)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
-                
-                HStack {
-                    isSecure ?
-                    SecureField(Strings.Login.placeHolderPassword, text: $password)
-                        .padding(.horizontal, 20)
-                        .textFieldStyle(.plain)
-                        .padding(.bottom, 20)
-                    :
-                    SecureField(Strings.Login.placeHolderPassword, text: $password)
-                        .padding(.horizontal, 20)
-                        .textFieldStyle(.plain)
-                        .padding(.bottom, 20)
-                    
-                    Button(action: {
-                        isSecure.toggle()
-                    }) {
-                        Image(systemName: isSecure ? "eye.slash" : "eye")
-                    }
-                    .padding(.trailing, 20)
-                }
-            }
-            .frame(height: geo.size.height * 0.07)
-
-            Text(Strings.Login.titleLogin)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .foregroundColor(Color(hex: "#4552CB"))
-                .font(.footnote)
-                .padding(.trailing, 20)
-
-            Button {
-                // handle later
-            } label: {
-                Text(Strings.Login.signIn)
-                    .foregroundColor(.white)
-            }
-            .commonButton(paddingHorizontal: geo.size.height * 0.03, paddingVertical: geo.size.height * 0.03)
-
-        }
-
-            .background(Color.white)
-            .cornerRadiusCommon()
-            .padding(.horizontal, 24)
     }
 }
 
@@ -169,4 +103,3 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
-

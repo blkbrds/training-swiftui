@@ -20,6 +20,7 @@
 		60BE79462A10F75500D4BAC9 /* ThreeSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79452A10F75500D4BAC9 /* ThreeSide.swift */; };
 		60BE79492A10FB2000D4BAC9 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79482A10FB2000D4BAC9 /* Strings.swift */; };
 		60BE794D2A10FD5800D4BAC9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE794C2A10FD5800D4BAC9 /* Color.swift */; };
+		60BE79542A11EDAC00D4BAC9 /* FormInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79532A11EDAC00D4BAC9 /* FormInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		60BE79452A10F75500D4BAC9 /* ThreeSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSide.swift; sourceTree = "<group>"; };
 		60BE79482A10FB2000D4BAC9 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		60BE794C2A10FD5800D4BAC9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		60BE79532A11EDAC00D4BAC9 /* FormInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		60BE793B2A10ECFB00D4BAC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60BE79522A11ED7700D4BAC9 /* ViewBuilder */,
 				60BE79442A10F73400D4BAC9 /* CustomView */,
 				60BE79362A0F3EBD00D4BAC9 /* LoginView.swift */,
 			);
@@ -199,6 +202,14 @@
 				60BE79482A10FB2000D4BAC9 /* Strings.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		60BE79522A11ED7700D4BAC9 /* ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				60BE79532A11EDAC00D4BAC9 /* FormInputView.swift */,
+			);
+			path = ViewBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				60BE79462A10F75500D4BAC9 /* ThreeSide.swift in Sources */,
 				60BE793F2A10ED7600D4BAC9 /* Button.swift in Sources */,
 				60BE794D2A10FD5800D4BAC9 /* Color.swift in Sources */,
+				60BE79542A11EDAC00D4BAC9 /* FormInputView.swift in Sources */,
 				60BE790D2A0F3E8B00D4BAC9 /* StateAndDataFlowApp.swift in Sources */,
 				60BE79492A10FB2000D4BAC9 /* Strings.swift in Sources */,
 			);
