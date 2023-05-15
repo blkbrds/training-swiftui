@@ -142,7 +142,7 @@ struct LoginView: View {
             }
             .frame(height: geo.size.height * 0.07)
 
-            Text("Do not remember the password?")
+            Text(Strings.Login.titleLogin)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .foregroundColor(Color(hex: "#4552CB"))
                 .font(.footnote)
