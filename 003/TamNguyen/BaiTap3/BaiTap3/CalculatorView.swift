@@ -135,11 +135,6 @@ struct CalculatorButton: View {
     
     func buttonHeight() -> CGFloat {
         return (UIScreen.main.bounds.width - 5 * 6) / 4
-//        if title == "0" {
-//            return buttonWidth()
-//        } else {
-//            return buttonWidth()
-//        }
     }
 }
 

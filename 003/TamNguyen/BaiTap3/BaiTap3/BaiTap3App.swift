@@ -13,7 +13,8 @@ struct BaiTap3App: App {
         WindowGroup {
 //            ListAvatarView()
 //            CalculatorView()
-            ImageView()
+//            ImageView()
+            SliderView()
         }
     }
 }

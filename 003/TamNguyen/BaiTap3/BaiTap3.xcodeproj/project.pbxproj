@@ -16,6 +16,8 @@
 		60BE78EB2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */; };
 		60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */; };
 		60BE78FF2A0E375500D4BAC9 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78FE2A0E375500D4BAC9 /* ImageView.swift */; };
+		60BE795C2A1337EB00D4BAC9 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE795B2A1337EB00D4BAC9 /* SliderView.swift */; };
+		60BE79612A1342B100D4BAC9 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79602A1342B100D4BAC9 /* CustomSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		60BE78FE2A0E375500D4BAC9 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		60BE795B2A1337EB00D4BAC9 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		60BE79602A1342B100D4BAC9 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +102,12 @@
 		60BE78CC2A0CAA9A00D4BAC9 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				60BE795D2A1340AF00D4BAC9 /* Slider */,
 				60BE78CD2A0CAA9A00D4BAC9 /* BaiTap3App.swift */,
 				60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */,
 				60BE78FE2A0E375500D4BAC9 /* ImageView.swift */,
 				60BE78CF2A0CAA9A00D4BAC9 /* ListAvatarView.swift */,
+				60BE795B2A1337EB00D4BAC9 /* SliderView.swift */,
 				60BE78D12A0CAA9B00D4BAC9 /* Assets.xcassets */,
 				60BE78D32A0CAA9B00D4BAC9 /* Preview Content */,
 			);
@@ -131,6 +137,14 @@
 				60BE78EA2A0CAA9B00D4BAC9 /* BaiTap3UITestsLaunchTests.swift */,
 			);
 			path = BaiTap3UITests;
+			sourceTree = "<group>";
+		};
+		60BE795D2A1340AF00D4BAC9 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				60BE79602A1342B100D4BAC9 /* CustomSliderView.swift */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +279,10 @@
 			files = (
 				60BE78FF2A0E375500D4BAC9 /* ImageView.swift in Sources */,
 				60BE78D02A0CAA9A00D4BAC9 /* ListAvatarView.swift in Sources */,
+				60BE79612A1342B100D4BAC9 /* CustomSliderView.swift in Sources */,
 				60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */,
 				60BE78CE2A0CAA9A00D4BAC9 /* BaiTap3App.swift in Sources */,
+				60BE795C2A1337EB00D4BAC9 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
