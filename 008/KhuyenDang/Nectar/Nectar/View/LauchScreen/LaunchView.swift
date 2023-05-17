@@ -13,6 +13,7 @@ struct LaunchView: View {
     @State var isShowMainView: Bool = false
     @State var size = 0.7
     @State var opacity = 0.5
+    private var localStorage = LocalStorage()
 
     var body: some View {
         ZStack {
@@ -37,7 +38,11 @@ struct LaunchView: View {
             if isFirstLaunch {
                 appRouter.state = .tutorial
             } else {
-                appRouter.state = .login
+                if !localStorage.email.isEmpty && !localStorage.password.isEmpty {
+                    appRouter.state = .tabbar
+                } else {
+                    appRouter.state = .login
+                }
             }
         }
     }
