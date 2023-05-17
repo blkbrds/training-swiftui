@@ -109,21 +109,11 @@
 		8A4D8BAE2A04B034007F183A /* Nectar */ = {
 			isa = PBXGroup;
 			children = (
-				8AD2D11D2A149F7D00F7645F /* TutorialScreen */,
-				8AD2D11A2A149F6500F7645F /* LauchScreen */,
+				8AD2D1202A14B96D00F7645F /* View */,
 				8ACBA3AE2A0B55BB0013D104 /* Model */,
-				8ACBA3AB2A0B4C960013D104 /* PlusScreen */,
-				8A4D8BE72A08E7EA007F183A /* TabView */,
-				8A4D8BE02A08E5E8007F183A /* ProfileScreen */,
-				8A4D8BDF2A08E5D8007F183A /* CartScreen */,
-				8A4D8BDE2A08E5CC007F183A /* MapScreen */,
-				8A4D8BDB2A08E564007F183A /* HomeScreen */,
 				8A4D8BD82A08A9A8007F183A /* Extension */,
 				8A4D8BD52A08A55A007F183A /* Modifier */,
-				8A4D8BCC2A04FCEE007F183A /* ForgotPasswordScreen */,
-				8A4D8BC92A04F0DC007F183A /* RegistrationScreen */,
 				8A4D8BC62A04BA79007F183A /* Cell */,
-				8A4D8BC32A04BA36007F183A /* LoginScreen */,
 				8A4D8BC02A04B314007F183A /* AppRouter.swift */,
 				8A4D8BAF2A04B034007F183A /* NectarApp.swift */,
 				8A4D8BB12A04B034007F183A /* ContentView.swift */,
@@ -272,6 +262,24 @@
 				8AD2D11E2A149F9100F7645F /* TutorialView.swift */,
 			);
 			path = TutorialScreen;
+			sourceTree = "<group>";
+		};
+		8AD2D1202A14B96D00F7645F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A4D8BE72A08E7EA007F183A /* TabView */,
+				8AD2D11A2A149F6500F7645F /* LauchScreen */,
+				8ACBA3AB2A0B4C960013D104 /* PlusScreen */,
+				8AD2D11D2A149F7D00F7645F /* TutorialScreen */,
+				8A4D8BDE2A08E5CC007F183A /* MapScreen */,
+				8A4D8BCC2A04FCEE007F183A /* ForgotPasswordScreen */,
+				8A4D8BDF2A08E5D8007F183A /* CartScreen */,
+				8A4D8BC92A04F0DC007F183A /* RegistrationScreen */,
+				8A4D8BC32A04BA36007F183A /* LoginScreen */,
+				8A4D8BDB2A08E564007F183A /* HomeScreen */,
+				8A4D8BE02A08E5E8007F183A /* ProfileScreen */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
