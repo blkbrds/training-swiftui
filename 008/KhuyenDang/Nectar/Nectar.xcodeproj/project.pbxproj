@@ -38,6 +38,8 @@
 		8ACBA3BB2A0B96600013D104 /* SectionFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3BA2A0B96600013D104 /* SectionFood.swift */; };
 		8ACBA3BD2A0C9E160013D104 /* SectionAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3BC2A0C9E160013D104 /* SectionAds.swift */; };
 		8ACBA3CF2A0DD9EB0013D104 /* MyTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3CE2A0DD9EB0013D104 /* MyTabItem.swift */; };
+		8AD2D11C2A149F7800F7645F /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2D11B2A149F7800F7645F /* LaunchView.swift */; };
+		8AD2D11F2A149F9100F7645F /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2D11E2A149F9100F7645F /* TutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		8ACBA3BA2A0B96600013D104 /* SectionFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFood.swift; sourceTree = "<group>"; };
 		8ACBA3BC2A0C9E160013D104 /* SectionAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionAds.swift; sourceTree = "<group>"; };
 		8ACBA3CE2A0DD9EB0013D104 /* MyTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabItem.swift; sourceTree = "<group>"; };
+		8AD2D11B2A149F7800F7645F /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		8AD2D11E2A149F9100F7645F /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		8A4D8BAE2A04B034007F183A /* Nectar */ = {
 			isa = PBXGroup;
 			children = (
+				8AD2D11D2A149F7D00F7645F /* TutorialScreen */,
+				8AD2D11A2A149F6500F7645F /* LauchScreen */,
 				8ACBA3AE2A0B55BB0013D104 /* Model */,
 				8ACBA3AB2A0B4C960013D104 /* PlusScreen */,
 				8A4D8BE72A08E7EA007F183A /* TabView */,
@@ -252,6 +258,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8AD2D11A2A149F6500F7645F /* LauchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AD2D11B2A149F7800F7645F /* LaunchView.swift */,
+			);
+			path = LauchScreen;
+			sourceTree = "<group>";
+		};
+		8AD2D11D2A149F7D00F7645F /* TutorialScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8AD2D11E2A149F9100F7645F /* TutorialView.swift */,
+			);
+			path = TutorialScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ACBA3BD2A0C9E160013D104 /* SectionAds.swift in Sources */,
+				8AD2D11C2A149F7800F7645F /* LaunchView.swift in Sources */,
 				8A4D8BD42A0899DF007F183A /* VerifyEmailView.swift in Sources */,
 				8ACBA3A52A0A36340013D104 /* TabbarShape.swift in Sources */,
 				8A4D8BEB2A08E9BA007F183A /* MySubTabView.swift in Sources */,
@@ -336,6 +359,7 @@
 				8A4D8BC12A04B314007F183A /* AppRouter.swift in Sources */,
 				8ACBA3B92A0B5BD80013D104 /* Define.swift in Sources */,
 				8A4D8BDA2A08A9BD007F183A /* String.swift in Sources */,
+				8AD2D11F2A149F9100F7645F /* TutorialView.swift in Sources */,
 				8A4D8BE62A08E631007F183A /* MapView.swift in Sources */,
 				8A4D8BB22A04B034007F183A /* ContentView.swift in Sources */,
 				8A4D8BE42A08E626007F183A /* CartView.swift in Sources */,

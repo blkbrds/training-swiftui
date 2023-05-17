@@ -24,6 +24,10 @@ struct NectarApp: App {
     @ViewBuilder
     var rootView: some View {
         switch appRouter.state {
+        case .launch:
+            LaunchView()
+        case .tutorial:
+            TutorialView()
         case .login:
             LoginView()
         case .tabbar:
