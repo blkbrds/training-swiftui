@@ -10,15 +10,15 @@ import SwiftUI
 
 struct MySubTabView: View {
 
-    @Binding var selectedTab: Tab
+    @ObservedObject var tabbarRouter: TabBarRouter
 
     var body: some View {
 
         HStack(spacing: 20) {
             let filteredTab = Tab.allCases.filter { $0 != .plus }
-            ForEach(filteredTab, id: \.self) { tab in
+            ForEach(filteredTab, id: \.rawValue) { tab in
                 Button(action: {
-                    selectedTab = tab
+                    tabbarRouter.currentTab = tab
                 }, label: {
                         Text("#\(tab.rawValue.capitalized)")
                     })

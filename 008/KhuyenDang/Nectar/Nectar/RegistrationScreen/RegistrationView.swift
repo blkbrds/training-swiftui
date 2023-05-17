@@ -60,6 +60,7 @@ struct RegistrationView: View {
                 Button(action: { },
                     label: {
                         Text("Sign Up")
+                            .frame(width: Define.widthButton, height: Define.heightButton)
                             .myButtonModifier()
                     })
                     .disabled(username.isEmpty || !email.validateEmail() || password.isEmpty)

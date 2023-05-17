@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
-    @Binding var selectedTab: Tab
-    
+
+    @EnvironmentObject var tabbarRouter: TabBarRouter
+
     var body: some View {
         VStack {
             Text("Profile")
                 .font(.system(size: 20))
                 .padding()
-            MySubTabView(selectedTab: $selectedTab)
+            MySubTabView(tabbarRouter: tabbarRouter)
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(selectedTab: .constant(.profile))
+        ProfileView()
     }
 }

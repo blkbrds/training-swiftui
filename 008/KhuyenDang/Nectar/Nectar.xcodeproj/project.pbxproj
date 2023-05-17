@@ -31,6 +31,13 @@
 		8A4D8BEF2A08FE82007F183A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D8BEE2A08FE82007F183A /* View.swift */; };
 		8ACBA3A52A0A36340013D104 /* TabbarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3A42A0A36340013D104 /* TabbarShape.swift */; };
 		8ACBA3AD2A0B4CAF0013D104 /* PlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3AC2A0B4CAF0013D104 /* PlusView.swift */; };
+		8ACBA3B02A0B55C80013D104 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3AF2A0B55C80013D104 /* FoodItem.swift */; };
+		8ACBA3B22A0B55F40013D104 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3B12A0B55F40013D104 /* HomeViewModel.swift */; };
+		8ACBA3B62A0B565F0013D104 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3B52A0B565F0013D104 /* FoodCell.swift */; };
+		8ACBA3B92A0B5BD80013D104 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3B82A0B5BD80013D104 /* Define.swift */; };
+		8ACBA3BB2A0B96600013D104 /* SectionFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3BA2A0B96600013D104 /* SectionFood.swift */; };
+		8ACBA3BD2A0C9E160013D104 /* SectionAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3BC2A0C9E160013D104 /* SectionAds.swift */; };
+		8ACBA3CF2A0DD9EB0013D104 /* MyTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3CE2A0DD9EB0013D104 /* MyTabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +66,13 @@
 		8A4D8BEE2A08FE82007F183A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8ACBA3A42A0A36340013D104 /* TabbarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarShape.swift; sourceTree = "<group>"; };
 		8ACBA3AC2A0B4CAF0013D104 /* PlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusView.swift; sourceTree = "<group>"; };
+		8ACBA3AF2A0B55C80013D104 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		8ACBA3B12A0B55F40013D104 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8ACBA3B52A0B565F0013D104 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		8ACBA3B82A0B5BD80013D104 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		8ACBA3BA2A0B96600013D104 /* SectionFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFood.swift; sourceTree = "<group>"; };
+		8ACBA3BC2A0C9E160013D104 /* SectionAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionAds.swift; sourceTree = "<group>"; };
+		8ACBA3CE2A0DD9EB0013D104 /* MyTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +105,7 @@
 		8A4D8BAE2A04B034007F183A /* Nectar */ = {
 			isa = PBXGroup;
 			children = (
+				8ACBA3AE2A0B55BB0013D104 /* Model */,
 				8ACBA3AB2A0B4C960013D104 /* PlusScreen */,
 				8A4D8BE72A08E7EA007F183A /* TabView */,
 				8A4D8BE02A08E5E8007F183A /* ProfileScreen */,
@@ -132,6 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				8A4D8BC72A04BA94007F183A /* InputCell.swift */,
+				8ACBA3B52A0B565F0013D104 /* FoodCell.swift */,
+				8ACBA3BA2A0B96600013D104 /* SectionFood.swift */,
+				8ACBA3BC2A0C9E160013D104 /* SectionAds.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -169,6 +187,7 @@
 			children = (
 				8A4D8BD92A08A9BD007F183A /* String.swift */,
 				8A4D8BEE2A08FE82007F183A /* View.swift */,
+				8ACBA3B82A0B5BD80013D104 /* Define.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -177,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8A4D8BDC2A08E581007F183A /* HomeView.swift */,
+				8ACBA3B12A0B55F40013D104 /* HomeViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -211,6 +231,7 @@
 				8A4D8BE82A08E805007F183A /* MyTabView.swift */,
 				8A4D8BEA2A08E9BA007F183A /* MySubTabView.swift */,
 				8A4D8BEC2A08FADC007F183A /* MyTab.swift */,
+				8ACBA3CE2A0DD9EB0013D104 /* MyTabItem.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -221,6 +242,14 @@
 				8ACBA3AC2A0B4CAF0013D104 /* PlusView.swift */,
 			);
 			path = PlusScreen;
+			sourceTree = "<group>";
+		};
+		8ACBA3AE2A0B55BB0013D104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8ACBA3AF2A0B55C80013D104 /* FoodItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,15 +322,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACBA3BD2A0C9E160013D104 /* SectionAds.swift in Sources */,
 				8A4D8BD42A0899DF007F183A /* VerifyEmailView.swift in Sources */,
 				8ACBA3A52A0A36340013D104 /* TabbarShape.swift in Sources */,
 				8A4D8BEB2A08E9BA007F183A /* MySubTabView.swift in Sources */,
 				8A4D8BD02A050D76007F183A /* EnterDigitCodeView.swift in Sources */,
 				8A4D8BDD2A08E581007F183A /* HomeView.swift in Sources */,
 				8A4D8BC82A04BA94007F183A /* InputCell.swift in Sources */,
+				8ACBA3B02A0B55C80013D104 /* FoodItem.swift in Sources */,
+				8ACBA3CF2A0DD9EB0013D104 /* MyTabItem.swift in Sources */,
 				8A4D8BCE2A04FD04007F183A /* ForgotPasswordView.swift in Sources */,
 				8A4D8BD22A050D8A007F183A /* CreateNewPasswordView.swift in Sources */,
 				8A4D8BC12A04B314007F183A /* AppRouter.swift in Sources */,
+				8ACBA3B92A0B5BD80013D104 /* Define.swift in Sources */,
 				8A4D8BDA2A08A9BD007F183A /* String.swift in Sources */,
 				8A4D8BE62A08E631007F183A /* MapView.swift in Sources */,
 				8A4D8BB22A04B034007F183A /* ContentView.swift in Sources */,
@@ -309,8 +342,11 @@
 				8A4D8BEF2A08FE82007F183A /* View.swift in Sources */,
 				8ACBA3AD2A0B4CAF0013D104 /* PlusView.swift in Sources */,
 				8A4D8BD72A08A590007F183A /* MyButton.swift in Sources */,
+				8ACBA3B62A0B565F0013D104 /* FoodCell.swift in Sources */,
 				8A4D8BE92A08E805007F183A /* MyTabView.swift in Sources */,
 				8A4D8BCB2A04F100007F183A /* RegistrationView.swift in Sources */,
+				8ACBA3B22A0B55F40013D104 /* HomeViewModel.swift in Sources */,
+				8ACBA3BB2A0B96600013D104 /* SectionFood.swift in Sources */,
 				8A4D8BC52A04BA43007F183A /* LoginView.swift in Sources */,
 				8A4D8BE22A08E613007F183A /* ProfileView.swift in Sources */,
 				8A4D8BED2A08FADD007F183A /* MyTab.swift in Sources */,

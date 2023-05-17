@@ -43,6 +43,7 @@ struct CreateNewPasswordView: View {
                 Button(action: { },
                     label: {
                         Text("Save")
+                            .frame(width: Define.widthButton, height: Define.heightButton)
                             .myButtonModifier()
                     })
                     .disabled(newPassword.isEmpty || confirmPassword.isEmpty)

@@ -9,33 +9,40 @@ import SwiftUI
 
 struct MyTabView: View {
 
-    @State var selectedTab: Tab = .home
+    @StateObject var tabbarRouter = TabBarRouter()
+    var tabItems = Tab.allCases
     init() {
         UITabBar.appearance().isHidden = true
     }
 
     var body: some View {
-        ZStack {
-            VStack {
-                switch selectedTab {
-                case .home:
-                    HomeView(selectedTab: $selectedTab)
-                case .map:
-                    MapView(selectedTab: $selectedTab)
-                case .plus:
-                    EmptyView()
-                case .cart:
-                    CartView(selectedTab: $selectedTab)
-                case .profile:
-                    ProfileView(selectedTab: $selectedTab)
-                }
+
+        VStack {
+            TabView(selection: $tabbarRouter.currentTab) {
+                HomeView()
+                    .environmentObject(tabbarRouter)
+                    .tag(tabItems[0])
+                    .ignoresSafeArea(.all)
+                MapView()
+                    .environmentObject(tabbarRouter)
+                    .tag(tabItems[1])
+                    .ignoresSafeArea(.all)
+                // PlusView --> Empty
+                CartView()
+                    .environmentObject(tabbarRouter)
+                    .tag(tabItems[3])
+                    .ignoresSafeArea(.all)
+                ProfileView()
+                    .environmentObject(tabbarRouter)
+                    .tag(tabItems[4])
+                    .ignoresSafeArea(.all)
+
             }
-            VStack {
-                Spacer()
-                MyTab(selectedTab: $selectedTab)
-            }
+            Spacer(minLength: 0)
+            MyTab(tabItems: tabItems, tabbarRouter: tabbarRouter)
         }
-            .ignoresSafeArea()
+            .ignoresSafeArea(.all, edges: .bottom)
+            .background(Color.white)
     }
 }
 

@@ -48,6 +48,7 @@ struct VerifyEmailView: View {
                     CreateNewPasswordView()
                 , label: {
                     Text("Verify")
+                        .frame(width: Define.widthButton, height: Define.heightButton)
                         .myButtonModifier()
                 })
                 .disabled(optCode.count < optCodeLength)

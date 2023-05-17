@@ -19,13 +19,13 @@ struct TabbarShape: Shape {
             let center = rect.width / 2
             path.move(to: CGPoint(x: center - 70, y: 0))
 
-            let to1 = CGPoint(x: center, y: 35)
-            let control1 = CGPoint(x: center - 35, y: 0)
-            let control2 = CGPoint(x: center - 35, y: 35)
+            let to1 = CGPoint(x: center, y: 40)
+            let control1 = CGPoint(x: center - 40, y: 0)
+            let control2 = CGPoint(x: center - 40, y: 40)
 
             let to2 = CGPoint(x: center + 70, y: 0)
-            let control3 = CGPoint(x: center + 35, y: 35)
-            let control4 = CGPoint(x: center + 35, y: 0)
+            let control3 = CGPoint(x: center + 40, y: 40)
+            let control4 = CGPoint(x: center + 40, y: 0)
 
             path.addCurve(to: to1, control1: control1, control2: control2)
             path.addCurve(to: to2, control1: control3, control2: control4)

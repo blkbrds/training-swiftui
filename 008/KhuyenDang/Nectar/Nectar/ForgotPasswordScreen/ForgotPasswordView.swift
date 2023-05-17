@@ -46,6 +46,7 @@ struct ForgotPasswordView: View {
                     VerifyEmailView()
                 , label: {
                     Text("Send")
+                        .frame(width: Define.widthButton, height: Define.heightButton)
                         .myButtonModifier()
                 })
                 .disabled(!email.validateEmail())

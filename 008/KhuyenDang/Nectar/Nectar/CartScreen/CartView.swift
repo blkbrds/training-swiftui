@@ -9,20 +9,19 @@ import SwiftUI
 
 struct CartView: View {
 
-    @Binding var selectedTab: Tab
-
+    @EnvironmentObject var tabbarRouter: TabBarRouter
     var body: some View {
         VStack {
             Text("Cart")
                 .font(.system(size: 20))
                 .padding()
-            MySubTabView(selectedTab: $selectedTab)
+            MySubTabView(tabbarRouter: tabbarRouter)
         }
     }
 }
 
 struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView(selectedTab: .constant(.cart))
+        CartView()
     }
 }

@@ -13,7 +13,6 @@ struct MyButton: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .frame(width: UIScreen.main.bounds.width - 50, height: 60)
             .font(.system(size: 18, weight: .semibold))
             .foregroundColor(.white)
             .background(isEnabled ? Color("green") : Color("green").opacity(0.8))

@@ -14,7 +14,7 @@ enum Tab: String, CaseIterable {
     case cart
     case profile
 
-    var logo: String {
+    var icon: String {
         switch self {
         case .home:
             return "house"
@@ -30,65 +30,51 @@ enum Tab: String, CaseIterable {
     }
 }
 
+class TabBarRouter: ObservableObject {
+    @Published var currentTab: Tab = .home
+}
+
 struct MyTab: View {
-    @Binding var selectedTab: Tab
+
+    var tabItems: [Tab]
     @State var isPresented = false
-    private var fillImage: String {
-        selectedTab.logo + ".fill"
-    }
+    @ObservedObject var tabbarRouter: TabBarRouter
 
     var body: some View {
-        ZStack {
-            HStack {
-                ForEach(Tab.allCases, id: \.rawValue) { tab in
-                    if tab == .plus {
-                        Spacer()
-                        VStack {
-                            EmptyView()
-                        }
-                        Spacer()
-                    } else {
-                        Spacer()
-                        VStack {
-                            Image(systemName: selectedTab == tab ? fillImage : tab.logo)
-                                .scaleEffect(selectedTab == tab ? 1.25 : 1.0)
-
-                            Text(tab.rawValue.capitalized)
-                                .font(.system(size: 14))
-                        }
-                            .foregroundColor(selectedTab == tab ? Color("green") : Color.black)
-                            .onTapGesture {
-                            withAnimation(.easeIn(duration: 0.1)) {
-                                selectedTab = tab
-                            }
-                        }
-                        Spacer()
-                    }
+        HStack {
+            ForEach(tabItems, id: \.rawValue) { tab in
+                GeometryReader { proxy in
+                    MyTabItem(tab: tab, tabbarRouter: tabbarRouter)
                 }
+                    .frame(width: 70, height: 50)
             }
-                .frame(height: 90)
-                .background(Color.white.clipShape(TabbarShape()))
-                .cornerRadius(10, corners: [.topLeft, .topRight])
-                .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 0)
-
+        }
+            .padding(.horizontal, 25)
+            .padding(.top)
+            .padding(.bottom, 10)
+            .background(Color.white.clipShape(TabbarShape()))
+            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -5)
+            .padding(.top, -15)
+            .ignoresSafeArea(.all, edges: .horizontal)
+            .overlay(
             Button(action: {
                 isPresented = true
             }) {
                 Image("plus_tabbar")
                     .resizable()
-                    .frame(width: 90, height: 90)
-                    .offset(y: -50)
+                    .frame(width: 80, height: 80)
+                    .offset(y: -45)
             }
                 .buttonStyle(PlainButtonStyle())
                 .sheet(isPresented: $isPresented) {
                 PlusView()
             }
-        }
+        )
     }
 }
 
 struct MyTab_Previews: PreviewProvider {
     static var previews: some View {
-        MyTab(selectedTab: .constant(.profile))
+        MyTabView()
     }
 }
