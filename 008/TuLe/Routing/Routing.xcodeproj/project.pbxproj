@@ -20,6 +20,13 @@
 		10E8A2102A112CC1002FA9C8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */; };
 		10E8A2152A11429B002FA9C8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2142A11429B002FA9C8 /* ErrorView.swift */; };
 		10E8A2182A11E079002FA9C8 /* BasedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2172A11E079002FA9C8 /* BasedTabView.swift */; };
+		10E8A21D2A146FA3002FA9C8 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A21C2A146FA3002FA9C8 /* TabbarView.swift */; };
+		10E8A21F2A146FDD002FA9C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A21E2A146FDD002FA9C8 /* HomeView.swift */; };
+		10E8A2212A146FED002FA9C8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2202A146FED002FA9C8 /* MapView.swift */; };
+		10E8A2232A146FF7002FA9C8 /* VideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2222A146FF7002FA9C8 /* VideosView.swift */; };
+		10E8A2252A14700A002FA9C8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2242A14700A002FA9C8 /* ProfileView.swift */; };
+		10E8A2272A147137002FA9C8 /* PlusTabbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2262A147137002FA9C8 /* PlusTabbarButtonView.swift */; };
+		10E8A2292A1474A3002FA9C8 /* MenuTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2282A1474A3002FA9C8 /* MenuTabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		10E8A2142A11429B002FA9C8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		10E8A2172A11E079002FA9C8 /* BasedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasedTabView.swift; sourceTree = "<group>"; };
+		10E8A21C2A146FA3002FA9C8 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		10E8A21E2A146FDD002FA9C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		10E8A2202A146FED002FA9C8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		10E8A2222A146FF7002FA9C8 /* VideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosView.swift; sourceTree = "<group>"; };
+		10E8A2242A14700A002FA9C8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		10E8A2262A147137002FA9C8 /* PlusTabbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusTabbarButtonView.swift; sourceTree = "<group>"; };
+		10E8A2282A1474A3002FA9C8 /* MenuTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 		1008FAAF2A08D4DB00DD0D3C /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				10E8A21B2A146F8A002FA9C8 /* CustomTabbar */,
 				10E8A2162A11DF68002FA9C8 /* TabView */,
 				10E8A2132A114289002FA9C8 /* Error */,
 				10E8A20E2A112CA5002FA9C8 /* Extension */,
@@ -142,6 +157,20 @@
 			path = TabView;
 			sourceTree = "<group>";
 		};
+		10E8A21B2A146F8A002FA9C8 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				10E8A21C2A146FA3002FA9C8 /* TabbarView.swift */,
+				10E8A21E2A146FDD002FA9C8 /* HomeView.swift */,
+				10E8A2202A146FED002FA9C8 /* MapView.swift */,
+				10E8A2222A146FF7002FA9C8 /* VideosView.swift */,
+				10E8A2242A14700A002FA9C8 /* ProfileView.swift */,
+				10E8A2262A147137002FA9C8 /* PlusTabbarButtonView.swift */,
+				10E8A2282A1474A3002FA9C8 /* MenuTabItem.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,17 +241,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E8A2232A146FF7002FA9C8 /* VideosView.swift in Sources */,
 				10E8A2182A11E079002FA9C8 /* BasedTabView.swift in Sources */,
+				10E8A21F2A146FDD002FA9C8 /* HomeView.swift in Sources */,
 				10E8A20D2A110A92002FA9C8 /* ForgotPasswordViewModel.swift in Sources */,
 				1008FAC02A08E90600DD0D3C /* LoginView.swift in Sources */,
 				10B8036A2A0B390C0054DFDA /* RegisterView.swift in Sources */,
 				10E8A20B2A110A81002FA9C8 /* RegisterViewModel.swift in Sources */,
+				10E8A2272A147137002FA9C8 /* PlusTabbarButtonView.swift in Sources */,
+				10E8A2212A146FED002FA9C8 /* MapView.swift in Sources */,
+				10E8A2252A14700A002FA9C8 /* ProfileView.swift in Sources */,
 				10E8A2092A110A75002FA9C8 /* LoginViewModel.swift in Sources */,
 				10E8A2152A11429B002FA9C8 /* ErrorView.swift in Sources */,
 				10E8A2102A112CC1002FA9C8 /* StringExtension.swift in Sources */,
 				1008FAB32A08D4DB00DD0D3C /* ContentView.swift in Sources */,
 				10B8036C2A0CA28B0054DFDA /* ForgotPasswordView.swift in Sources */,
 				1008FAB12A08D4DB00DD0D3C /* RoutingApp.swift in Sources */,
+				10E8A2292A1474A3002FA9C8 /* MenuTabItem.swift in Sources */,
+				10E8A21D2A146FA3002FA9C8 /* TabbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Routing/Preview Content\"";
+				DEVELOPMENT_TEAM = SW6LKJ7K3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -379,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Routing/Preview Content\"";
+				DEVELOPMENT_TEAM = SW6LKJ7K3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
