@@ -36,24 +36,17 @@ struct MyTabView: View {
 
             }
             Spacer(minLength: 0)
-            ZStack {
-                MyTab(tabItems: tabItems, tabbarRouter: tabbarRouter)
-                Button(action: {
-                    isPresented = true
-                }) {
-                    Image("plus_tabbar")
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                        .offset(y: -45)
-                }
-                    .buttonStyle(PlainButtonStyle())
-                    .sheet(isPresented: $isPresented) {
-                    PlusView()
-                }
-            }
+            MyTab(tabItems: tabItems, tabbarRouter: tabbarRouter, action: showPlusView)
         }
             .ignoresSafeArea(.all, edges: .bottom)
             .background(Color.white)
+            .sheet(isPresented: $isPresented) {
+            PlusView()
+        }
+    }
+
+    private func showPlusView() {
+        isPresented = true
     }
 }
 

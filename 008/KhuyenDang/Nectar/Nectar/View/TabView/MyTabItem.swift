@@ -36,6 +36,21 @@ struct MyTabItem: View {
     }
 }
 
+struct PlusTabbarButton: View {
+
+    var action: () -> Void
+    var body: some View {
+        Button(action: {
+            action()
+        }, label: {
+                Image("plus_tabbar")
+                    .resizable()
+                    .frame(width: 80, height: 80)
+            })
+            .buttonStyle(PlainButtonStyle())
+    }
+}
+
 struct MyTabItem_Previews: PreviewProvider {
     static var previews: some View {
         MyTabView()

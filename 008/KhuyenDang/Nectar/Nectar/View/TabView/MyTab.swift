@@ -38,6 +38,7 @@ struct MyTab: View {
 
     var tabItems: [Tab]
     @ObservedObject var tabbarRouter: TabBarRouter
+    var action: () -> Void
 
     var body: some View {
         HStack {
@@ -55,6 +56,10 @@ struct MyTab: View {
             .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -5)
             .padding(.top, -15)
             .ignoresSafeArea(.all, edges: .horizontal)
+            .overlay(
+            PlusTabbarButton(action: action)
+                .offset(y: -45)
+        )
     }
 }
 
