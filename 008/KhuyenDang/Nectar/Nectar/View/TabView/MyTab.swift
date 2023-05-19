@@ -37,7 +37,6 @@ class TabBarRouter: ObservableObject {
 struct MyTab: View {
 
     var tabItems: [Tab]
-    @State var isPresented = false
     @ObservedObject var tabbarRouter: TabBarRouter
 
     var body: some View {
@@ -56,20 +55,6 @@ struct MyTab: View {
             .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -5)
             .padding(.top, -15)
             .ignoresSafeArea(.all, edges: .horizontal)
-            .overlay(
-            Button(action: {
-                isPresented = true
-            }) {
-                Image("plus_tabbar")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .offset(y: -45)
-            }
-                .buttonStyle(PlainButtonStyle())
-                .sheet(isPresented: $isPresented) {
-                PlusView()
-            }
-        )
     }
 }
 

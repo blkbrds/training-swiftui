@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
+    @EnvironmentObject var tabbarRouter: TabBarRouter
     @State var error: Bool = false
     @StateObject var viewModel = LoginViewModel()
     @State var isLoading: Bool = false
@@ -60,6 +61,7 @@ struct LoginView: View {
                                 await viewModel.isValidAccount()
                                 if viewModel.isLoginSuccess {
                                     appRouter.state = .tabbar
+                                    tabbarRouter.currentTab = .home
                                     viewModel.resetData()
                                 } else {
                                     error = true

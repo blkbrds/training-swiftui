@@ -11,12 +11,14 @@ import SwiftUI
 struct NectarApp: App {
 
     @StateObject var appRouter = AppRouter()
+    @StateObject var tabbarRouter = TabBarRouter()
     @AppStorage("isDarkMode") var isDarkMode: Bool = false
 
     var body: some Scene {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
+                .environmentObject(tabbarRouter)
                 .environment(\.colorScheme, isDarkMode ? .dark : .light)
         }
     }
