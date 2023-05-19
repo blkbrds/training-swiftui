@@ -28,7 +28,6 @@
 		8A4D8BE92A08E805007F183A /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D8BE82A08E805007F183A /* MyTabView.swift */; };
 		8A4D8BEB2A08E9BA007F183A /* MySubTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D8BEA2A08E9BA007F183A /* MySubTabView.swift */; };
 		8A4D8BED2A08FADD007F183A /* MyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D8BEC2A08FADC007F183A /* MyTab.swift */; };
-		8A4D8BEF2A08FE82007F183A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D8BEE2A08FE82007F183A /* View.swift */; };
 		8ACBA3A52A0A36340013D104 /* TabbarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3A42A0A36340013D104 /* TabbarShape.swift */; };
 		8ACBA3AD2A0B4CAF0013D104 /* PlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3AC2A0B4CAF0013D104 /* PlusView.swift */; };
 		8ACBA3B02A0B55C80013D104 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACBA3AF2A0B55C80013D104 /* FoodItem.swift */; };
@@ -70,7 +69,6 @@
 		8A4D8BE82A08E805007F183A /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		8A4D8BEA2A08E9BA007F183A /* MySubTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubTabView.swift; sourceTree = "<group>"; };
 		8A4D8BEC2A08FADC007F183A /* MyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTab.swift; sourceTree = "<group>"; };
-		8A4D8BEE2A08FE82007F183A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8ACBA3A42A0A36340013D104 /* TabbarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarShape.swift; sourceTree = "<group>"; };
 		8ACBA3AC2A0B4CAF0013D104 /* PlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusView.swift; sourceTree = "<group>"; };
 		8ACBA3AF2A0B55C80013D104 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				8A4D8BD92A08A9BD007F183A /* String.swift */,
-				8A4D8BEE2A08FE82007F183A /* View.swift */,
 				8ACBA3B82A0B5BD80013D104 /* Define.swift */,
 			);
 			path = Extension;
@@ -396,7 +393,6 @@
 				8A4D8BB22A04B034007F183A /* ContentView.swift in Sources */,
 				8A4D8BE42A08E626007F183A /* CartView.swift in Sources */,
 				8AD2D1242A14C6B400F7645F /* DataManager.swift in Sources */,
-				8A4D8BEF2A08FE82007F183A /* View.swift in Sources */,
 				8AD2D1222A14C5BA00F7645F /* LoginViewModel.swift in Sources */,
 				8ACBA3AD2A0B4CAF0013D104 /* PlusView.swift in Sources */,
 				8A4D8BD72A08A590007F183A /* MyButton.swift in Sources */,
