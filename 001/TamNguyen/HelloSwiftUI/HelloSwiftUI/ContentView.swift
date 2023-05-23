@@ -41,5 +41,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice("iPhone 14")
+        ContentView().previewDevice("iPhone SE (2nd generation)")
+        ContentView().previewLayout(.fixed(width: 300, height: 300))
     }
 }
