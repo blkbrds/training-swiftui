@@ -26,12 +26,13 @@ struct LightDarkModelSettingDevice: View {
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Important message"), message: Text("Hello"), dismissButton: .default(Text("Got it!")))
             }
-            
+            Rectangle()
+                .frame(width: 100, height: 100)
+                .environment(\.colorScheme, .light)
         }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("background"))
             .edgesIgnoringSafeArea(.all)
-            .environment(\.colorScheme, .light)
     }
 }
 

@@ -18,6 +18,7 @@
 		60BE79AF2A1A209800D4BAC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79AE2A1A209800D4BAC9 /* AppDelegate.swift */; };
 		60BE79B12A1A21E900D4BAC9 /* LightDarkModelSettingDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79B02A1A21E900D4BAC9 /* LightDarkModelSettingDevice.swift */; };
 		60BE79B32A1A25AE00D4BAC9 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BE79B22A1A25AE00D4BAC9 /* Color.xcassets */; };
+		60BE79CF2A1CFC7300D4BAC9 /* LifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79CE2A1CFC7300D4BAC9 /* LifeCycleApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		60BE79AE2A1A209800D4BAC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60BE79B02A1A21E900D4BAC9 /* LightDarkModelSettingDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDarkModelSettingDevice.swift; sourceTree = "<group>"; };
 		60BE79B22A1A25AE00D4BAC9 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		60BE79CE2A1CFC7300D4BAC9 /* LifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				60BE79AB2A1A198300D4BAC9 /* Info.plist */,
 				60BE79B02A1A21E900D4BAC9 /* LightDarkModelSettingDevice.swift */,
 				60BE797F2A1A165800D4BAC9 /* BaiTap2App.swift */,
+				60BE79CE2A1CFC7300D4BAC9 /* LifeCycleApp.swift */,
 				60BE79A92A1A18C100D4BAC9 /* DeepLinkView.swift */,
 				60BE79AE2A1A209800D4BAC9 /* AppDelegate.swift */,
 				60BE79812A1A165800D4BAC9 /* ContentView.swift */,
@@ -276,6 +279,7 @@
 				60BE79AF2A1A209800D4BAC9 /* AppDelegate.swift in Sources */,
 				60BE79822A1A165800D4BAC9 /* ContentView.swift in Sources */,
 				60BE79AA2A1A18C100D4BAC9 /* DeepLinkView.swift in Sources */,
+				60BE79CF2A1CFC7300D4BAC9 /* LifeCycleApp.swift in Sources */,
 				60BE79802A1A165800D4BAC9 /* BaiTap2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

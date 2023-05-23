@@ -20,29 +20,7 @@ struct BaiTap2App: App {
     
     var body: some Scene {
         WindowGroup {
-            LightDarkModelSettingDevice()
-            //            ContentView()
-            //            DeepLinkView(name: name)
-            //                .onOpenURL { url in
-            //                name = url.valueOf("name") ?? ""
-            //
-            //                print(url.absoluteURL)
-            //                print(name)
-            //            }
-            //        }.onChange(of: scenePhase) { newValue in
-            //            switch newValue {
-            //            case .background:
-            //                print("App State : Background")
-            //                appDelegate.applicationDidEnterBackground(UIApplication.shared)
-            //            case .inactive:
-            //                print("App State : Inactive")
-            //            case .active:
-            //                print("App State : Active")
-            //                appDelegate.applicationDidBecomeActive(UIApplication.shared)
-            //            @unknown default:
-            //                print("App State : Unknown")
-            //            }
-            //        }
+            DeepLinkView(name: name)
         }
     }
 }
