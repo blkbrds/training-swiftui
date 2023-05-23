@@ -34,7 +34,6 @@ struct TextFieldModifier: ViewModifier {
             content
                 .padding(.horizontal, 20)
                 .textFieldStyle(.plain)
-                .padding(.bottom, 20)
         }
     }
 }

@@ -15,7 +15,7 @@ struct ButtonModifier: ViewModifier {
         content
             .frame(maxWidth: .infinity, alignment: .center)
             .frame(height: 50)
-            .background(isEnabled ? Color("textColor") : Color(red: 0.624, green: 0.475, blue: 0.347, opacity: 0.523))
+            .background(isEnabled ? Color("textColor") : Color("textColor").opacity(0.4))
             .bold()
             .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
     }

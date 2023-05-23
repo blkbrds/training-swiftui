@@ -24,6 +24,8 @@
 		60BE79BC2A1BAAFD00D4BAC9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79BB2A1BAAFD00D4BAC9 /* ButtonView.swift */; };
 		60BE79C02A1BB19E00D4BAC9 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79BF2A1BB19E00D4BAC9 /* TextFieldModifier.swift */; };
 		60BE79C22A1BB1B100D4BAC9 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79C12A1BB1B100D4BAC9 /* TextFieldView.swift */; };
+		60BE79C52A1C6A8500D4BAC9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79C42A1C6A8500D4BAC9 /* WelcomeView.swift */; };
+		60BE79C72A1C76EC00D4BAC9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE79C62A1C76EC00D4BAC9 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		60BE79BB2A1BAAFD00D4BAC9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		60BE79BF2A1BB19E00D4BAC9 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		60BE79C12A1BB1B100D4BAC9 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		60BE79C42A1C6A8500D4BAC9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		60BE79C62A1C76EC00D4BAC9 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				60BE78CD2A0CAA9A00D4BAC9 /* BaiTap3App.swift */,
 				60BE78FB2A0DF88C00D4BAC9 /* CalculatorView.swift */,
 				60BE78FE2A0E375500D4BAC9 /* ImageView.swift */,
+				60BE79C42A1C6A8500D4BAC9 /* WelcomeView.swift */,
 				60BE78CF2A0CAA9A00D4BAC9 /* ListAvatarView.swift */,
 				60BE795B2A1337EB00D4BAC9 /* SliderView.swift */,
 				60BE79642A1364C200D4BAC9 /* LoginView.swift */,
@@ -158,6 +163,7 @@
 		60BE795D2A1340AF00D4BAC9 /* Slider */ = {
 			isa = PBXGroup;
 			children = (
+				60BE79C62A1C76EC00D4BAC9 /* AppRouter.swift */,
 				60BE79602A1342B100D4BAC9 /* CustomSliderView.swift */,
 			);
 			path = Slider;
@@ -319,8 +325,10 @@
 				60BE78D02A0CAA9A00D4BAC9 /* ListAvatarView.swift in Sources */,
 				60BE79612A1342B100D4BAC9 /* CustomSliderView.swift in Sources */,
 				60BE78FC2A0DF88C00D4BAC9 /* CalculatorView.swift in Sources */,
+				60BE79C52A1C6A8500D4BAC9 /* WelcomeView.swift in Sources */,
 				60BE79C02A1BB19E00D4BAC9 /* TextFieldModifier.swift in Sources */,
 				60BE78CE2A0CAA9A00D4BAC9 /* BaiTap3App.swift in Sources */,
+				60BE79C72A1C76EC00D4BAC9 /* AppRouter.swift in Sources */,
 				60BE795C2A1337EB00D4BAC9 /* SliderView.swift in Sources */,
 				60BE79BC2A1BAAFD00D4BAC9 /* ButtonView.swift in Sources */,
 			);

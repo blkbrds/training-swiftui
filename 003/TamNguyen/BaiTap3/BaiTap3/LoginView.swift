@@ -14,6 +14,7 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var isSecure: Bool = true
     @State private var isValidate: Bool = false
+    @EnvironmentObject var appRouter: AppRouter
     
     var body: some View {
         ZStack() {
@@ -129,7 +130,6 @@ struct LoginView: View {
                     TextFieldView(data: $password, kind: .password)
                     :
                     TextFieldView(data: $password, kind: .password)
-                    
                     Button(action: {
                         isSecure.toggle()
                     }) {
@@ -149,14 +149,19 @@ struct LoginView: View {
                     // handler later
                 }
             ButtonView(titleButton: "Sign In") {
-                // handler later
+                appRouter.state = .welcome
             }
+            .disabled(isValidate == validateButton(userName: email, password: password))
             .padding(.horizontal, geo.size.height * 0.03)
             .padding(.vertical, geo.size.height * 0.03)
         }
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
         .padding(.horizontal, 24)
+    }
+
+    func validateButton(userName: String, password: String) -> Bool {
+        return userName.count > 8 && password.count > 8
     }
 }
 
