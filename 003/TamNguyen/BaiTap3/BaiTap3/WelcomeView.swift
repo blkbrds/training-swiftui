@@ -10,6 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
 
     let names: [String] = ["veterinary", "grooming", "petboarding", "adoption", "dogwalking", "training", "pettaxi", "petdate", "other"]
+    @EnvironmentObject var appRouter: AppRouter
 
     var body: some View {
 
@@ -43,6 +44,11 @@ struct WelcomeView: View {
                         }
                     }
                 }
+                
+                ButtonView(titleButton: "Go to Login") {
+                    appRouter.state = .login
+                }
+                .padding(.horizontal, 20)
                 Spacer()
             }
                 .navigationBarItems(trailing:

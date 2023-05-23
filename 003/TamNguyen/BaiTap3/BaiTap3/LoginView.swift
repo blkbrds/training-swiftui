@@ -14,7 +14,6 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var isSecure: Bool = true
     @State private var isValidate: Bool = false
-    @EnvironmentObject var appRouter: AppRouter
     
     var body: some View {
         ZStack() {
@@ -108,7 +107,7 @@ struct LoginView: View {
                     .padding(.top, 20)
                 
                 HStack {
-                    TextFieldView(data: $email, kind: .userName)
+                    TextFieldView(data: $email, isSecure: $isSecure, kind: .userName)
                     Button(action: {
                         isSecure.toggle()
                     }) {
@@ -126,10 +125,7 @@ struct LoginView: View {
                     .padding(.top, 20)
                 
                 HStack {
-                    isSecure ?
-                    TextFieldView(data: $password, kind: .password)
-                    :
-                    TextFieldView(data: $password, kind: .password)
+                    TextFieldView(data: $password, isSecure: $isSecure, kind: .password)
                     Button(action: {
                         isSecure.toggle()
                     }) {
@@ -149,7 +145,7 @@ struct LoginView: View {
                     // handler later
                 }
             ButtonView(titleButton: "Sign In") {
-                appRouter.state = .welcome
+                // handler later
             }
             .disabled(isValidate == validateButton(userName: email, password: password))
             .padding(.horizontal, geo.size.height * 0.03)

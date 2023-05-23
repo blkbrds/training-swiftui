@@ -10,7 +10,7 @@ import SwiftUI
 struct TextFieldView: View {
     
     @Binding var data: String
-    @State var isSecure: Bool = false
+    @Binding var isSecure: Bool
     var kind: KindOfInput = .userName
     
     var body: some View {
@@ -19,8 +19,13 @@ struct TextFieldView: View {
             TextField(kind.toPlaceHolder(), text: $data)
                 .textFieldModifier(kind: kind)
         case .password:
-            SecureField(kind.toPlaceHolder(), text: $data)
-                .textFieldModifier(kind: kind)
+            if isSecure {
+                SecureField(kind.toPlaceHolder(), text: $data)
+                    .textFieldModifier(kind: kind)
+            } else {
+                TextField(kind.toPlaceHolder(), text: $data)
+                    .textFieldModifier(kind: kind)
+            }
         }
     }
 }

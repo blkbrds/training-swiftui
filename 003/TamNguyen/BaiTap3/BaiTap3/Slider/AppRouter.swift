@@ -9,7 +9,7 @@ import SwiftUI
 
 class AppRouter: ObservableObject {
 
-    @Published var state: AppState = .login
+    @Published var state: AppState = .welcome
 }
 
 enum AppState {
