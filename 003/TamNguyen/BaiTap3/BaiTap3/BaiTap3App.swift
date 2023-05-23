@@ -14,7 +14,8 @@ struct BaiTap3App: App {
 //            ListAvatarView()
 //            CalculatorView()
 //            ImageView()
-            SliderView()
+//            SliderView()
+            LoginView()
         }
     }
 }
