@@ -16,13 +16,14 @@ struct MenuTabItem: View {
 
     var body: some View {
         VStack {
-            Image(systemName: systemIconName)
+            Image(systemIconName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: width, height: height)
                 .padding(.top, 10)
             Text(tabName)
                 .font(.footnote)
+                .foregroundColor(.white)
             Spacer()
         }
         .padding(.horizontal, -3)

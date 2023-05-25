@@ -11,6 +11,7 @@ struct RegisterView: View {
 
     @Binding var rootIsActive : Bool
     @StateObject var viewModel = RegisterViewModel()
+    @ObservedObject var jsonProvider: JSONProvider = JSONProvider()
 
     var body: some View {
         VStack(spacing: 50) {
@@ -48,7 +49,8 @@ struct RegisterView: View {
             }
             
             Button {
-                print("")
+                jsonProvider.userContainer.append(UserContainer(user: User(email: viewModel.email, userName: viewModel.userName, password: viewModel.password)))
+                jsonProvider.writeToFile()
             } label: {
                 Text("Sign up")
                     .frame(maxWidth: .infinity)
@@ -106,6 +108,11 @@ struct RegisterView: View {
         .navigationBarBackButtonHidden(true)
         .animation(Animation.default)
         .padding(.horizontal, 30)
+        .onAppear {
+            Task {
+                try await jsonProvider.getData()
+            }
+        }
     }
     
     func checkUserName(number: Int) -> Bool {

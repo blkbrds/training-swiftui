@@ -13,12 +13,12 @@ struct BasedTabView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-                .tag(0)
+//            HomeView()
+//                .tabItem {
+//                    Image(systemName: "house.fill")
+//                    Text("Home")
+//                }
+//                .tag(0)
             MapView()
                 .tabItem {
                     Image(systemName: "map.fill")
