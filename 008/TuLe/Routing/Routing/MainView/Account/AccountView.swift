@@ -118,13 +118,19 @@ struct TopView: View {
                 Spacer()
                 
                 VStack {
-                    Image(systemName: "qrcode.viewfinder")
-                        .resizable()
-                        .frame(width: 35, height: 35)
-                        .foregroundColor(.orange)
-                    
-                    Text("Mã thành viên")
-                        .foregroundColor(.orange)
+                    NavigationLink {
+                        MyQRView(user: data.user ?? User())
+                            .navigationTitle("My QR Code")
+                    } label: {
+                        VStack {
+                            Image(systemName: "qrcode.viewfinder")
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                                .foregroundColor(.orange)
+                            Text("Mã thành viên")
+                                .foregroundColor(.orange)
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 10)

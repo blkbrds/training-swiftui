@@ -13,6 +13,7 @@ final class RegisterViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
     @Published var isShowPassword: Bool = false
+    @Published var isShowPopUp: Bool = false
     
     func isSignUpDisable() -> Bool {
         return email.isValidEmail() && password.count >= 8 && userName.count >= 4 && password == confirmPassword 

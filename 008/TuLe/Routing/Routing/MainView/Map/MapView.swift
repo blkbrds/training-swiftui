@@ -13,8 +13,10 @@ struct MapView: View {
     
     var body: some View {
         VStack {
-            Text("Map")
+            Spacer()
+            Text("Hanlde Later")
                 .font(.largeTitle)
+                .foregroundColor(.white)
             Divider()
             HStack {
                 Button {
@@ -33,6 +35,7 @@ struct MapView: View {
                 } label: { Text("Tab #4") }.buttonStyle(.borderedProminent)
             }
             .padding()
+            Spacer()
         }
     }
 }

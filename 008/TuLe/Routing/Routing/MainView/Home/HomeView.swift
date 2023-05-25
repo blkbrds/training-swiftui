@@ -39,6 +39,7 @@ struct HomeView: View {
                     isLoading = viewModel.isLoadingSuccess
                 }
             }
+            .preferredColorScheme(.dark)
         }
     }
 }

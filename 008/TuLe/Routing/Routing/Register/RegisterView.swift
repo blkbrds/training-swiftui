@@ -72,6 +72,11 @@ struct RegisterView: View {
             .disabled(!viewModel.isSignUpDisable())
             .cornerRadius(10)
             .padding()
+            .alert("Đăng ký thành công", isPresented: $viewModel.isShowPopUp) {
+                Button("OK", role: .cancel) {
+                    rootIsActive = false
+                }
+            }
             
             VStack {
                 HStack {

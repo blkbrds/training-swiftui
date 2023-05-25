@@ -13,8 +13,10 @@ struct VideosView: View {
     
     var body: some View {
         VStack {
-            Text("Videos")
+            Spacer()
+            Text("Hanlde Later")
                 .font(.largeTitle)
+                .foregroundColor(.white)
             Divider()
             HStack {
                 Button {
@@ -33,6 +35,8 @@ struct VideosView: View {
                 } label: { Text("Tab #4") }.buttonStyle(.borderedProminent)
             }
             .padding()
+            
+            Spacer()
         }
     }
 }
