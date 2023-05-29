@@ -14,6 +14,8 @@
 		60BE789E2A0B407D00D4BAC9 /* HelloSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE789D2A0B407D00D4BAC9 /* HelloSwiftUITests.swift */; };
 		60BE78A82A0B407D00D4BAC9 /* HelloSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78A72A0B407D00D4BAC9 /* HelloSwiftUIUITests.swift */; };
 		60BE78AA2A0B407D00D4BAC9 /* HelloSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78A92A0B407D00D4BAC9 /* HelloSwiftUIUITestsLaunchTests.swift */; };
+		60BE78BC2A0B7E4C00D4BAC9 /* Bai2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78BB2A0B7E4C00D4BAC9 /* Bai2View.swift */; };
+		60BE78BF2A0B850300D4BAC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE78BE2A0B850300D4BAC9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		60BE78A32A0B407D00D4BAC9 /* HelloSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BE78A72A0B407D00D4BAC9 /* HelloSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftUIUITests.swift; sourceTree = "<group>"; };
 		60BE78A92A0B407D00D4BAC9 /* HelloSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60BE78BB2A0B7E4C00D4BAC9 /* Bai2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bai2View.swift; sourceTree = "<group>"; };
+		60BE78BD2A0B7E6800D4BAC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		60BE78BE2A0B850300D4BAC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +99,13 @@
 		60BE788B2A0B407B00D4BAC9 /* HelloSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				60BE78BD2A0B7E6800D4BAC9 /* Info.plist */,
+				60BE78BB2A0B7E4C00D4BAC9 /* Bai2View.swift */,
 				60BE788C2A0B407B00D4BAC9 /* HelloSwiftUIApp.swift */,
 				60BE788E2A0B407B00D4BAC9 /* ContentView.swift */,
 				60BE78902A0B407C00D4BAC9 /* Assets.xcassets */,
 				60BE78922A0B407C00D4BAC9 /* Preview Content */,
+				60BE78BE2A0B850300D4BAC9 /* AppDelegate.swift */,
 			);
 			path = HelloSwiftUI;
 			sourceTree = "<group>";
@@ -257,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BE78BF2A0B850300D4BAC9 /* AppDelegate.swift in Sources */,
 				60BE788F2A0B407B00D4BAC9 /* ContentView.swift in Sources */,
 				60BE788D2A0B407B00D4BAC9 /* HelloSwiftUIApp.swift in Sources */,
+				60BE78BC2A0B7E4C00D4BAC9 /* Bai2View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +429,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelloSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +458,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelloSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
