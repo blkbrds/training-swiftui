@@ -15,6 +15,10 @@
 		8A0075552A1B49B000626D2D /* Requirement01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075542A1B49B000626D2D /* Requirement01.swift */; };
 		8A0075572A1B50CB00626D2D /* Requirement02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075562A1B50CB00626D2D /* Requirement02.swift */; };
 		8A0075592A1B51F700626D2D /* Requirement03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075582A1B51F700626D2D /* Requirement03.swift */; };
+		8A00755C2A1B605100626D2D /* BasicLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */; };
+		8A00755E2A1B6B7000626D2D /* ChangeSizeOfRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */; };
+		8A0075602A1B6C4B00626D2D /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755F2A1B6C4B00626D2D /* Spacing.swift */; };
+		8A0075622A1B6D8D00626D2D /* ScroolHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		8A0075542A1B49B000626D2D /* Requirement01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement01.swift; sourceTree = "<group>"; };
 		8A0075562A1B50CB00626D2D /* Requirement02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement02.swift; sourceTree = "<group>"; };
 		8A0075582A1B51F700626D2D /* Requirement03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement03.swift; sourceTree = "<group>"; };
+		8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLazyGrid.swift; sourceTree = "<group>"; };
+		8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSizeOfRow.swift; sourceTree = "<group>"; };
+		8A00755F2A1B6C4B00626D2D /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolHorizontal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		8A00753F2A1B1C4200626D2D /* Grid Layout */ = {
 			isa = PBXGroup;
 			children = (
+				8A00755A2A1B5E9100626D2D /* Exercise03 */,
 				8A0075512A1B2CD300626D2D /* Exercise02 */,
 				8A00754E2A1B1D6A00626D2D /* Exercise01 */,
 				8A0075402A1B1C4200626D2D /* Grid_LayoutApp.swift */,
@@ -93,6 +102,17 @@
 				8A0075582A1B51F700626D2D /* Requirement03.swift */,
 			);
 			path = Exercise02;
+			sourceTree = "<group>";
+		};
+		8A00755A2A1B5E9100626D2D /* Exercise03 */ = {
+			isa = PBXGroup;
+			children = (
+				8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */,
+				8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */,
+				8A00755F2A1B6C4B00626D2D /* Spacing.swift */,
+				8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */,
+			);
+			path = Exercise03;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +187,13 @@
 			files = (
 				8A0075552A1B49B000626D2D /* Requirement01.swift in Sources */,
 				8A0075572A1B50CB00626D2D /* Requirement02.swift in Sources */,
+				8A0075602A1B6C4B00626D2D /* Spacing.swift in Sources */,
+				8A0075622A1B6D8D00626D2D /* ScroolHorizontal.swift in Sources */,
 				8A0075592A1B51F700626D2D /* Requirement03.swift in Sources */,
 				8A0075432A1B1C4200626D2D /* ContentView.swift in Sources */,
+				8A00755C2A1B605100626D2D /* BasicLazyGrid.swift in Sources */,
 				8A0075412A1B1C4200626D2D /* Grid_LayoutApp.swift in Sources */,
+				8A00755E2A1B6B7000626D2D /* ChangeSizeOfRow.swift in Sources */,
 				8A0075502A1B1F0900626D2D /* BasicLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
