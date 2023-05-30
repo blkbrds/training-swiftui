@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class LoginViewModel: ObservableObject {
 
@@ -14,8 +15,6 @@ final class LoginViewModel: ObservableObject {
     @Published var isShowPassword: Bool = false
     @Published var forgotPasswordFlow : Bool = false
     @Published var registerFlow : Bool = false
-    @Published var errorType: ErrorLoginType = .none
-    @Published var loginSuccess: Bool = false
     @Published var jsonProvider: JSONProvider = JSONProvider()
     
     func isLoginDisable() -> Bool {
@@ -23,18 +22,16 @@ final class LoginViewModel: ObservableObject {
     }
     
     @MainActor
-    func checkLogin() async -> UserContainer? {
+    func checkLogin() async throws -> UserContainer? {
         do {
             let data = try await jsonProvider.getData()
             for item in data {
                 if item.user?.email == email && item.user?.password == password {
-                    loginSuccess = true
                     return item
                 }
             }
-            errorType = .invalid
         } catch {
-            errorType = .connectFail
+            throw CommonError.networkError
         }
         return nil
     }

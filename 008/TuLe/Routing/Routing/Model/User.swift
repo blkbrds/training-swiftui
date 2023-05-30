@@ -38,7 +38,7 @@ class JSONProvider: ObservableObject {
                 return try await decodeData(fromURL: mainUrl)
             }
         } catch {
-            throw error
+            throw CommonError.networkError
         }
     }
     

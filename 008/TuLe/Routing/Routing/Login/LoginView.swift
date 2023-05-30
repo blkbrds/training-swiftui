@@ -12,6 +12,7 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
     @State var isShowIndicator: Bool = false
     @EnvironmentObject var appRouter: StorageData
+    @EnvironmentObject var errorManager: ErrorManager
     @State var logoScale = 0.0
     @State var opacityTitle = 0.0
     @State var isShowPopUp = false
@@ -86,11 +87,17 @@ struct LoginView: View {
                             Button {
                                 Task {
                                     isShowIndicator = true
-                                    let data = await viewModel.checkLogin()
-                                    if viewModel.loginSuccess {
-                                        appRouter.appState = .main
-                                        appRouter.dataLogin = try JSONEncoder().encode(data)
-                                    } else {
+                                    do {
+                                        let data = try await viewModel.checkLogin()
+                                        if let data = try await viewModel.checkLogin() {
+                                            appRouter.appState = .main
+                                            appRouter.dataLogin = try JSONEncoder().encode(data)
+                                        } else {
+                                            errorManager.appError = .loginInvalid
+                                            isShowPopUp = true
+                                        }
+                                    } catch {
+                                        errorManager.appError = .networkError
                                         isShowPopUp = true
                                     }
                                     isShowIndicator = false
@@ -118,7 +125,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                             .padding()
                             .alert(isPresented: $isShowPopUp) {
-                                viewModel.errorType.errorAlert()
+                                errorManager.appError.errorAlert()
                             }
                             
                             HStack {
