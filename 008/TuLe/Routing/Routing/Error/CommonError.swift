@@ -1,5 +1,5 @@
 //
-//  ErrorManager.swift
+//  CommonError.swift
 //  Routing
 //
 //  Created by Tu Le C. [2] VN.Danang on 30/05/2023.
@@ -23,10 +23,6 @@ enum CommonError: Error {
             return ""
         }
     }
-}
-
-class ErrorManager: ObservableObject {
-    @Published var appError: CommonError = .unknown
 }
 
 extension Error {

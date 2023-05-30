@@ -11,7 +11,6 @@ import SwiftUI
 struct RoutingApp: App {
 
     @StateObject var appRouter = StorageData()
-    @StateObject var errorManager = ErrorManager()
     
     @ViewBuilder
     var rootView: some View {
@@ -29,7 +28,6 @@ struct RoutingApp: App {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
-                .environmentObject(errorManager)
         }
     }
 }
