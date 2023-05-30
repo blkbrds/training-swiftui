@@ -24,6 +24,8 @@
 		8AB478602A2483CA00F6D805 /* FixedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4785F2A2483CA00F6D805 /* FixedGrid.swift */; };
 		8AB478622A24868300F6D805 /* AdaptiveGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478612A24868300F6D805 /* AdaptiveGrid.swift */; };
 		8AB478642A2488F500F6D805 /* MixingGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478632A2488F500F6D805 /* MixingGrid.swift */; };
+		8AB478672A2490A200F6D805 /* SectionVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478662A2490A200F6D805 /* SectionVGridView.swift */; };
+		8AB478692A259FBE00F6D805 /* SectionHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478682A259FBE00F6D805 /* SectionHGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		8AB4785F2A2483CA00F6D805 /* FixedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedGrid.swift; sourceTree = "<group>"; };
 		8AB478612A24868300F6D805 /* AdaptiveGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveGrid.swift; sourceTree = "<group>"; };
 		8AB478632A2488F500F6D805 /* MixingGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixingGrid.swift; sourceTree = "<group>"; };
+		8AB478662A2490A200F6D805 /* SectionVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVGridView.swift; sourceTree = "<group>"; };
+		8AB478682A259FBE00F6D805 /* SectionHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		8A00753F2A1B1C4200626D2D /* Grid Layout */ = {
 			isa = PBXGroup;
 			children = (
+				8AB478652A248D1F00F6D805 /* Exercise05 */,
 				8AB4785A2A245B6200F6D805 /* Exercise04 */,
 				8A00755A2A1B5E9100626D2D /* Exercise03 */,
 				8A0075512A1B2CD300626D2D /* Exercise02 */,
@@ -136,6 +141,15 @@
 				8AB478632A2488F500F6D805 /* MixingGrid.swift */,
 			);
 			path = Exercise04;
+			sourceTree = "<group>";
+		};
+		8AB478652A248D1F00F6D805 /* Exercise05 */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478662A2490A200F6D805 /* SectionVGridView.swift */,
+				8AB478682A259FBE00F6D805 /* SectionHGridView.swift */,
+			);
+			path = Exercise05;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,10 +230,12 @@
 				8A0075432A1B1C4200626D2D /* ContentView.swift in Sources */,
 				8A00755C2A1B605100626D2D /* BasicLazyGrid.swift in Sources */,
 				8AB478602A2483CA00F6D805 /* FixedGrid.swift in Sources */,
+				8AB478692A259FBE00F6D805 /* SectionHGridView.swift in Sources */,
 				8A0075412A1B1C4200626D2D /* Grid_LayoutApp.swift in Sources */,
 				8AB478622A24868300F6D805 /* AdaptiveGrid.swift in Sources */,
 				8AB478642A2488F500F6D805 /* MixingGrid.swift in Sources */,
 				8A00755E2A1B6B7000626D2D /* ChangeSizeOfRow.swift in Sources */,
+				8AB478672A2490A200F6D805 /* SectionVGridView.swift in Sources */,
 				8A0075502A1B1F0900626D2D /* BasicLayout.swift in Sources */,
 				8AB4785E2A24634D00F6D805 /* FlexibleGrid.swift in Sources */,
 				8AB4785C2A245CDE00F6D805 /* DefaultGrid.swift in Sources */,
