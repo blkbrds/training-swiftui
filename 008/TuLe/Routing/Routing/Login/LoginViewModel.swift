@@ -7,20 +7,6 @@
 
 import Foundation
 
-enum ErrorLoginType {
-    case invalid
-    case connectFail
-    
-    func errorMessage() -> String {
-        switch self {
-        case .invalid:
-            return "Tên email hoặc mật khẩu không chính xác"
-        case .connectFail:
-            return "Lỗi khi kết nối tới sever"
-        }
-    }
-}
-
 final class LoginViewModel: ObservableObject {
 
     @Published var email: String = ""
@@ -28,7 +14,7 @@ final class LoginViewModel: ObservableObject {
     @Published var isShowPassword: Bool = false
     @Published var forgotPasswordFlow : Bool = false
     @Published var registerFlow : Bool = false
-    @Published var errorType: ErrorLoginType?
+    @Published var errorType: ErrorLoginType = .none
     @Published var loginSuccess: Bool = false
     @Published var jsonProvider: JSONProvider = JSONProvider()
     
@@ -39,7 +25,6 @@ final class LoginViewModel: ObservableObject {
     @MainActor
     func checkLogin() async -> UserContainer? {
         do {
-            try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
             let data = try await jsonProvider.getData()
             for item in data {
                 if item.user?.email == email && item.user?.password == password {

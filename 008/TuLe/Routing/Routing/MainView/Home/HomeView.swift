@@ -20,7 +20,6 @@ struct HomeView: View {
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
-                .padding(.top, 20)
             ScrollView {
                 
                 ScrollView {

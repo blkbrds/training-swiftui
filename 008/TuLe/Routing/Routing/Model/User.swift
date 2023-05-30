@@ -31,6 +31,7 @@ class JSONProvider: ObservableObject {
     
     func getData() async throws -> [UserContainer] {
         do {
+            try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
             if fm.fileExists(atPath: getDocumentsDirectory().path) {
                 return try await decodeData(fromURL: getDocumentsDirectory().appendingPathExtension("user.json"))
             } else {
@@ -45,8 +46,7 @@ class JSONProvider: ObservableObject {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
-    
-    @MainActor
+
     func decodeData(fromURL url: URL) async throws -> [UserContainer] {
         do{
             let jsonData = try Data(contentsOf: url)

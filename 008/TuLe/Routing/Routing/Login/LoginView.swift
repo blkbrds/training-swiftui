@@ -118,7 +118,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                             .padding()
                             .alert(isPresented: $isShowPopUp) {
-                                Alert(title: Text("Login fail"), message: Text(viewModel.errorType?.errorMessage() ?? ""), dismissButton: .default(Text("Got it!")))
+                                viewModel.errorType.errorAlert()
                             }
                             
                             HStack {
