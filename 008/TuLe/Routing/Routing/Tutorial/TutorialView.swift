@@ -1,0 +1,58 @@
+//
+//  TutorialView.swift
+//  StateAndDataFlow
+//
+//  Created by Tu Le C. [2] VN.Danang on 11/04/2023.
+//
+
+import SwiftUI
+
+struct TutorialView: View {
+    
+    @State private var pageIndex = 0
+    @EnvironmentObject var appRouter: StorageData
+    private let pages: [TutorialModel] = TutorialModel.samplePages
+    private let dotAppearance = UIPageControl.appearance()
+    
+    var body: some View {
+        TabView(selection: $pageIndex) {
+            ForEach(pages) { page in
+                VStack {
+                    Spacer()
+                    PageView(page: page)
+                    Spacer()
+                    if page == pages.last {
+                        Button("Login!", action: goToLogin)
+                            .buttonStyle(.bordered)
+                    } else {
+                        Button("next", action: incrementPage)
+                            .buttonStyle(.borderedProminent)
+                    }
+                    Spacer()
+                }
+                .tag(page.tag)
+            }
+        }
+        .animation(.easeInOut, value: pageIndex)
+        .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+        .tabViewStyle(PageTabViewStyle())
+        .onAppear {
+            dotAppearance.currentPageIndicatorTintColor = .black
+            dotAppearance.pageIndicatorTintColor = .gray
+        }
+    }
+    
+    func incrementPage() {
+        pageIndex += 1
+    }
+    
+    func goToLogin() {
+        appRouter.appState = .login
+    }
+}
+
+struct TutorialView_Previews: PreviewProvider {
+    static var previews: some View {
+        TutorialView()
+    }
+}
