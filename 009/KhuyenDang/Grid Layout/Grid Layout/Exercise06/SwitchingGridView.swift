@@ -49,7 +49,6 @@ struct SwitchingGridView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         gridItem = Array(repeating: GridItem(), count: gridItem.count % 4 + 1)
-                        print(gridItem.count)
                     } label: {
                         Image(systemName: iconButton)
                             .font(.title)
