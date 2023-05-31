@@ -31,7 +31,8 @@ class JSONProvider: ObservableObject {
     
     func getData() async throws -> [UserContainer] {
         do {
-            if fm.fileExists(atPath: getDocumentsDirectory().path) {
+            try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+            if fm.fileExists(atPath: try getDocumentsDirectory().path) {
                 return try await decodeData(fromURL: getDocumentsDirectory().appendingPathExtension("user.json"))
             } else {
                 return try await decodeData(fromURL: mainUrl)
@@ -41,21 +42,35 @@ class JSONProvider: ObservableObject {
         }
     }
     
-    func getDocumentsDirectory() -> URL {
+    func getDocumentsDirectory() throws -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+        if paths.isEmpty {
+            throw CommonError.errorURL
+        } else {
+            return paths[0]
+        }
     }
-    
-    @MainActor
+
     func decodeData(fromURL url: URL) async throws -> [UserContainer] {
         do{
-            let jsonData = try Data(contentsOf: url)
+            let jsonData = try getDataJsonFile(url: url)
             let decoder = JSONDecoder()
             let userContainer = try decoder.decode([UserContainer].self, from: jsonData)
             self.userContainer = userContainer
             return userContainer
+        } catch CommonError.fileNotFound {
+            throw CommonError.fileNotFound
         } catch {
-            throw error
+            throw CommonError.errorParsing
+        }
+    }
+    
+    func getDataJsonFile(url: URL) throws -> Data {
+        do {
+            let jsonData = try Data(contentsOf: url)
+            return jsonData
+        } catch {
+            throw CommonError.fileNotFound
         }
     }
     
@@ -66,8 +81,6 @@ class JSONProvider: ObservableObject {
             let jsonData = try encoder.encode(userContainer)
             if let jsonString = String(data: jsonData, encoding: .utf8) {
                 try jsonString.write(to: getDocumentsDirectory().appendingPathExtension("user.json"), atomically: true, encoding: .utf8)
-                print("\(getDocumentsDirectory().appendingPathExtension("user.json"))")
-                print("save thành công")
             }
         } catch { }
     }

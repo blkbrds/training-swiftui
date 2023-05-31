@@ -86,11 +86,15 @@ struct LoginView: View {
                             Button {
                                 Task {
                                     isShowIndicator = true
-                                    let data = await viewModel.checkLogin()
-                                    if viewModel.loginSuccess {
-                                        appRouter.appState = .main
-                                        appRouter.dataLogin = try JSONEncoder().encode(data)
-                                    } else {
+                                    do {
+                                        let data = try await viewModel.checkLogin()
+                                        if let data = try await viewModel.checkLogin() {
+                                            appRouter.appState = .main
+                                            appRouter.dataLogin = try JSONEncoder().encode(data)
+                                        } else {
+                                            isShowPopUp = true
+                                        }
+                                    } catch {
                                         isShowPopUp = true
                                     }
                                     isShowIndicator = false
@@ -118,7 +122,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                             .padding()
                             .alert(isPresented: $isShowPopUp) {
-                                Alert(title: Text("Login fail"), message: Text(viewModel.errorType?.errorMessage() ?? ""), dismissButton: .default(Text("Got it!")))
+                                Alert(title: Text("Login fail") ,message: Text("\(viewModel.contentError)"), dismissButton: .default(Text("Got it!")))
                             }
                             
                             HStack {

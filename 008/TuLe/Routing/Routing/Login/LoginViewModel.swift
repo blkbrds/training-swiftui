@@ -6,20 +6,7 @@
 //
 
 import Foundation
-
-enum ErrorLoginType {
-    case invalid
-    case connectFail
-    
-    func errorMessage() -> String {
-        switch self {
-        case .invalid:
-            return "Tên email hoặc mật khẩu không chính xác"
-        case .connectFail:
-            return "Lỗi khi kết nối tới sever"
-        }
-    }
-}
+import SwiftUI
 
 final class LoginViewModel: ObservableObject {
 
@@ -28,9 +15,8 @@ final class LoginViewModel: ObservableObject {
     @Published var isShowPassword: Bool = false
     @Published var forgotPasswordFlow : Bool = false
     @Published var registerFlow : Bool = false
-    @Published var errorType: ErrorLoginType?
-    @Published var loginSuccess: Bool = false
     @Published var jsonProvider: JSONProvider = JSONProvider()
+    @Published var contentError: String = ""
     
     func isLoginDisable() -> Bool {
         return email.isValidEmail() && password != ""
@@ -39,17 +25,29 @@ final class LoginViewModel: ObservableObject {
     @MainActor
     func checkLogin() async -> UserContainer? {
         do {
-            try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
             let data = try await jsonProvider.getData()
-            for item in data {
-                if item.user?.email == email && item.user?.password == password {
-                    loginSuccess = true
-                    return item
-                }
+            guard let account = isValidAccount(data: data) else {
+                contentError = "Sai tên đăng nhập hoặc mật khẩu"
+                return nil
             }
-            errorType = .invalid
+            return account
+        } catch CommonError.fileNotFound {
+            contentError = CommonError.fileNotFound.localizedDescription
+        } catch CommonError.errorParsing {
+            contentError = CommonError.errorParsing.localizedDescription
+        } catch CommonError.errorURL {
+            contentError = CommonError.errorURL.localizedDescription
         } catch {
-            errorType = .connectFail
+            contentError = CommonError.unknown.localizedDescription
+        }
+        return nil
+    }
+    
+    func isValidAccount(data: [UserContainer]) -> UserContainer? {
+        for item in data {
+            if item.user?.email == email && item.user?.password == password {
+                return item
+            }
         }
         return nil
     }

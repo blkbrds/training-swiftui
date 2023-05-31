@@ -51,6 +51,7 @@ struct RegisterView: View {
             Button {
                 jsonProvider.userContainer.append(UserContainer(user: User(email: viewModel.email, userName: viewModel.userName, password: viewModel.password)))
                 jsonProvider.writeToFile()
+                viewModel.isShowPopUp.toggle()
             } label: {
                 Text("Sign up")
                     .frame(maxWidth: .infinity)

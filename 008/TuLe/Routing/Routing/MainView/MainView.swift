@@ -37,28 +37,22 @@ struct MainView: View {
                         }
                     }
                     .blur(radius: isLoadingApi ? 3.0 : 0.0)
-                HStack {
-                    MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "house", tabName: "Home", tabbarRouter: tabbarRouter, assignedPage: .home)
-                        .padding(.leading, 3)
-                    MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "location", tabName: "Location", tabbarRouter: tabbarRouter, assignedPage: .map)
-                    Spacer()
-                    MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "category", tabName: "Category", tabbarRouter: tabbarRouter, assignedPage: .videos)
-                    MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "profile", tabName: "Profile", tabbarRouter: tabbarRouter, assignedPage: .profile)
-                        .padding(.trailing, 5)
-                }
-                .frame(width: geometry.size.width, height: geometry.size.height/8)
-                .background(
-                    LinearGradient(gradient: Gradient(colors: [
-                        Color(red: 83 / 255, green: 57 / 255, blue: 146 / 255),
-                        Color(red: 191 / 255, green: 80 / 255, blue: 196 / 255)
-                    ]), startPoint: .leading, endPoint: .trailing)
-                )
-                .clipShape(TabbarShape())
-                .sheet(isPresented: $isShowPlusView) {
-                    TicketView()
-                }
-                .overlay {
-                    VStack {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 0)
+                        .frame(width: geometry.size.width, height: geometry.size.height/8)
+                        .background(
+                            LinearGradient(gradient: Gradient(colors: [
+                                Color(red: 83 / 255, green: 57 / 255, blue: 146 / 255),
+                                Color(red: 191 / 255, green: 80 / 255, blue: 196 / 255)
+                            ]), startPoint: .leading, endPoint: .trailing)
+                        )
+                        .foregroundColor(.clear)
+                        .clipShape(TabbarShape())
+                    
+                    HStack {
+                        MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "house", tabName: "Home", tabbarRouter: tabbarRouter, assignedPage: .home)
+                            .padding(.leading, 3)
+                        MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "location", tabName: "Location", tabbarRouter: tabbarRouter, assignedPage: .map)
                         PlusTabbarButtonView(width: geometry.size.width/7, height: geometry.size.width/7, systemIconName: "ticket", tabName: "plush", action: showPlusView)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 25)
@@ -71,19 +65,28 @@ struct MainView: View {
                             )
                             .rotationEffect(.degrees(45))
                             .rotationEffect(.degrees(isRotating))
-                    }
-                    .offset(y: loadingOffset)
-                    .onAppear {
-                        loadingOffset = -geometry.size.height/2
-                    }
-                    .onChange(of: isLoadingApi) { newValue in
-                        withAnimation {
-                            if !newValue {
-                                loadingOffset = -geometry.size.height/7/2
-                                isRotating = 0
+                            .offset(y: loadingOffset)
+                            .onAppear {
+                                loadingOffset = -geometry.size.height/2
                             }
-                        }
+                            .onChange(of: isLoadingApi) { newValue in
+                                withAnimation {
+                                    if !newValue {
+                                        loadingOffset = -geometry.size.height/7/2
+                                        isRotating = 0
+                                    }
+                                }
+                            }
+                        MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "category", tabName: "Category", tabbarRouter: tabbarRouter, assignedPage: .videos)
+                        MenuTabItem(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "profile", tabName: "Profile", tabbarRouter: tabbarRouter, assignedPage: .profile)
+                            .padding(.trailing, 5)
                     }
+                    .frame(width: geometry.size.width, height: geometry.size.height/8)
+                    .background(.clear)
+                    .sheet(isPresented: $isShowPlusView) {
+                        TicketView()
+                    }
+                    
                 }
             }
             .background(
@@ -95,7 +98,7 @@ struct MainView: View {
                     Color(red: 23 / 255, green: 12 / 255, blue: 21 / 255)
                 ]), startPoint: .top, endPoint: .bottom)
             )
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
             .onAppear {
                 if isLoadingApi {
                     withAnimation(.linear(duration: 1)
