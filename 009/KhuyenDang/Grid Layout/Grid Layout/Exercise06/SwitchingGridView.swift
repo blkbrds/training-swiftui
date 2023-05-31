@@ -57,6 +57,7 @@ struct SwitchingGridView: View {
 
                 }
             }
+                .animation(.easeInOut, value: gridItem.count)
         }
     }
 }
