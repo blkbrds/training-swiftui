@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A0075412A1B1C4200626D2D /* Grid_LayoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075402A1B1C4200626D2D /* Grid_LayoutApp.swift */; };
+		8A0075432A1B1C4200626D2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075422A1B1C4200626D2D /* ContentView.swift */; };
+		8A0075452A1B1C4400626D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0075442A1B1C4400626D2D /* Assets.xcassets */; };
+		8A0075482A1B1C4400626D2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0075472A1B1C4400626D2D /* Preview Assets.xcassets */; };
+		8A0075502A1B1F0900626D2D /* BasicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00754F2A1B1F0900626D2D /* BasicLayout.swift */; };
+		8A0075552A1B49B000626D2D /* Requirement01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075542A1B49B000626D2D /* Requirement01.swift */; };
+		8A0075572A1B50CB00626D2D /* Requirement02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075562A1B50CB00626D2D /* Requirement02.swift */; };
+		8A0075592A1B51F700626D2D /* Requirement03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075582A1B51F700626D2D /* Requirement03.swift */; };
+		8A00755C2A1B605100626D2D /* BasicLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */; };
+		8A00755E2A1B6B7000626D2D /* ChangeSizeOfRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */; };
+		8A0075602A1B6C4B00626D2D /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00755F2A1B6C4B00626D2D /* Spacing.swift */; };
+		8A0075622A1B6D8D00626D2D /* ScroolHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */; };
+		8AB4785C2A245CDE00F6D805 /* DefaultGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4785B2A245CDE00F6D805 /* DefaultGrid.swift */; };
+		8AB4785E2A24634D00F6D805 /* FlexibleGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4785D2A24634D00F6D805 /* FlexibleGrid.swift */; };
+		8AB478602A2483CA00F6D805 /* FixedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4785F2A2483CA00F6D805 /* FixedGrid.swift */; };
+		8AB478622A24868300F6D805 /* AdaptiveGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478612A24868300F6D805 /* AdaptiveGrid.swift */; };
+		8AB478642A2488F500F6D805 /* MixingGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478632A2488F500F6D805 /* MixingGrid.swift */; };
+		8AB478672A2490A200F6D805 /* SectionVGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478662A2490A200F6D805 /* SectionVGridView.swift */; };
+		8AB478692A259FBE00F6D805 /* SectionHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478682A259FBE00F6D805 /* SectionHGridView.swift */; };
+		8AB4786C2A25E2D700F6D805 /* SwitchingGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4786B2A25E2D700F6D805 /* SwitchingGridView.swift */; };
+		8AB478722A25F29D00F6D805 /* CombineGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478712A25F29D00F6D805 /* CombineGridView.swift */; };
+		8AB478752A26E9E700F6D805 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478742A26E9E700F6D805 /* Cafe.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A00753D2A1B1C4200626D2D /* Grid Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grid Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0075402A1B1C4200626D2D /* Grid_LayoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid_LayoutApp.swift; sourceTree = "<group>"; };
+		8A0075422A1B1C4200626D2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A0075442A1B1C4400626D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A0075472A1B1C4400626D2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A00754F2A1B1F0900626D2D /* BasicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayout.swift; sourceTree = "<group>"; };
+		8A0075542A1B49B000626D2D /* Requirement01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement01.swift; sourceTree = "<group>"; };
+		8A0075562A1B50CB00626D2D /* Requirement02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement02.swift; sourceTree = "<group>"; };
+		8A0075582A1B51F700626D2D /* Requirement03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirement03.swift; sourceTree = "<group>"; };
+		8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLazyGrid.swift; sourceTree = "<group>"; };
+		8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSizeOfRow.swift; sourceTree = "<group>"; };
+		8A00755F2A1B6C4B00626D2D /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroolHorizontal.swift; sourceTree = "<group>"; };
+		8AB4785B2A245CDE00F6D805 /* DefaultGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGrid.swift; sourceTree = "<group>"; };
+		8AB4785D2A24634D00F6D805 /* FlexibleGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGrid.swift; sourceTree = "<group>"; };
+		8AB4785F2A2483CA00F6D805 /* FixedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedGrid.swift; sourceTree = "<group>"; };
+		8AB478612A24868300F6D805 /* AdaptiveGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveGrid.swift; sourceTree = "<group>"; };
+		8AB478632A2488F500F6D805 /* MixingGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixingGrid.swift; sourceTree = "<group>"; };
+		8AB478662A2490A200F6D805 /* SectionVGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVGridView.swift; sourceTree = "<group>"; };
+		8AB478682A259FBE00F6D805 /* SectionHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHGridView.swift; sourceTree = "<group>"; };
+		8AB4786B2A25E2D700F6D805 /* SwitchingGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingGridView.swift; sourceTree = "<group>"; };
+		8AB478712A25F29D00F6D805 /* CombineGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineGridView.swift; sourceTree = "<group>"; };
+		8AB478742A26E9E700F6D805 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A00753A2A1B1C4200626D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A0075342A1B1C4200626D2D = {
+			isa = PBXGroup;
+			children = (
+				8A00753F2A1B1C4200626D2D /* Grid Layout */,
+				8A00753E2A1B1C4200626D2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A00753E2A1B1C4200626D2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A00753D2A1B1C4200626D2D /* Grid Layout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A00753F2A1B1C4200626D2D /* Grid Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478732A26E9D100F6D805 /* Model */,
+				8AB4786E2A25F24800F6D805 /* Exercise07 */,
+				8AB4786A2A25E2AF00F6D805 /* Exercise06 */,
+				8AB478652A248D1F00F6D805 /* Exercise05 */,
+				8AB4785A2A245B6200F6D805 /* Exercise04 */,
+				8A00755A2A1B5E9100626D2D /* Exercise03 */,
+				8A0075512A1B2CD300626D2D /* Exercise02 */,
+				8A00754E2A1B1D6A00626D2D /* Exercise01 */,
+				8A0075402A1B1C4200626D2D /* Grid_LayoutApp.swift */,
+				8A0075422A1B1C4200626D2D /* ContentView.swift */,
+				8A0075442A1B1C4400626D2D /* Assets.xcassets */,
+				8A0075462A1B1C4400626D2D /* Preview Content */,
+			);
+			path = "Grid Layout";
+			sourceTree = "<group>";
+		};
+		8A0075462A1B1C4400626D2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A0075472A1B1C4400626D2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8A00754E2A1B1D6A00626D2D /* Exercise01 */ = {
+			isa = PBXGroup;
+			children = (
+				8A00754F2A1B1F0900626D2D /* BasicLayout.swift */,
+			);
+			path = Exercise01;
+			sourceTree = "<group>";
+		};
+		8A0075512A1B2CD300626D2D /* Exercise02 */ = {
+			isa = PBXGroup;
+			children = (
+				8A0075542A1B49B000626D2D /* Requirement01.swift */,
+				8A0075562A1B50CB00626D2D /* Requirement02.swift */,
+				8A0075582A1B51F700626D2D /* Requirement03.swift */,
+			);
+			path = Exercise02;
+			sourceTree = "<group>";
+		};
+		8A00755A2A1B5E9100626D2D /* Exercise03 */ = {
+			isa = PBXGroup;
+			children = (
+				8A00755B2A1B605100626D2D /* BasicLazyGrid.swift */,
+				8A00755D2A1B6B7000626D2D /* ChangeSizeOfRow.swift */,
+				8A00755F2A1B6C4B00626D2D /* Spacing.swift */,
+				8A0075612A1B6D8D00626D2D /* ScroolHorizontal.swift */,
+			);
+			path = Exercise03;
+			sourceTree = "<group>";
+		};
+		8AB4785A2A245B6200F6D805 /* Exercise04 */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4785B2A245CDE00F6D805 /* DefaultGrid.swift */,
+				8AB4785D2A24634D00F6D805 /* FlexibleGrid.swift */,
+				8AB4785F2A2483CA00F6D805 /* FixedGrid.swift */,
+				8AB478612A24868300F6D805 /* AdaptiveGrid.swift */,
+				8AB478632A2488F500F6D805 /* MixingGrid.swift */,
+			);
+			path = Exercise04;
+			sourceTree = "<group>";
+		};
+		8AB478652A248D1F00F6D805 /* Exercise05 */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478662A2490A200F6D805 /* SectionVGridView.swift */,
+				8AB478682A259FBE00F6D805 /* SectionHGridView.swift */,
+			);
+			path = Exercise05;
+			sourceTree = "<group>";
+		};
+		8AB4786A2A25E2AF00F6D805 /* Exercise06 */ = {
+			isa = PBXGroup;
+			children = (
+				8AB4786B2A25E2D700F6D805 /* SwitchingGridView.swift */,
+			);
+			path = Exercise06;
+			sourceTree = "<group>";
+		};
+		8AB4786E2A25F24800F6D805 /* Exercise07 */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478712A25F29D00F6D805 /* CombineGridView.swift */,
+			);
+			path = Exercise07;
+			sourceTree = "<group>";
+		};
+		8AB478732A26E9D100F6D805 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478742A26E9E700F6D805 /* Cafe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A00753C2A1B1C4200626D2D /* Grid Layout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A00754B2A1B1C4400626D2D /* Build configuration list for PBXNativeTarget "Grid Layout" */;
+			buildPhases = (
+				8A0075392A1B1C4200626D2D /* Sources */,
+				8A00753A2A1B1C4200626D2D /* Frameworks */,
+				8A00753B2A1B1C4200626D2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Grid Layout";
+			productName = "Grid Layout";
+			productReference = 8A00753D2A1B1C4200626D2D /* Grid Layout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A0075352A1B1C4200626D2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8A00753C2A1B1C4200626D2D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8A0075382A1B1C4200626D2D /* Build configuration list for PBXProject "Grid Layout" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A0075342A1B1C4200626D2D;
+			productRefGroup = 8A00753E2A1B1C4200626D2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A00753C2A1B1C4200626D2D /* Grid Layout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A00753B2A1B1C4200626D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0075482A1B1C4400626D2D /* Preview Assets.xcassets in Resources */,
+				8A0075452A1B1C4400626D2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A0075392A1B1C4200626D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0075552A1B49B000626D2D /* Requirement01.swift in Sources */,
+				8A0075572A1B50CB00626D2D /* Requirement02.swift in Sources */,
+				8A0075602A1B6C4B00626D2D /* Spacing.swift in Sources */,
+				8A0075622A1B6D8D00626D2D /* ScroolHorizontal.swift in Sources */,
+				8A0075592A1B51F700626D2D /* Requirement03.swift in Sources */,
+				8A0075432A1B1C4200626D2D /* ContentView.swift in Sources */,
+				8A00755C2A1B605100626D2D /* BasicLazyGrid.swift in Sources */,
+				8AB4786C2A25E2D700F6D805 /* SwitchingGridView.swift in Sources */,
+				8AB478752A26E9E700F6D805 /* Cafe.swift in Sources */,
+				8AB478602A2483CA00F6D805 /* FixedGrid.swift in Sources */,
+				8AB478692A259FBE00F6D805 /* SectionHGridView.swift in Sources */,
+				8A0075412A1B1C4200626D2D /* Grid_LayoutApp.swift in Sources */,
+				8AB478622A24868300F6D805 /* AdaptiveGrid.swift in Sources */,
+				8AB478722A25F29D00F6D805 /* CombineGridView.swift in Sources */,
+				8AB478642A2488F500F6D805 /* MixingGrid.swift in Sources */,
+				8A00755E2A1B6B7000626D2D /* ChangeSizeOfRow.swift in Sources */,
+				8AB478672A2490A200F6D805 /* SectionVGridView.swift in Sources */,
+				8A0075502A1B1F0900626D2D /* BasicLayout.swift in Sources */,
+				8AB4785E2A24634D00F6D805 /* FlexibleGrid.swift in Sources */,
+				8AB4785C2A245CDE00F6D805 /* DefaultGrid.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A0075492A1B1C4400626D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A00754A2A1B1C4400626D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A00754C2A1B1C4400626D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Grid Layout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ios.Grid-Layout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A00754D2A1B1C4400626D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Grid Layout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ios.Grid-Layout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A0075382A1B1C4200626D2D /* Build configuration list for PBXProject "Grid Layout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A0075492A1B1C4400626D2D /* Debug */,
+				8A00754A2A1B1C4400626D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A00754B2A1B1C4400626D2D /* Build configuration list for PBXNativeTarget "Grid Layout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A00754C2A1B1C4400626D2D /* Debug */,
+				8A00754D2A1B1C4400626D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A0075352A1B1C4200626D2D /* Project object */;
+}
