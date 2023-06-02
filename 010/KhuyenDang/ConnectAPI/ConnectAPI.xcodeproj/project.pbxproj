@@ -12,6 +12,10 @@
 		8AB478A12A27395F00F6D805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB478A02A27395F00F6D805 /* Assets.xcassets */; };
 		8AB478A42A27395F00F6D805 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB478A32A27395F00F6D805 /* Preview Assets.xcassets */; };
 		8AB478AB2A273A0B00F6D805 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478AA2A273A0B00F6D805 /* Networking.swift */; };
+		8AB478AD2A284CAE00F6D805 /* CompletionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478AC2A284CAE00F6D805 /* CompletionHandling.swift */; };
+		8AB478B12A284CF800F6D805 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478B02A284CF800F6D805 /* ApiManager.swift */; };
+		8AB478B32A284D3A00F6D805 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478B22A284D3A00F6D805 /* Cocktail.swift */; };
+		8AB478B72A28905800F6D805 /* CompletionHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478B62A28905800F6D805 /* CompletionHandlingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		8AB478A02A27395F00F6D805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AB478A32A27395F00F6D805 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AB478AA2A273A0B00F6D805 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		8AB478AC2A284CAE00F6D805 /* CompletionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandling.swift; sourceTree = "<group>"; };
+		8AB478B02A284CF800F6D805 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		8AB478B22A284D3A00F6D805 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		8AB478B62A28905800F6D805 /* CompletionHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,8 @@
 		8AB4789B2A27395D00F6D805 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8AB478AF2A284CE800F6D805 /* Model */,
+				8AB478AE2A284CBD00F6D805 /* Completion Handling */,
 				8AB4789C2A27395D00F6D805 /* ConnectAPIApp.swift */,
 				8AB4789E2A27395D00F6D805 /* ContentView.swift */,
 				8AB478A02A27395F00F6D805 /* Assets.xcassets */,
@@ -68,6 +78,24 @@
 				8AB478A32A27395F00F6D805 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8AB478AE2A284CBD00F6D805 /* Completion Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478AC2A284CAE00F6D805 /* CompletionHandling.swift */,
+				8AB478B62A28905800F6D805 /* CompletionHandlingViewModel.swift */,
+			);
+			path = "Completion Handling";
+			sourceTree = "<group>";
+		};
+		8AB478AF2A284CE800F6D805 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AB478B02A284CF800F6D805 /* ApiManager.swift */,
+				8AB478B22A284D3A00F6D805 /* Cocktail.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +170,10 @@
 			files = (
 				8AB478AB2A273A0B00F6D805 /* Networking.swift in Sources */,
 				8AB4789F2A27395D00F6D805 /* ContentView.swift in Sources */,
+				8AB478B12A284CF800F6D805 /* ApiManager.swift in Sources */,
+				8AB478B72A28905800F6D805 /* CompletionHandlingViewModel.swift in Sources */,
+				8AB478AD2A284CAE00F6D805 /* CompletionHandling.swift in Sources */,
+				8AB478B32A284D3A00F6D805 /* Cocktail.swift in Sources */,
 				8AB4789D2A27395D00F6D805 /* ConnectAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

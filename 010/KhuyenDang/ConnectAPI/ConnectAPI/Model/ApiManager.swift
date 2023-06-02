@@ -1,0 +1,76 @@
+//
+//  ApiManager.swift
+//  ConnectAPI
+//
+//  Created by Khuyen Dang T.T. VN.Danang on 01/06/2023.
+//
+
+import Foundation
+
+typealias JSObject = [String: Any]
+typealias JSArray = [JSObject]
+typealias APICompletion<Value> = (APIResult<Value>) -> Void
+
+
+enum APIResult<Value> {
+    case success(Value)
+    case failure(APIError)
+}
+
+enum APIError: Error {
+
+    case networkError
+    case invalidURL
+    case requestFailed(Error)
+    case invalidResponse
+    case decodingFailed(Error)
+    case unknown
+
+    var localizedDescription: String {
+        switch self {
+        case .networkError:
+            return "Error connecting to the server"
+        case .invalidURL:
+            return "Invalid url path"
+        case .requestFailed(let error):
+            return "Fail request \(error.localizedDescription)"
+        case .invalidResponse:
+            return "Invalid HTTP response code"
+        case .decodingFailed(_):
+            return "Failed parsing data"
+        case .unknown:
+            return "Unknown error"
+        }
+    }
+}
+
+class ApiManager {
+    static func getDrinks(completion: @escaping APICompletion<[Drink]>) {
+
+        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") else {
+            completion(.failure(.invalidURL))
+            return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(.requestFailed(error)))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(Cocktail.self, from: data)
+                completion(.success(result.drinks))
+            } catch {
+                completion(.failure(.decodingFailed(error)))
+            }
+        }
+            .resume()
+    }
+}
