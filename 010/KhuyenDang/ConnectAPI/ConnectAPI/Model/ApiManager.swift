@@ -73,4 +73,17 @@ class ApiManager {
         }
             .resume()
     }
+
+    static func getDrinksWithAsync() async throws -> [Drink] {
+        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") else {
+            throw APIError.invalidURL
+        }
+        let urlRequest = URLRequest(url: url)
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            throw APIError.invalidResponse
+        }
+        let result = try JSONDecoder().decode(Cocktail.self, from: data)
+        return result.drinks
+    }
 }
