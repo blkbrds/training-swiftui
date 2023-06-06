@@ -50,7 +50,7 @@ struct LoginView: View {
                                 .padding(.horizontal)
                             
                             if !viewModel.email.isValidEmail() && viewModel.email != "" {
-                                ErrorView(imageName: ErrorType.wrong.getImageError(), messageError: "Email invalidate")
+                                InputInvalidView(imageName: InputInvalidType.wrong.getImageError(), messageError: "Email invalidate")
                                     .padding(.leading, 15)
                             }
                             

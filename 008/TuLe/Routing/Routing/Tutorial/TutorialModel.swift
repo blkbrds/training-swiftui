@@ -13,7 +13,9 @@ struct TutorialModel: Identifiable, Equatable {
     var description: String
     var imageUrl: String
     var tag: Int
-    
+}
+
+extension TutorialModel {
     static var samplePage = TutorialModel(name: "Title Example", description: "This is a sample description for the purpose of debugging", imageUrl: "tutorial1", tag: 0)
     
     static var samplePages: [TutorialModel] = [

@@ -24,23 +24,22 @@ final class LoginViewModel: ObservableObject {
     
     @MainActor
     func checkLogin() async -> UserContainer? {
-        do {
-            let data = try await jsonProvider.getData()
+        let result = await jsonProvider.getData()
+        switch result {
+        case .success(let data):
             guard let account = isValidAccount(data: data) else {
                 contentError = "Sai tên đăng nhập hoặc mật khẩu"
                 return nil
             }
             return account
-        } catch CommonError.fileNotFound {
-            contentError = CommonError.fileNotFound.localizedDescription
-        } catch CommonError.errorParsing {
-            contentError = CommonError.errorParsing.localizedDescription
-        } catch CommonError.errorURL {
-            contentError = CommonError.errorURL.localizedDescription
-        } catch {
-            contentError = CommonError.unknown.localizedDescription
+        case .failure(let error):
+            if let errorType = error as? CommonError {
+                contentError = errorType.localizedDescription
+            } else {
+                contentError = CommonError.unknown.localizedDescription
+            }
+            return nil
         }
-        return nil
     }
     
     func isValidAccount(data: [UserContainer]) -> UserContainer? {

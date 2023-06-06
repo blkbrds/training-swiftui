@@ -8,23 +8,50 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
+    
+    enum TypeFileName {
+        case nowPlaying
+        case comingSoon
+        case topMovies
+        
+        var fileNameString: String {
+            switch self {
+            case .nowPlaying:
+                return "nowplaying"
+            case .comingSoon:
+                return "comingsoon"
+            case .topMovies:
+                return "topmovies"
+            }
+        }
+    }
 
-    @Published var homeData = HomeModel(nowPlaying: [], comingSoon: [], topMovies: [])
+    @Published var nowPlaying: [HomeModel] = []
+    @Published var comingSoon: [HomeModel] = []
+    @Published var topMovies: [HomeModel] = []
     @Published var isLoadingSuccess: Bool = false
+    @Published var popup = (isShow: false, contentErr: "")
     
     @MainActor
-    func loadData() async {
+    func loadData(typeFileName: TypeFileName) async {
         do {
-            guard let url = Bundle.main.url(forResource: "dummyJson", withExtension: "json") else {
-                return
+            let resultt = try await HomeAPIManager().readJsonFile(fileName: typeFileName.fileNameString)
+            switch typeFileName {
+            case .nowPlaying:
+                nowPlaying = resultt.results
+            case .comingSoon:
+                comingSoon = resultt.results
+            case .topMovies:
+                topMovies = resultt.results
             }
-            try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
-            let data = try Data(contentsOf: url)
-            homeData = try await data.loadHomeData()
             isLoadingSuccess = false
-        } catch { }
+        } catch {
+            popup.contentErr = error.localizedDescription
+            popup.isShow = true
+        }
     }
 }
+
 
 extension Data {
     func loadHomeData() async throws -> HomeModel {
@@ -38,7 +65,6 @@ extension Data {
     
     func loadUserData() async throws -> UserContainer {
         do {
-            print("ttttttt")
             let userData = try JSONDecoder().decode(UserContainer.self, from: self)
             return userData
         } catch {

@@ -11,7 +11,6 @@ struct RegisterView: View {
 
     @Binding var rootIsActive : Bool
     @StateObject var viewModel = RegisterViewModel()
-    @ObservedObject var jsonProvider: JSONProvider = JSONProvider()
 
     var body: some View {
         VStack(spacing: 50) {
@@ -21,11 +20,11 @@ struct RegisterView: View {
             VStack (alignment: .leading, spacing: 20) {
                 UnderlineTextFieldView(title: "Email", value: $viewModel.email)
                 if !viewModel.email.isValidEmail() && viewModel.email != "" {
-                    ErrorView(imageName: ErrorType.wrong.getImageError(), messageError: "Email invalidate")
+                    InputInvalidView(imageName: InputInvalidType.wrong.getImageError(), messageError: "Email invalidate")
                 }
                 UnderlineTextFieldView(title: "Username", value: $viewModel.userName)
                 if viewModel.userName.count < 4 && viewModel.userName != "" {
-                    ErrorView(imageName: ErrorType.wrong.getImageError(), messageError: "A minimum of 4 characters")
+                    InputInvalidView(imageName: InputInvalidType.wrong.getImageError(), messageError: "A minimum of 4 characters")
                 }
                 ZStack(alignment: .trailing) {
                     UnderlineTextFieldView(title: "Password", value: $viewModel.password, isPassword: true)
@@ -40,17 +39,16 @@ struct RegisterView: View {
                     })
                 }
                 if viewModel.password.count < 8 && viewModel.password != "" {
-                    ErrorView(imageName: ErrorType.unlock.getImageError(), messageError: "A minimum of 8 characters")
+                    InputInvalidView(imageName: InputInvalidType.unlock.getImageError(), messageError: "A minimum of 8 characters")
                 }
                 UnderlineTextFieldView(title: "Confirm Password", value: $viewModel.confirmPassword, isPassword: true)
                 if viewModel.confirmPassword != viewModel.password && viewModel.confirmPassword != ""  {
-                    ErrorView(imageName: ErrorType.wrong.getImageError(), messageError: "Password must be the same")
+                    InputInvalidView(imageName: InputInvalidType.wrong.getImageError(), messageError: "Password must be the same")
                 }
             }
             
             Button {
-                jsonProvider.userContainer.append(UserContainer(user: User(email: viewModel.email, userName: viewModel.userName, password: viewModel.password)))
-                jsonProvider.writeToFile()
+                viewModel.writeJson()
                 viewModel.isShowPopUp.toggle()
             } label: {
                 Text("Sign up")
@@ -116,7 +114,7 @@ struct RegisterView: View {
         .padding(.horizontal, 30)
         .onAppear {
             Task {
-                try await jsonProvider.getData()
+                await viewModel.jsonProvider.getData()
             }
         }
     }

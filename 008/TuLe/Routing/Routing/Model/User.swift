@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum APIResult<Value> {
+    case success(Value)
+    case failure(Error)
+}
+
 struct UserContainer: Codable {
     var user: User?
     
@@ -29,16 +34,16 @@ class JSONProvider: ObservableObject {
     private var fm = FileManager.default
     private let mainUrl: URL = Bundle.main.url(forResource: "user", withExtension: "json") ?? URL(filePath: "")
     
-    func getData() async throws -> [UserContainer] {
+    func getData() async -> APIResult<[UserContainer]> {
         do {
             try? await Task.sleep(until: .now + .seconds(3), clock: .continuous)
             if fm.fileExists(atPath: try getDocumentsDirectory().path) {
-                return try await decodeData(fromURL: getDocumentsDirectory().appendingPathExtension("user.json"))
+                return try await .success(decodeData(fromURL: getDocumentsDirectory().appendingPathExtension("user.json")))
             } else {
-                return try await decodeData(fromURL: mainUrl)
+                return try await .success(decodeData(fromURL: mainUrl))
             }
         } catch {
-            throw error
+            return .failure(error)
         }
     }
     

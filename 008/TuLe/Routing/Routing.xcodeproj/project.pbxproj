@@ -15,7 +15,6 @@
 		104AEBBE2A1F6243003D3339 /* MyQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104AEBBD2A1F6243003D3339 /* MyQRView.swift */; };
 		104AEBDA2A258ACA003D3339 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104AEBD92A258ACA003D3339 /* CommonError.swift */; };
 		109FB2202A15D1A300C6337C /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FB21F2A15D1A300C6337C /* TicketView.swift */; };
-		109FB2262A1B247700C6337C /* dummyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 109FB2252A1B247700C6337C /* dummyJson.json */; };
 		109FB2292A1B25FE00C6337C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FB2282A1B25FE00C6337C /* HomeModel.swift */; };
 		109FB22B2A1B45AA00C6337C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FB22A2A1B45AA00C6337C /* HomeViewModel.swift */; };
 		109FB22F2A1BB1D400C6337C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FB22E2A1BB1D400C6337C /* User.swift */; };
@@ -23,11 +22,14 @@
 		109FB23D2A1EFD8F00C6337C /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109FB23C2A1EFD8F00C6337C /* AccountViewModel.swift */; };
 		10B8036A2A0B390C0054DFDA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B803692A0B390C0054DFDA /* RegisterView.swift */; };
 		10B8036C2A0CA28B0054DFDA /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8036B2A0CA28B0054DFDA /* ForgotPasswordView.swift */; };
+		10D321582A2D98CF000B20EA /* topmovies.json in Resources */ = {isa = PBXBuildFile; fileRef = 10D321552A2D98CF000B20EA /* topmovies.json */; };
+		10D321592A2D98CF000B20EA /* comingsoon.json in Resources */ = {isa = PBXBuildFile; fileRef = 10D321562A2D98CF000B20EA /* comingsoon.json */; };
+		10D3215A2A2D98CF000B20EA /* nowplaying.json in Resources */ = {isa = PBXBuildFile; fileRef = 10D321572A2D98CF000B20EA /* nowplaying.json */; };
 		10E8A2092A110A75002FA9C8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2082A110A75002FA9C8 /* LoginViewModel.swift */; };
 		10E8A20B2A110A81002FA9C8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20A2A110A81002FA9C8 /* RegisterViewModel.swift */; };
 		10E8A20D2A110A92002FA9C8 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20C2A110A92002FA9C8 /* ForgotPasswordViewModel.swift */; };
 		10E8A2102A112CC1002FA9C8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */; };
-		10E8A2152A11429B002FA9C8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2142A11429B002FA9C8 /* ErrorView.swift */; };
+		10E8A2152A11429B002FA9C8 /* InputInvalidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2142A11429B002FA9C8 /* InputInvalidView.swift */; };
 		10E8A21D2A146FA3002FA9C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A21C2A146FA3002FA9C8 /* MainView.swift */; };
 		10E8A21F2A146FDD002FA9C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A21E2A146FDD002FA9C8 /* HomeView.swift */; };
 		10E8A2212A146FED002FA9C8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E8A2202A146FED002FA9C8 /* MapView.swift */; };
@@ -49,7 +51,6 @@
 		104AEBBD2A1F6243003D3339 /* MyQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQRView.swift; sourceTree = "<group>"; };
 		104AEBD92A258ACA003D3339 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
 		109FB21F2A15D1A300C6337C /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
-		109FB2252A1B247700C6337C /* dummyJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummyJson.json; sourceTree = "<group>"; };
 		109FB2282A1B25FE00C6337C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		109FB22A2A1B45AA00C6337C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		109FB22E2A1BB1D400C6337C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -57,11 +58,14 @@
 		109FB23C2A1EFD8F00C6337C /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		10B803692A0B390C0054DFDA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		10B8036B2A0CA28B0054DFDA /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		10D321552A2D98CF000B20EA /* topmovies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topmovies.json; sourceTree = "<group>"; };
+		10D321562A2D98CF000B20EA /* comingsoon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comingsoon.json; sourceTree = "<group>"; };
+		10D321572A2D98CF000B20EA /* nowplaying.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nowplaying.json; sourceTree = "<group>"; };
 		10E8A2082A110A75002FA9C8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		10E8A20A2A110A81002FA9C8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		10E8A20C2A110A92002FA9C8 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		10E8A20F2A112CC1002FA9C8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		10E8A2142A11429B002FA9C8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		10E8A2142A11429B002FA9C8 /* InputInvalidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInvalidView.swift; sourceTree = "<group>"; };
 		10E8A21C2A146FA3002FA9C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		10E8A21E2A146FDD002FA9C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		10E8A2202A146FED002FA9C8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				1008FABF2A08E90600DD0D3C /* LoginView.swift */,
 				10E8A2082A110A75002FA9C8 /* LoginViewModel.swift */,
+				10E8A2142A11429B002FA9C8 /* InputInvalidView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -148,7 +153,9 @@
 		109FB2242A1B246800C6337C /* dummyData */ = {
 			isa = PBXGroup;
 			children = (
-				109FB2252A1B247700C6337C /* dummyJson.json */,
+				10D321562A2D98CF000B20EA /* comingsoon.json */,
+				10D321572A2D98CF000B20EA /* nowplaying.json */,
+				10D321552A2D98CF000B20EA /* topmovies.json */,
 			);
 			path = dummyData;
 			sourceTree = "<group>";
@@ -234,7 +241,6 @@
 		10E8A2132A114289002FA9C8 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				10E8A2142A11429B002FA9C8 /* ErrorView.swift */,
 				104AEBD92A258ACA003D3339 /* CommonError.swift */,
 			);
 			path = Error;
@@ -323,9 +329,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D321592A2D98CF000B20EA /* comingsoon.json in Resources */,
+				10D3215A2A2D98CF000B20EA /* nowplaying.json in Resources */,
+				10D321582A2D98CF000B20EA /* topmovies.json in Resources */,
 				1008FAB82A08D4DE00DD0D3C /* Preview Assets.xcassets in Resources */,
 				1008FAB52A08D4DE00DD0D3C /* Assets.xcassets in Resources */,
-				109FB2262A1B247700C6337C /* dummyJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +358,7 @@
 				10E8A22F2A148EC1002FA9C8 /* TutorialView.swift in Sources */,
 				10E8A2212A146FED002FA9C8 /* MapView.swift in Sources */,
 				10E8A2092A110A75002FA9C8 /* LoginViewModel.swift in Sources */,
-				10E8A2152A11429B002FA9C8 /* ErrorView.swift in Sources */,
+				10E8A2152A11429B002FA9C8 /* InputInvalidView.swift in Sources */,
 				10E8A2302A148EC1002FA9C8 /* PageView.swift in Sources */,
 				10E8A2102A112CC1002FA9C8 /* StringExtension.swift in Sources */,
 				10E8A22E2A148EC1002FA9C8 /* TutorialModel.swift in Sources */,

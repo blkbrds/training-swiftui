@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ErrorView: View {
+struct InputInvalidView: View {
 
     var imageName: String
     var messageError: String
@@ -22,7 +22,7 @@ struct ErrorView: View {
     }
 }
 
-enum ErrorType {
+enum InputInvalidType {
     case wrong
     case unlock
     

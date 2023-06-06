@@ -20,7 +20,7 @@ struct ForgotPasswordView: View {
             VStack (alignment: .leading, spacing: 20) {
                 UnderlineTextFieldView(title: "Email", value: $viewModel.email)
                 if !viewModel.email.isValidEmail() && viewModel.email != "" {
-                    ErrorView(imageName: ErrorType.wrong.getImageError(), messageError: "Email invalidate")
+                    InputInvalidView(imageName: InputInvalidType.wrong.getImageError(), messageError: "Email invalidate")
                         .padding(.leading, 15)
                 }
             }

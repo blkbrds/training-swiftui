@@ -21,12 +21,9 @@ struct HomeView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
             ScrollView {
-                
-                ScrollView {
-                    NowPlayingView(title: "Now Playing" ,data: viewModel.homeData.nowPlaying)
-                    NowPlayingView(title: "Coming soon" ,data: viewModel.homeData.comingSoon)
-                    NowPlayingView(title: "Top Movíe" ,data: viewModel.homeData.topMovies)
-                }
+                HomeListView(title: "Now Playing", data: viewModel.nowPlaying)
+                HomeListView(title: "Comming soon", data: viewModel.comingSoon)
+                HomeListView(title: "Top movies", data: viewModel.topMovies)
             }
             .frame(maxWidth: .infinity)
             .background(
@@ -34,19 +31,34 @@ struct HomeView: View {
             )
             .onAppear {
                 Task {
-                    await viewModel.loadData()
+                    await fetchData()
                     isLoading = viewModel.isLoadingSuccess
                 }
             }
             .preferredColorScheme(.dark)
+            .alert(isPresented: $viewModel.popup.isShow) {
+                Alert(title: Text("Login fail") ,message: Text("\(viewModel.popup.contentErr)"), dismissButton: .default(Text("Got it!")))
+            }
         }
+    }
+    func fetchData() async {
+        await Task.withGroup(resultType: Void.self, body: { group in
+            group.addTask {
+                await viewModel.loadData(typeFileName: .nowPlaying)
+            }
+            group.addTask {
+                await viewModel.loadData(typeFileName: .topMovies)
+            }
+            group.addTask {
+                await viewModel.loadData(typeFileName: .comingSoon)
+            }
+        })
     }
 }
 
-struct NowPlayingView: View {
-    
+struct HomeListView: View {
     var title: String
-    var data: [String]
+    var data: [HomeModel]
     
     var body: some View {
         Text(title)
@@ -59,23 +71,23 @@ struct NowPlayingView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(data, id: \.self) { item in
-                    if item == data.first {
-                        Image(item)
-                            .resizable()
-                            .frame(width: 100, height: 130)
-                            .padding(.leading)
-                    } else if item == data.last {
-                        Image(item)
-                            .resizable()
-                            .frame(width: 100, height: 130)
-                            .padding(.trailing)
-                    } else {
-                        Image(item)
-                            .resizable()
-                            .frame(width: 100, height: 130)
-                    }
-                    
+                    HomeRow(imageName: item.posterPath)
+                        .frame(width: 100, height: 130)
                 }
+            }
+        }
+    }
+}
+
+struct HomeRow: View {
+    var imageName: String
+    
+    var body: some View {
+        ScrollView(.horizontal) {
+            HStack {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 100, height: 130)
             }
         }
     }
