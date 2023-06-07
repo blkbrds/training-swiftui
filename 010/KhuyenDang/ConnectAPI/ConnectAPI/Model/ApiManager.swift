@@ -6,48 +6,12 @@
 //
 
 import Foundation
-
-typealias JSObject = [String: Any]
-typealias JSArray = [JSObject]
-typealias APICompletion<Value> = (APIResult<Value>) -> Void
-
-
-enum APIResult<Value> {
-    case success(Value)
-    case failure(APIError)
-}
-
-enum APIError: Error {
-
-    case networkError
-    case invalidURL
-    case requestFailed(Error)
-    case invalidResponse
-    case decodingFailed(Error)
-    case unknown
-
-    var localizedDescription: String {
-        switch self {
-        case .networkError:
-            return "Error connecting to the server"
-        case .invalidURL:
-            return "Invalid url path"
-        case .requestFailed(let error):
-            return "Fail request \(error.localizedDescription)"
-        case .invalidResponse:
-            return "Invalid HTTP response code"
-        case .decodingFailed(_):
-            return "Failed parsing data"
-        case .unknown:
-            return "Unknown error"
-        }
-    }
-}
+import Combine
 
 class ApiManager {
     static func getDrinks(completion: @escaping APICompletion<[Drink]>) {
 
-        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") else {
+        guard let url = URL(string: API.Path.drinkUrl) else {
             completion(.failure(.invalidURL))
             return }
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -68,14 +32,14 @@ class ApiManager {
                 let result = try decoder.decode(Cocktail.self, from: data)
                 completion(.success(result.drinks))
             } catch {
-                completion(.failure(.decodingFailed(error)))
+                completion(.failure(.decodingFailed))
             }
         }
             .resume()
     }
 
     static func getDrinksWithAsync() async throws -> [Drink] {
-        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") else {
+        guard let url = URL(string: API.Path.drinkUrl) else {
             throw APIError.invalidURL
         }
         let urlRequest = URLRequest(url: url)
@@ -86,4 +50,26 @@ class ApiManager {
         let result = try JSONDecoder().decode(Cocktail.self, from: data)
         return result.drinks
     }
+
+    static func fetchDrinks(completion: @escaping APICompletion<[Drink]>) {
+        API.share().request(url: API.Path.drinkUrl)
+            .sink(receiveCompletion: { res in
+            switch res {
+            case .failure(let error):
+                completion(.failure(error))
+            case .finished:
+                break
+            }
+        }, receiveValue: { data in
+                do {
+                    let result = try JSONDecoder().decode(Cocktail.self, from: data)
+                    completion(.success(result.drinks))
+                } catch {
+                    completion(.failure(.decodingFailed))
+                }
+            }
+        )
+            .store(in: &cancellables)
+    }
 }
+private var cancellables = Set<AnyCancellable>()
