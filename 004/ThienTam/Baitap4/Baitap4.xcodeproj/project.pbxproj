@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A0B3BF2A2ED63E0037120F /* MonkeyGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3BE2A2ED63E0037120F /* MonkeyGesture.swift */; };
 		60C7BF052A2848590071AEFB /* Baitap4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7BF042A2848590071AEFB /* Baitap4App.swift */; };
 		60C7BF072A2848590071AEFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7BF062A2848590071AEFB /* ContentView.swift */; };
 		60C7BF092A28485A0071AEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C7BF082A28485A0071AEFB /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60A0B3BE2A2ED63E0037120F /* MonkeyGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyGesture.swift; sourceTree = "<group>"; };
 		60C7BF012A2848590071AEFB /* Baitap4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baitap4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C7BF042A2848590071AEFB /* Baitap4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baitap4App.swift; sourceTree = "<group>"; };
 		60C7BF062A2848590071AEFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				60C7BF042A2848590071AEFB /* Baitap4App.swift */,
+				60A0B3BE2A2ED63E0037120F /* MonkeyGesture.swift */,
 				60C7BF062A2848590071AEFB /* ContentView.swift */,
 				60C7BF082A28485A0071AEFB /* Assets.xcassets */,
 				60C7BF0A2A28485A0071AEFB /* Preview Content */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A0B3BF2A2ED63E0037120F /* MonkeyGesture.swift in Sources */,
 				60C7BF072A2848590071AEFB /* ContentView.swift in Sources */,
 				60C7BF052A2848590071AEFB /* Baitap4App.swift in Sources */,
 			);
