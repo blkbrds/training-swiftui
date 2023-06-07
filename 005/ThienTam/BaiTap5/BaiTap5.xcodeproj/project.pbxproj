@@ -14,6 +14,9 @@
 		60A0B3E12A3039130037120F /* BaiTap5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3E02A3039130037120F /* BaiTap5Tests.swift */; };
 		60A0B3EB2A3039130037120F /* BaiTap5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3EA2A3039130037120F /* BaiTap5UITests.swift */; };
 		60A0B3ED2A3039130037120F /* BaiTap5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3EC2A3039130037120F /* BaiTap5UITestsLaunchTests.swift */; };
+		60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3F92A3077140037120F /* CustomButton.swift */; };
+		60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FB2A3090140037120F /* TextModifier.swift */; };
+		60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FD2A3090790037120F /* ButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		60A0B3E62A3039130037120F /* BaiTap5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A0B3EA2A3039130037120F /* BaiTap5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5UITests.swift; sourceTree = "<group>"; };
 		60A0B3EC2A3039130037120F /* BaiTap5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60A0B3F92A3077140037120F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		60A0B3FB2A3090140037120F /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
+		60A0B3FD2A3090790037120F /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				60A0B3CF2A3039110037120F /* BaiTap5App.swift */,
+				60A0B3FB2A3090140037120F /* TextModifier.swift */,
+				60A0B3FD2A3090790037120F /* ButtonModifier.swift */,
+				60A0B3F92A3077140037120F /* CustomButton.swift */,
 				60A0B3D12A3039110037120F /* ContentView.swift */,
 				60A0B3D32A3039120037120F /* Assets.xcassets */,
 				60A0B3D52A3039120037120F /* Preview Content */,
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A0B3D22A3039110037120F /* ContentView.swift in Sources */,
+				60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */,
 				60A0B3D02A3039110037120F /* BaiTap5App.swift in Sources */,
+				60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */,
+				60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

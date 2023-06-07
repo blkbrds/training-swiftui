@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(spacing: 50) {
+            CustomButton(titleButton: "Email", titleBadge: "100", actionButton: {
+                //
+            }, kind: .topright)
+            
+            CustomButton(titleButton: "Friends", titleBadge: "50", actionButton: {
+                //
+            }, kind: .topleft)
+            
+            CustomButton(titleButton: "Photos", titleBadge: "50", actionButton: {
+                //
+            }, kind: .bottomleft)
         }
-        .padding()
     }
 }
 
