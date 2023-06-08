@@ -12,6 +12,7 @@
 		104AEBD02A2067EF003D3339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104AEBCF2A2067EF003D3339 /* Assets.xcassets */; };
 		104AEBD32A2067EF003D3339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104AEBD22A2067EF003D3339 /* Preview Assets.xcassets */; };
 		10A559872A29837600057F20 /* BaiTap1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A559862A29837600057F20 /* BaiTap1.swift */; };
+		10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215C2A3173DC000B20EA /* BaiTap2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		104AEBCF2A2067EF003D3339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		104AEBD22A2067EF003D3339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10A559862A29837600057F20 /* BaiTap1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap1.swift; sourceTree = "<group>"; };
+		10D3215C2A3173DC000B20EA /* BaiTap2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		104AEBCA2A2067EB003D3339 /* GridLayout */ = {
 			isa = PBXGroup;
 			children = (
+				10D3215B2A3173C7000B20EA /* BaiTap2 */,
 				10A559852A29835900057F20 /* BaiTap1 */,
 				104AEBCB2A2067EB003D3339 /* GridLayoutApp.swift */,
 				104AEBCD2A2067EB003D3339 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				10A559862A29837600057F20 /* BaiTap1.swift */,
 			);
 			path = BaiTap1;
+			sourceTree = "<group>";
+		};
+		10D3215B2A3173C7000B20EA /* BaiTap2 */ = {
+			isa = PBXGroup;
+			children = (
+				10D3215C2A3173DC000B20EA /* BaiTap2.swift */,
+			);
+			path = BaiTap2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				10A559872A29837600057F20 /* BaiTap1.swift in Sources */,
 				104AEBCE2A2067EB003D3339 /* ContentView.swift in Sources */,
 				104AEBCC2A2067EB003D3339 /* GridLayoutApp.swift in Sources */,
+				10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
