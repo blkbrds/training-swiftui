@@ -58,6 +58,8 @@ class API {
 
     struct Path {
         static let drinkUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+        static let animalUrl = "https://api.thedogapi.com/v1/breeds"
+        static let detailAnimalUrl = "https://api.thedogapi.com/v1/images/"
     }
 }
 

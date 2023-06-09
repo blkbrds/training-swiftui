@@ -71,5 +71,47 @@ class ApiManager {
         )
             .store(in: &cancellables)
     }
+
+    static func getAnimals(completion: @escaping APICompletion<[Animal]>) {
+        API.share().request(url: API.Path.animalUrl)
+            .sink(receiveCompletion: { res in
+            switch res {
+            case .failure(let error):
+                completion(.failure(error))
+            case .finished:
+                break
+            }
+        }, receiveValue: { data in
+                do {
+                    let result = try JSONDecoder().decode([Animal].self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(.decodingFailed))
+                }
+            }
+        )
+            .store(in: &cancellables)
+    }
+
+    static func getDetailAnimal(imageId: String, completion: @escaping APICompletion<DetailAnimal>) {
+        API.share().request(url: API.Path.detailAnimalUrl + imageId)
+            .sink(receiveCompletion: { res in
+            switch res {
+            case .failure(let error):
+                completion(.failure(error))
+            case .finished:
+                break
+            }
+        }, receiveValue: { data in
+                do {
+                    let result = try JSONDecoder().decode(DetailAnimal.self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(.decodingFailed))
+                }
+            }
+        )
+            .store(in: &cancellables)
+    }
 }
 private var cancellables = Set<AnyCancellable>()
