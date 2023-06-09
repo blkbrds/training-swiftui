@@ -14,6 +14,7 @@
 		10A559872A29837600057F20 /* BaiTap1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A559862A29837600057F20 /* BaiTap1.swift */; };
 		10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215C2A3173DC000B20EA /* BaiTap2.swift */; };
 		10D321602A318262000B20EA /* BaiTap3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215F2A318262000B20EA /* BaiTap3.swift */; };
+		10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321622A31B6CA000B20EA /* BaiTap4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		10A559862A29837600057F20 /* BaiTap1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap1.swift; sourceTree = "<group>"; };
 		10D3215C2A3173DC000B20EA /* BaiTap2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2.swift; sourceTree = "<group>"; };
 		10D3215F2A318262000B20EA /* BaiTap3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3.swift; sourceTree = "<group>"; };
+		10D321622A31B6CA000B20EA /* BaiTap4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		104AEBCA2A2067EB003D3339 /* GridLayout */ = {
 			isa = PBXGroup;
 			children = (
+				10D321612A3194C8000B20EA /* BaiTap4 */,
 				10D3215E2A317FE3000B20EA /* BaiTap3 */,
 				10D3215B2A3173C7000B20EA /* BaiTap2 */,
 				10A559852A29835900057F20 /* BaiTap1 */,
@@ -98,6 +101,14 @@
 				10D3215F2A318262000B20EA /* BaiTap3.swift */,
 			);
 			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		10D321612A3194C8000B20EA /* BaiTap4 */ = {
+			isa = PBXGroup;
+			children = (
+				10D321622A31B6CA000B20EA /* BaiTap4.swift */,
+			);
+			path = BaiTap4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				104AEBCC2A2067EB003D3339 /* GridLayoutApp.swift in Sources */,
 				10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */,
 				10D321602A318262000B20EA /* BaiTap3.swift in Sources */,
+				10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
