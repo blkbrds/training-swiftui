@@ -16,6 +16,7 @@
 		10D321602A318262000B20EA /* BaiTap3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215F2A318262000B20EA /* BaiTap3.swift */; };
 		10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321622A31B6CA000B20EA /* BaiTap4.swift */; };
 		10D321662A32D5F8000B20EA /* BaiTap5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321652A32D5F8000B20EA /* BaiTap5.swift */; };
+		10D321692A36D534000B20EA /* BaiTap6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321682A36D534000B20EA /* BaiTap6.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		10D3215F2A318262000B20EA /* BaiTap3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3.swift; sourceTree = "<group>"; };
 		10D321622A31B6CA000B20EA /* BaiTap4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4.swift; sourceTree = "<group>"; };
 		10D321652A32D5F8000B20EA /* BaiTap5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5.swift; sourceTree = "<group>"; };
+		10D321682A36D534000B20EA /* BaiTap6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		104AEBCA2A2067EB003D3339 /* GridLayout */ = {
 			isa = PBXGroup;
 			children = (
+				10D321672A36CF5E000B20EA /* BaiTap6 */,
 				10D321642A32D499000B20EA /* BaiTap5 */,
 				10D321612A3194C8000B20EA /* BaiTap4 */,
 				10D3215E2A317FE3000B20EA /* BaiTap3 */,
@@ -120,6 +123,14 @@
 				10D321652A32D5F8000B20EA /* BaiTap5.swift */,
 			);
 			path = BaiTap5;
+			sourceTree = "<group>";
+		};
+		10D321672A36CF5E000B20EA /* BaiTap6 */ = {
+			isa = PBXGroup;
+			children = (
+				10D321682A36D534000B20EA /* BaiTap6.swift */,
+			);
+			path = BaiTap6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				10D321662A32D5F8000B20EA /* BaiTap5.swift in Sources */,
 				10D321602A318262000B20EA /* BaiTap3.swift in Sources */,
 				10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */,
+				10D321692A36D534000B20EA /* BaiTap6.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GridLayout/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -334,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GridLayout/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -362,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
