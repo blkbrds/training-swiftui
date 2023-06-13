@@ -17,6 +17,16 @@
 		60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3F92A3077140037120F /* CustomButton.swift */; };
 		60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FB2A3090140037120F /* TextModifier.swift */; };
 		60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FD2A3090790037120F /* ButtonModifier.swift */; };
+		60A0B4012A30AE3C0037120F /* OneSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4002A30AE3C0037120F /* OneSquare.swift */; };
+		60A0B4032A30AF560037120F /* TwoSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4022A30AF560037120F /* TwoSquare.swift */; };
+		60A0B4052A30B86A0037120F /* ChangeSizeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4042A30B86A0037120F /* ChangeSizeVIew.swift */; };
+		60A0B4072A3174FF0037120F /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4062A3174FF0037120F /* GestureView.swift */; };
+		60A0B4092A3190560037120F /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4082A3190560037120F /* StackView.swift */; };
+		60A0B40B2A3193870037120F /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B40A2A3193870037120F /* ScrollView.swift */; };
+		60A0B40F2A31C9C10037120F /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B40E2A31C9C10037120F /* ItemView.swift */; };
+		60A0B4112A32251D0037120F /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4102A32251D0037120F /* PopularView.swift */; };
+		60A0B4132A32274C0037120F /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4122A32274C0037120F /* TabbarView.swift */; };
+		60A0B4152A3229070037120F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4142A3229070037120F /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,16 @@
 		60A0B3F92A3077140037120F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		60A0B3FB2A3090140037120F /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		60A0B3FD2A3090790037120F /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		60A0B4002A30AE3C0037120F /* OneSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSquare.swift; sourceTree = "<group>"; };
+		60A0B4022A30AF560037120F /* TwoSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquare.swift; sourceTree = "<group>"; };
+		60A0B4042A30B86A0037120F /* ChangeSizeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSizeVIew.swift; sourceTree = "<group>"; };
+		60A0B4062A3174FF0037120F /* GestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		60A0B4082A3190560037120F /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		60A0B40A2A3193870037120F /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		60A0B40E2A31C9C10037120F /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		60A0B4102A32251D0037120F /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
+		60A0B4122A32274C0037120F /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		60A0B4142A3229070037120F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,16 @@
 				60A0B3D12A3039110037120F /* ContentView.swift */,
 				60A0B3D32A3039120037120F /* Assets.xcassets */,
 				60A0B3D52A3039120037120F /* Preview Content */,
+				60A0B4002A30AE3C0037120F /* OneSquare.swift */,
+				60A0B4022A30AF560037120F /* TwoSquare.swift */,
+				60A0B40A2A3193870037120F /* ScrollView.swift */,
+				60A0B4082A3190560037120F /* StackView.swift */,
+				60A0B4122A32274C0037120F /* TabbarView.swift */,
+				60A0B4142A3229070037120F /* ProfileView.swift */,
+				60A0B4042A30B86A0037120F /* ChangeSizeVIew.swift */,
+				60A0B4062A3174FF0037120F /* GestureView.swift */,
+				60A0B40E2A31C9C10037120F /* ItemView.swift */,
+				60A0B4102A32251D0037120F /* PopularView.swift */,
 			);
 			path = BaiTap5;
 			sourceTree = "<group>";
@@ -267,10 +297,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A0B3D22A3039110037120F /* ContentView.swift in Sources */,
+				60A0B4112A32251D0037120F /* PopularView.swift in Sources */,
+				60A0B40B2A3193870037120F /* ScrollView.swift in Sources */,
 				60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */,
+				60A0B4072A3174FF0037120F /* GestureView.swift in Sources */,
 				60A0B3D02A3039110037120F /* BaiTap5App.swift in Sources */,
+				60A0B4052A30B86A0037120F /* ChangeSizeVIew.swift in Sources */,
+				60A0B4152A3229070037120F /* ProfileView.swift in Sources */,
 				60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */,
+				60A0B4132A32274C0037120F /* TabbarView.swift in Sources */,
+				60A0B40F2A31C9C10037120F /* ItemView.swift in Sources */,
 				60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */,
+				60A0B4012A30AE3C0037120F /* OneSquare.swift in Sources */,
+				60A0B4032A30AF560037120F /* TwoSquare.swift in Sources */,
+				60A0B4092A3190560037120F /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

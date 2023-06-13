@@ -18,8 +18,22 @@ struct TextModifier: ViewModifier {
     }
 }
 
+struct HeaderModifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .multilineTextAlignment(.leading)
+            .bold()
+            .padding([.top, .leading], 20)
+    }
+}
+
 extension View {
     func textModifier() -> some View {
         self.modifier(TextModifier())
+    }
+    
+    func headerModifier() -> some View {
+        self.modifier(HeaderModifier())
     }
 }

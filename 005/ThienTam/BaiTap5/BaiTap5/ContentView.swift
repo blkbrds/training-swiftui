@@ -11,15 +11,18 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 50) {
-            CustomButton(titleButton: "Email", titleBadge: "100", actionButton: {
+            CustomButton(titleButton: "Email", titleBadge: 100, actionButton: {
                 //
             }, kind: .topright)
             
-            CustomButton(titleButton: "Friends", titleBadge: "50", actionButton: {
+            CustomButton(titleButton: "Friends", titleBadge: 50, actionButton: {
                 //
             }, kind: .topleft)
             
-            CustomButton(titleButton: "Photos", titleBadge: "50", actionButton: {
+            CustomButton(titleButton: "Photos", titleBadge: 25, actionButton: {
+                //
+            }, kind: .bottomleft)
+            CustomButton(titleButton: "Photos", titleBadge: 0, actionButton: {
                 //
             }, kind: .bottomleft)
         }

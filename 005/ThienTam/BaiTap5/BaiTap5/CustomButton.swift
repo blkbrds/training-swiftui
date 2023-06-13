@@ -65,9 +65,21 @@ enum PositionBadgeNumber {
 struct CustomButton: View {
     
     var titleButton: String
-    var titleBadge: String
+    var titleBadge: Int
     var actionButton: () -> Void
     var kind: PositionBadgeNumber
+    var widthBadge: CGFloat {
+        switch titleBadge {
+        case 0:
+            return 0
+        case 0 ... 25:
+            return 30
+        case 25 ... 50:
+            return 40
+        default:
+            return 50
+        }
+    }
     
     var body: some View {
         ZStack(alignment: kind.postion) {
@@ -80,18 +92,18 @@ struct CustomButton: View {
             .buttonModifier(kind: kind)
 
             Rectangle()
-                .frame(width: 50, height: 50)
+                .frame(width: widthBadge, height: widthBadge)
                 .clipShape(Circle())
                 .foregroundColor(.red)
                 .overlay(content: {
-                Text(titleBadge)
+                Text("\(titleBadge)")
                     .foregroundColor(.white)
             })
                 .alignmentGuide(kind.vertical) { dimensions in
-                dimensions[VerticalAlignment.top] + 25
+                dimensions[VerticalAlignment.top] + widthBadge / 2
             }
                 .alignmentGuide(kind.horizontal) { dimensions in
-                dimensions[HorizontalAlignment.trailing] - 25
+                dimensions[HorizontalAlignment.trailing] - widthBadge / 2
             }
         }
     }
