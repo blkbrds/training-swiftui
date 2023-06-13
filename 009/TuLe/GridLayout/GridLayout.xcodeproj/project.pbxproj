@@ -12,10 +12,13 @@
 		104AEBCE2A2067EB003D3339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104AEBCD2A2067EB003D3339 /* ContentView.swift */; };
 		104AEBD02A2067EF003D3339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104AEBCF2A2067EF003D3339 /* Assets.xcassets */; };
 		104AEBD32A2067EF003D3339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104AEBD22A2067EF003D3339 /* Preview Assets.xcassets */; };
+		107E45D82A3821FA00381292 /* Flexible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45D72A3821FA00381292 /* Flexible.swift */; };
+		107E45DA2A38223600381292 /* Adaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45D92A38223600381292 /* Adaptive.swift */; };
+		107E45DC2A38226B00381292 /* Mixing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45DB2A38226B00381292 /* Mixing.swift */; };
 		10A559872A29837600057F20 /* BaiTap1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A559862A29837600057F20 /* BaiTap1.swift */; };
 		10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215C2A3173DC000B20EA /* BaiTap2.swift */; };
 		10D321602A318262000B20EA /* BaiTap3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D3215F2A318262000B20EA /* BaiTap3.swift */; };
-		10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321622A31B6CA000B20EA /* BaiTap4.swift */; };
+		10D321632A31B6CA000B20EA /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321622A31B6CA000B20EA /* Default.swift */; };
 		10D321662A32D5F8000B20EA /* BaiTap5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321652A32D5F8000B20EA /* BaiTap5.swift */; };
 		10D321692A36D534000B20EA /* BaiTap6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D321682A36D534000B20EA /* BaiTap6.swift */; };
 /* End PBXBuildFile section */
@@ -27,10 +30,13 @@
 		104AEBCD2A2067EB003D3339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		104AEBCF2A2067EF003D3339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		104AEBD22A2067EF003D3339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		107E45D72A3821FA00381292 /* Flexible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flexible.swift; sourceTree = "<group>"; };
+		107E45D92A38223600381292 /* Adaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adaptive.swift; sourceTree = "<group>"; };
+		107E45DB2A38226B00381292 /* Mixing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixing.swift; sourceTree = "<group>"; };
 		10A559862A29837600057F20 /* BaiTap1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap1.swift; sourceTree = "<group>"; };
 		10D3215C2A3173DC000B20EA /* BaiTap2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap2.swift; sourceTree = "<group>"; };
 		10D3215F2A318262000B20EA /* BaiTap3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3.swift; sourceTree = "<group>"; };
-		10D321622A31B6CA000B20EA /* BaiTap4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap4.swift; sourceTree = "<group>"; };
+		10D321622A31B6CA000B20EA /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
 		10D321652A32D5F8000B20EA /* BaiTap5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5.swift; sourceTree = "<group>"; };
 		10D321682A36D534000B20EA /* BaiTap6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap6.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +129,10 @@
 		10D321612A3194C8000B20EA /* BaiTap4 */ = {
 			isa = PBXGroup;
 			children = (
-				10D321622A31B6CA000B20EA /* BaiTap4.swift */,
+				10D321622A31B6CA000B20EA /* Default.swift */,
+				107E45D72A3821FA00381292 /* Flexible.swift */,
+				107E45D92A38223600381292 /* Adaptive.swift */,
+				107E45DB2A38226B00381292 /* Mixing.swift */,
 			);
 			path = BaiTap4;
 			sourceTree = "<group>";
@@ -217,11 +226,14 @@
 				10A559872A29837600057F20 /* BaiTap1.swift in Sources */,
 				104AEBCE2A2067EB003D3339 /* ContentView.swift in Sources */,
 				104AEBCC2A2067EB003D3339 /* GridLayoutApp.swift in Sources */,
+				107E45DC2A38226B00381292 /* Mixing.swift in Sources */,
 				10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */,
 				10D321662A32D5F8000B20EA /* BaiTap5.swift in Sources */,
 				1018889B2A3779F4007F2A38 /* BaiTap7.swift in Sources */,
 				10D321602A318262000B20EA /* BaiTap3.swift in Sources */,
-				10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */,
+				10D321632A31B6CA000B20EA /* Default.swift in Sources */,
+				107E45D82A3821FA00381292 /* Flexible.swift in Sources */,
+				107E45DA2A38223600381292 /* Adaptive.swift in Sources */,
 				10D321692A36D534000B20EA /* BaiTap6.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
