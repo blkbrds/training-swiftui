@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1018889B2A3779F4007F2A38 /* BaiTap7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018889A2A3779F4007F2A38 /* BaiTap7.swift */; };
 		104AEBCC2A2067EB003D3339 /* GridLayoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104AEBCB2A2067EB003D3339 /* GridLayoutApp.swift */; };
 		104AEBCE2A2067EB003D3339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104AEBCD2A2067EB003D3339 /* ContentView.swift */; };
 		104AEBD02A2067EF003D3339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104AEBCF2A2067EF003D3339 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1018889A2A3779F4007F2A38 /* BaiTap7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap7.swift; sourceTree = "<group>"; };
 		104AEBC82A2067EB003D3339 /* GridLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104AEBCB2A2067EB003D3339 /* GridLayoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutApp.swift; sourceTree = "<group>"; };
 		104AEBCD2A2067EB003D3339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		101888992A3779D5007F2A38 /* BaiTap7 */ = {
+			isa = PBXGroup;
+			children = (
+				1018889A2A3779F4007F2A38 /* BaiTap7.swift */,
+			);
+			path = BaiTap7;
+			sourceTree = "<group>";
+		};
 		104AEBBF2A2067EB003D3339 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 		104AEBCA2A2067EB003D3339 /* GridLayout */ = {
 			isa = PBXGroup;
 			children = (
+				101888992A3779D5007F2A38 /* BaiTap7 */,
 				10D321672A36CF5E000B20EA /* BaiTap6 */,
 				10D321642A32D499000B20EA /* BaiTap5 */,
 				10D321612A3194C8000B20EA /* BaiTap4 */,
@@ -208,6 +219,7 @@
 				104AEBCC2A2067EB003D3339 /* GridLayoutApp.swift in Sources */,
 				10D3215D2A3173DC000B20EA /* BaiTap2.swift in Sources */,
 				10D321662A32D5F8000B20EA /* BaiTap5.swift in Sources */,
+				1018889B2A3779F4007F2A38 /* BaiTap7.swift in Sources */,
 				10D321602A318262000B20EA /* BaiTap3.swift in Sources */,
 				10D321632A31B6CA000B20EA /* BaiTap4.swift in Sources */,
 				10D321692A36D534000B20EA /* BaiTap6.swift in Sources */,
