@@ -14,7 +14,7 @@ class ConnectUrlsApiViewModel: ObservableObject {
     @Published var isShowError: Bool = false
     @Published var errorString: String = ""
     var realAnimals: [Animal] {
-        return animals.filter { !$0.imageId.isEmpty }
+        return animals.filter { !($0.imageId?.isEmpty ?? true) }
     }
 
     func fetchAnimals() {
@@ -34,7 +34,7 @@ class ConnectUrlsApiViewModel: ObservableObject {
 
     func getDetailAnimal(animals: [Animal]) {
         for (index, animal) in animals.enumerated() {
-            ApiManager.getDetailAnimal(imageId: animal.imageId) { [weak self] result in
+            ApiManager.getDetailAnimal(typeAnimal: .dog, imageId: animal.imageId ?? "") { [weak self] result in
                 guard let this = self else { return }
                 DispatchQueue.main.async {
                     switch result {
@@ -49,7 +49,7 @@ class ConnectUrlsApiViewModel: ObservableObject {
     }
 
     func getAnimals(completion: @escaping ([Animal]?, Error?) -> Void) {
-        ApiManager.getAnimals { [weak self] result in
+        ApiManager.getDogs { [weak self] result in
             guard self != nil else { return }
             DispatchQueue.main.async {
                 switch result {

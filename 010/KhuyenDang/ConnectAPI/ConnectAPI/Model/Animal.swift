@@ -9,7 +9,7 @@ import Foundation
 
 struct Animal: Codable {
     var name: String
-    var imageId: String
+    var imageId: String?
     var lifeCycle: String
     var origin: String?
     var breed: String?

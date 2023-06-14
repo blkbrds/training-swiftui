@@ -8,6 +8,11 @@
 import Foundation
 import Combine
 
+enum TypeAnimal {
+    case dog
+    case cat
+}
+
 class ApiManager {
     static func getDrinks(completion: @escaping APICompletion<[Drink]>) {
 
@@ -72,8 +77,8 @@ class ApiManager {
             .store(in: &cancellables)
     }
 
-    static func getAnimals(completion: @escaping APICompletion<[Animal]>) {
-        API.share().request(url: API.Path.animalUrl)
+    static func getDogs(completion: @escaping APICompletion<[Animal]>) {
+        API.share().request(url: API.Path.dogUrl)
             .sink(receiveCompletion: { res in
             switch res {
             case .failure(let error):
@@ -93,8 +98,30 @@ class ApiManager {
             .store(in: &cancellables)
     }
 
-    static func getDetailAnimal(imageId: String, completion: @escaping APICompletion<DetailAnimal>) {
-        API.share().request(url: API.Path.detailAnimalUrl + imageId)
+    static func getCats(completion: @escaping APICompletion<[Animal]>) {
+        API.share().request(url: API.Path.catUrl)
+            .sink(receiveCompletion: { res in
+            switch res {
+            case .failure(let error):
+                completion(.failure(error))
+            case .finished:
+                break
+            }
+        }, receiveValue: { data in
+                do {
+                    let result = try JSONDecoder().decode([Animal].self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(.decodingFailed))
+                }
+            }
+        )
+            .store(in: &cancellables)
+    }
+
+    static func getDetailAnimal(typeAnimal: TypeAnimal, imageId: String, completion: @escaping APICompletion<DetailAnimal>) {
+        let url = typeAnimal == .dog ? API.Path.detailDogUrl : API.Path.detailCatUrl
+        API.share().request(url: url + imageId)
             .sink(receiveCompletion: { res in
             switch res {
             case .failure(let error):

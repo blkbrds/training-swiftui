@@ -17,6 +17,8 @@
 		8A2FD6BA2A3029E400158D58 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6B92A3029E400158D58 /* Animal.swift */; };
 		8A2FD6BD2A30315000158D58 /* ConnectUrlsApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6BC2A30315000158D58 /* ConnectUrlsApiView.swift */; };
 		8A2FD6BF2A30315D00158D58 /* ConnectUrlsApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6BE2A30315D00158D58 /* ConnectUrlsApiViewModel.swift */; };
+		8A2FD6C22A32C75A00158D58 /* GroupApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6C12A32C75A00158D58 /* GroupApiView.swift */; };
+		8A2FD6C42A32C77500158D58 /* GroupApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6C32A32C77500158D58 /* GroupApiViewModel.swift */; };
 		8AB4789D2A27395D00F6D805 /* ConnectAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4789C2A27395D00F6D805 /* ConnectAPIApp.swift */; };
 		8AB4789F2A27395D00F6D805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4789E2A27395D00F6D805 /* ContentView.swift */; };
 		8AB478A12A27395F00F6D805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB478A02A27395F00F6D805 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		8A2FD6B92A3029E400158D58 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		8A2FD6BC2A30315000158D58 /* ConnectUrlsApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUrlsApiView.swift; sourceTree = "<group>"; };
 		8A2FD6BE2A30315D00158D58 /* ConnectUrlsApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUrlsApiViewModel.swift; sourceTree = "<group>"; };
+		8A2FD6C12A32C75A00158D58 /* GroupApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupApiView.swift; sourceTree = "<group>"; };
+		8A2FD6C32A32C77500158D58 /* GroupApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupApiViewModel.swift; sourceTree = "<group>"; };
 		8AB478992A27395D00F6D805 /* ConnectAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB4789C2A27395D00F6D805 /* ConnectAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAPIApp.swift; sourceTree = "<group>"; };
 		8AB4789E2A27395D00F6D805 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 			path = "Connect Urls API";
 			sourceTree = "<group>";
 		};
+		8A2FD6C02A32C74600158D58 /* Group API */ = {
+			isa = PBXGroup;
+			children = (
+				8A2FD6C12A32C75A00158D58 /* GroupApiView.swift */,
+				8A2FD6C32A32C77500158D58 /* GroupApiViewModel.swift */,
+			);
+			path = "Group API";
+			sourceTree = "<group>";
+		};
 		8AB478902A27395D00F6D805 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 		8AB4789B2A27395D00F6D805 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8A2FD6C02A32C74600158D58 /* Group API */,
 				8A2FD6BB2A30312C00158D58 /* Connect Urls API */,
 				8A2FD6B12A2F301C00158D58 /* Custom */,
 				8A2FD6AA2A2DBE9A00158D58 /* Erorr handling */,
@@ -257,6 +271,8 @@
 				8A2FD6BD2A30315000158D58 /* ConnectUrlsApiView.swift in Sources */,
 				8A2FD6BF2A30315D00158D58 /* ConnectUrlsApiViewModel.swift in Sources */,
 				8A2FD6A62A29D55300158D58 /* AsyncAwaitHandling.swift in Sources */,
+				8A2FD6C22A32C75A00158D58 /* GroupApiView.swift in Sources */,
+				8A2FD6C42A32C77500158D58 /* GroupApiViewModel.swift in Sources */,
 				8AB478AD2A284CAE00F6D805 /* CompletionHandling.swift in Sources */,
 				8AB478B32A284D3A00F6D805 /* Cocktail.swift in Sources */,
 				8A2FD6B02A2DC13300158D58 /* API.swift in Sources */,
