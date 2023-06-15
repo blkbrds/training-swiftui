@@ -64,6 +64,7 @@ class API {
         static let baseCatUrl = "https://api.thecatapi.com/v1/"
         static let catUrl = baseCatUrl + "breeds"
         static let detailCatUrl = baseCatUrl + "images/"
+        static let basePixabay = "https://pixabay.com/api/?key=37276891-42556684b069dc91a3344105d&q="
     }
 }
 

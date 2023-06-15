@@ -140,5 +140,27 @@ class ApiManager {
         )
             .store(in: &cancellables)
     }
+
+    static func getPixabay(query: String, completion: @escaping APICompletion<Pixabay>) {
+        let url = API.Path.basePixabay + query
+        API.share().request(url: url)
+            .sink(receiveCompletion: { res in
+            switch res {
+            case .failure(let error):
+                completion(.failure(error))
+            case .finished:
+                break
+            }
+        }, receiveValue: { data in
+                do {
+                    let result = try JSONDecoder().decode(Pixabay.self, from: data)
+                    completion(.success(result))
+                } catch {
+                    completion(.failure(.decodingFailed))
+                }
+            }
+        )
+            .store(in: &cancellables)
+    }
 }
 private var cancellables = Set<AnyCancellable>()
