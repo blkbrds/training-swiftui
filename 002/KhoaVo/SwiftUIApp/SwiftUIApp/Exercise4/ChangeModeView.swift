@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct Define {
+    static let appTextColor: String = "AppTextColor"
+    static let appBackgroundColor: String = "AppBackgroundColor"
+}
+
 struct ChangeModeView: View {
 
     @Environment(\.colorScheme) var colorScheme
@@ -15,10 +20,10 @@ struct ChangeModeView: View {
         VStack(spacing: .leastNormalMagnitude) {
             Text(colorScheme == .dark ? "It's in dark mode" : "It's in light mode")
                 .padding()
-                .foregroundColor(colorScheme == .dark ? .white : .black)
+                .foregroundColor(Color(Define.appTextColor))
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(colorScheme == .dark ? .black : .white)
+                .background(Color(Define.appBackgroundColor))
             Text("Always in light mode")
                 .padding()
                 .foregroundColor(.white)
