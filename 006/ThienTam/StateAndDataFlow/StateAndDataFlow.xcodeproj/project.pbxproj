@@ -11,6 +11,8 @@
 		60382EB72A3C46D0004A44F9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EB62A3C46D0004A44F9 /* HomeView.swift */; };
 		60382EBC2A3EF53C004A44F9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EBB2A3EF53C004A44F9 /* LoginViewModel.swift */; };
 		60382EC42A403851004A44F9 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EC32A403851004A44F9 /* TutorialView.swift */; };
+		60382ECB2A4144DE004A44F9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382ECA2A4144DE004A44F9 /* HomeViewModel.swift */; };
+		60382ECD2A414D51004A44F9 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382ECC2A414D51004A44F9 /* TutorialViewModel.swift */; };
 		609B757C2A384DDA0065BD38 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B757B2A384DDA0065BD38 /* StateAndDataFlowApp.swift */; };
 		609B757E2A384DDA0065BD38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B757D2A384DDA0065BD38 /* LoginView.swift */; };
 		609B75802A384DDC0065BD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609B757F2A384DDC0065BD38 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		60382EB62A3C46D0004A44F9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		60382EBB2A3EF53C004A44F9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		60382EC32A403851004A44F9 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		60382ECA2A4144DE004A44F9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		60382ECC2A414D51004A44F9 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		609B75782A384DDA0065BD38 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B757B2A384DDA0065BD38 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		609B757D2A384DDA0065BD38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -84,9 +88,9 @@
 		60382EB82A3C48BB004A44F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				60382EC92A4140F3004A44F9 /* Home */,
 				60382EC22A403838004A44F9 /* TutorialView */,
 				60382EBA2A3EF50C004A44F9 /* Login */,
-				60382EB62A3C46D0004A44F9 /* HomeView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				60382EC32A403851004A44F9 /* TutorialView.swift */,
+				60382ECC2A414D51004A44F9 /* TutorialViewModel.swift */,
 			);
 			path = TutorialView;
+			sourceTree = "<group>";
+		};
+		60382EC92A4140F3004A44F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				60382EB62A3C46D0004A44F9 /* HomeView.swift */,
+				60382ECA2A4144DE004A44F9 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		609B756F2A384DDA0065BD38 = {
@@ -307,9 +321,11 @@
 				60382EC42A403851004A44F9 /* TutorialView.swift in Sources */,
 				60382EB52A3C4508004A44F9 /* AppRouter.swift in Sources */,
 				609B757E2A384DDA0065BD38 /* LoginView.swift in Sources */,
+				60382ECB2A4144DE004A44F9 /* HomeViewModel.swift in Sources */,
 				60382EBC2A3EF53C004A44F9 /* LoginViewModel.swift in Sources */,
 				609B75A92A3AADF40065BD38 /* DataManager.swift in Sources */,
 				60382EB72A3C46D0004A44F9 /* HomeView.swift in Sources */,
+				60382ECD2A414D51004A44F9 /* TutorialViewModel.swift in Sources */,
 				609B757C2A384DDA0065BD38 /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

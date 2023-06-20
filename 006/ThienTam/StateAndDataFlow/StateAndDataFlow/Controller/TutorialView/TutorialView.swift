@@ -28,7 +28,11 @@ struct TutorialView: View {
             Spacer()
             
             Button(action: {
-                appRouter.state = .login
+                guard let currentUser = DataManager().getCurrentUser() else {
+                    appRouter.state = .login
+                    return
+                }
+                appRouter.state = .home
             }) {
                 Text("GET STARTED")
                     .foregroundColor(Color("welcome"))

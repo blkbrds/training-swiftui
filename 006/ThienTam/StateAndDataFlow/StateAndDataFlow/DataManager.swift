@@ -27,6 +27,7 @@ class DataManager {
         Account(userName: "user3", password: "password3", userId: "32112212"),
         Account(userName: "user1", password: "password1", userId: nil),
     ]
+    private var currentUser: Account?
 
     func checkLogin(userName: String, password: String) async throws -> Account? {
         do {
@@ -38,5 +39,13 @@ class DataManager {
         } catch {
             throw error
         }
+    }
+
+    func logoutUser() {
+        currentUser = nil
+    }
+
+    func getCurrentUser() -> Account? {
+        return currentUser
     }
 }
