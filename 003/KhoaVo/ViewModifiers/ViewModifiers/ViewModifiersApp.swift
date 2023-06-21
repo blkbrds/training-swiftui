@@ -12,10 +12,15 @@ struct ViewModifiersApp: App {
 
     var body: some Scene {
         WindowGroup {
+
             /// ---Bai Tap 1---
             // AvatarView()
+
             /// ---Bai Tap 2---
-            ListAvatarView()
+            // ListAvatarView()
+
+            /// ---Bai Tap 3---
+            CalculatorView()
         }
     }
 }

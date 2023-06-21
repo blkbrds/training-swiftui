@@ -42,7 +42,7 @@ struct ListAvatarView: View {
                                               characterName: characters[index].characterName,
                                               viewWidth: itemWidth,
                                               viewHeight: itemWidth + 50)
-                                .onChanged { index in
+                                .onAvatarPress { index in
                                     print("Index of item is \(index)")
                                 }
                             }

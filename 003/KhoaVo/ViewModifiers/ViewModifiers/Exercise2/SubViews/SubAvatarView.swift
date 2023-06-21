@@ -44,7 +44,7 @@ struct SubAvatarView: View {
         .shadow(radius: 10)
     }
 
-    func onChanged(action: @escaping (Int) -> Void ) -> Self {
+    func onAvatarPress(action: @escaping (Int) -> Void ) -> Self {
         var copy = self
         copy.action = action
         return copy
