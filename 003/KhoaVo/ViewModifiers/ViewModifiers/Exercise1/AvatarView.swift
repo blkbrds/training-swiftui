@@ -10,6 +10,7 @@ import SwiftUI
 struct AvatarView: View {
 
     @State var name: String = "Uchiha Itachi"
+
     var body: some View {
         VStack {
             Image("img-itachi")
@@ -20,10 +21,11 @@ struct AvatarView: View {
                 .onTapGesture {
                     print("\(name)")
                 }
+                .shadow(radius: 10, x: 10, y: 10)
             Text("\(name)")
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(.red)
+                .foregroundColor(.brown)
                 .padding()
         }
         .padding()

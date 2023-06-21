@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ViewModifiersApp: App {
+
     var body: some Scene {
         WindowGroup {
-            AvatarView()
+            /// ---Bai Tap 1---
+            // AvatarView()
+            /// ---Bai Tap 2---
+            ListAvatarView()
         }
     }
 }
