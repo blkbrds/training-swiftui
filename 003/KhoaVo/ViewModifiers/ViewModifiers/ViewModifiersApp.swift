@@ -24,6 +24,9 @@ struct ViewModifiersApp: App {
 
             /// ---Bai Tap 4---
             ThreeSliderView()
+
+            /// ---Bai Tap 5---
+            // 
         }
     }
 }

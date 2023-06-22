@@ -49,12 +49,11 @@ struct CustomSliderView: View {
                 .foregroundColor(type.color)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             Slider(value: $sliderValue,
-                      in: 0...255,
-                      step: 1) { didChange in
-                   // updateBackgroundColor()
-               }
-                      .tint(type.color)
-                      .frame(maxWidth: .infinity, maxHeight: .infinity)
+                   in: 0...255,
+                   step: 1)
+            .tint(type.color)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .shadow(radius: 10)
             Spacer(minLength: 20)
         }
         .background(.white)
