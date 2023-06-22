@@ -20,7 +20,10 @@ struct ViewModifiersApp: App {
             // ListAvatarView()
 
             /// ---Bai Tap 3---
-            CalculatorView()
+            // CalculatorView()
+
+            /// ---Bai Tap 4---
+            ThreeSliderView()
         }
     }
 }
