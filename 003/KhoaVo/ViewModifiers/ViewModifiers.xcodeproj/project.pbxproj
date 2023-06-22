@@ -22,6 +22,11 @@
 		8A2AD29C2A419CE700162B23 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2AD29B2A419CE700162B23 /* Character.swift */; };
 		8A34BE762A43FDDD00AAEECC /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE752A43FDDD00AAEECC /* CustomSliderView.swift */; };
 		8A34BE792A440B0500AAEECC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE782A440B0500AAEECC /* CustomImageView.swift */; };
+		8A34BE7C2A440C8800AAEECC /* ImageFullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE7B2A440C8800AAEECC /* ImageFullScreenView.swift */; };
+		8A34BE7E2A44267E00AAEECC /* ImageFullSafeAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE7D2A44267E00AAEECC /* ImageFullSafeAreaView.swift */; };
+		8A34BE802A4426C400AAEECC /* ImageFixedSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE7F2A4426C400AAEECC /* ImageFixedSize.swift */; };
+		8A34BE822A4428DC00AAEECC /* ImageRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE812A4428DC00AAEECC /* ImageRoundedView.swift */; };
+		8A34BE842A442C8700AAEECC /* ImageUnderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A34BE832A442C8700AAEECC /* ImageUnderTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		8A2AD29B2A419CE700162B23 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8A34BE752A43FDDD00AAEECC /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		8A34BE782A440B0500AAEECC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		8A34BE7B2A440C8800AAEECC /* ImageFullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFullScreenView.swift; sourceTree = "<group>"; };
+		8A34BE7D2A44267E00AAEECC /* ImageFullSafeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFullSafeAreaView.swift; sourceTree = "<group>"; };
+		8A34BE7F2A4426C400AAEECC /* ImageFixedSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFixedSize.swift; sourceTree = "<group>"; };
+		8A34BE812A4428DC00AAEECC /* ImageRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRoundedView.swift; sourceTree = "<group>"; };
+		8A34BE832A442C8700AAEECC /* ImageUnderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUnderTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,9 +228,22 @@
 		8A34BE772A44086C00AAEECC /* Exercise5 */ = {
 			isa = PBXGroup;
 			children = (
+				8A34BE7A2A440C7200AAEECC /* SubViews */,
 				8A34BE782A440B0500AAEECC /* CustomImageView.swift */,
 			);
 			path = Exercise5;
+			sourceTree = "<group>";
+		};
+		8A34BE7A2A440C7200AAEECC /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A34BE7F2A4426C400AAEECC /* ImageFixedSize.swift */,
+				8A34BE7D2A44267E00AAEECC /* ImageFullSafeAreaView.swift */,
+				8A34BE7B2A440C8800AAEECC /* ImageFullScreenView.swift */,
+				8A34BE812A4428DC00AAEECC /* ImageRoundedView.swift */,
+				8A34BE832A442C8700AAEECC /* ImageUnderTextView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,13 +378,18 @@
 			files = (
 				8A2AD2982A415A8100162B23 /* ListAvatarView.swift in Sources */,
 				8A2AD26E2A41420900162B23 /* AvatarView.swift in Sources */,
+				8A34BE822A4428DC00AAEECC /* ImageRoundedView.swift in Sources */,
 				8A2AD29C2A419CE700162B23 /* Character.swift in Sources */,
+				8A34BE7C2A440C8800AAEECC /* ImageFullScreenView.swift in Sources */,
 				8A247A9F2A42DCAD00BE59FD /* ButtonCalculatorView.swift in Sources */,
 				8A2AD29A2A415CA300162B23 /* SubAvatarView.swift in Sources */,
 				8A34BE762A43FDDD00AAEECC /* CustomSliderView.swift in Sources */,
+				8A34BE842A442C8700AAEECC /* ImageUnderTextView.swift in Sources */,
+				8A34BE7E2A44267E00AAEECC /* ImageFullSafeAreaView.swift in Sources */,
 				8A247A9D2A42D8E800BE59FD /* CalculatorView.swift in Sources */,
 				8A247AA52A42F97E00BE59FD /* ThreeSliderView.swift in Sources */,
 				8A2AD26C2A41420900162B23 /* ViewModifiersApp.swift in Sources */,
+				8A34BE802A4426C400AAEECC /* ImageFixedSize.swift in Sources */,
 				8A34BE792A440B0500AAEECC /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,10 +23,10 @@ struct ViewModifiersApp: App {
             // CalculatorView()
 
             /// ---Bai Tap 4---
-            ThreeSliderView()
+            // ThreeSliderView()
 
             /// ---Bai Tap 5---
-            // 
+            CustomImageView()
         }
     }
 }
