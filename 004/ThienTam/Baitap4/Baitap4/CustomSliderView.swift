@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct CustomSliderView: View {
-    @State private var sliderValue: CGFloat = 0
-
-    var transformedSliderValue: String {
-        let transformedValue = sliderValue + 20
+    @State private var sliderValue: CGFloat = 150
+    @State private var textFieldValue: String = ""
+    private var transformedSliderValue: String {
+        let transformedValue = (sliderValue + 20) / 3
         return String(format: "%.2f", transformedValue)
     }
 
@@ -20,11 +20,15 @@ struct CustomSliderView: View {
         VStack(alignment: .center, spacing: 50) {
             HStack(alignment: .center) {
                 Text("Slider Value:")
-                TextField("Slider value", text:
-                    .constant(transformedSliderValue))
-                .frame(width: 70)
+                TextField("", text: $textFieldValue, onEditingChanged: { editing in
+                    if !editing, let value = Double(textFieldValue) {
+                        sliderValue = CGFloat(value * 3 - 20)
+                    }
+                })
+                    .frame(width: 70)
                     .multilineTextAlignment(.center)
                     .padding()
+                    .border(.black)
             }
                 .frame(width: 300, height: 50)
 
@@ -34,7 +38,7 @@ struct CustomSliderView: View {
                     .foregroundColor(Color.red)
 
                 Rectangle()
-                    .frame(width: 20, height: sliderValue)
+                    .frame(width: 20, height: sliderValue + 20)
                     .foregroundColor(Color.blue)
 
                 Circle()
@@ -46,6 +50,7 @@ struct CustomSliderView: View {
                         .onChanged { value in
                         let offsetY = value.location.y
                         sliderValue = max(-20, min(offsetY, 280))
+                        textFieldValue = String(format: "%.2f", (sliderValue + 20) / 3)
                     }
                 )
             }

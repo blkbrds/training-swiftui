@@ -17,6 +17,7 @@ struct MonkeyGesture: View {
     @State private var showText = false
     @State private var tapCount = 0
     @State private var timer: Timer?
+    @State private var message: String = ""
 
     var body: some View {
 
@@ -44,27 +45,28 @@ struct MonkeyGesture: View {
             currentAmount = .zero
         }
 
-        let doubleTapGesture = TapGesture(count: 2)
+        let tapGesture = TapGesture(count: 2)
             .onEnded {
-            tapCount += 1
-            showText.toggle()
+            showText = true
+            message = "Khỉ là Tâm"
+            startTimer()
         }
-
-        let tapGesture = TapGesture(count: 1)
-            .onEnded {
-            tapCount = 0
-            showText.toggle()
-        }
+            .exclusively(before: TapGesture(count: 1)
+                .onEnded {
+                showText = true
+                message = "Tâm là khỉ"
+                startTimer()
+            })
 
         VStack {
             if showText {
-                tapCount % 2 == 0
-                    ?
-                Text("Tôi là khỉ")
-                    .font(.largeTitle)
-                :
-                    Text("Khỉ là tôi")
-                    .font(.largeTitle)
+                Image("bubble")
+                    .resizable()
+                    .frame(width: 180, height: 90)
+                    .overlay(
+                    Text(message)
+                        .font(.callout)
+                )
             }
             Image("monkey")
                 .resizable()
@@ -72,39 +74,19 @@ struct MonkeyGesture: View {
                 .cornerRadius(100)
                 .scaleEffect(scale * currentScale)
                 .rotationEffect(currentAmount + finalAmount)
-                .simultaneousGesture(doubleTapGesture)
                 .simultaneousGesture(tapGesture)
                 .simultaneousGesture(rotationGesture)
                 .simultaneousGesture(scaleGesture)
         }
-            .onChange(of: showText) { newValue in
-            if newValue {
-                startTimer()
-            } else {
-                cancelTimer()
-            }
-        }
     }
 
     private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
-            showText = false
-        }
-    }
-
-    private func cancelTimer() {
         timer?.invalidate()
-        timer = nil
-    }
-    private func resetState() {
-        showText = false
-        currentScale = 1.0
-        currentAmount = .zero
-        finalAmount = .zero
-    }
-
-    func hideText() {
-        showText = false
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
+            withAnimation {
+                showText = false
+            }
+        }
     }
 }
 
