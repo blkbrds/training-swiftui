@@ -9,8 +9,6 @@ import SwiftUI
 
 struct Bai1: View {
     @State var randomColor: Color = Color.gray
-    let screenWidth: CGFloat = UIScreen.main.bounds.size.width
-    let screenHeight: CGFloat = UIScreen.main.bounds.size.height
     
     var body: some View {
         VStack {
@@ -21,13 +19,16 @@ struct Bai1: View {
                     blue: .random(in: 0...1)
                     )
             }
-            .font(.title3)
-            .foregroundColor(Color.black)
-            .frame(width: 100, height: 50)
+            .font(.system(size: 28, weight: .bold, design: .serif))
+            .foregroundColor(.white)
+            .padding(.horizontal)
+            .padding(10)
+            .background(Color.blue.opacity(0.7))
+            .cornerRadius(20)
+            .shadow(color: .white, radius: 4)
         }
-        .frame(width: screenWidth, height: screenHeight)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(randomColor)
-        
     }
 }
 
