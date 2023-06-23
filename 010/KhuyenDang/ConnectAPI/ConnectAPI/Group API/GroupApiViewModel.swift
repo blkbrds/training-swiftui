@@ -39,16 +39,16 @@ class GroupApiViewModel: ObservableObject {
 
         // API 2
         dispatchGroup.enter()
-        getDogs { [weak self] (animals, error) in
-            guard let this = self, let animals = animals else {
-                dispatchGroup.leave()
-                return
-            }
-            this.getDetailAnimal(typeAnimal: .dog, animals: animals) { animals in
-                tempDogs = animals
-                dispatchGroup.leave()
-            }
-        }
+//        getDogs { [weak self] (animals, error) in
+//            guard let this = self, let animals = animals else {
+//                dispatchGroup.leave()
+//                return
+//            }
+//            this.getDetailAnimal(typeAnimal: .dog, animals: animals) { animals in
+//                tempDogs = animals
+//                dispatchGroup.leave()
+//            }
+//        }
 
         // API 3
         dispatchGroup.enter()
@@ -75,18 +75,18 @@ class GroupApiViewModel: ObservableObject {
         }
     }
 
-    func getDogs(completion: @escaping ([Animal]?, Error?) -> Void) {
-        ApiManager.getDogs { [weak self] result in
-            guard self != nil else { return }
-            switch result {
-            case .failure(let error):
-                completion(nil, error)
-            case .success(let animals):
-                let temp = Array(animals.prefix(20))
-                completion(temp, nil)
-            }
-        }
-    }
+//    func getDogs(completion: @escaping ([Animal]?, Error?) -> Void) {
+//        ApiManager.getDogs { [weak self] result in
+//            guard self != nil else { return }
+//            switch result {
+//            case .failure(let error):
+//                completion(nil, error)
+//            case .success(let animals):
+//                let temp = Array(animals.prefix(20))
+//                completion(temp, nil)
+//            }
+//        }
+//    }
 
     func getCats(completion: @escaping ([Animal]?, Error?) -> Void) {
         ApiManager.getCats { [weak self] result in

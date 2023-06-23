@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60382EDF2A442684004A44F9 /* ConnectAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EDE2A442684004A44F9 /* ConnectAPITests.swift */; };
+		60382EE62A4426AE004A44F9 /* ConnectUrlsApiViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EE52A4426AE004A44F9 /* ConnectUrlsApiViewModelTest.swift */; };
+		60382EE92A44276B004A44F9 /* Ext+WaitUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EE82A44276B004A44F9 /* Ext+WaitUntil.swift */; };
+		60382EED2A442D00004A44F9 /* dogjs.json in Resources */ = {isa = PBXBuildFile; fileRef = 60382EEC2A442D00004A44F9 /* dogjs.json */; };
+		60382EF02A4432A5004A44F9 /* MockDogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EEE2A443273004A44F9 /* MockDogService.swift */; };
+		60382EF12A444A80004A44F9 /* dogjs.json in Resources */ = {isa = PBXBuildFile; fileRef = 60382EEC2A442D00004A44F9 /* dogjs.json */; };
+		60382EF32A453141004A44F9 /* MockFailureDogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EF22A453141004A44F9 /* MockFailureDogService.swift */; };
 		8A2FD6A62A29D55300158D58 /* AsyncAwaitHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6A52A29D55300158D58 /* AsyncAwaitHandling.swift */; };
 		8A2FD6A82A29D9C600158D58 /* AsyncAwaitHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6A72A29D9C600158D58 /* AsyncAwaitHandlingViewModel.swift */; };
 		8A2FD6AC2A2DBEB900158D58 /* ErrorHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2FD6AB2A2DBEB900158D58 /* ErrorHandlingView.swift */; };
@@ -36,7 +43,24 @@
 		8AB478B72A28905800F6D805 /* CompletionHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB478B62A28905800F6D805 /* CompletionHandlingViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		60382EE02A442684004A44F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB478912A27395D00F6D805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AB478982A27395D00F6D805;
+			remoteInfo = ConnectAPI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		60382EDC2A442684004A44F9 /* ConnectAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60382EDE2A442684004A44F9 /* ConnectAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAPITests.swift; sourceTree = "<group>"; };
+		60382EE52A4426AE004A44F9 /* ConnectUrlsApiViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUrlsApiViewModelTest.swift; sourceTree = "<group>"; };
+		60382EE82A44276B004A44F9 /* Ext+WaitUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+WaitUntil.swift"; sourceTree = "<group>"; };
+		60382EEC2A442D00004A44F9 /* dogjs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dogjs.json; sourceTree = "<group>"; };
+		60382EEE2A443273004A44F9 /* MockDogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogService.swift; sourceTree = "<group>"; };
+		60382EF22A453141004A44F9 /* MockFailureDogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureDogService.swift; sourceTree = "<group>"; };
 		8A2FD6A52A29D55300158D58 /* AsyncAwaitHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandling.swift; sourceTree = "<group>"; };
 		8A2FD6A72A29D9C600158D58 /* AsyncAwaitHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModel.swift; sourceTree = "<group>"; };
 		8A2FD6AB2A2DBEB900158D58 /* ErrorHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingView.swift; sourceTree = "<group>"; };
@@ -68,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		60382ED92A442684004A44F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AB478962A27395D00F6D805 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +109,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60382EDD2A442684004A44F9 /* ConnectAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				60382EE72A44274C004A44F9 /* Ext */,
+				60382EDE2A442684004A44F9 /* ConnectAPITests.swift */,
+				60382EE52A4426AE004A44F9 /* ConnectUrlsApiViewModelTest.swift */,
+			);
+			path = ConnectAPITests;
+			sourceTree = "<group>";
+		};
+		60382EE72A44274C004A44F9 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				60382EE82A44276B004A44F9 /* Ext+WaitUntil.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		60382EEB2A442CCD004A44F9 /* JsonTest */ = {
+			isa = PBXGroup;
+			children = (
+				60382EEC2A442D00004A44F9 /* dogjs.json */,
+			);
+			path = JsonTest;
+			sourceTree = "<group>";
+		};
 		8A2FD6A42A29D4FD00158D58 /* Async await handling */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				8A2FD6BC2A30315000158D58 /* ConnectUrlsApiView.swift */,
+				60382EF22A453141004A44F9 /* MockFailureDogService.swift */,
+				60382EEE2A443273004A44F9 /* MockDogService.swift */,
+				60382EEB2A442CCD004A44F9 /* JsonTest */,
 				8A2FD6BE2A30315D00158D58 /* ConnectUrlsApiViewModel.swift */,
 			);
 			path = "Connect Urls API";
@@ -156,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB4789B2A27395D00F6D805 /* ConnectAPI */,
+				60382EDD2A442684004A44F9 /* ConnectAPITests */,
 				8AB4789A2A27395D00F6D805 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB478992A27395D00F6D805 /* ConnectAPI.app */,
+				60382EDC2A442684004A44F9 /* ConnectAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +281,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		60382EDB2A442684004A44F9 /* ConnectAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60382EE22A442684004A44F9 /* Build configuration list for PBXNativeTarget "ConnectAPITests" */;
+			buildPhases = (
+				60382ED82A442684004A44F9 /* Sources */,
+				60382ED92A442684004A44F9 /* Frameworks */,
+				60382EDA2A442684004A44F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60382EE12A442684004A44F9 /* PBXTargetDependency */,
+			);
+			name = ConnectAPITests;
+			productName = ConnectAPITests;
+			productReference = 60382EDC2A442684004A44F9 /* ConnectAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8AB478982A27395D00F6D805 /* ConnectAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AB478A72A27395F00F6D805 /* Build configuration list for PBXNativeTarget "ConnectAPI" */;
@@ -246,6 +326,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					60382EDB2A442684004A44F9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8AB478982A27395D00F6D805;
+					};
 					8AB478982A27395D00F6D805 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -265,23 +349,43 @@
 			projectRoot = "";
 			targets = (
 				8AB478982A27395D00F6D805 /* ConnectAPI */,
+				60382EDB2A442684004A44F9 /* ConnectAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		60382EDA2A442684004A44F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60382EED2A442D00004A44F9 /* dogjs.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AB478972A27395D00F6D805 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8AB478A42A27395F00F6D805 /* Preview Assets.xcassets in Resources */,
 				8AB478A12A27395F00F6D805 /* Assets.xcassets in Resources */,
+				60382EF12A444A80004A44F9 /* dogjs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		60382ED82A442684004A44F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60382EE62A4426AE004A44F9 /* ConnectUrlsApiViewModelTest.swift in Sources */,
+				60382EDF2A442684004A44F9 /* ConnectAPITests.swift in Sources */,
+				60382EE92A44276B004A44F9 /* Ext+WaitUntil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AB478952A27395D00F6D805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +404,7 @@
 				8A2FD6BD2A30315000158D58 /* ConnectUrlsApiView.swift in Sources */,
 				8A2FD6BF2A30315D00158D58 /* ConnectUrlsApiViewModel.swift in Sources */,
 				8A6F26FE2A39AFD7004DE05F /* Pixabay.swift in Sources */,
+				60382EF02A4432A5004A44F9 /* MockDogService.swift in Sources */,
 				8A2FD6A62A29D55300158D58 /* AsyncAwaitHandling.swift in Sources */,
 				8A2FD6C22A32C75A00158D58 /* GroupApiView.swift in Sources */,
 				8A6F27042A39BAFF004DE05F /* PixabayCelViewModel.swift in Sources */,
@@ -310,13 +415,56 @@
 				8A6F26FA2A39A3AE004DE05F /* DownloaderViewModel.swift in Sources */,
 				8AB4789D2A27395D00F6D805 /* ConnectAPIApp.swift in Sources */,
 				8A2FD6B72A3029BD00158D58 /* AnimalCell.swift in Sources */,
+				60382EF32A453141004A44F9 /* MockFailureDogService.swift in Sources */,
 				8A2FD6BA2A3029E400158D58 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		60382EE12A442684004A44F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AB478982A27395D00F6D805 /* ConnectAPI */;
+			targetProxy = 60382EE02A442684004A44F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		60382EE32A442684004A44F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tamrx.ConnectAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectAPI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConnectAPI";
+			};
+			name = Debug;
+		};
+		60382EE42A442684004A44F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tamrx.ConnectAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConnectAPI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ConnectAPI";
+			};
+			name = Release;
+		};
 		8AB478A52A27395F00F6D805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,6 +638,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		60382EE22A442684004A44F9 /* Build configuration list for PBXNativeTarget "ConnectAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60382EE32A442684004A44F9 /* Debug */,
+				60382EE42A442684004A44F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8AB478942A27395D00F6D805 /* Build configuration list for PBXProject "ConnectAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

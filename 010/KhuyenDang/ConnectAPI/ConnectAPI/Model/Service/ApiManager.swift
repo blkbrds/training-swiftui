@@ -13,7 +13,11 @@ enum TypeAnimal {
     case cat
 }
 
-class ApiManager {
+protocol GetDog {
+    func getDogs(completion: @escaping APICompletion<[Animal]>)
+}
+
+class ApiManager: GetDog {
     static func getDrinks(completion: @escaping APICompletion<[Drink]>) {
 
         guard let url = URL(string: API.Path.drinkUrl) else {
@@ -77,7 +81,7 @@ class ApiManager {
             .store(in: &cancellables)
     }
 
-    static func getDogs(completion: @escaping APICompletion<[Animal]>) {
+    func getDogs(completion: @escaping APICompletion<[Animal]>) {
         API.share().request(url: API.Path.dogUrl)
             .sink(receiveCompletion: { res in
             switch res {

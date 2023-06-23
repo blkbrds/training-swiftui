@@ -13,8 +13,13 @@ class ConnectUrlsApiViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var isShowError: Bool = false
     @Published var errorString: String = ""
+    private var dogService: GetDog
     var realAnimals: [Animal] {
         return animals.filter { !($0.imageId?.isEmpty ?? true) }
+    }
+
+    init(dogService: GetDog = ApiManager()) {
+        self.dogService = dogService
     }
 
     func fetchAnimals() {
@@ -49,7 +54,7 @@ class ConnectUrlsApiViewModel: ObservableObject {
     }
 
     func getAnimals(completion: @escaping ([Animal]?, Error?) -> Void) {
-        ApiManager.getDogs { [weak self] result in
+        dogService.getDogs { [weak self] result in
             guard self != nil else { return }
             DispatchQueue.main.async {
                 switch result {
