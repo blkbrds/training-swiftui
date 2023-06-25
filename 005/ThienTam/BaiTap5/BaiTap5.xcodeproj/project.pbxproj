@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60382F0B2A483CE8004A44F9 /* BadgeNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F0A2A483CE8004A44F9 /* BadgeNumberView.swift */; };
+		60382F0D2A483D67004A44F9 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F0C2A483D67004A44F9 /* Badge.swift */; };
+		60382F0F2A483DE4004A44F9 /* ButtonBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F0E2A483DE4004A44F9 /* ButtonBadge.swift */; };
 		60A0B3D02A3039110037120F /* BaiTap5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3CF2A3039110037120F /* BaiTap5App.swift */; };
-		60A0B3D22A3039110037120F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3D12A3039110037120F /* ContentView.swift */; };
 		60A0B3D42A3039120037120F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A0B3D32A3039120037120F /* Assets.xcassets */; };
 		60A0B3D72A3039120037120F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A0B3D62A3039120037120F /* Preview Assets.xcassets */; };
 		60A0B3E12A3039130037120F /* BaiTap5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3E02A3039130037120F /* BaiTap5Tests.swift */; };
 		60A0B3EB2A3039130037120F /* BaiTap5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3EA2A3039130037120F /* BaiTap5UITests.swift */; };
 		60A0B3ED2A3039130037120F /* BaiTap5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3EC2A3039130037120F /* BaiTap5UITestsLaunchTests.swift */; };
-		60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3F92A3077140037120F /* CustomButton.swift */; };
 		60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FB2A3090140037120F /* TextModifier.swift */; };
-		60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B3FD2A3090790037120F /* ButtonModifier.swift */; };
 		60A0B4012A30AE3C0037120F /* OneSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4002A30AE3C0037120F /* OneSquare.swift */; };
 		60A0B4032A30AF560037120F /* TwoSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4022A30AF560037120F /* TwoSquare.swift */; };
 		60A0B4052A30B86A0037120F /* ChangeSizeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A0B4042A30B86A0037120F /* ChangeSizeVIew.swift */; };
@@ -47,9 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60382F0A2A483CE8004A44F9 /* BadgeNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeNumberView.swift; sourceTree = "<group>"; };
+		60382F0C2A483D67004A44F9 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		60382F0E2A483DE4004A44F9 /* ButtonBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBadge.swift; sourceTree = "<group>"; };
 		60A0B3CC2A3039110037120F /* BaiTap5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A0B3CF2A3039110037120F /* BaiTap5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5App.swift; sourceTree = "<group>"; };
-		60A0B3D12A3039110037120F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		60A0B3D32A3039120037120F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A0B3D62A3039120037120F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		60A0B3DC2A3039130037120F /* BaiTap5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,9 +59,7 @@
 		60A0B3E62A3039130037120F /* BaiTap5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A0B3EA2A3039130037120F /* BaiTap5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5UITests.swift; sourceTree = "<group>"; };
 		60A0B3EC2A3039130037120F /* BaiTap5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap5UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		60A0B3F92A3077140037120F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		60A0B3FB2A3090140037120F /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
-		60A0B3FD2A3090790037120F /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		60A0B4002A30AE3C0037120F /* OneSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSquare.swift; sourceTree = "<group>"; };
 		60A0B4022A30AF560037120F /* TwoSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquare.swift; sourceTree = "<group>"; };
 		60A0B4042A30B86A0037120F /* ChangeSizeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSizeVIew.swift; sourceTree = "<group>"; };
@@ -97,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60382F092A483CAF004A44F9 /* BadgeNumber */ = {
+			isa = PBXGroup;
+			children = (
+				60382F0A2A483CE8004A44F9 /* BadgeNumberView.swift */,
+				60382F0C2A483D67004A44F9 /* Badge.swift */,
+				60382F0E2A483DE4004A44F9 /* ButtonBadge.swift */,
+			);
+			path = BadgeNumber;
+			sourceTree = "<group>";
+		};
+		60382F112A483EEE004A44F9 /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				60A0B3FB2A3090140037120F /* TextModifier.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
 		60A0B3C32A3039100037120F = {
 			isa = PBXGroup;
 			children = (
@@ -120,11 +138,9 @@
 		60A0B3CE2A3039110037120F /* BaiTap5 */ = {
 			isa = PBXGroup;
 			children = (
+				60382F112A483EEE004A44F9 /* CustomModifier */,
+				60382F092A483CAF004A44F9 /* BadgeNumber */,
 				60A0B3CF2A3039110037120F /* BaiTap5App.swift */,
-				60A0B3FB2A3090140037120F /* TextModifier.swift */,
-				60A0B3FD2A3090790037120F /* ButtonModifier.swift */,
-				60A0B3F92A3077140037120F /* CustomButton.swift */,
-				60A0B3D12A3039110037120F /* ContentView.swift */,
 				60A0B3D32A3039120037120F /* Assets.xcassets */,
 				60A0B3D52A3039120037120F /* Preview Content */,
 				60A0B4002A30AE3C0037120F /* OneSquare.swift */,
@@ -296,18 +312,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60A0B3D22A3039110037120F /* ContentView.swift in Sources */,
 				60A0B4112A32251D0037120F /* PopularView.swift in Sources */,
 				60A0B40B2A3193870037120F /* ScrollView.swift in Sources */,
 				60A0B3FC2A3090140037120F /* TextModifier.swift in Sources */,
 				60A0B4072A3174FF0037120F /* GestureView.swift in Sources */,
 				60A0B3D02A3039110037120F /* BaiTap5App.swift in Sources */,
 				60A0B4052A30B86A0037120F /* ChangeSizeVIew.swift in Sources */,
+				60382F0B2A483CE8004A44F9 /* BadgeNumberView.swift in Sources */,
 				60A0B4152A3229070037120F /* ProfileView.swift in Sources */,
-				60A0B3FA2A3077140037120F /* CustomButton.swift in Sources */,
+				60382F0D2A483D67004A44F9 /* Badge.swift in Sources */,
+				60382F0F2A483DE4004A44F9 /* ButtonBadge.swift in Sources */,
 				60A0B4132A32274C0037120F /* TabbarView.swift in Sources */,
 				60A0B40F2A31C9C10037120F /* ItemView.swift in Sources */,
-				60A0B3FE2A3090790037120F /* ButtonModifier.swift in Sources */,
 				60A0B4012A30AE3C0037120F /* OneSquare.swift in Sources */,
 				60A0B4032A30AF560037120F /* TwoSquare.swift in Sources */,
 				60A0B4092A3190560037120F /* StackView.swift in Sources */,
