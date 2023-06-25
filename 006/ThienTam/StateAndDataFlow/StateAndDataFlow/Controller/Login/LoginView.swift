@@ -48,8 +48,11 @@ struct LoginView: View {
 
                 Spacer()
                 Button(action: {
-                    viewModel.submitButton {
-                        appRouter.state = .home
+                    Task {
+                        await viewModel.submitButton()
+                        if viewModel.isLoggedIn {
+                            appRouter.state = .home
+                        }
                     }
                 }) {
                     Text(viewModel.titleButton)
@@ -70,7 +73,7 @@ struct LoginView: View {
                     .scaleEffect(2)
             }
         }
-            .alert("Invalid", isPresented: $viewModel.isShowAlert, actions: {
+        .alert(viewModel.alertString, isPresented: $viewModel.isShowAlert, actions: {
 
         })
             .ignoresSafeArea()

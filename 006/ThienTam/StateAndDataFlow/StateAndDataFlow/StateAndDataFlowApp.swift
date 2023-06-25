@@ -11,26 +11,47 @@ import SwiftUI
 struct StateAndDataFlowApp: App {
 
     @StateObject var appRouter = AppRouter()
+    @AppStorage("isDarkMode") var isDarkMode = false
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("isRemoveTutorial") var isRemoveTutorial = false
 
     var body: some Scene {
         WindowGroup {
             rootView
                 .environmentObject(appRouter)
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
+
+    func checkLogin() -> some View {
+        Group {
+            if isLoggedIn {
+                HomeView()
+            } else {
+                LoginView()
+            }
+        }
+    }
+
 
 
     @ViewBuilder
     var rootView: some View {
         switch appRouter.state {
-        case .launch:
-            HomeView()
+        case .setting:
+            SettingView()
         case .tutorial:
-            HomeView()
+            if isRemoveTutorial {
+                checkLogin()
+            } else {
+                TutorialView()
+            }
         case .login:
-            LoginView()
+            checkLogin()
         case .home:
             HomeView()
+        case .edit:
+            EditView()
         }
     }
 }

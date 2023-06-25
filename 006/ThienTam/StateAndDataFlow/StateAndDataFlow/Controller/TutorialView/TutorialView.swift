@@ -10,6 +10,8 @@ import SwiftUI
 struct TutorialView: View {
     
     @EnvironmentObject var appRouter: AppRouter
+    @AppStorage("isRemoveTutorial") var isRemoveTutorial = false
+    @ObservedObject var viewModel = TutorialViewModel()
 
     var body: some View {
         VStack {
@@ -28,11 +30,12 @@ struct TutorialView: View {
             Spacer()
             
             Button(action: {
-                guard let currentUser = DataManager().getCurrentUser() else {
+                if viewModel.isCheckHaveUser() {
+                    appRouter.state = .home
+                } else {
                     appRouter.state = .login
-                    return
+                    isRemoveTutorial = true
                 }
-                appRouter.state = .home
             }) {
                 Text("GET STARTED")
                     .foregroundColor(Color("welcome"))

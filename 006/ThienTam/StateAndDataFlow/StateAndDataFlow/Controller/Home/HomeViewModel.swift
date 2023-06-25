@@ -28,18 +28,32 @@ enum TabView: Int, CaseIterable {
 }
 
 final class HomeViewModel: ObservableObject {
-    
+
     @Published var selectedTab: TabView = .photos
-    
+    @AppStorage("isDarkMode") var isDarkMode = false
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+
     func isSameTab(tab: TabView) -> Bool {
         return selectedTab == tab
     }
-    
+
     func setSelectedTab(tab: TabView) {
         selectedTab = tab
     }
 
-    func clearUser() {
-        DataManager().logoutUser()
+    func clearLocalStorage() async {
+        do {
+            LocalStore.shared.clearUser()
+            DispatchQueue.main.async {
+                self.isDarkMode = false
+                self.isLoggedIn = false
+            }
+        } catch {
+            print(error)
+        }
+    }
+
+    func getFullName() -> String {
+        return LocalStore.shared.getFullName()
     }
 }

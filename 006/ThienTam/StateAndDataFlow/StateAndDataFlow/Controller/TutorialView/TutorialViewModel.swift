@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-final class TutorialViewModel {
+final class TutorialViewModel: ObservableObject {
 
     func isCheckHaveUser() -> Bool {
-        return DataManager().getCurrentUser() != nil
+        return LocalStore.shared.isHaveUserId()
     }
 }

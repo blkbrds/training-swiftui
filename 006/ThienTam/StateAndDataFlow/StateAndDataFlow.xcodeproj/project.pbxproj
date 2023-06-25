@@ -13,6 +13,13 @@
 		60382EC42A403851004A44F9 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EC32A403851004A44F9 /* TutorialView.swift */; };
 		60382ECB2A4144DE004A44F9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382ECA2A4144DE004A44F9 /* HomeViewModel.swift */; };
 		60382ECD2A414D51004A44F9 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382ECC2A414D51004A44F9 /* TutorialViewModel.swift */; };
+		60382EF62A454672004A44F9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EF52A454672004A44F9 /* SettingView.swift */; };
+		60382EF82A454D32004A44F9 /* CustomToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EF72A454D32004A44F9 /* CustomToggle.swift */; };
+		60382EFD2A457DD9004A44F9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EFC2A457DD9004A44F9 /* EditView.swift */; };
+		60382EFF2A458168004A44F9 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382EFE2A458168004A44F9 /* EditViewModel.swift */; };
+		60382F012A46F339004A44F9 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F002A46F339004A44F9 /* SettingViewModel.swift */; };
+		60382F042A46FBF7004A44F9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F032A46FBF7004A44F9 /* Account.swift */; };
+		60382F062A46FC33004A44F9 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60382F052A46FC33004A44F9 /* LocalStore.swift */; };
 		609B757C2A384DDA0065BD38 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B757B2A384DDA0065BD38 /* StateAndDataFlowApp.swift */; };
 		609B757E2A384DDA0065BD38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B757D2A384DDA0065BD38 /* LoginView.swift */; };
 		609B75802A384DDC0065BD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609B757F2A384DDC0065BD38 /* Assets.xcassets */; };
@@ -47,6 +54,13 @@
 		60382EC32A403851004A44F9 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		60382ECA2A4144DE004A44F9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		60382ECC2A414D51004A44F9 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
+		60382EF52A454672004A44F9 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		60382EF72A454D32004A44F9 /* CustomToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToggle.swift; sourceTree = "<group>"; };
+		60382EFC2A457DD9004A44F9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		60382EFE2A458168004A44F9 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		60382F002A46F339004A44F9 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		60382F032A46FBF7004A44F9 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		60382F052A46FC33004A44F9 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		609B75782A384DDA0065BD38 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B757B2A384DDA0065BD38 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		609B757D2A384DDA0065BD38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -88,6 +102,8 @@
 		60382EB82A3C48BB004A44F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				60382EFB2A457DB6004A44F9 /* Edit */,
+				60382EF42A454657004A44F9 /* Setting */,
 				60382EC92A4140F3004A44F9 /* Home */,
 				60382EC22A403838004A44F9 /* TutorialView */,
 				60382EBA2A3EF50C004A44F9 /* Login */,
@@ -129,6 +145,42 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		60382EF42A454657004A44F9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				60382EF52A454672004A44F9 /* SettingView.swift */,
+				60382F002A46F339004A44F9 /* SettingViewModel.swift */,
+				60382EF72A454D32004A44F9 /* CustomToggle.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		60382EFB2A457DB6004A44F9 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				60382EFC2A457DD9004A44F9 /* EditView.swift */,
+				60382EFE2A458168004A44F9 /* EditViewModel.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		60382F022A46FBC9004A44F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60382F032A46FBF7004A44F9 /* Account.swift */,
+				60382F052A46FC33004A44F9 /* LocalStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60382F072A46FC69004A44F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				609B75A82A3AADF40065BD38 /* DataManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		609B756F2A384DDA0065BD38 = {
 			isa = PBXGroup;
 			children = (
@@ -152,10 +204,11 @@
 		609B757A2A384DDA0065BD38 /* StateAndDataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				60382F072A46FC69004A44F9 /* Service */,
+				60382F022A46FBC9004A44F9 /* Model */,
 				60382EB82A3C48BB004A44F9 /* Controller */,
 				609B757B2A384DDA0065BD38 /* StateAndDataFlowApp.swift */,
 				60382EB42A3C4508004A44F9 /* AppRouter.swift */,
-				609B75A82A3AADF40065BD38 /* DataManager.swift */,
 				609B757F2A384DDC0065BD38 /* Assets.xcassets */,
 				609B75812A384DDC0065BD38 /* Preview Content */,
 			);
@@ -319,6 +372,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				60382EC42A403851004A44F9 /* TutorialView.swift in Sources */,
+				60382F012A46F339004A44F9 /* SettingViewModel.swift in Sources */,
+				60382EF82A454D32004A44F9 /* CustomToggle.swift in Sources */,
+				60382F062A46FC33004A44F9 /* LocalStore.swift in Sources */,
+				60382EFD2A457DD9004A44F9 /* EditView.swift in Sources */,
+				60382EF62A454672004A44F9 /* SettingView.swift in Sources */,
+				60382F042A46FBF7004A44F9 /* Account.swift in Sources */,
 				60382EB52A3C4508004A44F9 /* AppRouter.swift in Sources */,
 				609B757E2A384DDA0065BD38 /* LoginView.swift in Sources */,
 				60382ECB2A4144DE004A44F9 /* HomeViewModel.swift in Sources */,
@@ -326,6 +385,7 @@
 				609B75A92A3AADF40065BD38 /* DataManager.swift in Sources */,
 				60382EB72A3C46D0004A44F9 /* HomeView.swift in Sources */,
 				60382ECD2A414D51004A44F9 /* TutorialViewModel.swift in Sources */,
+				60382EFF2A458168004A44F9 /* EditViewModel.swift in Sources */,
 				609B757C2A384DDA0065BD38 /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,8 +13,9 @@ class AppRouter: ObservableObject {
 }
 
 enum AppState {
-    case launch
+    case setting
     case tutorial
     case login
     case home
+    case edit
 }
