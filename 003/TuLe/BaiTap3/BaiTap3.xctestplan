@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "5171A6CD-325A-419A-A688-25AE0EC3D33B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BaiTap3.xcodeproj",
+      "identifier" : "10EE2BB5299C711900A15636",
+      "name" : "BaiTap3"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BaiTap3.xcodeproj",
+        "identifier" : "109245192A4A7FB9000286A4",
+        "name" : "BaiTap3UITests"
+      }
+    }
+  ],
+  "version" : 1
+}

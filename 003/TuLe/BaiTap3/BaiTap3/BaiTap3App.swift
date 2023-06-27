@@ -16,7 +16,7 @@ struct BaiTap3App: App {
     var rootView: some View {
         switch appRouter.state {
         case .welcome:
-            WelcomeView()
+            ContentView()
         case .login:
             LoginView()
         }
