@@ -13,6 +13,8 @@
 		105A803629A4A43600B9704F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105A803529A4A43600B9704F /* WelcomeView.swift */; };
 		1092451D2A4A7FB9000286A4 /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092451C2A4A7FB9000286A4 /* BaiTap3UITests.swift */; };
 		1092451F2A4A7FB9000286A4 /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092451E2A4A7FB9000286A4 /* BaiTap3UITestsLaunchTests.swift */; };
+		1092452A2A4ABACE000286A4 /* CaculatorUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109245292A4ABACE000286A4 /* CaculatorUITest.swift */; };
+		1092452C2A4ABC55000286A4 /* AvatarUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092452B2A4ABC55000286A4 /* AvatarUITest.swift */; };
 		10EE2BBA299C711900A15636 /* BaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BB9299C711900A15636 /* BaiTap3App.swift */; };
 		10EE2BBC299C711900A15636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE2BBB299C711900A15636 /* ContentView.swift */; };
 		10EE2BBE299C711D00A15636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EE2BBD299C711D00A15636 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		1092451C2A4A7FB9000286A4 /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
 		1092451E2A4A7FB9000286A4 /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		109245252A4A8111000286A4 /* BaiTap3.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BaiTap3.xctestplan; sourceTree = "<group>"; };
+		109245292A4ABACE000286A4 /* CaculatorUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorUITest.swift; sourceTree = "<group>"; };
+		1092452B2A4ABC55000286A4 /* AvatarUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUITest.swift; sourceTree = "<group>"; };
 		10EE2BB6299C711900A15636 /* BaiTap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EE2BB9299C711900A15636 /* BaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3App.swift; sourceTree = "<group>"; };
 		10EE2BBB299C711900A15636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				1092451C2A4A7FB9000286A4 /* BaiTap3UITests.swift */,
 				1092451E2A4A7FB9000286A4 /* BaiTap3UITestsLaunchTests.swift */,
+				109245292A4ABACE000286A4 /* CaculatorUITest.swift */,
+				1092452B2A4ABC55000286A4 /* AvatarUITest.swift */,
 			);
 			path = BaiTap3UITests;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 			files = (
 				1092451D2A4A7FB9000286A4 /* BaiTap3UITests.swift in Sources */,
 				1092451F2A4A7FB9000286A4 /* BaiTap3UITestsLaunchTests.swift in Sources */,
+				1092452C2A4ABC55000286A4 /* AvatarUITest.swift in Sources */,
+				1092452A2A4ABACE000286A4 /* CaculatorUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
