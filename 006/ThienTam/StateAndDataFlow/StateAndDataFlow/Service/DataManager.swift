@@ -13,7 +13,7 @@ class DataManager {
         Account(userName: "user1", password: "password1", userId: "12345", fullName: "Nguyen Khanh Thien Tam"),
         Account(userName: "user2", password: "password2", userId: "233443", fullName: "Le Van Luyen"),
         Account(userName: "user3", password: "password3", userId: "32112212", fullName: "Nguyen Van A"),
-        Account(userName: "user1", password: "password1", userId: nil, fullName: "Le Thi B"),
+        Account(userName: "user4", password: "password4", userId: nil, fullName: "Le Thi B"),
     ]
 
     func checkLogin(userName: String, password: String) async throws -> Account? {

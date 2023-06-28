@@ -30,7 +30,7 @@ class LoginViewModel: ObservableObject {
             let info = try await DataManager().checkLogin(userName: username, password: password)
             isLoading = false
             DispatchQueue.main.async {
-                guard let info = info else {
+                guard let info = info, (info.userId != nil) else {
                     self.alertString = "Invalid username or password"
                     self.isShowAlert = true
                     return

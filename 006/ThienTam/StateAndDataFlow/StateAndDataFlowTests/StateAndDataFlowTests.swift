@@ -12,14 +12,14 @@ import SwiftUI
 @testable import StateAndDataFlow
 
 @MainActor class LoginViewModelTest: XCTestCase {
-    
+
     private var viewModel: LoginViewModel!
-    
+
     @MainActor override func setUp() {
         super.setUp()
         viewModel = LoginViewModel()
     }
-    
+
     func testValidSubmitButton() {
         viewModel.username = "user1"
         viewModel.password = "password123"
@@ -27,32 +27,32 @@ import SwiftUI
         XCTAssertEqual(viewModel.titleButton, "GET STARTED")
         XCTAssertEqual(viewModel.colorButton, Color("submitButton"))
     }
-    
+
     func testInvalidSubmitButton() {
         viewModel.username = "a"
         viewModel.password = "a"
         XCTAssertFalse(viewModel.isLoginButtonEnabled)
         XCTAssertEqual(viewModel.titleButton, "LOGIN")
         XCTAssertEqual(viewModel.colorButton, Color.gray.opacity(0.5))
-        
+
     }
-    
-    func testLoginFailure() {
-        viewModel.submitButton {
-        }
-        waitUntil(viewModel.$isShowAlert, equals: true)
+
+    func testLoginFailure() async {
+        viewModel.username = "user4"
+        viewModel.password = "password4"
+        await viewModel.submitButton()
+//        waitUntil(viewModel.$isShowAlert, equals: true)
         XCTAssertFalse(self.viewModel.isLoading)
         XCTAssertTrue(self.viewModel.isShowAlert)
     }
-    
-    func testLoginSuccess() {
+
+    func testLoginSuccess() async {
         viewModel.username = "user1"
         viewModel.password = "password1"
-        viewModel.submitButton {
-        }
-        waitUntil(viewModel.$isShowAlert, equals: false)
+        await viewModel.submitButton()
+//        waitUntil(viewModel.$isShowAlert, equals: false)
         XCTAssertFalse(self.viewModel.isShowAlert)
-        
+
     }
 }
 
@@ -68,17 +68,17 @@ extension XCTestCase {
         let expectation = expectation(
             description: "Awaiting value \(expectedValue)"
         )
-        
+
         var cancellable: AnyCancellable?
 
         cancellable = propertyPublisher
             .dropFirst()
             .first(where: { $0 == expectedValue })
             .sink { value in
-                XCTAssertEqual(value, expectedValue, file: file, line: line)
-                cancellable?.cancel()
-                expectation.fulfill()
-            }
+            XCTAssertEqual(value, expectedValue, file: file, line: line)
+            cancellable?.cancel()
+            expectation.fulfill()
+        }
 
         waitForExpectations(timeout: timeout, handler: nil)
     }
