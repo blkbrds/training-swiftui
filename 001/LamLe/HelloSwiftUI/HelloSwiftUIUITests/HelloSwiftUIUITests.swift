@@ -38,4 +38,19 @@ final class HelloSwiftUIUITests: XCTestCase {
             }
         }
     }
+    
+    func testUITapButton() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let tap = app.buttons["Tap"]
+        XCTAssert(tap.exists)
+    }
+    
+    func testScreenNotGrayColor() throws {
+        let app = XCUIApplication()
+        app.launch()
+        let tapButton = app.buttons["Tap"]
+        tapButton.tap()
+    }
+    
 }

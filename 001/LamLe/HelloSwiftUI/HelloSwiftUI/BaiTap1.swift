@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct Bai1: View {
-    @State var randomColor: Color = Color.gray
+//    @State var randomColor: Color = Color.gray
+    @StateObject var viewModel = ViewModel()
 
     var body: some View {
         VStack {
             Button("Tap") {
-                randomColor = Color(
-                    red: .random(in: 0...1),
-                    green: .random(in: 0...1),
-                    blue: .random(in: 0...1)
-                    )
+                viewModel.changeColorRandom()
             }
             .font(.system(size: 28, weight: .bold, design: .serif))
             .foregroundColor(.white)
@@ -28,7 +25,7 @@ struct Bai1: View {
             .shadow(color: .white, radius: 4)
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(randomColor)
+        .background(viewModel.randomColor)
     }
 }
 
@@ -41,8 +38,22 @@ struct Bai1_Previews: PreviewProvider {
                 .previewDisplayName("Theo Kich Thuoc")
             Bai1()
                 .previewLayout(.device)
-                .previewDevice("iPhone 11 Pro Max")
+                .previewDevice("iPhone 8")
                 .previewDisplayName("Theo Device")
+        }
+    }
+}
+
+extension Bai1 {
+    final class ViewModel: ObservableObject {
+        @Published var randomColor: Color = Color.gray
+        
+        func changeColorRandom() {
+            randomColor = Color(
+                red: .random(in: 0...1),
+                green: .random(in: 0...1),
+                blue: .random(in: 0...1)
+                )
         }
     }
 }

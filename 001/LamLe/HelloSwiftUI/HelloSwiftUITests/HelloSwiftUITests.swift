@@ -7,6 +7,10 @@
 
 import XCTest
 @testable import HelloSwiftUI
+import SwiftUI
+import ViewInspector
+
+extension Bai1: Inspectable {}
 
 final class HelloSwiftUITests: XCTestCase {
 
@@ -32,5 +36,18 @@ final class HelloSwiftUITests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testTitleButton() throws {
+        let bai1 = Bai1()
+        let titleButton = try bai1.inspect()
+            .find(button: "Tap")
+        let textButton = try titleButton.find(text: "Tap")
+        XCTAssertEqual(try textButton.string(), "Tap")
+    }
+    
+    func testRandomColorTapping() throws {
+        let viewModel = Bai1.ViewModel()
+        viewModel.changeColorRandom()
+        XCTAssertNotEqual(viewModel.randomColor, Color.gray)
+    }
 }
