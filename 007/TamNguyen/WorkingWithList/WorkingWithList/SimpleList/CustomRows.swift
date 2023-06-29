@@ -9,15 +9,15 @@ import SwiftUI
 
 struct CustomRows: View {
     let customDatas: [User] = [
-            User(imageName: "photo", largeTitle: "Title 1", smallTitle: "Subtitle 1"),
-            User(imageName: "photo.fill", largeTitle: "Title 2", smallTitle: "Subtitle 2"),
-            User(imageName: "photo.on.rectangle", largeTitle: "Title 3", smallTitle: "Subtitle 3")
+            User(imageName: "tam", largeTitle: "Tam Nguyen7", smallTitle: "Mobile Developer"),
+            User(imageName: "tien", largeTitle: "Tien Le", smallTitle: "Team Manager"),
+            User(imageName: "khuyen", largeTitle: "Khuyen Dang", smallTitle: "Mobile Developer")
         ]
 
     var body: some View {
         NavigationView {
             List(customDatas, id: \.largeTitle) { item in
-                ProfileCell()
+                ProfileCell(image: item.imageName, title: item.largeTitle, subTile: item.smallTitle)
             }
                 .listStyle(.plain)
                 .navigationTitle("List users")

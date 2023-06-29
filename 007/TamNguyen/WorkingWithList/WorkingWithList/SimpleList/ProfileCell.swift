@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ProfileCell: View {
-    
+
     var image: String
     var title: String
     var subTile: String
 
     var body: some View {
         HStack {
-            Image(systemName: "photo")
-                .font(.title)
+            Image(image)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 10)
 
             VStack(alignment: .leading) {
-                Text("Thien Tam")
+                Text(title)
                     .font(.title)
-                Text("Mobile Developer")
+                Text(subTile)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
@@ -36,6 +40,6 @@ struct ProfileCell: View {
 
 struct ProfileCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCell()
+        ProfileCell(image: "", title: "", subTile: "")
     }
 }
