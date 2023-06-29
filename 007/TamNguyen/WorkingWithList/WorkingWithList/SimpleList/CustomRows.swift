@@ -17,7 +17,10 @@ struct CustomRows: View {
     var body: some View {
         NavigationView {
             List(customDatas, id: \.largeTitle) { item in
-                ProfileCell(image: item.imageName, title: item.largeTitle, subTile: item.smallTitle)
+                NavigationLink(destination: DetailView(user: item)) {
+                    ProfileCell(image: item.imageName, title: item.largeTitle, subTile: item.smallTitle)
+                        .contentShape(Rectangle())
+                }
             }
                 .listStyle(.plain)
                 .navigationTitle("List users")

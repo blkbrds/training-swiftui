@@ -31,9 +31,6 @@ struct ProfileCell: View {
             }
 
             Spacer()
-
-            Image(systemName: "chevron.right")
-                .foregroundColor(.gray)
         }
     }
 }
