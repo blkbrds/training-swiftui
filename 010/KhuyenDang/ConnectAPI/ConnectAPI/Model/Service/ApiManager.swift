@@ -13,8 +13,12 @@ enum TypeAnimal {
     case cat
 }
 
-class ApiManager {
-    static func getDrinks(completion: @escaping APICompletion<[Drink]>) {
+protocol FakeServer {
+    func getDrinks(completion: @escaping APICompletion<[Drink]>)
+}
+
+class ApiManager: FakeServer {
+    func getDrinks(completion: @escaping APICompletion<[Drink]>) {
 
         guard let url = URL(string: API.Path.drinkUrl) else {
             completion(.failure(.invalidURL))

@@ -11,7 +11,7 @@ struct Cocktail: Codable {
     var drinks: [Drink]
 }
 
-struct Drink: Codable {
+struct Drink: Codable, Equatable {
     var idDrink: String
     var name: String
     var image: String
@@ -20,5 +20,8 @@ struct Drink: Codable {
         case idDrink
         case name = "strDrink"
         case image = "strDrinkThumb"
+    }
+    static func == (lhs: Drink, rhs: Drink) -> Bool {
+        return lhs.idDrink == rhs.idDrink && lhs.name == rhs.name && lhs.image == rhs.image
     }
 }

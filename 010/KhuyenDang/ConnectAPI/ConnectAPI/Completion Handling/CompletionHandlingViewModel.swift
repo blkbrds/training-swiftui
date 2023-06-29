@@ -12,9 +12,14 @@ class CompletionHandlingViewModel: ObservableObject {
     @Published var drinks: [Drink] = []
     @Published var errorString: String = ""
     @Published var isShowError: Bool = false
+    private var drinkService: FakeServer
+
+    init(drinkService: FakeServer = ApiManager()) {
+        self.drinkService = drinkService
+    }
 
     func getDrink() {
-        ApiManager.getDrinks { [weak self] result in
+        drinkService.getDrinks { [weak self] result in
             guard let this = self else { return }
             DispatchQueue.main.async {
                 switch result {
