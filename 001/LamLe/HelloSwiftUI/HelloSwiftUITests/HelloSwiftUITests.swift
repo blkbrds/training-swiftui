@@ -4,7 +4,6 @@
 //
 //  Created by Lam Le T. [2] VN.Danang on 6/26/23.
 //
-
 import XCTest
 @testable import HelloSwiftUI
 import SwiftUI
@@ -36,7 +35,7 @@ final class HelloSwiftUITests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
     func testTitleButton() throws {
         let bai1 = Bai1()
         let titleButton = try bai1.inspect()
@@ -44,10 +43,12 @@ final class HelloSwiftUITests: XCTestCase {
         let textButton = try titleButton.find(text: "Tap")
         XCTAssertEqual(try textButton.string(), "Tap")
     }
-    
+
     func testRandomColorTapping() throws {
         let viewModel = Bai1.ViewModel()
         viewModel.changeColorRandom()
         XCTAssertNotEqual(viewModel.randomColor, Color.gray)
     }
+    
+    
 }

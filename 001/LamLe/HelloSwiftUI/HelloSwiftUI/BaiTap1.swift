@@ -4,7 +4,6 @@
 //
 //  Created by Lam Le T. [2] VN.Danang on 6/26/23.
 //
-
 import SwiftUI
 
 struct Bai1: View {
@@ -47,7 +46,7 @@ struct Bai1_Previews: PreviewProvider {
 extension Bai1 {
     final class ViewModel: ObservableObject {
         @Published var randomColor: Color = Color.gray
-        
+
         func changeColorRandom() {
             randomColor = Color(
                 red: .random(in: 0...1),

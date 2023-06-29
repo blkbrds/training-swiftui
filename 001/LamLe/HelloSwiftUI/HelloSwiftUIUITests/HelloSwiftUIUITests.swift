@@ -4,14 +4,12 @@
 //
 //  Created by Lam Le T. [2] VN.Danang on 6/26/23.
 //
-
 import XCTest
 
 final class HelloSwiftUIUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
@@ -38,19 +36,19 @@ final class HelloSwiftUIUITests: XCTestCase {
             }
         }
     }
-    
+
     func testUITapButton() throws {
         let app = XCUIApplication()
         app.launch()
         let tap = app.buttons["Tap"]
         XCTAssert(tap.exists)
     }
-    
+
     func testScreenNotGrayColor() throws {
         let app = XCUIApplication()
         app.launch()
         let tapButton = app.buttons["Tap"]
         tapButton.tap()
     }
-    
+
 }
