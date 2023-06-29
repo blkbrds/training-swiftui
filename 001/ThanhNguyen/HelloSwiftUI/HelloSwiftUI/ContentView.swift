@@ -24,11 +24,15 @@ struct ContentView: View {
             .onAppear {
                 self.didAppear?(self)
             }
+            .frame(maxWidth: 150, maxHeight: 50)
+            .font(.system(size: 30, weight: .heavy, design: .rounded))
             .padding(10)
-            .background(.orange)
-            .foregroundColor(.secondary)
+            .background(
+                LinearGradient(colors: [.pink, .orange], startPoint: .bottomLeading, endPoint: .topTrailing)
+            )
+            .foregroundColor(.white)
             .cornerRadius(.infinity)
-            .shadow(color: .white, radius: 5)
+            .shadow(color: .pink, radius: 5)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(backgroundColor)
