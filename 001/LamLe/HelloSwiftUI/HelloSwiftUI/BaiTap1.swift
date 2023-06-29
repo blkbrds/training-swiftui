@@ -7,14 +7,16 @@
 import SwiftUI
 
 struct Bai1: View {
-//    @State var randomColor: Color = Color.gray
+
     @StateObject var viewModel = ViewModel()
+    internal var didAppear: ((Self) -> Void)?
 
     var body: some View {
         VStack {
             Button("Tap") {
                 viewModel.changeColorRandom()
             }
+            .onAppear { self.didAppear?(self) }
             .font(.system(size: 28, weight: .bold, design: .serif))
             .foregroundColor(.white)
             .padding(.horizontal)

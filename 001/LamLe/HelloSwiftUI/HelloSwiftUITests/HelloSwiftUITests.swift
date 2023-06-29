@@ -50,5 +50,14 @@ final class HelloSwiftUITests: XCTestCase {
         XCTAssertNotEqual(viewModel.randomColor, Color.gray)
     }
     
-    
+    func testBackGroupColorAfterTappingButton() throws {
+        var bai1 = Bai1()
+        let exp = bai1.on(\.didAppear) { view in
+            let tapButton = try view.find(button: "Tap")
+            try tapButton.tap()
+            XCTAssertNotEqual(try view.actualView().viewModel.randomColor, Color.gray)
+        }
+        ViewHosting.host(view: bai1)
+        wait(for: [exp], timeout: 0.1)
+    }
 }
