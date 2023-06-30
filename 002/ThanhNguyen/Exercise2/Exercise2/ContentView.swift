@@ -9,17 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @Environment(\.colorScheme) var colorScheme
     let name: String
+
+    private var titleColor: Color {
+        colorScheme == .light ? .black : .white
+    }
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
+                .environment(\.colorScheme, .light)
             Text("Hello, world!")
+                .font(.system(size: 25, weight: .heavy, design: .monospaced))
+                .foregroundColor(titleColor)
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(Color.blue)
+                .foregroundColor(titleColor)
                 .padding()
         }
         .padding()
