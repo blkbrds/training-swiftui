@@ -14,7 +14,6 @@
 		2824B81E2A4D920D00D3BD00 /* Exercise2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B81D2A4D920D00D3BD00 /* Exercise2Tests.swift */; };
 		2824B8282A4D920D00D3BD00 /* Exercise2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B8272A4D920D00D3BD00 /* Exercise2UITests.swift */; };
 		2824B82A2A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B8292A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift */; };
-		28F33AB32A4E708F004FE027 /* LifeCycleOfSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F33AB22A4E708E004FE027 /* LifeCycleOfSwiftUIApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		2824B8232A4D920D00D3BD00 /* Exercise2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2824B8272A4D920D00D3BD00 /* Exercise2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITests.swift; sourceTree = "<group>"; };
 		2824B8292A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		28F33AB22A4E708E004FE027 /* LifeCycleOfSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleOfSwiftUIApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 				2824B8102A4D920D00D3BD00 /* Assets.xcassets */,
 				2824B80E2A4D920C00D3BD00 /* ContentView.swift */,
 				2824B80C2A4D920C00D3BD00 /* Exercise2App.swift */,
-				28F33AB22A4E708E004FE027 /* LifeCycleOfSwiftUIApp.swift */,
 				2824B8122A4D920D00D3BD00 /* Preview Content */,
 			);
 			path = Exercise2;
@@ -260,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F33AB32A4E708F004FE027 /* LifeCycleOfSwiftUIApp.swift in Sources */,
 				2824B80F2A4D920C00D3BD00 /* ContentView.swift in Sources */,
 				2824B80D2A4D920C00D3BD00 /* Exercise2App.swift in Sources */,
 			);

@@ -7,11 +7,29 @@
 
 import SwiftUI
 
-//@main
+@main
 struct Exercise2App: App {
+
+    @Environment(\.scenePhase) private var scenePhase
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL { url in
+                    print("URL -> \(url.absoluteString)")
+                }
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .active:
+                print("App state -> ACTIVE")
+            case .background:
+                print("App state -> BACKGROUND")
+            case .inactive:
+                print("App state -> INACTIVE")
+            @unknown default:
+                print("App state -> UNKNOWN")
+            }
         }
     }
 }
