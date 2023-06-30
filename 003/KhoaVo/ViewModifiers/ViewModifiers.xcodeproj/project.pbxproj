@@ -29,9 +29,12 @@
 		8A54B2462A4BE38F0097F6A9 /* SubAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2352A4BE38F0097F6A9 /* SubAvatarView.swift */; };
 		8A54B2472A4BE38F0097F6A9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2372A4BE38F0097F6A9 /* Character.swift */; };
 		8A54B2482A4BE38F0097F6A9 /* ListAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2382A4BE38F0097F6A9 /* ListAvatarView.swift */; };
-		8A54B24B2A4BF2030097F6A9 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B24A2A4BF2030097F6A9 /* ButtonsView.swift */; };
+		8A54B24B2A4BF2030097F6A9 /* IncreaseValueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B24A2A4BF2030097F6A9 /* IncreaseValueButtonView.swift */; };
 		8A54B24E2A4BF2730097F6A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B24D2A4BF2730097F6A9 /* LoginView.swift */; };
 		8A54B2512A4C173B0097F6A9 /* TextFieldDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2502A4C173B0097F6A9 /* TextFieldDemoView.swift */; };
+		8A54B2542A4C2B7F0097F6A9 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2532A4C2B7F0097F6A9 /* ButtonModifier.swift */; };
+		8A8943842A4E7452000BD956 /* ListButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943832A4E7452000BD956 /* ListButtonView.swift */; };
+		8A8943862A4E7EDE000BD956 /* CustomLayoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943852A4E7EDE000BD956 /* CustomLayoutButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,9 +80,12 @@
 		8A54B2352A4BE38F0097F6A9 /* SubAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubAvatarView.swift; sourceTree = "<group>"; };
 		8A54B2372A4BE38F0097F6A9 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8A54B2382A4BE38F0097F6A9 /* ListAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAvatarView.swift; sourceTree = "<group>"; };
-		8A54B24A2A4BF2030097F6A9 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		8A54B24A2A4BF2030097F6A9 /* IncreaseValueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseValueButtonView.swift; sourceTree = "<group>"; };
 		8A54B24D2A4BF2730097F6A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8A54B2502A4C173B0097F6A9 /* TextFieldDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDemoView.swift; sourceTree = "<group>"; };
+		8A54B2532A4C2B7F0097F6A9 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		8A8943832A4E7452000BD956 /* ListButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButtonView.swift; sourceTree = "<group>"; };
+		8A8943852A4E7EDE000BD956 /* CustomLayoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,7 +286,9 @@
 		8A54B2492A4BE8230097F6A9 /* Exercise8 */ = {
 			isa = PBXGroup;
 			children = (
-				8A54B24A2A4BF2030097F6A9 /* ButtonsView.swift */,
+				8A8943832A4E7452000BD956 /* ListButtonView.swift */,
+				8A54B2522A4C2B550097F6A9 /* Modifiers */,
+				8A8943822A4E7397000BD956 /* SubViews */,
 			);
 			path = Exercise8;
 			sourceTree = "<group>";
@@ -299,6 +307,23 @@
 				8A54B22C2A4BE38F0097F6A9 /* TextFieldModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		8A54B2522A4C2B550097F6A9 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8A54B2532A4C2B7F0097F6A9 /* ButtonModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		8A8943822A4E7397000BD956 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A8943852A4E7EDE000BD956 /* CustomLayoutButtonView.swift */,
+				8A54B24A2A4BF2030097F6A9 /* IncreaseValueButtonView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,17 +460,20 @@
 				8A54B2462A4BE38F0097F6A9 /* SubAvatarView.swift in Sources */,
 				8A54B2422A4BE38F0097F6A9 /* TextFieldModifier.swift in Sources */,
 				8A54B23D2A4BE38F0097F6A9 /* ImageFullSafeAreaView.swift in Sources */,
+				8A8943842A4E7452000BD956 /* ListButtonView.swift in Sources */,
 				8A54B1F42A4BE36C0097F6A9 /* ViewModifiersApp.swift in Sources */,
 				8A54B2432A4BE38F0097F6A9 /* AvatarView.swift in Sources */,
-				8A54B24B2A4BF2030097F6A9 /* ButtonsView.swift in Sources */,
+				8A54B24B2A4BF2030097F6A9 /* IncreaseValueButtonView.swift in Sources */,
 				8A54B23C2A4BE38F0097F6A9 /* ImageUnderTextView.swift in Sources */,
 				8A54B23A2A4BE38F0097F6A9 /* ThreeSliderView.swift in Sources */,
 				8A54B2482A4BE38F0097F6A9 /* ListAvatarView.swift in Sources */,
 				8A54B23E2A4BE38F0097F6A9 /* ImageFixedSize.swift in Sources */,
+				8A8943862A4E7EDE000BD956 /* CustomLayoutButtonView.swift in Sources */,
 				8A54B23B2A4BE38F0097F6A9 /* ImageRoundedView.swift in Sources */,
 				8A54B2392A4BE38F0097F6A9 /* CustomSliderView.swift in Sources */,
 				8A54B2442A4BE38F0097F6A9 /* ButtonCalculatorView.swift in Sources */,
 				8A54B23F2A4BE38F0097F6A9 /* ImageFullScreenView.swift in Sources */,
+				8A54B2542A4C2B7F0097F6A9 /* ButtonModifier.swift in Sources */,
 				8A54B2512A4C173B0097F6A9 /* TextFieldDemoView.swift in Sources */,
 				8A54B2412A4BE38F0097F6A9 /* TextFieldStyleView.swift in Sources */,
 				8A54B24E2A4BF2730097F6A9 /* LoginView.swift in Sources */,

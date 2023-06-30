@@ -59,11 +59,11 @@ struct TextFieldStyleView: View {
         switch type {
         case .username:
             TextField(type.placeholder, text: $data)
-                .myTextFieldModifier(type: type)
+                .textFieldModifier(type: type)
         case .password:
             if isShowingPassword {
                 TextField(type.placeholder, text: $data)
-                    .myTextFieldModifier(type: type)
+                    .textFieldModifier(type: type)
                     .overlay(
                         Button(action: {
                             isShowingPassword = !isShowingPassword
@@ -75,7 +75,7 @@ struct TextFieldStyleView: View {
                     )
             } else {
                 SecureField(type.placeholder, text: $data)
-                    .myTextFieldModifier(type: type)
+                    .textFieldModifier(type: type)
                     .overlay(
                         Button(action: {
                             isShowingPassword = !isShowingPassword

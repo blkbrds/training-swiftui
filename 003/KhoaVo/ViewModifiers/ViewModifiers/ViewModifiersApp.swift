@@ -10,8 +10,6 @@ import SwiftUI
 @main
 struct ViewModifiersApp: App {
 
-    @State var string: String = "abc"
-
     var body: some Scene {
         WindowGroup {
 
@@ -31,10 +29,10 @@ struct ViewModifiersApp: App {
             // CustomImageView()
 
             /// ---Bai Tap 6+7---
-            TextFieldDemoView()
+            // TextFieldDemoView()
 
             /// ---Bai Tap 8---
-            // ButtonsView()
+            ListButtonView()
 
             /// ---Bai Tap 9---
             // LoginView()
