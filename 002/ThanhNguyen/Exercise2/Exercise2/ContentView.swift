@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @Environment(\.colorScheme) var colorScheme
+    @State private var shouldShowingAlert = false
     let name: String
 
     private var titleColor: Color {
@@ -29,6 +30,26 @@ struct ContentView: View {
                 .font(.title)
                 .foregroundColor(titleColor)
                 .padding()
+            Button("Tap me") {
+                shouldShowingAlert = true
+            }
+            .alert(isPresented: $shouldShowingAlert, content: {
+                Alert(
+                    title: .init("Hello Thanh"),
+                    message: .init("How are you?"),
+                    primaryButton: .cancel(.init("Good")),
+                    secondaryButton: .default(.init("Not good"))
+                )
+            })
+            .frame(maxWidth: 100, maxHeight: 40)
+            .font(.system(size: 20, weight: .heavy, design: .rounded))
+            .padding(10)
+            .background(
+                LinearGradient(colors: [.pink, .orange], startPoint: .bottomLeading, endPoint: .topTrailing)
+            )
+            .foregroundColor(.white)
+            .cornerRadius(.infinity)
+            .shadow(color: .pink, radius: 5)
         }
         .padding()
     }
