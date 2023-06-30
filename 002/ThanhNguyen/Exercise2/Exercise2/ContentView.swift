@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
 
     @Environment(\.colorScheme) var colorScheme
-    @State private var shouldShowingAlert = false
+    @State var shouldShowingAlert = false
     let name: String
+    public var didAppear: ((Self) -> Void)?
 
     private var titleColor: Color {
         colorScheme == .light ? .black : .white
@@ -32,6 +33,9 @@ struct ContentView: View {
                 .padding()
             Button("Tap me") {
                 shouldShowingAlert = true
+            }
+            .onAppear {
+                self.didAppear?(self)
             }
             .alert(isPresented: $shouldShowingAlert, content: {
                 Alert(
