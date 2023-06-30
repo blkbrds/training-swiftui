@@ -44,6 +44,7 @@
 		2824B8232A4D920D00D3BD00 /* Exercise2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2824B8272A4D920D00D3BD00 /* Exercise2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITests.swift; sourceTree = "<group>"; };
 		2824B8292A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28F33AB52A4E849B004FE027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		2824B80B2A4D920C00D3BD00 /* Exercise2 */ = {
 			isa = PBXGroup;
 			children = (
+				28F33AB52A4E849B004FE027 /* Info.plist */,
 				2824B8102A4D920D00D3BD00 /* Assets.xcassets */,
 				2824B80E2A4D920C00D3BD00 /* ContentView.swift */,
 				2824B80C2A4D920C00D3BD00 /* Exercise2App.swift */,
@@ -420,6 +422,7 @@
 				DEVELOPMENT_TEAM = CMZ44KR78X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Exercise2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,6 +453,7 @@
 				DEVELOPMENT_TEAM = CMZ44KR78X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Exercise2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

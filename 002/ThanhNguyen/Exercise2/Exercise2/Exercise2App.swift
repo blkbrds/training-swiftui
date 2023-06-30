@@ -11,12 +11,15 @@ import SwiftUI
 struct Exercise2App: App {
 
     @Environment(\.scenePhase) private var scenePhase
+    @State var name: String = ""
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(name: name)
                 .onOpenURL { url in
-                    print("URL -> \(url.absoluteString)")
+                    name = url.valueOf("name") ?? ""
+                    print(url.absoluteURL)
+                    print(name)
                 }
         }
         .onChange(of: scenePhase) { phase in
@@ -31,5 +34,12 @@ struct Exercise2App: App {
                 print("App state -> UNKNOWN")
             }
         }
+    }
+}
+
+extension URL {
+    func valueOf(_ queryParamaterName: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == queryParamaterName })?.value
     }
 }
