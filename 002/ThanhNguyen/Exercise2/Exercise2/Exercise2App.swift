@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct Exercise2App: App {
 
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @Environment(\.scenePhase) private var scenePhase
     @State var name: String = ""
 
