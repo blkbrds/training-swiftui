@@ -14,19 +14,28 @@ struct ContentView: View {
     @Binding var name: String
     public var didAppear: ((Self) -> Void)?
 
+    private let titleColor: Color = Color("titleColor")
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .font(.system(size: 40))
                 .imageScale(.large)
-                .foregroundColor(Color(BaseColor.titleColor.rawValue))
+                .foregroundColor(titleColor)
                 .padding(.bottom, 15)
             Text("Hello, world!")
                 .font(.system(size: 25, weight: .heavy, design: .monospaced))
-                .foregroundColor(Color(BaseColor.titleColor.rawValue))
+                .foregroundColor(titleColor)
+            Text("Light mode always")
+                .frame(maxWidth: .infinity, maxHeight: 50)
+                .background(.brown)
+                .font(.system(size: 25, weight: .heavy, design: .monospaced))
+                .foregroundColor(titleColor)
+                .cornerRadius(.infinity)
+                .environment(\.colorScheme, .light)
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(Color(BaseColor.titleColor.rawValue))
+                .foregroundColor(titleColor)
                 .padding()
             Button("Tap me") {
                 shouldShowingAlert = true
