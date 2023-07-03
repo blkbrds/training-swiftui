@@ -5,6 +5,7 @@
 //  Created by Thanh Nguyen X. [4] VN.Danang on 29/06/2023.
 //
 
+import SwiftUI
 import XCTest
 import ViewInspector
 @testable import Exercise2
@@ -18,11 +19,35 @@ final class Exercise2Tests: XCTestCase {
     private var contentView: ContentView!
 
     override func setUpWithError() throws {
-        contentView = ContentView(name: "")
+        contentView = ContentView(name: .constant(""))
     }
 
     override func tearDownWithError() throws {
         contentView = nil
+    }
+
+    func testTitleLightScheme() throws {
+        let contentView = ContentView(name: .constant("")).environment(\.colorScheme, .light)
+        let text = try contentView.inspect().find(text: "Hello, world!")
+        XCTAssertEqual(ColorScheme.light, try text.environment(\.colorScheme))
+    }
+
+    func testTitleDarkScheme() throws {
+        let contentView = ContentView(name: .constant("")).environment(\.colorScheme, .dark)
+        let text = try contentView.inspect().find(text: "Hello, world!")
+        XCTAssertEqual(ColorScheme.dark, try text.environment(\.colorScheme))
+    }
+
+    func testAlwaysLightTextWhenLightEnvironment() throws {
+        let contentView = ContentView(name: .constant("")).environment(\.colorScheme, .light)
+        let text = try contentView.inspect().find(text: "Light mode always")
+        XCTAssertEqual(ColorScheme.light, try text.environment(\.colorScheme))
+    }
+
+    func testAlwaysLightTextWhenDarkEnvironment() throws {
+        let contentView = ContentView(name: .constant("")).environment(\.colorScheme, .dark)
+        let text = try contentView.inspect().find(text: "Light mode always")
+        XCTAssertEqual(ColorScheme.light, try text.environment(\.colorScheme))
     }
 
     func testShowAlert() throws {
