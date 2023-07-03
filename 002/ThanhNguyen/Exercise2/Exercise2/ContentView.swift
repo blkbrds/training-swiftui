@@ -11,26 +11,22 @@ struct ContentView: View {
 
     @Environment(\.colorScheme) var colorScheme
     @State var shouldShowingAlert = false
-    let name: String
+    @Binding var name: String
     public var didAppear: ((Self) -> Void)?
-
-    private var environmentColor: Color {
-        colorScheme == .light ? .black : .white
-    }
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .font(.system(size: 40))
                 .imageScale(.large)
-                .foregroundColor(environmentColor)
+                .foregroundColor(Color(BaseColor.titleColor.rawValue))
                 .padding(.bottom, 15)
             Text("Hello, world!")
                 .font(.system(size: 25, weight: .heavy, design: .monospaced))
-                .foregroundColor(environmentColor)
+                .foregroundColor(Color(BaseColor.titleColor.rawValue))
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(environmentColor)
+                .foregroundColor(Color(BaseColor.titleColor.rawValue))
                 .padding()
             Button("Tap me") {
                 shouldShowingAlert = true
@@ -66,6 +62,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(name: "")
+        ContentView(name: .constant(""))
     }
 }

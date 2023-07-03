@@ -16,7 +16,7 @@ struct Exercise2App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(name: name)
+            ContentView(name: $name)
                 .onOpenURL { url in
                     name = url.valueOf("name") ?? ""
                     print(url.absoluteURL)
