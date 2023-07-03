@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106976642A52AFA50073CB00 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 106976632A52AFA50073CB00 /* ViewInspector */; };
 		107E45EA2A38523F00381292 /* ConnectAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45E92A38523F00381292 /* ConnectAPIApp.swift */; };
 		107E45EC2A38523F00381292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45EB2A38523F00381292 /* ContentView.swift */; };
 		107E45EE2A38524200381292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107E45ED2A38524200381292 /* Assets.xcassets */; };
@@ -18,6 +19,13 @@
 		10D1D5442A49366500588F66 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 10D1D5432A49366500588F66 /* test.json */; };
 		10D1D5472A493BE100588F66 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1D5462A493BE100588F66 /* MockService.swift */; };
 		10D1D5492A49404400588F66 /* NetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D1D5482A49404400588F66 /* NetworkingViewModel.swift */; };
+		10DA6F092A4D678900F6D7EC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F082A4D678900F6D7EC /* Mock.swift */; };
+		10DA6F0C2A4D67F500F6D7EC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F0B2A4D67F500F6D7EC /* APIManager.swift */; };
+		10DA6F0E2A4D682B00F6D7EC /* CocktailGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F0D2A4D682B00F6D7EC /* CocktailGlass.swift */; };
+		10DA6F122A4D68F100F6D7EC /* CocktailGlassTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F112A4D68F100F6D7EC /* CocktailGlassTest.swift */; };
+		10DA6F142A4D69C800F6D7EC /* CocktailGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F132A4D69C800F6D7EC /* CocktailGlassView.swift */; };
+		10DA6F162A4D6A0700F6D7EC /* CocktailGlassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA6F152A4D6A0700F6D7EC /* CocktailGlassViewModel.swift */; };
+		10DA6F1A2A4D6CE600F6D7EC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 10DA6F192A4D6CE600F6D7EC /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,13 @@
 		10D1D5432A49366500588F66 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		10D1D5462A493BE100588F66 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		10D1D5482A49404400588F66 /* NetworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewModel.swift; sourceTree = "<group>"; };
+		10DA6F082A4D678900F6D7EC /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		10DA6F0B2A4D67F500F6D7EC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		10DA6F0D2A4D682B00F6D7EC /* CocktailGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailGlass.swift; sourceTree = "<group>"; };
+		10DA6F112A4D68F100F6D7EC /* CocktailGlassTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailGlassTest.swift; sourceTree = "<group>"; };
+		10DA6F132A4D69C800F6D7EC /* CocktailGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailGlassView.swift; sourceTree = "<group>"; };
+		10DA6F152A4D6A0700F6D7EC /* CocktailGlassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailGlassViewModel.swift; sourceTree = "<group>"; };
+		10DA6F192A4D6CE600F6D7EC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106976642A52AFA50073CB00 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +136,7 @@
 		107E45E82A38523F00381292 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				10DA6F0A2A4D67C700F6D7EC /* CompletionHandling */,
 				107E46022A3ACF9E00381292 /* Networking */,
 				107E45E92A38523F00381292 /* ConnectAPIApp.swift */,
 				107E45EB2A38523F00381292 /* ContentView.swift */,
@@ -161,6 +178,8 @@
 				10D1D5422A4929FD00588F66 /* JsonTest */,
 				10D1D51A2A40561100588F66 /* ConnectAPITests.swift */,
 				10D1D5462A493BE100588F66 /* MockService.swift */,
+				10DA6F082A4D678900F6D7EC /* Mock.swift */,
+				10DA6F112A4D68F100F6D7EC /* CocktailGlassTest.swift */,
 			);
 			path = ConnectAPITests;
 			sourceTree = "<group>";
@@ -168,9 +187,37 @@
 		10D1D5422A4929FD00588F66 /* JsonTest */ = {
 			isa = PBXGroup;
 			children = (
+				10DA6F192A4D6CE600F6D7EC /* data.json */,
 				10D1D5432A49366500588F66 /* test.json */,
 			);
 			path = JsonTest;
+			sourceTree = "<group>";
+		};
+		10DA6F0A2A4D67C700F6D7EC /* CompletionHandling */ = {
+			isa = PBXGroup;
+			children = (
+				10DA6F102A4D689E00F6D7EC /* Screen */,
+				10DA6F0F2A4D689400F6D7EC /* Model */,
+			);
+			path = CompletionHandling;
+			sourceTree = "<group>";
+		};
+		10DA6F0F2A4D689400F6D7EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10DA6F0B2A4D67F500F6D7EC /* APIManager.swift */,
+				10DA6F0D2A4D682B00F6D7EC /* CocktailGlass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10DA6F102A4D689E00F6D7EC /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				10DA6F132A4D69C800F6D7EC /* CocktailGlassView.swift */,
+				10DA6F152A4D6A0700F6D7EC /* CocktailGlassViewModel.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +236,8 @@
 			dependencies = (
 			);
 			name = ConnectAPI;
+			packageProductDependencies = (
+			);
 			productName = ConnectAPI;
 			productReference = 107E45E62A38523F00381292 /* ConnectAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +292,9 @@
 				10D1D51D2A40561100588F66 /* PBXTargetDependency */,
 			);
 			name = ConnectAPITests;
+			packageProductDependencies = (
+				106976632A52AFA50073CB00 /* ViewInspector */,
+			);
 			productName = ConnectAPITests;
 			productReference = 10D1D5182A40561100588F66 /* ConnectAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -283,6 +335,9 @@
 				Base,
 			);
 			mainGroup = 107E45DD2A38523F00381292;
+			packageReferences = (
+				106976622A52AFA50073CB00 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 107E45E72A38523F00381292 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,6 +358,7 @@
 				107E45F12A38524200381292 /* Preview Assets.xcassets in Resources */,
 				107E45EE2A38524200381292 /* Assets.xcassets in Resources */,
 				10D1D5442A49366500588F66 /* test.json in Resources */,
+				10DA6F1A2A4D6CE600F6D7EC /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DA6F0E2A4D682B00F6D7EC /* CocktailGlass.swift in Sources */,
 				10D1D5492A49404400588F66 /* NetworkingViewModel.swift in Sources */,
+				10DA6F142A4D69C800F6D7EC /* CocktailGlassView.swift in Sources */,
 				10D1D5132A400BF200588F66 /* Networking.swift in Sources */,
+				10DA6F0C2A4D67F500F6D7EC /* APIManager.swift in Sources */,
 				107E45EC2A38523F00381292 /* ContentView.swift in Sources */,
 				107E45EA2A38523F00381292 /* ConnectAPIApp.swift in Sources */,
+				10DA6F162A4D6A0700F6D7EC /* CocktailGlassViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +423,8 @@
 			files = (
 				10D1D51B2A40561100588F66 /* ConnectAPITests.swift in Sources */,
 				10D1D5472A493BE100588F66 /* MockService.swift in Sources */,
+				10DA6F122A4D68F100F6D7EC /* CocktailGlassTest.swift in Sources */,
+				10DA6F092A4D678900F6D7EC /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +772,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		106976622A52AFA50073CB00 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		106976632A52AFA50073CB00 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 106976622A52AFA50073CB00 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 107E45DE2A38523F00381292 /* Project object */;
 }

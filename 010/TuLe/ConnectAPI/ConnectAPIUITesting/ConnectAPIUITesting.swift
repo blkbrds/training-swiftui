@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import ConnectAPI
 
 final class ConnectAPIUITesting: XCTestCase {
 
