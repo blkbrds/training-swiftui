@@ -14,22 +14,23 @@ struct ContentView: View {
     let name: String
     public var didAppear: ((Self) -> Void)?
 
-    private var titleColor: Color {
+    private var environmentColor: Color {
         colorScheme == .light ? .black : .white
     }
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
+                .font(.system(size: 40))
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
-                .environment(\.colorScheme, .light)
+                .foregroundColor(environmentColor)
+                .padding(.bottom, 15)
             Text("Hello, world!")
                 .font(.system(size: 25, weight: .heavy, design: .monospaced))
-                .foregroundColor(titleColor)
+                .foregroundColor(environmentColor)
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(titleColor)
+                .foregroundColor(environmentColor)
                 .padding()
             Button("Tap me") {
                 shouldShowingAlert = true
@@ -49,7 +50,11 @@ struct ContentView: View {
             .font(.system(size: 20, weight: .heavy, design: .rounded))
             .padding(10)
             .background(
-                LinearGradient(colors: [.pink, .orange], startPoint: .bottomLeading, endPoint: .topTrailing)
+                LinearGradient(
+                    colors: colorScheme == .light ? [.pink, .orange] : [.cyan, .blue],
+                    startPoint: .bottomLeading,
+                    endPoint: .topTrailing
+                )
             )
             .foregroundColor(.white)
             .cornerRadius(.infinity)
