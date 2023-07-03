@@ -81,6 +81,13 @@ Với *SwiftUI*, bạn sẽ tiếp cận với khái niệm **SwiftUI App Life C
 * `#1` Hiển thị giao diện màn hình & Text theo Dark mode hoặc Light mode từ setting của thiết bị
 * `#2` Hiển thị giao diện độc lập với chế dộ Dark & Light mode của thiết bị
 
+**Đảm bảo 4 bước thực hiện như sau:**
+
+* Lấy biến môi trường ra. Thực hiện if...else để thay đổi giao diện theo từng loại giá trị. Cụ thể là Color
+* Thay vì Color phải if...else thì hay tạo 1 Color Set trong file Assests và định nghĩa sẵn màu cho từng giá trị
+* Truyền 1 giá trị nào đó của biến môi trường cho view cha để nó không bị ảnh hưởng bởi thiết bị
+* Truyền 1 giá trị nào đó của biến môi trường cho view con để nó không bị ảnh hưởng bởi view cha. Và thấy được phân cấp view ảnh hưởng như thế nào trong việc các giá trị của biến môi trường truyền qua lần lượt các cấp view.
+
 ### Mô tả
 
 > *(chưa cập nhật ... )*
