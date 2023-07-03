@@ -9,33 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
     @State var shouldShowingAlert = false
     @Binding var name: String
     public var didAppear: ((Self) -> Void)?
-
-    private let titleColor: Color = Color("titleColor")
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .font(.system(size: 40))
                 .imageScale(.large)
-                .foregroundColor(titleColor)
+                .foregroundColor(Color("titleColor"))
                 .padding(.bottom, 15)
             Text("Hello, world!")
                 .font(.system(size: 25, weight: .heavy, design: .monospaced))
-                .foregroundColor(titleColor)
+                .foregroundColor(Color("titleColor"))
             Text("Light mode always")
                 .frame(maxWidth: .infinity, maxHeight: 50)
                 .background(.brown)
                 .font(.system(size: 25, weight: .heavy, design: .monospaced))
-                .foregroundColor(titleColor)
+                .foregroundColor(Color("titleColor"))
                 .cornerRadius(.infinity)
                 .environment(\.colorScheme, .light)
             Text((name != "") ? name : "---")
                 .font(.title)
-                .foregroundColor(titleColor)
+                .foregroundColor(Color("titleColor"))
                 .padding()
             Button("Tap me") {
                 shouldShowingAlert = true
