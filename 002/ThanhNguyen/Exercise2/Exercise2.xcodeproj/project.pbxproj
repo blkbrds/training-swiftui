@@ -16,6 +16,7 @@
 		2824B82A2A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B8292A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift */; };
 		2824E3962A4EB55C0099C498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824E3952A4EB55C0099C498 /* AppDelegate.swift */; };
 		2824E3992A4EC5700099C498 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 2824E3982A4EC5700099C498 /* ViewInspector */; };
+		28714FB42A52A5360058651A /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28714FB32A52A5360058651A /* BaseColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2824B8272A4D920D00D3BD00 /* Exercise2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITests.swift; sourceTree = "<group>"; };
 		2824B8292A4D920E00D3BD00 /* Exercise2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2824E3952A4EB55C0099C498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28714FB32A52A5360058651A /* BaseColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColor.swift; sourceTree = "<group>"; };
 		28F33AB52A4E849B004FE027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				2824B80E2A4D920C00D3BD00 /* ContentView.swift */,
 				2824B80C2A4D920C00D3BD00 /* Exercise2App.swift */,
 				2824B8122A4D920D00D3BD00 /* Preview Content */,
+				28714FB32A52A5360058651A /* BaseColor.swift */,
 			);
 			path = Exercise2;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28714FB42A52A5360058651A /* BaseColor.swift in Sources */,
 				2824E3962A4EB55C0099C498 /* AppDelegate.swift in Sources */,
 				2824B80F2A4D920C00D3BD00 /* ContentView.swift in Sources */,
 				2824B80D2A4D920C00D3BD00 /* Exercise2App.swift in Sources */,
