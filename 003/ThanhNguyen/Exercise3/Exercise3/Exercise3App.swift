@@ -11,7 +11,8 @@ import SwiftUI
 struct Exercise3App: App {
     var body: some Scene {
         WindowGroup {
-            AvatarView() // part 1
+//            AvatarView() // part 1
+            ListAvatarView() // part 2
         }
     }
 }
