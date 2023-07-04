@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2E935A2A53AB9A0042E2E6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E93592A53AB9A0042E2E6 /* Router.swift */; };
 		8A54B1F42A4BE36C0097F6A9 /* ViewModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B1F32A4BE36C0097F6A9 /* ViewModifiersApp.swift */; };
 		8A54B1F82A4BE3700097F6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54B1F72A4BE3700097F6A9 /* Assets.xcassets */; };
 		8A54B1FB2A4BE3700097F6A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54B1FA2A4BE3700097F6A9 /* Preview Assets.xcassets */; };
@@ -35,6 +36,11 @@
 		8A54B2542A4C2B7F0097F6A9 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B2532A4C2B7F0097F6A9 /* ButtonModifier.swift */; };
 		8A8943842A4E7452000BD956 /* ListButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943832A4E7452000BD956 /* ListButtonView.swift */; };
 		8A8943862A4E7EDE000BD956 /* CustomLayoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943852A4E7EDE000BD956 /* CustomLayoutButtonView.swift */; };
+		8A89438A2A4EBA8F000BD956 /* AppColorTextLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943892A4EBA8F000BD956 /* AppColorTextLoginModifier.swift */; };
+		8A89438C2A4EBA9F000BD956 /* LoginTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A89438B2A4EBA9F000BD956 /* LoginTextFieldModifier.swift */; };
+		8A89438E2A4EC09B000BD956 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A89438D2A4EC09B000BD956 /* LoginButtonView.swift */; };
+		8A8943902A4EC113000BD956 /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A89438F2A4EC113000BD956 /* LoginTextFieldView.swift */; };
+		8A8943932A4EC474000BD956 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8943922A4EC474000BD956 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A2E93592A53AB9A0042E2E6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8A54B1F02A4BE36C0097F6A9 /* ViewModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewModifiers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A54B1F32A4BE36C0097F6A9 /* ViewModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiersApp.swift; sourceTree = "<group>"; };
 		8A54B1F72A4BE3700097F6A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +93,11 @@
 		8A54B2532A4C2B7F0097F6A9 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		8A8943832A4E7452000BD956 /* ListButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButtonView.swift; sourceTree = "<group>"; };
 		8A8943852A4E7EDE000BD956 /* CustomLayoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayoutButtonView.swift; sourceTree = "<group>"; };
+		8A8943892A4EBA8F000BD956 /* AppColorTextLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorTextLoginModifier.swift; sourceTree = "<group>"; };
+		8A89438B2A4EBA9F000BD956 /* LoginTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldModifier.swift; sourceTree = "<group>"; };
+		8A89438D2A4EC09B000BD956 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
+		8A89438F2A4EC113000BD956 /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
+		8A8943922A4EC474000BD956 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +158,7 @@
 				8A54B2292A4BE38F0097F6A9 /* Exercise6+7 */,
 				8A54B2492A4BE8230097F6A9 /* Exercise8 */,
 				8A54B24C2A4BF2550097F6A9 /* Exercise9 */,
+				8A8943912A4EC450000BD956 /* Exercise10 */,
 				8A54B1F92A4BE3700097F6A9 /* Preview Content */,
 			);
 			path = ViewModifiers;
@@ -296,6 +309,8 @@
 		8A54B24C2A4BF2550097F6A9 /* Exercise9 */ = {
 			isa = PBXGroup;
 			children = (
+				8A8943882A4EBA69000BD956 /* SubViews */,
+				8A8943872A4EBA53000BD956 /* Modifiers */,
 				8A54B24D2A4BF2730097F6A9 /* LoginView.swift */,
 			);
 			path = Exercise9;
@@ -324,6 +339,33 @@
 				8A54B24A2A4BF2030097F6A9 /* IncreaseValueButtonView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		8A8943872A4EBA53000BD956 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8A8943892A4EBA8F000BD956 /* AppColorTextLoginModifier.swift */,
+				8A89438B2A4EBA9F000BD956 /* LoginTextFieldModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		8A8943882A4EBA69000BD956 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A89438D2A4EC09B000BD956 /* LoginButtonView.swift */,
+				8A89438F2A4EC113000BD956 /* LoginTextFieldView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		8A8943912A4EC450000BD956 /* Exercise10 */ = {
+			isa = PBXGroup;
+			children = (
+				8A2E93592A53AB9A0042E2E6 /* Router.swift */,
+				8A8943922A4EC474000BD956 /* WelcomeView.swift */,
+			);
+			path = Exercise10;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,14 +513,20 @@
 				8A8943862A4E7EDE000BD956 /* CustomLayoutButtonView.swift in Sources */,
 				8A54B23B2A4BE38F0097F6A9 /* ImageRoundedView.swift in Sources */,
 				8A54B2392A4BE38F0097F6A9 /* CustomSliderView.swift in Sources */,
+				8A8943902A4EC113000BD956 /* LoginTextFieldView.swift in Sources */,
 				8A54B2442A4BE38F0097F6A9 /* ButtonCalculatorView.swift in Sources */,
+				8A89438A2A4EBA8F000BD956 /* AppColorTextLoginModifier.swift in Sources */,
 				8A54B23F2A4BE38F0097F6A9 /* ImageFullScreenView.swift in Sources */,
 				8A54B2542A4C2B7F0097F6A9 /* ButtonModifier.swift in Sources */,
 				8A54B2512A4C173B0097F6A9 /* TextFieldDemoView.swift in Sources */,
+				8A2E935A2A53AB9A0042E2E6 /* Router.swift in Sources */,
 				8A54B2412A4BE38F0097F6A9 /* TextFieldStyleView.swift in Sources */,
 				8A54B24E2A4BF2730097F6A9 /* LoginView.swift in Sources */,
 				8A54B2472A4BE38F0097F6A9 /* Character.swift in Sources */,
+				8A89438C2A4EBA9F000BD956 /* LoginTextFieldModifier.swift in Sources */,
 				8A54B2402A4BE38F0097F6A9 /* CustomImageView.swift in Sources */,
+				8A89438E2A4EC09B000BD956 /* LoginButtonView.swift in Sources */,
+				8A8943932A4EC474000BD956 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

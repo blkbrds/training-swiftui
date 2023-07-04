@@ -10,6 +10,18 @@ import SwiftUI
 @main
 struct ViewModifiersApp: App {
 
+    @StateObject var coordinator = Coordinator()
+
+    @ViewBuilder
+    var rootView: some View {
+        switch coordinator.screenType {
+        case .welcome:
+            WelcomeView()
+        case .login:
+            LoginView(username: "", password: "")
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
 
@@ -32,10 +44,14 @@ struct ViewModifiersApp: App {
             // TextFieldDemoView()
 
             /// ---Bai Tap 8---
-            ListButtonView()
+            // ListButtonView()
 
             /// ---Bai Tap 9---
-            // LoginView()
+            // LoginView(username: "", password: "")
+
+            /// ---Bai Tap10 ---
+            rootView
+                .environmentObject(coordinator)
         }
     }
 }
