@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B975E12A53D7C400ED3AC2 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B975E02A53D7C400ED3AC2 /* AvatarView.swift */; };
 		28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9D5782A52CE0400070E6E /* Exercise3App.swift */; };
 		28B9D57B2A52CE0400070E6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9D57A2A52CE0400070E6E /* ContentView.swift */; };
 		28B9D57D2A52CE0500070E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B9D57C2A52CE0500070E6E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28B975E02A53D7C400ED3AC2 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		28B9D5752A52CE0400070E6E /* Exercise3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B9D5782A52CE0400070E6E /* Exercise3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise3App.swift; sourceTree = "<group>"; };
 		28B9D57A2A52CE0400070E6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28B975DF2A53CE3900ED3AC2 /* Part1 */ = {
+			isa = PBXGroup;
+			children = (
+				28B975E02A53D7C400ED3AC2 /* AvatarView.swift */,
+			);
+			path = Part1;
+			sourceTree = "<group>";
+		};
 		28B9D56C2A52CE0400070E6E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		28B9D5772A52CE0400070E6E /* Exercise3 */ = {
 			isa = PBXGroup;
 			children = (
+				28B975DF2A53CE3900ED3AC2 /* Part1 */,
 				28B9D5782A52CE0400070E6E /* Exercise3App.swift */,
 				28B9D57A2A52CE0400070E6E /* ContentView.swift */,
 				28B9D57C2A52CE0500070E6E /* Assets.xcassets */,
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B9D57B2A52CE0400070E6E /* ContentView.swift in Sources */,
+				28B975E12A53D7C400ED3AC2 /* AvatarView.swift in Sources */,
 				28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
