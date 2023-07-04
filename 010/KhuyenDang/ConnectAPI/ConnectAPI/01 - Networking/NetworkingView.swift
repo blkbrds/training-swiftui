@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NetworkingView: View {
 
-    @ObservedObject var viewModel: NetworkingViewModel
+    @ObservedObject var viewModel = NetworkingViewModel()
 
     var body: some View {
         List(viewModel.drinks, id: \.self) { drink in
@@ -24,6 +24,6 @@ struct NetworkingView: View {
 
 struct NetworkingView_Previews: PreviewProvider {
     static var previews: some View {
-        NetworkingView(viewModel: NetworkingViewModel())
+        NetworkingView()
     }
 }
