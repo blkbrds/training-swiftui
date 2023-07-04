@@ -22,6 +22,7 @@ struct LoginView: View {
     var body: some View {
         let bannerWidth: CGFloat = screenSize.width * 323 / 375
         let bannerHeight: CGFloat = bannerWidth * 205 / 323
+        let isInValid: Bool = username.isEmpty || password.isEmpty
         VStack(alignment: .leading, spacing: 10) {
             VStack {
             }.frame(width: .infinity, height: 10)
@@ -43,6 +44,7 @@ struct LoginView: View {
             VStack(spacing: 15) {
                 TextField("Username", text: $username)
                     .padding([.leading, .trailing], 40)
+                    .submitLabel(.next)
 
                 VStack {
 
@@ -50,8 +52,9 @@ struct LoginView: View {
                 .frame(width: screenSize.width - 80, height: 1)
                 .background(Color(Define.loginTintColor))
 
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
                     .padding([.leading, .trailing], 40)
+                    .submitLabel(.done)
 
                 VStack {
 
@@ -69,14 +72,36 @@ struct LoginView: View {
             .padding(.top, 10)
 
             VStack {
-                LoginButtonView(title: "Let's Combat!")
-                .cornerRadius(29)
+                HStack {
+                    LoginButtonView(title: "Let's Combat!")
+                        .onButtonPress {
+                            print("Login Success !")
+                        }
+                    .disabled(isInValid)
+                    .overlay {
+                        if isInValid {
+                            Color(red: 1, green: 1, blue: 1, opacity: 0.8)
+                        }
+                    }
+                    .cornerRadius(29)
+                }
                 .frame(width: 224, height: 58)
 
-                Text("Connect With:")
-                    .appColorTextLoginModifier()
+                HStack {
+                    LoginButtonView(title: "Let's Cancel!")
+                        .onButtonPress {
+                            username = ""
+                            password = ""
+                        }
+                    .cornerRadius(29)
+                }
+                .frame(width: 224, height: 58)
 
                 HStack(spacing: 5) {
+
+                    Text("Connect With")
+                        .appColorTextLoginModifier()
+
                     Button {
                         
                     } label: {
@@ -92,7 +117,7 @@ struct LoginView: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 10) {
+                HStack(spacing: 5) {
                     Text("Don't have an account?")
                         .normalTextLoginModifier()
 
