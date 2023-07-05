@@ -15,7 +15,6 @@ struct ContentView: View {
     @State var textInfo: String = ""
     @State var infoShow: String = ""
     internal var didAppear: ((Self) -> Void)?
-//    internal var didAppear2: ((Self) -> Void)?
     
     
     var body: some View {
@@ -51,7 +50,6 @@ struct ContentView: View {
                     Button("Submit", role: .cancel) {
                         infoShow = textInfo
                     }
-//                    .onAppear { self.didAppear2?(self) }
                 } message: {
                     Text("Please enter your UserName")
                 }
