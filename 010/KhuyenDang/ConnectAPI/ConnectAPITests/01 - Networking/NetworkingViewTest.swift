@@ -14,11 +14,15 @@ import Combine
 
 @MainActor class NetworkingViewTest: XCTestCase {
 
-    var viewModel: NetworkingViewModel!
+    private var viewModel: NetworkingViewModel!
 
-    func testSuccessListDrinks() throws {
+    @MainActor override func setUp() {
+        super.setUp()
         let mockApi = MockSuccessDrinkService()
         viewModel = NetworkingViewModel(drinkService: mockApi)
+    }
+
+    func testSuccessListDrinks() throws {
         let view = NetworkingView(viewModel: viewModel)
         try view.inspect().list().callOnAppear()
         waitUntil(viewModel.$drinks, equals: DummyData.dummyNameDrinks)
