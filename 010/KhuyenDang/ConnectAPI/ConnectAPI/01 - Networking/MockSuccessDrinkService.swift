@@ -22,4 +22,18 @@ class MockSuccessDrinkService: FakeServer {
             print("Lỗi khi ánh xạ JSON: \(error.localizedDescription)")
         }
     }
+
+    func getDrinks(completion: @escaping APICompletion<[Drink]>) {
+        guard let fileURL = Bundle.main.url(forResource: "drinkjs", withExtension: "json") else {
+            return
+        }
+        do {
+            let jsonData = try Data(contentsOf: fileURL)
+            let decoder = JSONDecoder()
+            let cocktail = try decoder.decode(Cocktail.self, from: jsonData)
+            completion(.success(cocktail.drinks))
+        } catch {
+            print("Lỗi khi ánh xạ JSON: \(error.localizedDescription)")
+        }
+    }
 }

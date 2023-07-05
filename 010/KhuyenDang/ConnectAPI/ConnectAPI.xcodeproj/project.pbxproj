@@ -23,7 +23,13 @@
 		8A5DA5C62A53C4CF00774BE4 /* MockFailureDrinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DA5C52A53C4CE00774BE4 /* MockFailureDrinkService.swift */; };
 		8A5DA5C72A53C73300774BE4 /* drinkjs.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A5DA5C12A53C45B00774BE4 /* drinkjs.json */; };
 		8A5DA5CA2A53CBA200774BE4 /* NetworkingViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DA5C92A53CBA200774BE4 /* NetworkingViewTest.swift */; };
-		8A5DA5CD2A53CBBC00774BE4 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 8A5DA5CC2A53CBBC00774BE4 /* ViewInspector */; };
+		8ACB869C2A5413AB0089D605 /* CompletionHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB869B2A5413AB0089D605 /* CompletionHandlingView.swift */; };
+		8ACB869E2A5413BF0089D605 /* CompletionHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB869D2A5413BF0089D605 /* CompletionHandlingViewModel.swift */; };
+		8ACB86A12A5415120089D605 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A02A5415120089D605 /* ApiManager.swift */; };
+		8ACB86A42A5415400089D605 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A32A5415400089D605 /* Cocktail.swift */; };
+		8ACB86A72A5418440089D605 /* CompletionHandlingViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A62A5418440089D605 /* CompletionHandlingViewTest.swift */; };
+		8ACB86A92A5418550089D605 /* CompletionHandlingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */; };
+		8ACB86AC2A541E9F0089D605 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 8ACB86AB2A541E9F0089D605 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		8A5DA5C52A53C4CE00774BE4 /* MockFailureDrinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFailureDrinkService.swift; sourceTree = "<group>"; };
 		8A5DA5C82A53C8B800774BE4 /* ConnectAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConnectAPI.xctestplan; sourceTree = "<group>"; };
 		8A5DA5C92A53CBA200774BE4 /* NetworkingViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewTest.swift; sourceTree = "<group>"; };
+		8ACB869B2A5413AB0089D605 /* CompletionHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingView.swift; sourceTree = "<group>"; };
+		8ACB869D2A5413BF0089D605 /* CompletionHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewModel.swift; sourceTree = "<group>"; };
+		8ACB86A02A5415120089D605 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		8ACB86A32A5415400089D605 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		8ACB86A62A5418440089D605 /* CompletionHandlingViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewTest.swift; sourceTree = "<group>"; };
+		8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A5DA5CD2A53CBBC00774BE4 /* ViewInspector in Frameworks */,
+				8ACB86AC2A541E9F0089D605 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +127,8 @@
 		8A5DA58A2A53B2DB00774BE4 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB869F2A5415060089D605 /* Model */,
+				8ACB869A2A54138F0089D605 /* 02 - Completion Handling */,
 				8A5DA5B52A53B35100774BE4 /* 01 - Networking */,
 				8A5DA58B2A53B2DB00774BE4 /* ConnectAPIApp.swift */,
 				8A5DA58D2A53B2DB00774BE4 /* ContentView.swift */,
@@ -135,6 +149,7 @@
 		8A5DA59B2A53B2DC00774BE4 /* ConnectAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB86A52A54182B0089D605 /* 02 - CompletionHandling */,
 				8A5DA5C02A53C45B00774BE4 /* JsonTest */,
 				8A5DA5BD2A53C3CA00774BE4 /* Ext */,
 				8A5DA5B82A53B76600774BE4 /* 01 - Networking */,
@@ -188,6 +203,41 @@
 			path = JsonTest;
 			sourceTree = "<group>";
 		};
+		8ACB869A2A54138F0089D605 /* 02 - Completion Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB869B2A5413AB0089D605 /* CompletionHandlingView.swift */,
+				8ACB869D2A5413BF0089D605 /* CompletionHandlingViewModel.swift */,
+			);
+			path = "02 - Completion Handling";
+			sourceTree = "<group>";
+		};
+		8ACB869F2A5415060089D605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB86A22A54152A0089D605 /* Service */,
+				8ACB86A32A5415400089D605 /* Cocktail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8ACB86A22A54152A0089D605 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB86A02A5415120089D605 /* ApiManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8ACB86A52A54182B0089D605 /* 02 - CompletionHandling */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB86A62A5418440089D605 /* CompletionHandlingViewTest.swift */,
+				8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */,
+			);
+			path = "02 - CompletionHandling";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,7 +273,7 @@
 			);
 			name = ConnectAPITests;
 			packageProductDependencies = (
-				8A5DA5CC2A53CBBC00774BE4 /* ViewInspector */,
+				8ACB86AB2A541E9F0089D605 /* ViewInspector */,
 			);
 			productName = ConnectAPITests;
 			productReference = 8A5DA5982A53B2DC00774BE4 /* ConnectAPITests.xctest */;
@@ -280,7 +330,7 @@
 			);
 			mainGroup = 8A5DA57F2A53B2DB00774BE4;
 			packageReferences = (
-				8A5DA5CB2A53CBBC00774BE4 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				8ACB86AA2A541E9F0089D605 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 8A5DA5892A53B2DB00774BE4 /* Products */;
 			projectDirPath = "";
@@ -327,10 +377,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5DA5BA2A53BD0400774BE4 /* NetworkingViewModel.swift in Sources */,
+				8ACB86A12A5415120089D605 /* ApiManager.swift in Sources */,
 				8A5DA5C62A53C4CF00774BE4 /* MockFailureDrinkService.swift in Sources */,
+				8ACB86A42A5415400089D605 /* Cocktail.swift in Sources */,
 				8A5DA58E2A53B2DB00774BE4 /* ContentView.swift in Sources */,
 				8A5DA5C42A53C4BC00774BE4 /* MockSuccessDrinkService.swift in Sources */,
 				8A5DA5B72A53B37E00774BE4 /* NetworkingView.swift in Sources */,
+				8ACB869E2A5413BF0089D605 /* CompletionHandlingViewModel.swift in Sources */,
+				8ACB869C2A5413AB0089D605 /* CompletionHandlingView.swift in Sources */,
 				8A5DA58C2A53B2DB00774BE4 /* ConnectAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5DA5BC2A53C39900774BE4 /* NetworkingViewModelTest.swift in Sources */,
+				8ACB86A92A5418550089D605 /* CompletionHandlingViewModelTest.swift in Sources */,
 				8A5DA59D2A53B2DC00774BE4 /* ConnectAPITests.swift in Sources */,
 				8A5DA5CA2A53CBA200774BE4 /* NetworkingViewTest.swift in Sources */,
+				8ACB86A72A5418440089D605 /* CompletionHandlingViewTest.swift in Sources */,
 				8A5DA5BF2A53C3E000774BE4 /* Ext+WaitUntil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,7 +717,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8A5DA5CB2A53CBBC00774BE4 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+		8ACB86AA2A541E9F0089D605 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
 			requirement = {
@@ -672,9 +728,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8A5DA5CC2A53CBBC00774BE4 /* ViewInspector */ = {
+		8ACB86AB2A541E9F0089D605 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8A5DA5CB2A53CBBC00774BE4 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			package = 8ACB86AA2A541E9F0089D605 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -1,5 +1,5 @@
 //
-//  NetworkingViewModelTest.swift
+//  CompletionHandlingViewModelTest.swift
 //  ConnectAPITests
 //
 //  Created by Khuyen Dang T.T. VN.Danang on 04/07/2023.
@@ -11,20 +11,20 @@ import SwiftUI
 import Combine
 @testable import ConnectAPI
 
-@MainActor class NetworkingViewModelTest: XCTestCase {
+@MainActor class CompletionHandlingViewModelTest: XCTestCase {
 
-    private var viewModel: NetworkingViewModel!
+    private var viewModel: CompletionHandlingViewModel!
 
     @MainActor override func setUp() {
         super.setUp()
         let mockApi = MockSuccessDrinkService()
-        viewModel = NetworkingViewModel(drinkService: mockApi)
+        viewModel = CompletionHandlingViewModel(drinkService: mockApi)
     }
 
     func testSuccessGetDrink() {
         let expectation = XCTestExpectation(description: "Completion called with success")
-        viewModel.fetchDrinks()
-        waitUntil(viewModel.$drinks, equals: DummyData.dummyNameDrinks)
+        viewModel.getDrink()
+        waitUntil(viewModel.$drinks, equals: DummyData.drinks)
         XCTAssertEqual(self.viewModel.drinks.count, 2)
         expectation.fulfill()
         wait(for: [expectation], timeout: 1.0)
@@ -33,24 +33,13 @@ import Combine
     func testFailureGetDrink() {
         let mockApi = MockFailureDrinkService()
         mockApi.shouldFail = true
-        viewModel = NetworkingViewModel(drinkService: mockApi)
+        viewModel = CompletionHandlingViewModel(drinkService: mockApi)
         let expectation = XCTestExpectation(description: "Completion called with error")
-        viewModel.fetchDrinks()
+        viewModel.getDrink()
         waitUntil(viewModel.$isShowError, equals: true)
         XCTAssertTrue(self.viewModel.isShowError)
-        XCTAssertEqual(self.viewModel.errorString, Define.error)
+        XCTAssertEqual(self.viewModel.errorString, APIError.invalidResponse.localizedDescription)
         expectation.fulfill()
         wait(for: [expectation], timeout: 1.0)
     }
-}
-
-struct Define {
-    static let error = "Fail in process get data"
-}
-struct DummyData {
-    static let dummyNameDrinks = ["Margarita", "Blue Margarita"]
-    static let drinks: [Drink] = [
-        Drink(idDrink: "11007", name: "Margarita", image: "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg"),
-        Drink(idDrink: "11118", name: "Blue Margarita", image: "https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg")
-    ]
 }
