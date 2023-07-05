@@ -13,7 +13,8 @@ struct Exercise3App: App {
         WindowGroup {
 //            AvatarView() // part 1
 //            ListAvatarView() // part 2
-            CalculatorView() // part 3
+//            CalculatorView() // part 3
+            ColorSliderView() // part 4
         }
     }
 }
