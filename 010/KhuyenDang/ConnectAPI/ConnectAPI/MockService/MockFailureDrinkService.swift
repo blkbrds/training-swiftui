@@ -15,11 +15,15 @@ class MockFailureDrinkService: FakeServer {
             completion(nil, "Fail in process get data")
         }
     }
-    
+
     func getDrinks(completion: @escaping APICompletion<[Drink]>) {
         if shouldFail {
             let error = APIError.invalidResponse
             completion(.failure(error))
         }
+    }
+
+    func getDrinksWithAsync() async throws -> [Drink] {
+        throw APIError.invalidResponse
     }
 }

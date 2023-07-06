@@ -30,6 +30,9 @@
 		8ACB86A72A5418440089D605 /* CompletionHandlingViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A62A5418440089D605 /* CompletionHandlingViewTest.swift */; };
 		8ACB86A92A5418550089D605 /* CompletionHandlingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */; };
 		8ACB86AC2A541E9F0089D605 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 8ACB86AB2A541E9F0089D605 /* ViewInspector */; };
+		8ACB86AF2A550D210089D605 /* AsyncAwaitHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86AE2A550D210089D605 /* AsyncAwaitHandlingView.swift */; };
+		8ACB86B12A550D310089D605 /* AsyncAwaitHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86B02A550D310089D605 /* AsyncAwaitHandlingViewModel.swift */; };
+		8ACB86B82A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86B72A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		8ACB86A32A5415400089D605 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		8ACB86A62A5418440089D605 /* CompletionHandlingViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewTest.swift; sourceTree = "<group>"; };
 		8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlingViewModelTest.swift; sourceTree = "<group>"; };
+		8ACB86AE2A550D210089D605 /* AsyncAwaitHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingView.swift; sourceTree = "<group>"; };
+		8ACB86B02A550D310089D605 /* AsyncAwaitHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModel.swift; sourceTree = "<group>"; };
+		8ACB86B72A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 		8A5DA58A2A53B2DB00774BE4 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB86B92A5520710089D605 /* MockService */,
+				8ACB86AD2A550C930089D605 /* 03 - Async Await Handling */,
 				8ACB869F2A5415060089D605 /* Model */,
 				8ACB869A2A54138F0089D605 /* 02 - Completion Handling */,
 				8A5DA5B52A53B35100774BE4 /* 01 - Networking */,
@@ -149,10 +157,11 @@
 		8A5DA59B2A53B2DC00774BE4 /* ConnectAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				8ACB86B42A551F0C0089D605 /* 03 - Async Await Handling */,
 				8ACB86A52A54182B0089D605 /* 02 - CompletionHandling */,
+				8A5DA5B82A53B76600774BE4 /* 01 - Networking */,
 				8A5DA5C02A53C45B00774BE4 /* JsonTest */,
 				8A5DA5BD2A53C3CA00774BE4 /* Ext */,
-				8A5DA5B82A53B76600774BE4 /* 01 - Networking */,
 				8A5DA59C2A53B2DC00774BE4 /* ConnectAPITests.swift */,
 			);
 			path = ConnectAPITests;
@@ -172,8 +181,6 @@
 			children = (
 				8A5DA5B62A53B37E00774BE4 /* NetworkingView.swift */,
 				8A5DA5B92A53BD0400774BE4 /* NetworkingViewModel.swift */,
-				8A5DA5C32A53C4BC00774BE4 /* MockSuccessDrinkService.swift */,
-				8A5DA5C52A53C4CE00774BE4 /* MockFailureDrinkService.swift */,
 			);
 			path = "01 - Networking";
 			sourceTree = "<group>";
@@ -236,6 +243,32 @@
 				8ACB86A82A5418550089D605 /* CompletionHandlingViewModelTest.swift */,
 			);
 			path = "02 - CompletionHandling";
+			sourceTree = "<group>";
+		};
+		8ACB86AD2A550C930089D605 /* 03 - Async Await Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB86AE2A550D210089D605 /* AsyncAwaitHandlingView.swift */,
+				8ACB86B02A550D310089D605 /* AsyncAwaitHandlingViewModel.swift */,
+			);
+			path = "03 - Async Await Handling";
+			sourceTree = "<group>";
+		};
+		8ACB86B42A551F0C0089D605 /* 03 - Async Await Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB86B72A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift */,
+			);
+			path = "03 - Async Await Handling";
+			sourceTree = "<group>";
+		};
+		8ACB86B92A5520710089D605 /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				8A5DA5C32A53C4BC00774BE4 /* MockSuccessDrinkService.swift */,
+				8A5DA5C52A53C4CE00774BE4 /* MockFailureDrinkService.swift */,
+			);
+			path = MockService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,10 +412,12 @@
 				8A5DA5BA2A53BD0400774BE4 /* NetworkingViewModel.swift in Sources */,
 				8ACB86A12A5415120089D605 /* ApiManager.swift in Sources */,
 				8A5DA5C62A53C4CF00774BE4 /* MockFailureDrinkService.swift in Sources */,
+				8ACB86B12A550D310089D605 /* AsyncAwaitHandlingViewModel.swift in Sources */,
 				8ACB86A42A5415400089D605 /* Cocktail.swift in Sources */,
 				8A5DA58E2A53B2DB00774BE4 /* ContentView.swift in Sources */,
 				8A5DA5C42A53C4BC00774BE4 /* MockSuccessDrinkService.swift in Sources */,
 				8A5DA5B72A53B37E00774BE4 /* NetworkingView.swift in Sources */,
+				8ACB86AF2A550D210089D605 /* AsyncAwaitHandlingView.swift in Sources */,
 				8ACB869E2A5413BF0089D605 /* CompletionHandlingViewModel.swift in Sources */,
 				8ACB869C2A5413AB0089D605 /* CompletionHandlingView.swift in Sources */,
 				8A5DA58C2A53B2DB00774BE4 /* ConnectAPIApp.swift in Sources */,
@@ -397,6 +432,7 @@
 				8ACB86A92A5418550089D605 /* CompletionHandlingViewModelTest.swift in Sources */,
 				8A5DA59D2A53B2DC00774BE4 /* ConnectAPITests.swift in Sources */,
 				8A5DA5CA2A53CBA200774BE4 /* NetworkingViewTest.swift in Sources */,
+				8ACB86B82A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift in Sources */,
 				8ACB86A72A5418440089D605 /* CompletionHandlingViewTest.swift in Sources */,
 				8A5DA5BF2A53C3E000774BE4 /* Ext+WaitUntil.swift in Sources */,
 			);

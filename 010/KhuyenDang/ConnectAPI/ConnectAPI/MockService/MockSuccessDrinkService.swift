@@ -8,6 +8,7 @@
 import Foundation
 
 class MockSuccessDrinkService: FakeServer {
+
     func fetchDrinks(completion: @escaping ([String]?, String?) -> Void) {
         guard let fileURL = Bundle.main.url(forResource: "drinkjs", withExtension: "json") else {
             return
@@ -34,6 +35,20 @@ class MockSuccessDrinkService: FakeServer {
             completion(.success(cocktail.drinks))
         } catch {
             print("Lỗi khi ánh xạ JSON: \(error.localizedDescription)")
+        }
+    }
+
+    func getDrinksWithAsync() async throws -> [Drink] {
+        guard let fileURL = Bundle.main.url(forResource: "drinkjs", withExtension: "json") else {
+            throw APIError.invalidURL
+        }
+        do {
+            let jsonData = try Data(contentsOf: fileURL)
+            let decoder = JSONDecoder()
+            let cocktail = try JSONDecoder().decode(Cocktail.self, from: jsonData)
+            return cocktail.drinks
+        } catch {
+            throw APIError.invalidResponse
         }
     }
 }
