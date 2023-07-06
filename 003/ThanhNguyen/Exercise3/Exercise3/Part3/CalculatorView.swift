@@ -9,12 +9,61 @@ import SwiftUI
 
 struct CalculatorView: View {
 
-    private var matrixButton = [
-        ["AC", "+/_", "%", "÷"],
-        ["7", "8", "9", "×"],
-        ["4", "5", "6", "-"],
-        ["1", "2", "3", "+"],
-        ["0", ",", "="]
+    enum ButtonType {
+        case number
+        case calculation
+        case specialCalculation
+
+        var titleColor: Color {
+            switch self {
+            case .specialCalculation: return .black
+            default: return .white
+            }
+        }
+
+        var backgroundColor: Color {
+            switch self {
+            case .number: return Color("darkGray")
+            case .calculation: return .orange
+            case .specialCalculation: return Color("lightGray")
+            }
+        }
+    }
+
+    struct CalculatorButton {
+        let type: ButtonType
+        let title: String
+    }
+
+    private let matrixButton1: [[CalculatorButton]] = [
+        [
+            .init(type: .specialCalculation, title: "AC"),
+            .init(type: .specialCalculation, title: "+/_"),
+            .init(type: .specialCalculation, title: "%"),
+            .init(type: .calculation, title: "÷")
+        ],
+        [
+            .init(type: .number, title: "7"),
+            .init(type: .number, title: "8"),
+            .init(type: .number, title: "9"),
+            .init(type: .calculation, title: "×")
+        ],
+        [
+            .init(type: .number, title: "4"),
+            .init(type: .number, title: "5"),
+            .init(type: .number, title: "6"),
+            .init(type: .calculation, title: "-")
+        ],
+        [
+            .init(type: .number, title: "1"),
+            .init(type: .number, title: "2"),
+            .init(type: .number, title: "3"),
+            .init(type: .calculation, title: "+")
+        ],[
+            .init(type: .number, title: "0"),
+            .init(type: .number, title: "."),
+            .init(type: .calculation, title: "="),
+        ]
     ]
 
     var body: some View {
@@ -29,21 +78,21 @@ struct CalculatorView: View {
                         .padding(.trailing, 20)
                 }
                 let height = (geo.size.width - 5 * 10) / 4
-                ForEach(matrixButton, id: \.self) { row in
+                ForEach(Array(matrixButton1.enumerated()), id: \.offset) { row in
                     HStack(spacing: 10) {
-                        ForEach(row, id: \.self) { buttonText in
-                            Button(buttonText) {
-                                print(buttonText)
+                        ForEach(Array(row.element.enumerated()), id: \.offset) { button in
+                            Button(button.element.title) {
+                                print(button.element.title)
                             }
                             .frame(
-                                width: buttonText == "0"
+                                width: button.element.title == "0"
                                 ? (geo.size.width - 4 * 10) / 2 + 5
                                 : height,
                                 height: height
                             )
                             .font(.system(size: 30, weight: .heavy, design: .rounded))
-                            .foregroundColor(checkButtonColor(buttonText).foreground)
-                            .background(checkButtonColor(buttonText).background)
+                            .foregroundColor(button.element.type.titleColor)
+                            .background(button.element.type.backgroundColor)
                             .cornerRadius(.infinity)
                         }
                     }
@@ -51,17 +100,6 @@ struct CalculatorView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.black)
-        }
-    }
-
-    private func checkButtonColor(_ button: String) -> (foreground: Color, background: Color) {
-        switch button {
-        case "AC", "+/_", "%":
-            return (.black, Color("lightGray"))
-        case "÷", "×", "-", "+", "=":
-            return (.white, .orange)
-        default:
-            return (.white, Color("darkGray"))
         }
     }
 }
