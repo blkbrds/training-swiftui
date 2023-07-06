@@ -35,6 +35,20 @@ final class Lesson2Tests: XCTestCase {
         }
     }
     
+    func testCheckTextTitle() throws {
+        let myView = ContentView(name: "Light Mode")
+        let textHello = try myView.inspect().find(text: "Hello, SwiftUI Lesson 2")
+        let textHelloAgain = try myView.inspect().find(text: "Hello Again, SwiftUI Lesson 2")
+        XCTAssertEqual(try textHello.string(), "Hello, SwiftUI Lesson 2")
+        XCTAssertEqual(try textHelloAgain.string(), "Hello Again, SwiftUI Lesson 2")
+    }
+
+    func testCheckTitleButton() throws {
+        let myView = ContentView(name: "")
+        let enterInfoButton = try myView.inspect().find(text: "Tap Me Enter Info")
+        XCTAssertEqual(try enterInfoButton.string(), "Tap Me Enter Info")
+    }
+    
     func testLightModeScreen() throws {
         let myView = ContentView(name: "Light Mode").environment(\.colorScheme, ColorScheme.light)
         let textHello = try myView.inspect().find(text: "Hello, SwiftUI Lesson 2")

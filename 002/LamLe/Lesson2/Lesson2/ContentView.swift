@@ -20,19 +20,21 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, SwiftUI Lesson 2")
+                .italic()
                 .font(.system(size: 20, weight: .light, design: .serif))
                 .padding()
-                .background(colorScheme == .dark ? .gray : .white)
+                .background(Color("ColorSet"))
                 .cornerRadius(20)
             Text("Hello Again, SwiftUI Lesson 2")
                 .font(.system(size: 20, weight: .ultraLight, design: .serif))
                 .padding()
-                .foregroundColor(colorScheme == .dark ? .blue : .green)
+                .foregroundColor(Color("foregroundColorText"))
                 .environment(\.colorScheme, .light)
             Text((name != "") ? name : "---")
                 .font(.title)
                 .foregroundColor(Color.blue)
                 .padding()
+                .id(12)
             VStack {
                 Button("Tap Me Enter Info") {
                     isShowAlert = true
@@ -72,4 +74,3 @@ struct ContentView_Previews: PreviewProvider {
             .environment(\.colorScheme, .dark)
     }
 }
-
