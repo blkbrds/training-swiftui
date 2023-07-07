@@ -18,7 +18,7 @@ struct TextFieldModifier: ViewModifier {
             .font(.system(size: 20))
             .background(.white)
             .overlay(
-                RoundedRectangle(cornerRadius: 0)
+                Rectangle()
                     .stroke(.black, lineWidth: 1.5)
             )
     }

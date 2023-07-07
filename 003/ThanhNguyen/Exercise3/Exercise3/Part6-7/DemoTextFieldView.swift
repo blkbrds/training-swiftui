@@ -16,7 +16,7 @@ struct DemoTextFieldView: View {
         VStack(spacing: 20) {
             Text("Register")
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .font(.system(size: 40, weight: .semibold, design: .serif))
+                .font(.system(size: 40, weight: .thin, design: .serif))
             BaseTextField(data: $email, type: .email)
                 .frame(maxHeight: 50)
             BaseTextField(data: $password, type: .password)
