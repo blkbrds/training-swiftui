@@ -15,7 +15,8 @@ struct Exercise3App: App {
 //            ListAvatarView() // part 2
 //            CalculatorView() // part 3
 //            ColorSliderView() // part 4
-            ImageContentView() // part 5
+//            ImageContentView() // part 5
+            DemoTextFieldView() // part 6-7
         }
     }
 }
