@@ -12,6 +12,9 @@
 		2872B3E32A57B780008ABCC0 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E22A57B780008ABCC0 /* BaseTextField.swift */; };
 		2872B3E52A57BBE4008ABCC0 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E42A57BBE4008ABCC0 /* TextFieldModifier.swift */; };
 		2872B3E72A57C8FB008ABCC0 /* DemoTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E62A57C8FB008ABCC0 /* DemoTextFieldView.swift */; };
+		2872B3EA2A57F02D008ABCC0 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E92A57F02D008ABCC0 /* BaseButton.swift */; };
+		2872B3EC2A57F59E008ABCC0 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3EB2A57F59E008ABCC0 /* ButtonModifier.swift */; };
+		2872B3EE2A580797008ABCC0 /* DemoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3ED2A580797008ABCC0 /* DemoButtonView.swift */; };
 		28B975E12A53D7C400ED3AC2 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B975E02A53D7C400ED3AC2 /* AvatarView.swift */; };
 		28B975E42A54069200ED3AC2 /* ListAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B975E32A54069200ED3AC2 /* ListAvatarView.swift */; };
 		28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9D5782A52CE0400070E6E /* Exercise3App.swift */; };
@@ -47,6 +50,9 @@
 		2872B3E22A57B780008ABCC0 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		2872B3E42A57BBE4008ABCC0 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		2872B3E62A57C8FB008ABCC0 /* DemoTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTextFieldView.swift; sourceTree = "<group>"; };
+		2872B3E92A57F02D008ABCC0 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		2872B3EB2A57F59E008ABCC0 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		2872B3ED2A580797008ABCC0 /* DemoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoButtonView.swift; sourceTree = "<group>"; };
 		28B975E02A53D7C400ED3AC2 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		28B975E32A54069200ED3AC2 /* ListAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAvatarView.swift; sourceTree = "<group>"; };
 		28B9D5752A52CE0400070E6E /* Exercise3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,16 @@
 			path = "Part6-7";
 			sourceTree = "<group>";
 		};
+		2872B3E82A57EAA2008ABCC0 /* Part8 */ = {
+			isa = PBXGroup;
+			children = (
+				2872B3E92A57F02D008ABCC0 /* BaseButton.swift */,
+				2872B3EB2A57F59E008ABCC0 /* ButtonModifier.swift */,
+				2872B3ED2A580797008ABCC0 /* DemoButtonView.swift */,
+			);
+			path = Part8;
+			sourceTree = "<group>";
+		};
 		28B975DF2A53CE3900ED3AC2 /* Part1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +168,7 @@
 		28B9D5772A52CE0400070E6E /* Exercise3 */ = {
 			isa = PBXGroup;
 			children = (
+				2872B3E82A57EAA2008ABCC0 /* Part8 */,
 				281EEB172A56999D008FC74D /* Part6-7 */,
 				281EEB142A565C54008FC74D /* Part5 */,
 				281EEB112A55507E008FC74D /* Part4 */,
@@ -332,8 +349,11 @@
 				28B9D57B2A52CE0400070E6E /* ContentView.swift in Sources */,
 				28C91F532A550A90009FF88A /* CalculatorView.swift in Sources */,
 				2872B3E32A57B780008ABCC0 /* BaseTextField.swift in Sources */,
+				2872B3EE2A580797008ABCC0 /* DemoButtonView.swift in Sources */,
 				28B975E42A54069200ED3AC2 /* ListAvatarView.swift in Sources */,
 				28B975E12A53D7C400ED3AC2 /* AvatarView.swift in Sources */,
+				2872B3EA2A57F02D008ABCC0 /* BaseButton.swift in Sources */,
+				2872B3EC2A57F59E008ABCC0 /* ButtonModifier.swift in Sources */,
 				28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */,
 				2872B3E52A57BBE4008ABCC0 /* TextFieldModifier.swift in Sources */,
 				281EEB132A5551D9008FC74D /* ColorSliderView.swift in Sources */,

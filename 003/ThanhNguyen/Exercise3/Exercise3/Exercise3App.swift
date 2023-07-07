@@ -16,7 +16,8 @@ struct Exercise3App: App {
 //            CalculatorView() // part 3
 //            ColorSliderView() // part 4
 //            ImageContentView() // part 5
-            DemoTextFieldView() // part 6-7
+//            DemoTextFieldView() // part 6-7
+            DemoButtonView() // part 8
         }
     }
 }
