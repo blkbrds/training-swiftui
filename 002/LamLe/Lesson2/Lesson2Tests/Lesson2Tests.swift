@@ -49,22 +49,41 @@ final class Lesson2Tests: XCTestCase {
         XCTAssertEqual(try enterInfoButton.string(), "Tap Me Enter Info")
     }
     
-    func testLightModeScreen() throws {
+    // Kiểm tra Environment của title Hello ảnh hưởng theo content view
+    func testTitleHelloEviromentLightModeScreen() throws {
         let myView = ContentView(name: "Light Mode").environment(\.colorScheme, ColorScheme.light)
         let textHello = try myView.inspect().find(text: "Hello, SwiftUI Lesson 2")
-        let textHelloAgain = try myView.inspect().find(text: "Hello Again, SwiftUI Lesson 2")
         XCTAssertEqual(ColorScheme.light, try textHello.environment(\.colorScheme))
+    }
+
+    func testTitleHelloEviromentDarkModeScreen() throws {
+        let myView = ContentView(name: "Dark Mode").environment(\.colorScheme, ColorScheme.dark)
+        let textHello = try myView.inspect().find(text: "Hello, SwiftUI Lesson 2")
+        XCTAssertEqual(ColorScheme.dark, try textHello.environment(\.colorScheme))
+    }
+    
+    // Kiểm tra Environment của title Hello không ảnh hưởng với content view
+    func testTitleHelloAgainEviromentLightModeScreen() throws {
+        let myView = ContentView(name: "Light Mode").environment(\.colorScheme, ColorScheme.light)
+        let textHelloAgain = try myView.inspect().find(text: "Hello Again, SwiftUI Lesson 2")
         XCTAssertEqual(ColorScheme.light, try textHelloAgain.environment(\.colorScheme))
     }
     
-    func testDarkModeScreen() throws {
+    func testTitleHelloAgainEviromentDarkModeScreen() throws {
         let myView = ContentView(name: "Dark Mode").environment(\.colorScheme, ColorScheme.dark)
-        let textHello = try myView.inspect().find(text: "Hello, SwiftUI Lesson 2")
         let textHelloAgain = try myView.inspect().find(text: "Hello Again, SwiftUI Lesson 2")
-        XCTAssertEqual(ColorScheme.dark, try textHello.environment(\.colorScheme))
         XCTAssertNotEqual(ColorScheme.dark, try textHelloAgain.environment(\.colorScheme))
     }
     
+    // Kiểm tra view cha ảnh hưởng đến view con
+    func testTitleHelloAgainEviromentWithView() throws {
+        let myView = ContentView(name: "Dark Mode").environment(\.colorScheme, ColorScheme.dark)
+        let viewText = try myView.inspect().find(viewWithTag: "ViewOfText")
+        let textHelloAgain = try myView.inspect().find(text: "Hello Again, SwiftUI Lesson 2")
+        XCTAssertNotEqual(try viewText.environment(\.colorScheme), try textHelloAgain.environment(\.colorScheme))
+    }
+    
+    // Kiểm tra sự kiện show alert
     func testShowAlertAfterTapButton() throws {
         var myView = ContentView(name: "Test Info")
         let exp = myView.on(\.didAppear) { view in
