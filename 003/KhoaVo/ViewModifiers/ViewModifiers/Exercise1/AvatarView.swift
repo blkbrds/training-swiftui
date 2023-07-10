@@ -31,3 +31,9 @@ struct AvatarView: View {
         .padding()
     }
 }
+
+struct AvatarView_Previews: PreviewProvider {
+    static var previews: some View {
+        AvatarView()
+    }
+}

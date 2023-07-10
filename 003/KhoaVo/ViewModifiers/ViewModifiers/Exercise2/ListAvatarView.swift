@@ -63,3 +63,9 @@ struct ListAvatarView: View {
         return characters.count / numberOfItemsPerRow + 1
     }
 }
+
+struct ListAvatarView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListAvatarView()
+    }
+}

@@ -108,3 +108,9 @@ struct CalculatorView: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
+
+struct CalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorView()
+    }
+}

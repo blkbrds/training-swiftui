@@ -131,3 +131,9 @@ struct LoginView: View {
         .background(.white)
     }
 }
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(username: "", password: "")
+    }
+}

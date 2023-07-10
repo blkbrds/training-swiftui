@@ -40,3 +40,9 @@ struct ThreeSliderView: View {
         .edgesIgnoringSafeArea(.all)
     }
 }
+
+struct ThreeSliderView_Previews: PreviewProvider {
+    static var previews: some View {
+        ThreeSliderView()
+    }
+}

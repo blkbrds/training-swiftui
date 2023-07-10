@@ -35,3 +35,9 @@ struct CustomImageView: View {
         }
     }
 }
+
+struct CustomImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomImageView()
+    }
+}

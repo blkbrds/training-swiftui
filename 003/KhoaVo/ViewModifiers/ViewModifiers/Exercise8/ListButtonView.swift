@@ -19,3 +19,9 @@ struct ListButtonView: View {
         }
     }
 }
+
+struct ListButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListButtonView()
+    }
+}
