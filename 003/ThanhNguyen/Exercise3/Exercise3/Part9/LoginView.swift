@@ -34,7 +34,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20, weight: .bold))
                 }
-                .buttonModifier()
+                .baseButton()
                 .padding(.bottom, 5)
                 .disabled(isValidate == validateSignInButton(email: email, password: password))
                 Button {
@@ -46,7 +46,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20, weight: .bold))
                 }
-                .buttonModifier()
+                .baseButton()
                 .padding(.bottom, 20)
                 Text("Forgot password?")
                     .frame(maxWidth: .infinity, maxHeight: 10, alignment: .trailing)
