@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		106976642A52AFA50073CB00 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 106976632A52AFA50073CB00 /* ViewInspector */; };
+		106976672A5528440073CB00 /* AsyncAwaitHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106976662A5528440073CB00 /* AsyncAwaitHandlingView.swift */; };
+		1069766B2A554C570073CB00 /* AsyncAwaitHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1069766A2A554C570073CB00 /* AsyncAwaitHandlingViewModel.swift */; };
+		106976702A5BE33A0073CB00 /* MockBt3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1069766F2A5BE33A0073CB00 /* MockBt3.swift */; };
+		106976722A5BE85D0073CB00 /* AsyncAwaitHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106976712A5BE85D0073CB00 /* AsyncAwaitHandlingTest.swift */; };
 		107E45EA2A38523F00381292 /* ConnectAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45E92A38523F00381292 /* ConnectAPIApp.swift */; };
 		107E45EC2A38523F00381292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E45EB2A38523F00381292 /* ContentView.swift */; };
 		107E45EE2A38524200381292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107E45ED2A38524200381292 /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		106976662A5528440073CB00 /* AsyncAwaitHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingView.swift; sourceTree = "<group>"; };
+		1069766A2A554C570073CB00 /* AsyncAwaitHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModel.swift; sourceTree = "<group>"; };
+		1069766F2A5BE33A0073CB00 /* MockBt3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBt3.swift; sourceTree = "<group>"; };
+		106976712A5BE85D0073CB00 /* AsyncAwaitHandlingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingTest.swift; sourceTree = "<group>"; };
 		107E45E62A38523F00381292 /* ConnectAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		107E45E92A38523F00381292 /* ConnectAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAPIApp.swift; sourceTree = "<group>"; };
 		107E45EB2A38523F00381292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +119,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106976652A53C1C40073CB00 /* AsyncAwaitHandling */ = {
+			isa = PBXGroup;
+			children = (
+				106976662A5528440073CB00 /* AsyncAwaitHandlingView.swift */,
+				1069766A2A554C570073CB00 /* AsyncAwaitHandlingViewModel.swift */,
+			);
+			path = AsyncAwaitHandling;
+			sourceTree = "<group>";
+		};
+		1069766C2A5BE3030073CB00 /* Bt1 */ = {
+			isa = PBXGroup;
+			children = (
+				10D1D51A2A40561100588F66 /* ConnectAPITests.swift */,
+				10D1D5462A493BE100588F66 /* MockService.swift */,
+			);
+			path = Bt1;
+			sourceTree = "<group>";
+		};
+		1069766D2A5BE3110073CB00 /* Bt2 */ = {
+			isa = PBXGroup;
+			children = (
+				10DA6F082A4D678900F6D7EC /* Mock.swift */,
+				10DA6F112A4D68F100F6D7EC /* CocktailGlassTest.swift */,
+			);
+			path = Bt2;
+			sourceTree = "<group>";
+		};
+		1069766E2A5BE3240073CB00 /* Bt3 */ = {
+			isa = PBXGroup;
+			children = (
+				1069766F2A5BE33A0073CB00 /* MockBt3.swift */,
+				106976712A5BE85D0073CB00 /* AsyncAwaitHandlingTest.swift */,
+			);
+			path = Bt3;
+			sourceTree = "<group>";
+		};
 		107E45DD2A38523F00381292 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +180,7 @@
 		107E45E82A38523F00381292 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
+				106976652A53C1C40073CB00 /* AsyncAwaitHandling */,
 				10DA6F0A2A4D67C700F6D7EC /* CompletionHandling */,
 				107E46022A3ACF9E00381292 /* Networking */,
 				107E45E92A38523F00381292 /* ConnectAPIApp.swift */,
@@ -175,11 +220,10 @@
 		10D1D5192A40561100588F66 /* ConnectAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				1069766E2A5BE3240073CB00 /* Bt3 */,
+				1069766D2A5BE3110073CB00 /* Bt2 */,
+				1069766C2A5BE3030073CB00 /* Bt1 */,
 				10D1D5422A4929FD00588F66 /* JsonTest */,
-				10D1D51A2A40561100588F66 /* ConnectAPITests.swift */,
-				10D1D5462A493BE100588F66 /* MockService.swift */,
-				10DA6F082A4D678900F6D7EC /* Mock.swift */,
-				10DA6F112A4D68F100F6D7EC /* CocktailGlassTest.swift */,
 			);
 			path = ConnectAPITests;
 			sourceTree = "<group>";
@@ -395,7 +439,9 @@
 				10DA6F142A4D69C800F6D7EC /* CocktailGlassView.swift in Sources */,
 				10D1D5132A400BF200588F66 /* Networking.swift in Sources */,
 				10DA6F0C2A4D67F500F6D7EC /* APIManager.swift in Sources */,
+				106976672A5528440073CB00 /* AsyncAwaitHandlingView.swift in Sources */,
 				107E45EC2A38523F00381292 /* ContentView.swift in Sources */,
+				1069766B2A554C570073CB00 /* AsyncAwaitHandlingViewModel.swift in Sources */,
 				107E45EA2A38523F00381292 /* ConnectAPIApp.swift in Sources */,
 				10DA6F162A4D6A0700F6D7EC /* CocktailGlassViewModel.swift in Sources */,
 			);
@@ -421,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106976722A5BE85D0073CB00 /* AsyncAwaitHandlingTest.swift in Sources */,
+				106976702A5BE33A0073CB00 /* MockBt3.swift in Sources */,
 				10D1D51B2A40561100588F66 /* ConnectAPITests.swift in Sources */,
 				10D1D5472A493BE100588F66 /* MockService.swift in Sources */,
 				10DA6F122A4D68F100F6D7EC /* CocktailGlassTest.swift in Sources */,

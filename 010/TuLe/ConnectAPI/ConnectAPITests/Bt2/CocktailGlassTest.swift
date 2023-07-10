@@ -34,7 +34,7 @@ final class CocktailGlassTest: XCTestCase {
     }
     
     func testTapButton() throws {
-        var view = CocktailGlassView()
+        var view = CocktailGlassView(viewModel: self.sut)
         let expectation = XCTestExpectation(description: "Button Tapped")
         let exp = view.on(\.didAppear) { view in
             try view.find(button: "LoadApi").tap()
@@ -43,6 +43,9 @@ final class CocktailGlassTest: XCTestCase {
         ViewHosting.host(view: view)
         wait(for: [exp], timeout: 3)
         XCTAssertFalse(sut.data.cocktail.isEmpty)
+        let scroll = try view.inspect().scrollView()
+        let cell = try scroll.find(ViewType.LazyVGrid.self).forEach(0)
+        XCTAssertFalse(cell.isEmpty)
     }
 
     func testPerformanceExample() throws {
