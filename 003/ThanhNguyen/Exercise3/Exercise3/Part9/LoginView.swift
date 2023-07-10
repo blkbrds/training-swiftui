@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
 
+    @EnvironmentObject var appRouter: AppRouter
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isValidate: Bool = false
@@ -39,6 +40,7 @@ struct LoginView: View {
                 Button {
                     email = ""
                     password = ""
+                    appRouter.state = .welcome
                 } label: {
                     Text("Cancel")
                         .foregroundColor(.white)

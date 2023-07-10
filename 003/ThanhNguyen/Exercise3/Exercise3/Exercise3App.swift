@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct Exercise3App: App {
+
+    @StateObject var appRouter: AppRouter = .init()
+
     var body: some Scene {
         WindowGroup {
 //            AvatarView() // part 1
@@ -18,7 +21,18 @@ struct Exercise3App: App {
 //            ImageContentView() // part 5
 //            DemoTextFieldView() // part 6-7
 //            DemoButtonView() // part 8
-            LoginView() // part 9
+//            LoginView() // part 9
+            rootView.environmentObject(appRouter)
+        }
+    }
+
+    @ViewBuilder
+    var rootView: some View {
+        switch appRouter.state {
+        case .welcome:
+            WelcomeView()
+        case .login:
+            LoginView()
         }
     }
 }

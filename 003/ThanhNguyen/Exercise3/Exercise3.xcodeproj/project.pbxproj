@@ -26,6 +26,8 @@
 		28B9D5962A52CE0600070E6E /* Exercise3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B9D5952A52CE0600070E6E /* Exercise3UITestsLaunchTests.swift */; };
 		28C91F532A550A90009FF88A /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C91F522A550A90009FF88A /* CalculatorView.swift */; };
 		28FB12F02A5BADE1003C28AA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB12EF2A5BADE1003C28AA /* LoginView.swift */; };
+		28FB12F32A5BEC6F003C28AA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB12F22A5BEC6F003C28AA /* WelcomeView.swift */; };
+		28FB12F52A5BFF71003C28AA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB12F42A5BFF71003C28AA /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		28B9D5952A52CE0600070E6E /* Exercise3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28C91F522A550A90009FF88A /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		28FB12EF2A5BADE1003C28AA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		28FB12F22A5BEC6F003C28AA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		28FB12F42A5BFF71003C28AA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		28B9D5772A52CE0400070E6E /* Exercise3 */ = {
 			isa = PBXGroup;
 			children = (
+				28FB12F12A5BEC45003C28AA /* Part10 */,
 				28FB12EE2A5BABE1003C28AA /* Part9 */,
 				2872B3E82A57EAA2008ABCC0 /* Part8 */,
 				281EEB172A56999D008FC74D /* Part6-7 */,
@@ -180,6 +185,7 @@
 				28B975DF2A53CE3900ED3AC2 /* Part1 */,
 				28B9D5782A52CE0400070E6E /* Exercise3App.swift */,
 				28B9D57A2A52CE0400070E6E /* ContentView.swift */,
+				28FB12F42A5BFF71003C28AA /* AppRouter.swift */,
 				28B9D57C2A52CE0500070E6E /* Assets.xcassets */,
 				28B9D57E2A52CE0500070E6E /* Preview Content */,
 			);
@@ -225,6 +231,14 @@
 				28FB12EF2A5BADE1003C28AA /* LoginView.swift */,
 			);
 			path = Part9;
+			sourceTree = "<group>";
+		};
+		28FB12F12A5BEC45003C28AA /* Part10 */ = {
+			isa = PBXGroup;
+			children = (
+				28FB12F22A5BEC6F003C28AA /* WelcomeView.swift */,
+			);
+			path = Part10;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +381,9 @@
 				2872B3EC2A57F59E008ABCC0 /* ButtonModifier.swift in Sources */,
 				28FB12F02A5BADE1003C28AA /* LoginView.swift in Sources */,
 				28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */,
+				28FB12F32A5BEC6F003C28AA /* WelcomeView.swift in Sources */,
 				2872B3E52A57BBE4008ABCC0 /* TextFieldModifier.swift in Sources */,
+				28FB12F52A5BFF71003C28AA /* AppRouter.swift in Sources */,
 				281EEB132A5551D9008FC74D /* ColorSliderView.swift in Sources */,
 				281EEB162A565CA6008FC74D /* ImageContentView.swift in Sources */,
 				2872B3E72A57C8FB008ABCC0 /* DemoTextFieldView.swift in Sources */,
