@@ -17,7 +17,8 @@ struct Exercise3App: App {
 //            ColorSliderView() // part 4
 //            ImageContentView() // part 5
 //            DemoTextFieldView() // part 6-7
-            DemoButtonView() // part 8
+//            DemoButtonView() // part 8
+            LoginView() // part 9
         }
     }
 }

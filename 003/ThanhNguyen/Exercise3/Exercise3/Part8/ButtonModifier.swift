@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ButtonModifier: ViewModifier {
 
+    @Environment (\.isEnabled) var isEnabled
+
     func body(content: Content) -> some View {
         content
-            .frame(maxWidth: 300, maxHeight: 50)
-            .clipShape(RoundedRectangle(cornerRadius: .infinity, style: .continuous))
+            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(height: 50)
+            .background(isEnabled ? .black : .gray)
+            .bold()
+            .cornerRadius(5)
     }
 }
 

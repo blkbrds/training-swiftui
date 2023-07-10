@@ -89,7 +89,7 @@ struct BaseButton: View {
             if type.shouldShowBorderShadow {
                 RoundedRectangle(cornerRadius: .infinity)
                     .fill(.gray)
-                    .buttonModifier()
+                    .frame(width: 300, height: 50)
                     .shadow(color: .gray, radius: 2, x: 0, y: 1)
             }
             Button {
@@ -123,8 +123,7 @@ struct BaseButton: View {
                 }
                 .padding(10)
             }
-            .buttonModifier()
-            .frame(alignment: type.alignmentType)
+            .frame(width: 300, height: 50, alignment: type.alignmentType)
             .background(type.backgroundColor)
             .cornerRadius(.infinity)
         }
