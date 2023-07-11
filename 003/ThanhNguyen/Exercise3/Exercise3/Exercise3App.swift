@@ -11,6 +11,8 @@ import SwiftUI
 struct Exercise3App: App {
 
     @StateObject var appRouter: AppRouter = .init()
+    @State var email: String = ""
+    @State var password: String = ""
 
     var body: some Scene {
         WindowGroup {
@@ -22,7 +24,7 @@ struct Exercise3App: App {
 //            DemoTextFieldView() // part 6-7
 //            DemoButtonView() // part 8
 //            LoginView() // part 9
-            rootView.environmentObject(appRouter)
+            rootView.environmentObject(appRouter) // part 10
         }
     }
 
@@ -32,7 +34,7 @@ struct Exercise3App: App {
         case .welcome:
             WelcomeView()
         case .login:
-            LoginView()
+            LoginView(email: $email, password: $password)
         }
     }
 }

@@ -6,31 +6,43 @@
 //
 
 import XCTest
+import SwiftUI
+import ViewInspector
 @testable import Exercise3
 
 final class Exercise3Tests: XCTestCase {
 
+    private var loginView: LoginView!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        loginView = .init(email: .constant(""), password: .constant(""))
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        loginView = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testDisableSignInButton() throws {
+        loginView = .init(email: .constant(""), password: .constant(""))
+        let button = try loginView.inspect().find(button: "Sign in")
+        XCTAssertTrue(button.isDisabled())
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testEnableSignInButton() throws {
+        loginView = .init(email: .constant("thanh123"), password: .constant("abcd1234"))
+        let button = try loginView.inspect().find(button: "Sign in")
+        XCTAssertFalse(button.isDisabled())
+    }
+
+    func testClearAllText() throws {
+        guard var loginView else { return }
+        let expectation = loginView.on(\.didAppear) { view in
+            let button = try view.find(button: "Cancel")
+            try button.tap()
+            XCTAssertTrue(try view.actualView().email.isEmpty)
+            XCTAssertTrue(try view.actualView().password.isEmpty)
         }
+        ViewHosting.host(view: loginView)
+        wait(for: [expectation], timeout: 1)
     }
-
 }

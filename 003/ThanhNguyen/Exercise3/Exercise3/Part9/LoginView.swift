@@ -9,10 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @EnvironmentObject var appRouter: AppRouter
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @Binding var email: String
+    @Binding var password: String
     @State private var isValidate: Bool = false
+    public var didAppear: ((Self) -> Void)?
 
     var body: some View {
         ScrollView {
@@ -40,7 +40,6 @@ struct LoginView: View {
                 Button {
                     email = ""
                     password = ""
-                    appRouter.state = .welcome
                 } label: {
                     Text("Cancel")
                         .foregroundColor(.white)
@@ -48,6 +47,9 @@ struct LoginView: View {
                 }
                 .baseButton()
                 .padding(.bottom, 20)
+                .onAppear {
+                    self.didAppear?(self)
+                }
                 Text("Forgot password?")
                     .frame(maxWidth: .infinity, maxHeight: 10, alignment: .trailing)
                     .font(.system(size: 15, weight: .medium, design: .default))
@@ -87,6 +89,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(email: .constant(""), password: .constant(""))
     }
 }
