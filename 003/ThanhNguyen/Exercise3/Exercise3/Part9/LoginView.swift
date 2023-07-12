@@ -12,78 +12,91 @@ struct LoginView: View {
     @Binding var email: String
     @Binding var password: String
     @State private var isValidate: Bool = false
+    @State private var isChecked = false
     public var didAppear: ((Self) -> Void)?
 
     var body: some View {
-        ScrollView {
+        GeometryReader { geo in
             VStack {
-                Text("Login")
-                    .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
-                    .font(.system(size: 40, weight: .thin, design: .serif))
-                    .padding(.bottom, 20)
-                BaseTextField(data: $email, type: .email)
-                    .frame(height: 50)
-                    .padding(.bottom, 10)
-                BaseTextField(data: $password, type: .password)
-                    .frame(height: 50)
-                    .padding(.bottom, 10)
-                Button {
-                    print("--->", email, password)
-                } label: {
-                    Text("Sign in")
-                        .foregroundColor(.white)
-                        .font(.system(size: 20, weight: .bold))
-                }
-                .baseButton()
-                .padding(.bottom, 5)
-                .disabled(isValidate == validateSignInButton(email: email, password: password))
-                Button {
-                    email = ""
-                    password = ""
-                } label: {
-                    Text("Cancel")
-                        .foregroundColor(.white)
-                        .font(.system(size: 20, weight: .bold))
-                }
-                .baseButton()
-                .padding(.bottom, 20)
-                .onAppear {
-                    self.didAppear?(self)
-                }
-                Text("Forgot password?")
-                    .frame(maxWidth: .infinity, maxHeight: 10, alignment: .trailing)
-                    .font(.system(size: 15, weight: .medium, design: .default))
-                    .foregroundColor(.secondary)
-                    .padding(.trailing, 5)
-                    .onTapGesture {
-                        print("forgot password")
+                ZStack {
+                    Image("img_login")
+                        .resizable()
+                        .frame(width: geo.size.width, height: 300)
+                        .padding(.leading, 130)
+                    VStack(spacing: 15) {
+                        Text("Welcome back")
+                            .font(.system(size: 35, weight: .bold))
+                            .padding(.top, 80)
+                        Text("Sign in to access your account")
+                            .font(.system(size: 15, weight: .light))
+                            .foregroundColor(.primary)
                     }
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(.gray)
-                    .padding(20)
+                }
+                VStack(spacing: 15) {
+                    LoginTextField(data: $email, type: .email)
+                        .frame(height: 50)
+                        .padding([.trailing, .leading], 30)
+                    LoginTextField(data: $password, type: .password)
+                        .frame(height: 50)
+                        .padding([.trailing, .leading], 30)
+                    HStack(alignment: .bottom) {
+                        CheckBoxView(checked: $isChecked)
+                        Text("Remember me")
+                            .font(.system(size: 11, weight: .light))
+                            .foregroundColor(.black)
+                        Spacer()
+                        Button("Forget password ?") {
+                            email = ""
+                            password = ""
+                        }
+                        .font(.system(size: 11, weight: .regular))
+                        .foregroundColor(Color("backgroundPink"))
+                        .onAppear {
+                            self.didAppear?(self)
+                        }
+                    }
+                    .padding([.trailing, .leading], 30)
+                }
+                .frame(width: geo.size.width)
+                Spacer()
                 VStack(spacing: 20) {
-                    BaseButton(type: .facebook)
-                    BaseButton(type: .google)
-                    BaseButton(type: .apple)
+                    Button("Login") {
+                        print("--->", email, password)
+                    }
+                    .loginButton()
+                    .padding([.trailing, .leading], 30)
+                    .disabled(isValidate == validateSignInButton(email: email, password: password))
+                    HStack {
+                        Text("New member ?")
+                            .font(.system(size: 18, weight: .light))
+                        Button("Register now") {
+                            print("Register now")
+                        }
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(Color("backgroundPink"))
+                    }
                 }
                 .padding(.bottom, 20)
-                HStack {
-                    Text("Don't have an account?")
-                        .font(.system(size: 20))
-                    Button("Register") {
-                        print("register")
-                    }
-                    .font(.system(size: 20, weight: .bold))
-                    .foregroundColor(.pink)
-                }
+                .frame(width: geo.size.width)
             }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
-        .padding()
     }
 
     private func validateSignInButton(email: String, password: String) -> Bool {
         return email.count >= 8 && password.count >= 8
+    }
+}
+
+struct CheckBoxView: View {
+    @Binding var checked: Bool
+
+    var body: some View {
+        Image(systemName: checked ? "checkmark.square.fill" : "square")
+            .foregroundColor( checked ? .blue : .secondary)
+            .onTapGesture {
+                self.checked.toggle()
+            }
     }
 }
 
