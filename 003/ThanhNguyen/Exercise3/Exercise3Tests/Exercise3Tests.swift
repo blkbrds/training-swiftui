@@ -22,20 +22,39 @@ final class Exercise3Tests: XCTestCase {
         loginView = nil
     }
 
-    func testDisableSignInButton() throws {
+    func testDisableSignInButton_emailAndPasswordEmpty() throws {
         loginView = .init(email: "", password: "")
         let button = try loginView.inspect().find(button: "Login")
         XCTAssertTrue(button.isDisabled())
     }
 
+    func testDisableSignInButton_emailAndPasswordIncorrect() throws {
+        loginView = .init(email: "thanh.nguyen4@monstar-lab", password: "abcd1234")
+        let button = try loginView.inspect().find(button: "Login")
+        XCTAssertTrue(button.isDisabled())
+    }
+
+    func testDisableSignInButton_emailCorrect_passwordIncorrect() throws {
+        loginView = .init(email: "thanh.nguyen4@monstar-lab.com", password: "abcd1234")
+        let button = try loginView.inspect().find(button: "Login")
+        XCTAssertTrue(button.isDisabled())
+    }
+
+    func testDisableSignInButton_emailIncorrect_passwordCorrect() throws {
+        loginView = .init(email: "thanh.nguyen4@monstar-lab", password: "@Abcd123")
+        let button = try loginView.inspect().find(button: "Login")
+        XCTAssertTrue(button.isDisabled())
+    }
+
     func testEnableSignInButton() throws {
-        loginView = .init(email: "thanh123", password: "abcd1234")
+        loginView = .init(email: "thanh.nguyen4@monstar-lab.com", password: "@Abcd123")
         let button = try loginView.inspect().find(button: "Login")
         XCTAssertFalse(button.isDisabled())
     }
 
     func testClearAllText() throws {
         guard var loginView else { return }
+        loginView = .init(email: "thanh123", password: "abcd1234")
         let expectation = loginView.on(\.didAppear) { view in
             let button = try view.find(button: "Forget password ?")
             try button.tap()
