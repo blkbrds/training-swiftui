@@ -33,7 +33,7 @@ struct LoginFormBaiTap9App: View {
                     .frame(height: 90)
                     .padding(50)
                 VStack(alignment: .leading, spacing: 1.0) {
-                    TextField("User Name", text: $userName) { isBegin in
+                    TextField("Username", text: $userName) { isBegin in
                         if isBegin {
                             print("Bắt đầu nhập")
                         } else {
@@ -52,7 +52,7 @@ struct LoginFormBaiTap9App: View {
                         .foregroundColor(.red.opacity(0.8))
                 }
                 VStack {
-                    SecureField("PassWord", text: $passWord)
+                    SecureField("Password", text: $passWord)
                         .login(systemImageString: "lock", isTextFieldPassword: true)
                         .font(.system(size: 15, weight: .bold, design: .serif))
                         .foregroundColor(.red.opacity(0.8))
@@ -93,12 +93,16 @@ struct LoginFormBaiTap9App: View {
                     .disabled(validationTextField())
                     .onAppear { self.didAppear?(self) }
                 }.padding(20)
-                Button(action: {
-                    
-                }) {
-                    Text("Don't Have An Account ? Sign Up")
-                        .underline()
-                        .foregroundColor(.blue.opacity(0.8))
+                HStack {
+                    Text("Don't Have An Account ?")
+                        .foregroundColor(.black.opacity(0.8))
+                    Button(action: {
+                        
+                    }) {
+                        Text("Sign Up")
+                            .underline()
+                            .foregroundColor(.blue.opacity(0.8))
+                    }
                 }
                 HStack {
                     Button(action: {
