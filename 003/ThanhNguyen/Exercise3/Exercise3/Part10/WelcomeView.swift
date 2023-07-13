@@ -9,52 +9,52 @@ import SwiftUI
 
 struct WelcomeView: View {
 
-    struct WelcomeInfo {
-        let title: String
-        let subtitle: String
-        let imageStr: String
-    }
-
-    private let welcomeInfoArray: [WelcomeInfo] = [
-        .init(title: "Explore the world easily", subtitle: "To your desire", imageStr: "img_welcome1"),
-        .init(title: "Reach the unknown spot", subtitle: "To your destination", imageStr: "img_welcome2"),
-        .init(title: "Make connects with Travello", subtitle: "To your dream trip", imageStr: "img_welcome3")
-    ]
-
     @EnvironmentObject var appRouter: AppRouter
-
+    let numberOfPage: Int = 3
+    @State var title: String = "Explore the world easily"
+    @State var subtitle: String = "To your desire"
+    @State var imageName: String = "img_welcome1"
     @State var currentPage: Int = 0
 
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Image(welcomeInfoArray[currentPage].imageStr)
+                Image(imageName)
                     .resizable()
                     .frame(width: geo.size.width * 2 / 3, height: geo.size.height / 3)
                 VStack {
-                    Text(welcomeInfoArray[currentPage].title)
+                    Text(title)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
                         .font(.system(size: 50, weight: .bold))
                         .padding(.top, 100)
                         .padding(.leading)
-                    Text(welcomeInfoArray[currentPage].subtitle)
+                    Text(subtitle)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .lineLimit(1)
                         .font(.system(size: 30, weight: .light))
                         .padding(.leading)
                 }
                 HStack {
-                    ForEach(Array(welcomeInfoArray.enumerated()), id: \.offset) { index, info in
+                    ForEach(0..<numberOfPage, id: \.self) { i in
                         RoundedRectangle(cornerRadius: .infinity)
                             .frame(width: 20, height: 10)
-                            .foregroundColor(index == currentPage ? Color("backgroundPink") : Color("disablePink"))
+                            .foregroundColor(i == currentPage ? Color("backgroundPink") : Color("disablePink"))
                     }
                     Spacer()
                     Button(">") {
-                        if currentPage < welcomeInfoArray.count - 1 {
+                        if currentPage < numberOfPage - 1 {
                             self.currentPage += 1
+                            if currentPage == 1 {
+                                title = "Reach the unknown spot"
+                                subtitle = "To your destination"
+                                imageName = "img_welcome2"
+                            } else if currentPage == 2 {
+                                title = "Make connects with Travello"
+                                subtitle = "To your dream trip"
+                                imageName = "img_welcome3"
+                            }
                         } else {
                             appRouter.state = .login
                         }
