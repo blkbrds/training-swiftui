@@ -9,6 +9,12 @@ import SwiftUI
 
 struct LoginView: View {
 
+    private struct Constants {
+        // Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character
+        static let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%*?&#])[A-Za-z\\dd$@$!%*?&#]{8,}"
+        static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    }
+
     @State var email: String
     @State var password: String
     @State private var isValidate: Bool = false
@@ -79,7 +85,8 @@ struct LoginView: View {
     }
 
     private func validateSignInButton(email: String, password: String) -> Bool {
-        return email.count >= 8 && password.count >= 8
+        return email.isMatch(regex: Constants.emailRegex)
+        && password.isMatch(regex: Constants.passwordRegex)
     }
 }
 
@@ -98,5 +105,13 @@ struct CheckBoxView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(email: "", password: "")
+    }
+}
+
+extension String {
+    public func isMatch(regex: String) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: regex) else { return false }
+        let range = NSRange(location: 0, length: self.utf16.count)
+        return regex.firstMatch(in: self, range: range) != nil
     }
 }
