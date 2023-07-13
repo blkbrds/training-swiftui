@@ -15,7 +15,7 @@ final class Exercise3Tests: XCTestCase {
     private var loginView: LoginView!
 
     override func setUpWithError() throws {
-        loginView = .init(email: .constant(""), password: .constant(""))
+        loginView = .init(email: "", password: "")
     }
 
     override func tearDownWithError() throws {
@@ -23,13 +23,13 @@ final class Exercise3Tests: XCTestCase {
     }
 
     func testDisableSignInButton() throws {
-        loginView = .init(email: .constant(""), password: .constant(""))
+        loginView = .init(email: "", password: "")
         let button = try loginView.inspect().find(button: "Login")
         XCTAssertTrue(button.isDisabled())
     }
 
     func testEnableSignInButton() throws {
-        loginView = .init(email: .constant("thanh123"), password: .constant("abcd1234"))
+        loginView = .init(email: "thanh123", password: "abcd1234")
         let button = try loginView.inspect().find(button: "Login")
         XCTAssertFalse(button.isDisabled())
     }

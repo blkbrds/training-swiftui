@@ -9,38 +9,55 @@ import SwiftUI
 
 struct WelcomeView: View {
 
+    struct WelcomeInfo {
+        let title: String
+        let subtitle: String
+        let imageStr: String
+    }
+
+    private let welcomeInfoArray: [WelcomeInfo] = [
+        .init(title: "Explore the world easily", subtitle: "To your desire", imageStr: "img_welcome1"),
+        .init(title: "Reach the unknown spot", subtitle: "To your destination", imageStr: "img_welcome2"),
+        .init(title: "Make connects with Travello", subtitle: "To your dream trip", imageStr: "img_welcome3")
+    ]
+
     @EnvironmentObject var appRouter: AppRouter
 
-    let numberOfPage: Int = 3
-    var currentPage: Int = 3
+    @State var currentPage: Int = 0
 
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Image("img_welcome")
+                Image(welcomeInfoArray[currentPage].imageStr)
                     .resizable()
                     .frame(width: geo.size.width * 2 / 3, height: geo.size.height / 3)
                 VStack {
-                    Text("Make connects with Travello")
+                    Text(welcomeInfoArray[currentPage].title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
                         .font(.system(size: 50, weight: .bold))
                         .padding(.top, 100)
-                    Text("To your dream trip")
+                        .padding(.leading)
+                    Text(welcomeInfoArray[currentPage].subtitle)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .lineLimit(1)
                         .font(.system(size: 30, weight: .light))
                         .padding(.leading)
                 }
                 HStack {
-                    ForEach(0..<numberOfPage, id: \.self) { i in
+                    ForEach(Array(welcomeInfoArray.enumerated()), id: \.offset) { index, info in
                         RoundedRectangle(cornerRadius: .infinity)
                             .frame(width: 20, height: 10)
-                            .foregroundColor(i + 1 == currentPage ? Color("backgroundPink") : Color("disablePink"))
+                            .foregroundColor(index == currentPage ? Color("backgroundPink") : Color("disablePink"))
                     }
                     Spacer()
                     Button(">") {
-                        appRouter.state = .login
+                        if currentPage < welcomeInfoArray.count - 1 {
+                            self.currentPage += 1
+                        } else {
+                            appRouter.state = .login
+                        }
                     }
                     .frame(width: 60, height: 60)
                     .background(.black)
