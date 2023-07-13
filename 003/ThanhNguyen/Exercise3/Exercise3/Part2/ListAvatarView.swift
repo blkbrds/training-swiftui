@@ -13,44 +13,57 @@ struct ListAvatarView: View {
         static let spacing: CGFloat = 20
     }
 
-    let avatars: [String] = ["カイドウ1", "カイドウ2", "カイドウ3", "カイドウ4", "カイドウ5", "カイドウ6", "カイドウ7", "カイドウ8", "カイドウ9"]
+    struct AvatarInfo {
+        @State var name: String
+        let imageStr: String
+    }
+
+    let avatars: [AvatarInfo] = [
+        .init(name: "Kaido", imageStr: "img_kaido"),
+        .init(name: "Luffy", imageStr: "img_luffy"),
+        .init(name: "Big Mom", imageStr: "img_bigmom"),
+        .init(name: "Shank", imageStr: "img_shank"),
+        .init(name: "Garp", imageStr: "img_garp"),
+        .init(name: "Roger", imageStr: "img_roger"),
+        .init(name: "Buggy", imageStr: "img_buggy"),
+        .init(name: "Sakazuki", imageStr: "img_akainu"),
+        .init(name: "Kuzan", imageStr: "img_kuzan"),
+    ]
+
     let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        GeometryReader { geo in
-            VStack {
-                Spacer()
-                LazyVGrid(columns: columns,
-                          spacing: Constants.spacing) {
-                    ForEach(Array(avatars.enumerated()), id: \.1) { (index, name) in
-                        Avatar(
-                            name: name,
-                            index: index,
-                            width: (geo.size.width - Constants.spacing * CGFloat(columns.count)) / CGFloat(columns.count)
-                        )
-                    }
+        VStack {
+            Spacer()
+            LazyVGrid(columns: columns,
+                      spacing: Constants.spacing) {
+                ForEach(Array(avatars.enumerated()), id: \.offset) { info in
+                    Avatar(
+                        name: info.element.$name,
+                        imageStr: info.element.imageStr
+                    )
                 }
-                Spacer()
             }
+            Spacer()
         }
     }
 }
 
 struct Avatar: View {
 
-    let name: String
-    let index: Int
-    let width: CGFloat
+    @Binding var name: String
+    let imageStr: String
 
     var body: some View {
         VStack {
-            Image("img_kaido")
+            Image(imageStr)
                 .resizable()
-                .frame(width: width, height: width)
+                .frame(width: 100, height: 100)
                 .scaledToFill()
+                .scaledToFit()
                 .cornerRadius(.infinity)
                 .onTapGesture {
-                    print("Name: -->", name, index)
+                    print("Name: -->", name)
                 }
             Text(name)
                 .multilineTextAlignment(.center)

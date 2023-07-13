@@ -14,7 +14,7 @@
 		281EEB162A565CA6008FC74D /* ImageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281EEB152A565CA6008FC74D /* ImageContentView.swift */; };
 		286F86142A5CF1BC0000A0B0 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 286F86132A5CF1BC0000A0B0 /* ViewInspector */; };
 		2872B3E32A57B780008ABCC0 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E22A57B780008ABCC0 /* BaseTextField.swift */; };
-		2872B3E52A57BBE4008ABCC0 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E42A57BBE4008ABCC0 /* TextFieldModifier.swift */; };
+		2872B3E52A57BBE4008ABCC0 /* DarkTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E42A57BBE4008ABCC0 /* DarkTextFieldModifier.swift */; };
 		2872B3E72A57C8FB008ABCC0 /* DemoTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E62A57C8FB008ABCC0 /* DemoTextFieldView.swift */; };
 		2872B3EA2A57F02D008ABCC0 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3E92A57F02D008ABCC0 /* BaseButton.swift */; };
 		2872B3EC2A57F59E008ABCC0 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872B3EB2A57F59E008ABCC0 /* ButtonModifier.swift */; };
@@ -58,7 +58,7 @@
 		281EEB122A5551D9008FC74D /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 		281EEB152A565CA6008FC74D /* ImageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContentView.swift; sourceTree = "<group>"; };
 		2872B3E22A57B780008ABCC0 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
-		2872B3E42A57BBE4008ABCC0 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		2872B3E42A57BBE4008ABCC0 /* DarkTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextFieldModifier.swift; sourceTree = "<group>"; };
 		2872B3E62A57C8FB008ABCC0 /* DemoTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTextFieldView.swift; sourceTree = "<group>"; };
 		2872B3E92A57F02D008ABCC0 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		2872B3EB2A57F59E008ABCC0 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				2872B3E22A57B780008ABCC0 /* BaseTextField.swift */,
-				2872B3E42A57BBE4008ABCC0 /* TextFieldModifier.swift */,
+				2872B3E42A57BBE4008ABCC0 /* DarkTextFieldModifier.swift */,
 				2872B3E62A57C8FB008ABCC0 /* DemoTextFieldView.swift */,
 			);
 			path = "Part6-7";
@@ -418,7 +418,7 @@
 				28B9D5792A52CE0400070E6E /* Exercise3App.swift in Sources */,
 				28FB12F32A5BEC6F003C28AA /* WelcomeView.swift in Sources */,
 				2807E2762A5E9222004FA4D2 /* LoginTextFieldModifier.swift in Sources */,
-				2872B3E52A57BBE4008ABCC0 /* TextFieldModifier.swift in Sources */,
+				2872B3E52A57BBE4008ABCC0 /* DarkTextFieldModifier.swift in Sources */,
 				28FB12F52A5BFF71003C28AA /* AppRouter.swift in Sources */,
 				281EEB132A5551D9008FC74D /* ColorSliderView.swift in Sources */,
 				281EEB162A565CA6008FC74D /* ImageContentView.swift in Sources */,

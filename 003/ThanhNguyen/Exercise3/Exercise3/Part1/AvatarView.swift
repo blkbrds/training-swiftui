@@ -22,14 +22,6 @@ struct AvatarView: View {
                     print("Name: -->", name)
                 }
             VStack(spacing: 10) {
-                Text("四皇")
-                    .multilineTextAlignment(.center)
-                    .font(.system(
-                        size: 50,
-                        weight: .heavy,
-                        design: .monospaced)
-                    )
-                    .foregroundColor(.red)
                 Text(name)
                     .multilineTextAlignment(.center)
                     .font(.system(

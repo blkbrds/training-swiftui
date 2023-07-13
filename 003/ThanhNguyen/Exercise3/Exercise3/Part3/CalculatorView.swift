@@ -35,7 +35,7 @@ struct CalculatorView: View {
         let title: String
     }
 
-    private let matrixButton1: [[CalculatorButton]] = [
+    private let matrixButton: [[CalculatorButton]] = [
         [
             .init(type: .specialCalculation, title: "AC"),
             .init(type: .specialCalculation, title: "+/_"),
@@ -78,7 +78,7 @@ struct CalculatorView: View {
                         .padding(.trailing, 20)
                 }
                 let height = (geo.size.width - 5 * 10) / 4
-                ForEach(Array(matrixButton1.enumerated()), id: \.offset) { row in
+                ForEach(Array(matrixButton.enumerated()), id: \.offset) { row in
                     HStack(spacing: 10) {
                         ForEach(Array(row.element.enumerated()), id: \.offset) { button in
                             Button(button.element.title) {
