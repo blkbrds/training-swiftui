@@ -20,7 +20,7 @@ struct GesturesApp: App {
             // ZoomImageView()
 
             /// ---Bai Tap 3---
-            MyMonkeyView()
+            TapGestureView()
         }
     }
 }
