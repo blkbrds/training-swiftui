@@ -16,6 +16,8 @@
 		8A2E93852A5422640042E2E6 /* GesturesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E93842A5422640042E2E6 /* GesturesUITestsLaunchTests.swift */; };
 		8AB1B15E2A5BE3CC000844B4 /* SubSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1B15D2A5BE3CC000844B4 /* SubSliderView.swift */; };
 		8AB1B1602A5BE5CF000844B4 /* SubTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1B15F2A5BE5CF000844B4 /* SubTextFieldView.swift */; };
+		8ACF4D982A5E4FC4007312A4 /* ZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACF4D972A5E4FC4007312A4 /* ZoomImageView.swift */; };
+		8AF5D9EA2A667DAB003C68F6 /* MyMonkeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5D9E92A667DAB003C68F6 /* MyMonkeyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8A2E93842A5422640042E2E6 /* GesturesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8AB1B15D2A5BE3CC000844B4 /* SubSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSliderView.swift; sourceTree = "<group>"; };
 		8AB1B15F2A5BE5CF000844B4 /* SubTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTextFieldView.swift; sourceTree = "<group>"; };
+		8ACF4D972A5E4FC4007312A4 /* ZoomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomImageView.swift; sourceTree = "<group>"; };
+		8AF5D9E92A667DAB003C68F6 /* MyMonkeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonkeyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +102,11 @@
 		8A2E93662A5422610042E2E6 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				8AB1B15B2A5BBE1E000844B4 /* Exercise1 */,
 				8A2E93672A5422610042E2E6 /* GesturesApp.swift */,
 				8A2E936B2A5422640042E2E6 /* Assets.xcassets */,
+				8AB1B15B2A5BBE1E000844B4 /* Exercise1 */,
+				8ACF4D962A5E4C8C007312A4 /* Exercise2 */,
+				8AF5D9E82A667D88003C68F6 /* Exercise3 */,
 				8A2E936D2A5422640042E2E6 /* Preview Content */,
 			);
 			path = Gestures;
@@ -147,6 +153,22 @@
 				8AB1B15F2A5BE5CF000844B4 /* SubTextFieldView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		8ACF4D962A5E4C8C007312A4 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				8ACF4D972A5E4FC4007312A4 /* ZoomImageView.swift */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
+		8AF5D9E82A667D88003C68F6 /* Exercise3 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF5D9E92A667DAB003C68F6 /* MyMonkeyView.swift */,
+			);
+			path = Exercise3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +304,9 @@
 				8AB1B15E2A5BE3CC000844B4 /* SubSliderView.swift in Sources */,
 				8A2E936A2A5422610042E2E6 /* MySliderView.swift in Sources */,
 				8A2E93682A5422610042E2E6 /* GesturesApp.swift in Sources */,
+				8AF5D9EA2A667DAB003C68F6 /* MyMonkeyView.swift in Sources */,
 				8AB1B1602A5BE5CF000844B4 /* SubTextFieldView.swift in Sources */,
+				8ACF4D982A5E4FC4007312A4 /* ZoomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

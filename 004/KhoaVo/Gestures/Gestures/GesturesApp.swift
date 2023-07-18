@@ -12,7 +12,15 @@ struct GesturesApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MySliderView()
+
+            /// ---Bai Tap 1---
+            // MySliderView()
+
+            /// ---Bai Tap 2---
+            // ZoomImageView()
+
+            /// ---Bai Tap 3---
+            MyMonkeyView()
         }
     }
 }
