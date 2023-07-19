@@ -10,10 +10,11 @@ import SwiftUI
 
 class AppRouter: ObservableObject {
 
-    @Published var state: AppState = .welcome
+    @Published var state: AppState = .firstTutorial
 }
 
 enum AppState {
     case login
     case welcome
+    case firstTutorial
 }

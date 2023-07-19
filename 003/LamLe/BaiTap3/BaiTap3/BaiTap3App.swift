@@ -21,9 +21,11 @@ struct BaiTap3App: App {
     var rootView: some View {
         switch appRouter.state {
         case .welcome:
-            WelcomeViewBaiTap10App()
+            WelcomeView2App()
         case .login:
             LoginFormBaiTap9App()
+        case .firstTutorial:
+            WelcomeView1BaiTap10App()
         }
     }
 }

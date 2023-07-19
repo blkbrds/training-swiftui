@@ -20,11 +20,12 @@
 		0B61CD662A5C0421004389DA /* LoginFormBaiTap9App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */; };
 		0B61CD682A5D0672004389DA /* ButtonBaiTap8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD672A5D0672004389DA /* ButtonBaiTap8.swift */; };
 		0B61CD6B2A5D3258004389DA /* ModifierTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD6A2A5D3258004389DA /* ModifierTextField.swift */; };
-		0B61CD6E2A5E918A004389DA /* WelcomeViewBaiTap10App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD6D2A5E918A004389DA /* WelcomeViewBaiTap10App.swift */; };
 		0B61CD712A5EB11D004389DA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD702A5EB11D004389DA /* AppRouter.swift */; };
 		0B61CD732A5F9A04004389DA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD722A5F9A04004389DA /* CustomButton.swift */; };
 		0B61CD752A5F9CC6004389DA /* ModifierButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD742A5F9CC6004389DA /* ModifierButton.swift */; };
 		0B61CD782A5FA2E2004389DA /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 0B61CD772A5FA2E2004389DA /* ViewInspector */; };
+		0B62B01A2A61284D00C7EA87 /* WelcomeView1BaiTap10App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62B0192A61284D00C7EA87 /* WelcomeView1BaiTap10App.swift */; };
+		0B62B01E2A612AD600C7EA87 /* WelcomeView2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62B01D2A612AD600C7EA87 /* WelcomeView2App.swift */; };
 		0B949CF02A5BE21D005CBCE8 /* SliderBaiTap4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B949CEF2A5BE21D005CBCE8 /* SliderBaiTap4App.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +63,11 @@
 		0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormBaiTap9App.swift; sourceTree = "<group>"; };
 		0B61CD672A5D0672004389DA /* ButtonBaiTap8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBaiTap8.swift; sourceTree = "<group>"; };
 		0B61CD6A2A5D3258004389DA /* ModifierTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierTextField.swift; sourceTree = "<group>"; };
-		0B61CD6D2A5E918A004389DA /* WelcomeViewBaiTap10App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewBaiTap10App.swift; sourceTree = "<group>"; };
 		0B61CD702A5EB11D004389DA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		0B61CD722A5F9A04004389DA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0B61CD742A5F9CC6004389DA /* ModifierButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierButton.swift; sourceTree = "<group>"; };
+		0B62B0192A61284D00C7EA87 /* WelcomeView1BaiTap10App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView1BaiTap10App.swift; sourceTree = "<group>"; };
+		0B62B01D2A612AD600C7EA87 /* WelcomeView2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView2App.swift; sourceTree = "<group>"; };
 		0B949CEF2A5BE21D005CBCE8 /* SliderBaiTap4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBaiTap4App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		0B0AD8572A55598A000EA893 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
+				0B62B0162A6127CA00C7EA87 /* WelcomeView */,
 				0B61CD6F2A5EB10F004389DA /* Router */,
 				0B61CD6C2A5D40AE004389DA /* ModifierButton */,
 				0B61CD692A5D323D004389DA /* ModifierTextField */,
@@ -131,7 +134,6 @@
 				0B61CD612A5BECAF004389DA /* ImageBaiTap5App.swift */,
 				0B61CD632A5BF460004389DA /* TextFieldBaiTap6App.swift */,
 				0B61CD672A5D0672004389DA /* ButtonBaiTap8.swift */,
-				0B61CD6D2A5E918A004389DA /* WelcomeViewBaiTap10App.swift */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -184,6 +186,15 @@
 				0B61CD702A5EB11D004389DA /* AppRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		0B62B0162A6127CA00C7EA87 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				0B62B0192A61284D00C7EA87 /* WelcomeView1BaiTap10App.swift */,
+				0B62B01D2A612AD600C7EA87 /* WelcomeView2App.swift */,
+			);
+			path = WelcomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,9 +337,10 @@
 				0B61CD622A5BECAF004389DA /* ImageBaiTap5App.swift in Sources */,
 				0B0AD8832A5565C1000EA893 /* ProfileApp.swift in Sources */,
 				0B0AD8592A55598A000EA893 /* BaiTap3App.swift in Sources */,
+				0B62B01E2A612AD600C7EA87 /* WelcomeView2App.swift in Sources */,
 				0B61CD682A5D0672004389DA /* ButtonBaiTap8.swift in Sources */,
 				0B61CD752A5F9CC6004389DA /* ModifierButton.swift in Sources */,
-				0B61CD6E2A5E918A004389DA /* WelcomeViewBaiTap10App.swift in Sources */,
+				0B62B01A2A61284D00C7EA87 /* WelcomeView1BaiTap10App.swift in Sources */,
 				0B61CD642A5BF460004389DA /* TextFieldBaiTap6App.swift in Sources */,
 				0B61CD712A5EB11D004389DA /* AppRouter.swift in Sources */,
 				0B61CD732A5F9A04004389DA /* CustomButton.swift in Sources */,
