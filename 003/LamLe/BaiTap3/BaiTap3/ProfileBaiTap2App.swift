@@ -1,5 +1,5 @@
 //
-//  ProfileApp.swift
+//  ProfileBaiTap2App.swift
 //  BaiTap3
 //
 //  Created by Lam Le T. [2] VN.Danang on 7/5/23.
@@ -9,22 +9,16 @@ import SwiftUI
 
 struct ProfileApp: View {
     
+    var listName = ["Jack", "Coman", "Messi", "Ronaldo", "Magurie", "Pogba", "Mac", "Mbappe", "Kevin"]
+    
     var body: some View {
         VStack {
-            HStack {
-                ExtractedView(indexView: 1)
-                ExtractedView(indexView: 2)
-                ExtractedView(indexView: 3)
-            }
-            HStack {
-                ExtractedView(height: 110.0, width: 110.0, indexView: 4)
-                ExtractedView(height: 110.0, width: 110.0, indexView: 5)
-                ExtractedView(height: 110.0, width: 110.0, indexView: 6)
-            }
-            HStack {
-                ExtractedView(height: 120.0, width: 120.0, indexView: 7)
-                ExtractedView(height: 120.0, width: 120.0, indexView: 8)
-                ExtractedView(height: 120.0, width: 120.0, indexView: 9)
+            ForEach(0..<3, id: \.self) { i in
+                HStack {
+                    ProfileView(height: CGFloat(100 + i * 10), width: CGFloat(100 + i * 10), indexView: (i == 0 ? i : i * 3), name: (i == 0 ? listName[i] : listName[i * 3]))
+                    ProfileView(height: CGFloat(100 + i * 10), width: CGFloat(100 + i * 10), indexView: (i == 0 ? i + 1 : i * 3 + 1), name: (i == 0 ? listName[i + 1] : listName[i * 3 + 1]))
+                    ProfileView(height: CGFloat(100 + i * 10), width: CGFloat(100 + i * 10), indexView: (i == 0 ? i + 2 : i * 3 + 2), name: (i == 0 ? listName[i + 2] : listName[i * 3 + 2]))
+                }
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -37,15 +31,16 @@ struct ProfileApp_Previews: PreviewProvider {
     }
 }
 
-struct ExtractedView: View {
+struct ProfileView: View {
     
-    var height: CGFloat = 100.0
-    var width: CGFloat = 100.0
+    var height: CGFloat
+    var width: CGFloat
     var indexView: Int
+    var name: String
     
     var body: some View {
         VStack {
-            Image("jessieLee")
+            Image(name)
                 .resizable(capInsets: EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 .clipShape(Circle())
                 .foregroundColor(.gray)
@@ -54,7 +49,7 @@ struct ExtractedView: View {
                 .onTapGesture {
                     print("Index View : \(indexView)" )
                 }
-            Text("Jessie Lee")
+            Text(name)
                 .foregroundColor(.pink)
                 .font(.body)
                 .fontWeight(.bold)

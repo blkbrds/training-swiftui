@@ -16,13 +16,14 @@ struct ImageBaiTap5App: View {
 //                .aspectRatio(contentMode: .fit)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 300, height: 300)
+                .clipShape(Circle())
                 .cornerRadius(50)
                 .overlay(
                     Text("Tao mạnh nhất")
                         .italic()
                         .font(.title)
                         .foregroundColor(Color.gray)
-                        .padding([.bottom, .trailing], 10)
+                        .padding([.bottom, .trailing], 40)
                         .opacity(0.9),
                          alignment: .bottomTrailing
                     )

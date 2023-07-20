@@ -13,7 +13,7 @@ struct TextFieldBaiTap6App: View {
     @State private var passWord: String = ""
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("Enter Your Name", text: $name, axis: .vertical)
+            CustomTextField(title: "Enter Your Name", value: name, isPassword: false)
 //                .border(Color.blue, width: 2)
 //                .textFieldStyle(.roundedBorder)
 //                .padding(30)
@@ -22,9 +22,8 @@ struct TextFieldBaiTap6App: View {
 //                .font(.system(size: 14, weight: .heavy, design: .rounded))
 //                .shadow(color: Color.gray.opacity(1.0),
 //                            radius: 3, x: 1, y: 2)
-                .cuteTextField()
                 
-            SecureField("Enter Your PassWord", text: $passWord)
+            CustomTextField(title: "Enter Your Password", value: passWord, isPassword: true)
 //                .border(Color.red, width: 2)
 //                .textFieldStyle(.automatic)
 //                .padding(30)
@@ -32,7 +31,6 @@ struct TextFieldBaiTap6App: View {
 //                .foregroundColor(.red)
 //                .shadow(color: Color.black.opacity(1.0),
 //                            radius: 5, x: 1, y: 10)
-                .cuteTextField()
         }
     }
 }

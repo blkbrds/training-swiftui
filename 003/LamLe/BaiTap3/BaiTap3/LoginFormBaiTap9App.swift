@@ -17,7 +17,7 @@ struct LoginFormBaiTap9App: View {
     internal var didAppear: ((Self) -> Void)?
     
     func validationTextField() -> Bool {
-        if (userName.isEmpty && passWord.isEmpty) {
+        if (userName.isEmpty || passWord.isEmpty) {
             return true
         } else {
             return false
@@ -87,7 +87,7 @@ struct LoginFormBaiTap9App: View {
                             .font(.system(size: 20, weight: .bold, design: .serif))
                     }
                     .frame(width: 300, height: 60)
-                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(validationTextField() ? 0.5 : 1))
+                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(validationTextField() ? 0.4 : 1))
                     .cornerRadius(20)
                     .shadow(color: Color("LoginButtonColor"), radius: 4)
                     .disabled(validationTextField())

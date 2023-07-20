@@ -12,8 +12,8 @@ struct CustomButton: View {
     var subTitle: String
     @State var count: Int = 0
     var nameIcon: String?
-    var backGroupColor: Color = .blue
-    var textTitleColor: Color = .white
+    var backGroupColor: Color
+    var textTitleColor: Color
     
     var body: some View {
         Button(action: {
@@ -39,6 +39,6 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(title: "Facebook", subTitle: "Elon Musk", nameIcon: "facebook")
+        CustomButton(title: "Facebook", subTitle: "Elon Musk", nameIcon: "facebook", backGroupColor: .blue, textTitleColor: .white)
     }
 }

@@ -26,6 +26,8 @@ struct BaiTap3App: App {
             LoginFormBaiTap9App()
         case .firstTutorial:
             WelcomeView1BaiTap10App()
+        case .testScreen:
+            ProfileApp()
         }
     }
 }

@@ -17,4 +17,5 @@ enum AppState {
     case login
     case welcome
     case firstTutorial
+    case testScreen
 }

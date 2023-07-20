@@ -10,9 +10,9 @@ import SwiftUI
 struct ButtonBaiTap8: View {
     var body: some View {
         VStack {
-            CustomButton(title: "Facebook", subTitle: "Mark Zuckerberg", nameIcon: "facebook", backGroupColor: .blue.opacity(0.8))
+            CustomButton(title: "Facebook", subTitle: "Mark Zuckerberg", nameIcon: "facebook", backGroupColor: .blue.opacity(0.8), textTitleColor: .white)
             CustomButton(title: "Google", subTitle: "Larry Page", nameIcon: "google", backGroupColor: .white.opacity(0.7), textTitleColor: .black.opacity(0.9))
-            CustomButton(title: "Twitter", subTitle: "Elon Musk", nameIcon: "twitter", backGroupColor: .blue.opacity(0.6))
+            CustomButton(title: "Twitter", subTitle: "Elon Musk", nameIcon: "twitter", backGroupColor: .blue.opacity(0.6), textTitleColor: .white)
         }
     }
 }

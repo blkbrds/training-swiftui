@@ -44,7 +44,7 @@ struct SliderBaiTap4App_Previews: PreviewProvider {
 struct SliderView: View {
     
     @Binding var color: Double
-    var nameColor: String = "Red"
+    var nameColor: String
     
     var body: some View {
             Section {

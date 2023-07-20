@@ -13,8 +13,10 @@
 		0B0AD86A2A55598B000EA893 /* BaiTap3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AD8692A55598B000EA893 /* BaiTap3Tests.swift */; };
 		0B0AD8742A55598B000EA893 /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AD8732A55598B000EA893 /* BaiTap3UITests.swift */; };
 		0B0AD8762A55598B000EA893 /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AD8752A55598B000EA893 /* BaiTap3UITestsLaunchTests.swift */; };
-		0B0AD8832A5565C1000EA893 /* ProfileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AD8822A5565C1000EA893 /* ProfileApp.swift */; };
-		0B36891D2A580615009E1FC2 /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36891C2A580615009E1FC2 /* CalculatorApp.swift */; };
+		0B0AD8832A5565C1000EA893 /* ProfileBaiTap2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AD8822A5565C1000EA893 /* ProfileBaiTap2App.swift */; };
+		0B36891D2A580615009E1FC2 /* CalculatorBaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36891C2A580615009E1FC2 /* CalculatorBaiTap3App.swift */; };
+		0B546C932A68DF6500784577 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B546C922A68DF6500784577 /* CustomTextField.swift */; };
+		0B546C952A68E2A900784577 /* AvatarBaiTap1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B546C942A68E2A900784577 /* AvatarBaiTap1App.swift */; };
 		0B61CD622A5BECAF004389DA /* ImageBaiTap5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD612A5BECAF004389DA /* ImageBaiTap5App.swift */; };
 		0B61CD642A5BF460004389DA /* TextFieldBaiTap6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD632A5BF460004389DA /* TextFieldBaiTap6App.swift */; };
 		0B61CD662A5C0421004389DA /* LoginFormBaiTap9App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */; };
@@ -56,8 +58,10 @@
 		0B0AD86F2A55598B000EA893 /* BaiTap3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0AD8732A55598B000EA893 /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
 		0B0AD8752A55598B000EA893 /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0B0AD8822A5565C1000EA893 /* ProfileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApp.swift; sourceTree = "<group>"; };
-		0B36891C2A580615009E1FC2 /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
+		0B0AD8822A5565C1000EA893 /* ProfileBaiTap2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBaiTap2App.swift; sourceTree = "<group>"; };
+		0B36891C2A580615009E1FC2 /* CalculatorBaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBaiTap3App.swift; sourceTree = "<group>"; };
+		0B546C922A68DF6500784577 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0B546C942A68E2A900784577 /* AvatarBaiTap1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarBaiTap1App.swift; sourceTree = "<group>"; };
 		0B61CD612A5BECAF004389DA /* ImageBaiTap5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBaiTap5App.swift; sourceTree = "<group>"; };
 		0B61CD632A5BF460004389DA /* TextFieldBaiTap6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBaiTap6App.swift; sourceTree = "<group>"; };
 		0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormBaiTap9App.swift; sourceTree = "<group>"; };
@@ -120,20 +124,21 @@
 		0B0AD8572A55598A000EA893 /* BaiTap3 */ = {
 			isa = PBXGroup;
 			children = (
-				0B62B0162A6127CA00C7EA87 /* WelcomeView */,
 				0B61CD6F2A5EB10F004389DA /* Router */,
 				0B61CD6C2A5D40AE004389DA /* ModifierButton */,
 				0B61CD692A5D323D004389DA /* ModifierTextField */,
 				0B0AD8582A55598A000EA893 /* BaiTap3App.swift */,
-				0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */,
 				0B0AD85C2A55598B000EA893 /* Assets.xcassets */,
 				0B0AD85E2A55598B000EA893 /* Preview Content */,
-				0B0AD8822A5565C1000EA893 /* ProfileApp.swift */,
-				0B36891C2A580615009E1FC2 /* CalculatorApp.swift */,
+				0B546C942A68E2A900784577 /* AvatarBaiTap1App.swift */,
+				0B0AD8822A5565C1000EA893 /* ProfileBaiTap2App.swift */,
+				0B36891C2A580615009E1FC2 /* CalculatorBaiTap3App.swift */,
 				0B949CEF2A5BE21D005CBCE8 /* SliderBaiTap4App.swift */,
 				0B61CD612A5BECAF004389DA /* ImageBaiTap5App.swift */,
 				0B61CD632A5BF460004389DA /* TextFieldBaiTap6App.swift */,
 				0B61CD672A5D0672004389DA /* ButtonBaiTap8.swift */,
+				0B61CD652A5C0421004389DA /* LoginFormBaiTap9App.swift */,
+				0B62B0162A6127CA00C7EA87 /* WelcomeView */,
 			);
 			path = BaiTap3;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				0B61CD6A2A5D3258004389DA /* ModifierTextField.swift */,
+				0B546C922A68DF6500784577 /* CustomTextField.swift */,
 			);
 			path = ModifierTextField;
 			sourceTree = "<group>";
@@ -335,7 +341,8 @@
 			files = (
 				0B61CD6B2A5D3258004389DA /* ModifierTextField.swift in Sources */,
 				0B61CD622A5BECAF004389DA /* ImageBaiTap5App.swift in Sources */,
-				0B0AD8832A5565C1000EA893 /* ProfileApp.swift in Sources */,
+				0B0AD8832A5565C1000EA893 /* ProfileBaiTap2App.swift in Sources */,
+				0B546C952A68E2A900784577 /* AvatarBaiTap1App.swift in Sources */,
 				0B0AD8592A55598A000EA893 /* BaiTap3App.swift in Sources */,
 				0B62B01E2A612AD600C7EA87 /* WelcomeView2App.swift in Sources */,
 				0B61CD682A5D0672004389DA /* ButtonBaiTap8.swift in Sources */,
@@ -346,7 +353,8 @@
 				0B61CD732A5F9A04004389DA /* CustomButton.swift in Sources */,
 				0B949CF02A5BE21D005CBCE8 /* SliderBaiTap4App.swift in Sources */,
 				0B61CD662A5C0421004389DA /* LoginFormBaiTap9App.swift in Sources */,
-				0B36891D2A580615009E1FC2 /* CalculatorApp.swift in Sources */,
+				0B36891D2A580615009E1FC2 /* CalculatorBaiTap3App.swift in Sources */,
+				0B546C932A68DF6500784577 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -487,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -561,7 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -580,7 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
