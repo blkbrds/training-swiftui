@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileApp: View {
     
-    var listName = ["Jack", "Coman", "Messi", "Ronaldo", "Magurie", "Pogba", "Mac", "Mbappe", "Kevin"]
+    var listName = ["Jack 100", "King Coman", "Leo Messi", "7 Ronaldo", "Harry Magurie", "Paul Pogba", "Mac Alise", " Mbappe", "Kevin"]
     
     var listImage = ["Jack", "coman", "messi", "ronaldo", "magurie", "pogba", "mac", "mbappe", "Kevin"]
     
