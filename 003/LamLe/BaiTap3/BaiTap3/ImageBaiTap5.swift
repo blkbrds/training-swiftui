@@ -10,7 +10,7 @@ import SwiftUI
 struct ImageBaiTap5App: View {
     var body: some View {
         ZStack {
-            Image("goku")
+            Image("GOKU")
                 .resizable()
 //                .ignoresSafeArea()
 //                .aspectRatio(contentMode: .fit)
