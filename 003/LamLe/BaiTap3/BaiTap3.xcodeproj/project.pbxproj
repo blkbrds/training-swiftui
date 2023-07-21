@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B9C17932A6A26C5009715CC /* BaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17922A6A26C5009715CC /* BaiTap3App.swift */; };
+		0B9C17952A6A26C5009715CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17942A6A26C5009715CC /* ContentView.swift */; };
+		0B9C17972A6A26C6009715CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9C17962A6A26C6009715CC /* Assets.xcassets */; };
+		0B9C179A2A6A26C6009715CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9C17992A6A26C6009715CC /* Preview Assets.xcassets */; };
+		0B9C17A42A6A26C6009715CC /* BaiTap3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17A32A6A26C6009715CC /* BaiTap3Tests.swift */; };
+		0B9C17AE2A6A26C6009715CC /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17AD2A6A26C6009715CC /* BaiTap3UITests.swift */; };
+		0B9C17B02A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17AF2A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift */; };
+		0B9C17BE2A6A2711009715CC /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17BD2A6A2711009715CC /* AvatarView.swift */; };
+		0BEA31162A6A2C6900DB25B2 /* ListAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */; };
+		0BEA31192A6A2E1B00DB25B2 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31182A6A2E1B00DB25B2 /* CalculatorView.swift */; };
+		0BEA311C2A6A319600DB25B2 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA311B2A6A319600DB25B2 /* SliderView.swift */; };
+		0BEA311F2A6A326500DB25B2 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA311E2A6A326500DB25B2 /* ImageView.swift */; };
+		0BEA31222A6A331B00DB25B2 /* TextFieldBeginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31212A6A331B00DB25B2 /* TextFieldBeginView.swift */; };
+		0BEA31252A6A348A00DB25B2 /* ModifierTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31242A6A348A00DB25B2 /* ModifierTextField.swift */; };
+		0BEA31272A6A34AB00DB25B2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31262A6A34AB00DB25B2 /* CustomTextField.swift */; };
+		0BEA312A2A6A397E00DB25B2 /* ButtonBeginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31292A6A397E00DB25B2 /* ButtonBeginView.swift */; };
+		0BEA312D2A6A39F900DB25B2 /* CustomButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA312C2A6A39F900DB25B2 /* CustomButtonModifier.swift */; };
+		0BEA312F2A6A3A1A00DB25B2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA312E2A6A3A1A00DB25B2 /* CustomButton.swift */; };
+		0BEA31322A6A3CD600DB25B2 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31312A6A3CD600DB25B2 /* LoginFormView.swift */; };
+		0BEA31382A6A3F1C00DB25B2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31372A6A3F1C00DB25B2 /* AppRouter.swift */; };
+		0BEA313C2A6A452F00DB25B2 /* WelcomeScreen1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA313B2A6A452F00DB25B2 /* WelcomeScreen1View.swift */; };
+		0BEA313E2A6A454C00DB25B2 /* WelcomeScreen2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA313D2A6A454C00DB25B2 /* WelcomeScreen2View.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B9C17A02A6A26C6009715CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B9C17872A6A26C5009715CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B9C178E2A6A26C5009715CC;
+			remoteInfo = BaiTap3;
+		};
+		0B9C17AA2A6A26C6009715CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B9C17872A6A26C5009715CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B9C178E2A6A26C5009715CC;
+			remoteInfo = BaiTap3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B9C178F2A6A26C5009715CC /* BaiTap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B9C17922A6A26C5009715CC /* BaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3App.swift; sourceTree = "<group>"; };
+		0B9C17942A6A26C5009715CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B9C17962A6A26C6009715CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B9C17992A6A26C6009715CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B9C179F2A6A26C6009715CC /* BaiTap3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B9C17A32A6A26C6009715CC /* BaiTap3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3Tests.swift; sourceTree = "<group>"; };
+		0B9C17A92A6A26C6009715CC /* BaiTap3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiTap3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B9C17AD2A6A26C6009715CC /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
+		0B9C17AF2A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B9C17BD2A6A2711009715CC /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAvatarView.swift; sourceTree = "<group>"; };
+		0BEA31182A6A2E1B00DB25B2 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		0BEA311B2A6A319600DB25B2 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0BEA311E2A6A326500DB25B2 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		0BEA31212A6A331B00DB25B2 /* TextFieldBeginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBeginView.swift; sourceTree = "<group>"; };
+		0BEA31242A6A348A00DB25B2 /* ModifierTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierTextField.swift; sourceTree = "<group>"; };
+		0BEA31262A6A34AB00DB25B2 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0BEA31292A6A397E00DB25B2 /* ButtonBeginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBeginView.swift; sourceTree = "<group>"; };
+		0BEA312C2A6A39F900DB25B2 /* CustomButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonModifier.swift; sourceTree = "<group>"; };
+		0BEA312E2A6A3A1A00DB25B2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0BEA31312A6A3CD600DB25B2 /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		0BEA31372A6A3F1C00DB25B2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		0BEA313B2A6A452F00DB25B2 /* WelcomeScreen1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen1View.swift; sourceTree = "<group>"; };
+		0BEA313D2A6A454C00DB25B2 /* WelcomeScreen2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen2View.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B9C178C2A6A26C5009715CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C179C2A6A26C6009715CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C17A62A6A26C6009715CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B9C17862A6A26C5009715CC = {
+			isa = PBXGroup;
+			children = (
+				0B9C17912A6A26C5009715CC /* BaiTap3 */,
+				0B9C17A22A6A26C6009715CC /* BaiTap3Tests */,
+				0B9C17AC2A6A26C6009715CC /* BaiTap3UITests */,
+				0B9C17902A6A26C5009715CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B9C17902A6A26C5009715CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B9C178F2A6A26C5009715CC /* BaiTap3.app */,
+				0B9C179F2A6A26C6009715CC /* BaiTap3Tests.xctest */,
+				0B9C17A92A6A26C6009715CC /* BaiTap3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B9C17912A6A26C5009715CC /* BaiTap3 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31362A6A3F0500DB25B2 /* Router */,
+				0B9C17BC2A6A26CE009715CC /* Bai1 */,
+				0BEA31142A6A2C4B00DB25B2 /* Bai2 */,
+				0BEA31172A6A2E0000DB25B2 /* Bai3 */,
+				0BEA311A2A6A317A00DB25B2 /* Bai4 */,
+				0BEA311D2A6A325700DB25B2 /* Bai5 */,
+				0BEA31202A6A32DB00DB25B2 /* Bai6 */,
+				0BEA31282A6A384600DB25B2 /* Bai8 */,
+				0BEA31302A6A3CBE00DB25B2 /* Bai9 */,
+				0BEA31332A6A3E7100DB25B2 /* Bai10 */,
+				0B9C17922A6A26C5009715CC /* BaiTap3App.swift */,
+				0B9C17942A6A26C5009715CC /* ContentView.swift */,
+				0B9C17962A6A26C6009715CC /* Assets.xcassets */,
+				0B9C17982A6A26C6009715CC /* Preview Content */,
+			);
+			path = BaiTap3;
+			sourceTree = "<group>";
+		};
+		0B9C17982A6A26C6009715CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0B9C17992A6A26C6009715CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B9C17A22A6A26C6009715CC /* BaiTap3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0B9C17A32A6A26C6009715CC /* BaiTap3Tests.swift */,
+			);
+			path = BaiTap3Tests;
+			sourceTree = "<group>";
+		};
+		0B9C17AC2A6A26C6009715CC /* BaiTap3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B9C17AD2A6A26C6009715CC /* BaiTap3UITests.swift */,
+				0B9C17AF2A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift */,
+			);
+			path = BaiTap3UITests;
+			sourceTree = "<group>";
+		};
+		0B9C17BC2A6A26CE009715CC /* Bai1 */ = {
+			isa = PBXGroup;
+			children = (
+				0B9C17BD2A6A2711009715CC /* AvatarView.swift */,
+			);
+			path = Bai1;
+			sourceTree = "<group>";
+		};
+		0BEA31142A6A2C4B00DB25B2 /* Bai2 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */,
+			);
+			path = Bai2;
+			sourceTree = "<group>";
+		};
+		0BEA31172A6A2E0000DB25B2 /* Bai3 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31182A6A2E1B00DB25B2 /* CalculatorView.swift */,
+			);
+			path = Bai3;
+			sourceTree = "<group>";
+		};
+		0BEA311A2A6A317A00DB25B2 /* Bai4 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA311B2A6A319600DB25B2 /* SliderView.swift */,
+			);
+			path = Bai4;
+			sourceTree = "<group>";
+		};
+		0BEA311D2A6A325700DB25B2 /* Bai5 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA311E2A6A326500DB25B2 /* ImageView.swift */,
+			);
+			path = Bai5;
+			sourceTree = "<group>";
+		};
+		0BEA31202A6A32DB00DB25B2 /* Bai6 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31232A6A342600DB25B2 /* Bai7-CustomTextField */,
+				0BEA31212A6A331B00DB25B2 /* TextFieldBeginView.swift */,
+			);
+			path = Bai6;
+			sourceTree = "<group>";
+		};
+		0BEA31232A6A342600DB25B2 /* Bai7-CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31242A6A348A00DB25B2 /* ModifierTextField.swift */,
+				0BEA31262A6A34AB00DB25B2 /* CustomTextField.swift */,
+			);
+			path = "Bai7-CustomTextField";
+			sourceTree = "<group>";
+		};
+		0BEA31282A6A384600DB25B2 /* Bai8 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA312B2A6A39AC00DB25B2 /* ModifierButton */,
+				0BEA31292A6A397E00DB25B2 /* ButtonBeginView.swift */,
+			);
+			path = Bai8;
+			sourceTree = "<group>";
+		};
+		0BEA312B2A6A39AC00DB25B2 /* ModifierButton */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA312C2A6A39F900DB25B2 /* CustomButtonModifier.swift */,
+				0BEA312E2A6A3A1A00DB25B2 /* CustomButton.swift */,
+			);
+			path = ModifierButton;
+			sourceTree = "<group>";
+		};
+		0BEA31302A6A3CBE00DB25B2 /* Bai9 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31312A6A3CD600DB25B2 /* LoginFormView.swift */,
+			);
+			path = Bai9;
+			sourceTree = "<group>";
+		};
+		0BEA31332A6A3E7100DB25B2 /* Bai10 */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA313B2A6A452F00DB25B2 /* WelcomeScreen1View.swift */,
+				0BEA313D2A6A454C00DB25B2 /* WelcomeScreen2View.swift */,
+			);
+			path = Bai10;
+			sourceTree = "<group>";
+		};
+		0BEA31362A6A3F0500DB25B2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0BEA31372A6A3F1C00DB25B2 /* AppRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B9C178E2A6A26C5009715CC /* BaiTap3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B9C17B32A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3" */;
+			buildPhases = (
+				0B9C178B2A6A26C5009715CC /* Sources */,
+				0B9C178C2A6A26C5009715CC /* Frameworks */,
+				0B9C178D2A6A26C5009715CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiTap3;
+			productName = BaiTap3;
+			productReference = 0B9C178F2A6A26C5009715CC /* BaiTap3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B9C179E2A6A26C6009715CC /* BaiTap3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B9C17B62A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3Tests" */;
+			buildPhases = (
+				0B9C179B2A6A26C6009715CC /* Sources */,
+				0B9C179C2A6A26C6009715CC /* Frameworks */,
+				0B9C179D2A6A26C6009715CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B9C17A12A6A26C6009715CC /* PBXTargetDependency */,
+			);
+			name = BaiTap3Tests;
+			productName = BaiTap3Tests;
+			productReference = 0B9C179F2A6A26C6009715CC /* BaiTap3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B9C17A82A6A26C6009715CC /* BaiTap3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B9C17B92A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3UITests" */;
+			buildPhases = (
+				0B9C17A52A6A26C6009715CC /* Sources */,
+				0B9C17A62A6A26C6009715CC /* Frameworks */,
+				0B9C17A72A6A26C6009715CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B9C17AB2A6A26C6009715CC /* PBXTargetDependency */,
+			);
+			name = BaiTap3UITests;
+			productName = BaiTap3UITests;
+			productReference = 0B9C17A92A6A26C6009715CC /* BaiTap3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B9C17872A6A26C5009715CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0B9C178E2A6A26C5009715CC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					0B9C179E2A6A26C6009715CC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 0B9C178E2A6A26C5009715CC;
+					};
+					0B9C17A82A6A26C6009715CC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 0B9C178E2A6A26C5009715CC;
+					};
+				};
+			};
+			buildConfigurationList = 0B9C178A2A6A26C5009715CC /* Build configuration list for PBXProject "BaiTap3" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B9C17862A6A26C5009715CC;
+			productRefGroup = 0B9C17902A6A26C5009715CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B9C178E2A6A26C5009715CC /* BaiTap3 */,
+				0B9C179E2A6A26C6009715CC /* BaiTap3Tests */,
+				0B9C17A82A6A26C6009715CC /* BaiTap3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B9C178D2A6A26C5009715CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9C179A2A6A26C6009715CC /* Preview Assets.xcassets in Resources */,
+				0B9C17972A6A26C6009715CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C179D2A6A26C6009715CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C17A72A6A26C6009715CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B9C178B2A6A26C5009715CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BEA312F2A6A3A1A00DB25B2 /* CustomButton.swift in Sources */,
+				0BEA312A2A6A397E00DB25B2 /* ButtonBeginView.swift in Sources */,
+				0BEA31252A6A348A00DB25B2 /* ModifierTextField.swift in Sources */,
+				0B9C17952A6A26C5009715CC /* ContentView.swift in Sources */,
+				0BEA312D2A6A39F900DB25B2 /* CustomButtonModifier.swift in Sources */,
+				0BEA313E2A6A454C00DB25B2 /* WelcomeScreen2View.swift in Sources */,
+				0BEA31192A6A2E1B00DB25B2 /* CalculatorView.swift in Sources */,
+				0BEA31162A6A2C6900DB25B2 /* ListAvatarView.swift in Sources */,
+				0BEA31272A6A34AB00DB25B2 /* CustomTextField.swift in Sources */,
+				0BEA311C2A6A319600DB25B2 /* SliderView.swift in Sources */,
+				0BEA31222A6A331B00DB25B2 /* TextFieldBeginView.swift in Sources */,
+				0BEA31322A6A3CD600DB25B2 /* LoginFormView.swift in Sources */,
+				0BEA31382A6A3F1C00DB25B2 /* AppRouter.swift in Sources */,
+				0BEA313C2A6A452F00DB25B2 /* WelcomeScreen1View.swift in Sources */,
+				0B9C17BE2A6A2711009715CC /* AvatarView.swift in Sources */,
+				0BEA311F2A6A326500DB25B2 /* ImageView.swift in Sources */,
+				0B9C17932A6A26C5009715CC /* BaiTap3App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C179B2A6A26C6009715CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9C17A42A6A26C6009715CC /* BaiTap3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B9C17A52A6A26C6009715CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B9C17AE2A6A26C6009715CC /* BaiTap3UITests.swift in Sources */,
+				0B9C17B02A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B9C17A12A6A26C6009715CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B9C178E2A6A26C5009715CC /* BaiTap3 */;
+			targetProxy = 0B9C17A02A6A26C6009715CC /* PBXContainerItemProxy */;
+		};
+		0B9C17AB2A6A26C6009715CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B9C178E2A6A26C5009715CC /* BaiTap3 */;
+			targetProxy = 0B9C17AA2A6A26C6009715CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B9C17B12A6A26C6009715CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B9C17B22A6A26C6009715CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B9C17B42A6A26C6009715CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BaiTap3/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B9C17B52A6A26C6009715CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BaiTap3/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B9C17B72A6A26C6009715CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaiTap3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BaiTap3";
+			};
+			name = Debug;
+		};
+		0B9C17B82A6A26C6009715CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaiTap3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BaiTap3";
+			};
+			name = Release;
+		};
+		0B9C17BA2A6A26C6009715CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaiTap3;
+			};
+			name = Debug;
+		};
+		0B9C17BB2A6A26C6009715CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Lam.le2.BaiTap3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaiTap3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B9C178A2A6A26C5009715CC /* Build configuration list for PBXProject "BaiTap3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B9C17B12A6A26C6009715CC /* Debug */,
+				0B9C17B22A6A26C6009715CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B9C17B32A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B9C17B42A6A26C6009715CC /* Debug */,
+				0B9C17B52A6A26C6009715CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B9C17B62A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B9C17B72A6A26C6009715CC /* Debug */,
+				0B9C17B82A6A26C6009715CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B9C17B92A6A26C6009715CC /* Build configuration list for PBXNativeTarget "BaiTap3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B9C17BA2A6A26C6009715CC /* Debug */,
+				0B9C17BB2A6A26C6009715CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B9C17872A6A26C5009715CC /* Project object */;
+}
