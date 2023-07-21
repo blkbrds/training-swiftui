@@ -11,7 +11,8 @@ import SwiftUI
 struct Exercise4App: App {
     var body: some Scene {
         WindowGroup {
-            MySliderView()
+//            MySliderView() // part 1
+            FingerInteractionView() // part 2
         }
     }
 }
