@@ -27,18 +27,20 @@ struct Background<Content: View>: View {
 struct MySliderView: View {
 
     @State var value: Int = 0
+    @FocusState private var isFocus: Bool
 
     var body: some View {
         Background {
             VStack {
                 CustomTextField(value: $value)
+                    .focused($isFocus)
                     .padding([.leading, .trailing, .bottom], 50)
                 CustomSlider(value: $value)
                     .padding(.bottom, 50)
             }
         }
         .onTapGesture {
-            UIApplication.shared.endEditing()
+            isFocus = false
         }
     }
 }
@@ -46,11 +48,5 @@ struct MySliderView: View {
 struct MySliderView_Previews: PreviewProvider {
     static var previews: some View {
         MySliderView()
-    }
-}
-
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

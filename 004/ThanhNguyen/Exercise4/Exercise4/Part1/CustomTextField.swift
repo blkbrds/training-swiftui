@@ -25,11 +25,7 @@ struct CustomTextField: View {
                 }
                 .keyboardType(.numberPad)
                 .onChange(of: value) { newValue in
-                    if newValue > 100 {
-                        value = 100
-                    } else if newValue < 0 {
-                        value = 0
-                    }
+                    value = min(max(newValue, 0), 100)
                 }
         }
         .frame(maxHeight: 100)
