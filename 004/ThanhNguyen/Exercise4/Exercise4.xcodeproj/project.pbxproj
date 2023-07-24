@@ -102,7 +102,7 @@
 		280FCB9D2A5E55F300419636 /* Exercise4 */ = {
 			isa = PBXGroup;
 			children = (
-				2877673B2A6A30AA0062F40E /* Part2 */,
+				2877673B2A6A30AA0062F40E /* Part2-3 */,
 				283C0FB82A6683CA00C9E577 /* Part1 */,
 				280FCB9E2A5E55F300419636 /* Exercise4App.swift */,
 				280FCBA22A5E55F400419636 /* Assets.xcassets */,
@@ -147,12 +147,12 @@
 			path = Part1;
 			sourceTree = "<group>";
 		};
-		2877673B2A6A30AA0062F40E /* Part2 */ = {
+		2877673B2A6A30AA0062F40E /* Part2-3 */ = {
 			isa = PBXGroup;
 			children = (
 				2877673C2A6A32480062F40E /* FingerInteractionView.swift */,
 			);
-			path = Part2;
+			path = "Part2-3";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
