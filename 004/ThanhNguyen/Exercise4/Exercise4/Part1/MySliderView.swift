@@ -32,8 +32,7 @@ struct MySliderView: View {
         Background {
             VStack {
                 CustomTextField(value: $value)
-                    .padding([.leading, .trailing], 50)
-                    .padding(.bottom, 50)
+                    .padding([.leading, .trailing, .bottom], 50)
                 CustomSlider(value: $value)
                     .padding(.bottom, 50)
             }
