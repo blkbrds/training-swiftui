@@ -10,7 +10,6 @@
 		280FCB9F2A5E55F300419636 /* Exercise4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FCB9E2A5E55F300419636 /* Exercise4App.swift */; };
 		280FCBA32A5E55F400419636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280FCBA22A5E55F400419636 /* Assets.xcassets */; };
 		280FCBA62A5E55F400419636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280FCBA52A5E55F400419636 /* Preview Assets.xcassets */; };
-		280FCBB02A5E55F400419636 /* Exercise4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FCBAF2A5E55F400419636 /* Exercise4Tests.swift */; };
 		280FCBBA2A5E55F400419636 /* Exercise4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FCBB92A5E55F400419636 /* Exercise4UITests.swift */; };
 		280FCBBC2A5E55F400419636 /* Exercise4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FCBBB2A5E55F400419636 /* Exercise4UITestsLaunchTests.swift */; };
 		283C0FBA2A66849600C9E577 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283C0FB92A66849600C9E577 /* CustomSlider.swift */; };
@@ -18,6 +17,9 @@
 		283C0FBE2A6687A400C9E577 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283C0FBD2A6687A400C9E577 /* Triangle.swift */; };
 		2877673D2A6A32480062F40E /* FingerInteractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877673C2A6A32480062F40E /* FingerInteractionView.swift */; };
 		2898A12A2A67915300383576 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898A1292A67915300383576 /* CustomTextField.swift */; };
+		28A6D4FC2A6F7DEB0070419F /* FingerInteractionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6D4FB2A6F7DEB0070419F /* FingerInteractionViewTests.swift */; };
+		28D6D4C02A6F651D00FDCBDF /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 28D6D4BF2A6F651D00FDCBDF /* ViewInspector */; };
+		28D6D4C22A6F65F300FDCBDF /* MySliderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6D4C12A6F65F300FDCBDF /* MySliderViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,6 @@
 		280FCBA22A5E55F400419636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280FCBA52A5E55F400419636 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		280FCBAB2A5E55F400419636 /* Exercise4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		280FCBAF2A5E55F400419636 /* Exercise4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise4Tests.swift; sourceTree = "<group>"; };
 		280FCBB52A5E55F400419636 /* Exercise4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280FCBB92A5E55F400419636 /* Exercise4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise4UITests.swift; sourceTree = "<group>"; };
 		280FCBBB2A5E55F400419636 /* Exercise4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise4UITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -52,6 +53,8 @@
 		283C0FBD2A6687A400C9E577 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		2877673C2A6A32480062F40E /* FingerInteractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerInteractionView.swift; sourceTree = "<group>"; };
 		2898A1292A67915300383576 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		28A6D4FB2A6F7DEB0070419F /* FingerInteractionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerInteractionViewTests.swift; sourceTree = "<group>"; };
+		28D6D4C12A6F65F300FDCBDF /* MySliderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySliderViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D6D4C02A6F651D00FDCBDF /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +126,8 @@
 		280FCBAE2A5E55F400419636 /* Exercise4Tests */ = {
 			isa = PBXGroup;
 			children = (
-				280FCBAF2A5E55F400419636 /* Exercise4Tests.swift */,
+				28D6D4C12A6F65F300FDCBDF /* MySliderViewTests.swift */,
+				28A6D4FB2A6F7DEB0070419F /* FingerInteractionViewTests.swift */,
 			);
 			path = Exercise4Tests;
 			sourceTree = "<group>";
@@ -189,6 +194,9 @@
 				280FCBAD2A5E55F400419636 /* PBXTargetDependency */,
 			);
 			name = Exercise4Tests;
+			packageProductDependencies = (
+				28D6D4BF2A6F651D00FDCBDF /* ViewInspector */,
+			);
 			productName = Exercise4Tests;
 			productReference = 280FCBAB2A5E55F400419636 /* Exercise4Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -243,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 280FCB922A5E55F300419636;
+			packageReferences = (
+				28D6D4BE2A6F651D00FDCBDF /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 280FCB9C2A5E55F300419636 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,7 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280FCBB02A5E55F400419636 /* Exercise4Tests.swift in Sources */,
+				28A6D4FC2A6F7DEB0070419F /* FingerInteractionViewTests.swift in Sources */,
+				28D6D4C22A6F65F300FDCBDF /* MySliderViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +631,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28D6D4BE2A6F651D00FDCBDF /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28D6D4BF2A6F651D00FDCBDF /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D6D4BE2A6F651D00FDCBDF /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 280FCB932A5E55F300419636 /* Project object */;
 }

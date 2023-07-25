@@ -12,8 +12,9 @@ struct FingerInteractionView: View {
     @State private var shouldShowMessage: Bool = false
     @State private var message: String = ""
     @State private var timer: Timer?
-    @State private var scale: CGFloat = 1
-    @State private var rotate: Angle = .zero
+    @State var scale: CGFloat
+    @State var rotate: Angle
+    public var didAppear: ((Self) -> Void)?
 
     var body: some View {
         GeometryReader { geo in
@@ -64,6 +65,14 @@ struct FingerInteractionView: View {
                         }
                     )
                 )
+            Button("Long Tap Test") {
+                self.scale = 1
+                self.rotate = .zero
+            }
+            .foregroundColor(.white)
+            .onAppear {
+                self.didAppear?(self)
+            }
         }
     }
 
@@ -88,6 +97,6 @@ struct FingerInteractionView: View {
 
 struct FingerInteractionView_Previews: PreviewProvider {
     static var previews: some View {
-        FingerInteractionView()
+        FingerInteractionView(scale: 1, rotate: .zero)
     }
 }

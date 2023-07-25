@@ -12,7 +12,7 @@ struct CustomSlider: View {
     @Binding var value: Int
     private let sliderHeight: CGFloat = 300
     private let sliderWidth: CGFloat = 30
-    private var tempHeight: CGFloat {
+    var tempHeight: CGFloat {
         return CGFloat(value) * sliderHeight / 100
     }
 

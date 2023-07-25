@@ -12,7 +12,7 @@ struct Exercise4App: App {
     var body: some Scene {
         WindowGroup {
 //            MySliderView() // part 1
-            FingerInteractionView() // part 2, 3
+            FingerInteractionView(scale: 0, rotate: .zero) // part 2, 3
         }
     }
 }
