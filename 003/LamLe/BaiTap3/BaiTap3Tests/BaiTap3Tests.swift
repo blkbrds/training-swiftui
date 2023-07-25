@@ -37,54 +37,30 @@ final class BaiTap3Tests: XCTestCase {
     }
     
     func testUserNameFieldIsNotEmpty() throws {
-            let loginView = LoginFormView()
-            let textFieldUserName = try loginView.inspect().find(viewWithTag: "userNameTextField")
-            XCTAssertFalse(textFieldUserName.isEmpty)
-        }
+        let loginView = LoginFormView()
+        let textFieldUserName = try loginView.inspect().find(viewWithTag: "userNameTextField")
+        XCTAssertFalse(textFieldUserName.isEmpty)
+    }
 
     func testPasswordFieldIsNotEmpty() throws {
-            let loginView = LoginFormView()
-            let textFieldPassword = try loginView.inspect().find(viewWithTag: "passWordTextField")
-            XCTAssertFalse(textFieldPassword.isEmpty)
+        let loginView = LoginFormView()
+        let textFieldPassword = try loginView.inspect().find(viewWithTag: "passWordTextField")
+        XCTAssertFalse(textFieldPassword.isEmpty)
     }
 
     func testButtonLoginIsNotDisable() throws {
-            var loginView = LoginFormView()
-            let exp = loginView.on(\.didAppear) { view in
-                try view.actualView().userName = "Abcd"
-                try view.actualView().passWord = "1234"
-                let checkDisableButton = try view.actualView().validationTextField()
-                XCTAssertFalse(checkDisableButton)
-            }
-        ViewHosting.host(view: loginView)
-        wait(for: [exp], timeout: 0.1)
+        let loginView = LoginFormView()
+        let vm = loginView.viewModel
+        vm.userName = "ABCD"
+        vm.passWord = "1234"
+        XCTAssertFalse(vm.validationTextField())
     }
 
     func testButtonLoginIsDisable() throws {
-        var loginView = LoginFormView()
-        let exp = loginView.on(\.didAppear) { view in
-            try view.actualView().userName = ""
-            try view.actualView().passWord = ""
-            let checkDisableButton = try view.actualView().validationTextField()
-            XCTAssertTrue(checkDisableButton)
-        }
-        ViewHosting.host(view: loginView)
-        wait(for: [exp], timeout: 0.1)
+        let loginView = LoginFormView()
+        let vm = loginView.viewModel
+        vm.userName = ""
+        vm.passWord = ""
+        XCTAssertTrue(vm.validationTextField())
     }
-
-    //    func testLoginSuccess() throws {
-    //        var loginView = LoginFormBaiTap9App()
-    //        let exp = loginView.on(\.didAppear) { view in
-    //            let buttonLogin = try view.find(button: "Log In")
-    //            try view.actualView().userName = "Abcd"
-    //            try view.actualView().passWord = "1234"
-    //            try view.actualView().validationTextField()
-    //            XCTAssertFalse(try view.actualView().loginSuccess)
-    //            try buttonLogin.tap()
-    //            XCTAssertTrue(try view.actualView().loginSuccess)
-    //        }
-    //        ViewHosting.host(view: loginView)
-    //        wait(for: [exp], timeout: 0.1)
-    //    }
-
 }

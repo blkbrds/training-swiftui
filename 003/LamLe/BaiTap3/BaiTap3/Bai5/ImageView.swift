@@ -11,13 +11,46 @@ struct ImageView: View {
     var body: some View {
             ZStack {
                 Image("M10")
+                /*
                     .resizable()
-    //                .ignoresSafeArea()
-    //                .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fill)
+                 */
+                /*
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                */
+                /*
+                    .resizable()
+                    .ignoresSafeArea()
+                    .frame(width: .infinity, height: .infinity)
+                 */
+                /*
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 300)
+                 */
+                /*
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 300, height: 300)
+                 */
+                
+                    .resizable()
+                    .frame(width: 300, height: 300)
                     .clipShape(Circle())
+    
+                /*
+                    .resizable()
+                    .frame(width: 300, height: 400)
+                    .clipShape(Ellipse())
+                 */
+                /*
+                    .resizable()
+                    .frame(width: 200, height: 300)
                     .cornerRadius(50)
+                 */
                     .overlay(
                         Text("G.O.A.T")
                             .italic()

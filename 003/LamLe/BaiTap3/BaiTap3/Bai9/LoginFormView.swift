@@ -10,21 +10,11 @@ import SwiftUI
 struct LoginFormView: View {
 
     // TODO: Properties
-    @State var userName = ""
-    @State var passWord = ""
     @State var checked = false
-    @State var errorMessageUserName = ""
-    @State var errorMessagePassword = ""
     @State var loginSuccess: Bool = false
     internal var didAppear: ((Self) -> Void)?
-
-    func validationTextField() -> Bool {
-        if (userName.isEmpty || passWord.isEmpty) {
-            return true
-        } else {
-            return false
-        }
-    }
+    
+    @StateObject var viewModel = LoginFormVM()
 
     var body: some View {
         ZStack {
@@ -34,41 +24,15 @@ struct LoginFormView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 90)
                     .padding(50)
-                VStack(alignment: .leading, spacing: 1.0) {
-                    TextField("Username", text: $userName) { isBegin in
-                        if isBegin {
-                            print("Bắt đầu nhập")
-                        } else {
-                            print("Kết thúc nhập")
-                            if userName.isEmpty {
-                                errorMessageUserName = "Username is not empty"
-                            } else {
-                                errorMessageUserName = ""
-                            }
-                        }
+                VStack(spacing: -10.0) {
+                    VStack(alignment: .leading, spacing: -8.0) {
+                        CustomLoginTextField(title: "Username", value: $viewModel.userName, isPassword: false)
+                            .tag("userNameTextField")
                     }
-                        .login(systemImageString: "person", isTextFieldPassword: false)
-                        .tag("userNameTextField")
-                    Text(errorMessageUserName)
-                        .font(.system(size: 15, weight: .bold, design: .serif))
-                        .foregroundColor(.red.opacity(0.8))
-                }
-                VStack(alignment: .leading) {
-                    SecureField("Password", text: $passWord)
-                        .login(systemImageString: "lock", isTextFieldPassword: true)
-                        .font(.system(size: 15, weight: .bold, design: .serif))
-                        .foregroundColor(.red.opacity(0.8))
-                        .tag("passWordTextField")
-                        .onChange(of: passWord) { newValue in
-                            if passWord.isEmpty {
-                                errorMessagePassword = "Password is not empty"
-                            } else {
-                                errorMessagePassword = ""
-                            }
-                        }
-                    Text(errorMessagePassword)
-                        .font(.system(size: 15, weight: .bold, design: .serif))
-                        .foregroundColor(.red.opacity(0.8))
+                    VStack(alignment: .leading, spacing: -8.0) {
+                        CustomLoginTextField(title: "Password", value: $viewModel.passWord, isPassword: true)
+                            .tag("passWordTextField")
+                    }
                 }
                 HStack(alignment: .center, spacing: 60.0) {
                     HStack {
@@ -99,10 +63,10 @@ struct LoginFormView: View {
                             .font(.system(size: 20, weight: .bold, design: .serif))
                     }
                     .frame(width: 300, height: 60)
-                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(validationTextField() ? 0.4 : 1))
+                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(viewModel.validationTextField() ? 0.4 : 1))
                     .cornerRadius(20)
                     .shadow(color: Color("LoginButtonColor"), radius: 4)
-                    .disabled(validationTextField())
+                    .disabled(viewModel.validationTextField())
                     .onAppear { self.didAppear?(self) }
                 }.padding(20)
                 HStack {
@@ -150,54 +114,6 @@ struct LoginFormView_Previews: PreviewProvider {
         LoginFormView()
     }
 }
-
-struct LoginTextFieldViewModifier: ViewModifier {
-    let systemImageString: String
-    var isTextFieldPassword: Bool
-    @State var isTappingShowPassword: Bool = false
-
-    func body(content: Content) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 5.0)
-                .stroke(
-                    LinearGradient(
-                        colors: [
-                            .red,
-                            .blue
-                        ],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                )
-                .frame(height: 40)
-            HStack {
-                Image(systemName: systemImageString)
-                content
-                if isTextFieldPassword {
-                    Button(action: {
-                        isTappingShowPassword = !isTappingShowPassword
-                    }) {
-                        Image(systemName: isTappingShowPassword == true ? "eye.circle" : "eye.slash.circle")
-                    }
-                }
-            }
-            .padding()
-            .foregroundColor(.gray)
-            .shadow(color: .purple, radius: 10)
-        }
-
-    }
-}
-
-extension View {
-    func login(systemImageString: String, isTextFieldPassword: Bool) -> some View {
-        ModifiedContent(
-            content: self,
-            modifier: LoginTextFieldViewModifier(systemImageString: systemImageString, isTextFieldPassword: isTextFieldPassword)
-        )
-    }
-}
-
 
 struct CheckBoxView: View {
 

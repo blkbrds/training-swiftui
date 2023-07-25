@@ -38,19 +38,19 @@ enum CalculatorButton: String {
         }
     }
 
-    var buttonWidth: CGFloat {
+    func setWidthOfButton(widthOfScreen: CGFloat) -> CGFloat {
         switch self {
         case .zero:
-            return (UIScreen.main.bounds.width - 10) / 2
-        default: return (UIScreen.main.bounds.width - 35) / 4
+            return (widthOfScreen - 10) / 2
+        default: return (widthOfScreen - 35) / 4
         }
     }
-
-    var cornerRadius: CGFloat {
+    
+    func setCornerRadiusButton(widthOfScreen: CGFloat) -> CGFloat {
         switch self {
         case .zero:
-            return (UIScreen.main.bounds.width - 60) / 2
-        default: return (UIScreen.main.bounds.width - 60) / 4
+            return (widthOfScreen - 60) / 2
+        default: return (widthOfScreen - 60) / 4
         }
     }
 }
@@ -82,29 +82,31 @@ struct CalculatorView: View {
     }
 
     var body: some View {
-        ZStack (alignment: .bottom) {
-            Color("backGroupCalculator").edgesIgnoringSafeArea(.all)
-            VStack {
-                Text(value)
-                    .padding()
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .font(.system(size: 88, weight: .light))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.2)
-                ForEach(buttons, id: \.self) { row in
-                    HStack {
-                        ForEach(row, id: \.self) { button in
-                            Button {
-                                print("Giá trị của button là \(button.rawValue)")
-                                tappingButton(button: button)
-                            } label: {
-                                Text(button.rawValue)
-                                    .font(.system(size: 32))
-                                    .frame(width: button.buttonWidth, height: 88)
-                                    .foregroundColor(.white)
-                                    .background(button.backGroundButton)
-                                    .cornerRadius(button.cornerRadius)
+        GeometryReader { geometry in
+            ZStack (alignment: .bottom) {
+                Color("backGroupCalculator").edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text(value)
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(.system(size: 88, weight: .light))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.2)
+                    ForEach(buttons, id: \.self) { row in
+                        HStack {
+                            ForEach(row, id: \.self) { button in
+                                Button {
+                                    print("Giá trị của button là \(button.rawValue)")
+                                    tappingButton(button: button)
+                                } label: {
+                                    Text(button.rawValue)
+                                        .font(.system(size: 32))
+                                        .frame(width: button.setWidthOfButton(widthOfScreen: geometry.size.width), height: 88)
+                                        .foregroundColor(.white)
+                                        .background(button.backGroundButton)
+                                        .cornerRadius(button.setCornerRadiusButton(widthOfScreen: geometry.size.width))
+                                }
                             }
                         }
                     }
@@ -113,6 +115,7 @@ struct CalculatorView: View {
         }
     }
 }
+
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView()

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WelcomeScreen1View: View {
     @EnvironmentObject var appRouter: AppRouter
+    @StateObject private var viewModel = WelcomeViewVM()
 
     var body: some View {
         ZStack {
@@ -17,13 +18,13 @@ struct WelcomeScreen1View: View {
                 .foregroundColor(Color(red: 254/255, green: 249/255, blue: 237/255))
                 .position(x: 80, y: 100)
             VStack(alignment: .center) {
-                TopViewWelcome()
-                Image(TextOfScreenWelcome.imageIntrodule)
+                TopWelcomeView()
+                Image(viewModel.imageIntrodule)
                     .resizable()
                     .frame(width: 299, height: 299)
-                Text(TextOfScreenWelcome.titleIntrodule)
+                Text(viewModel.titleIntrodule)
                     .font(.system(size: 28, weight: .bold, design: .monospaced))
-                Text(TextOfScreenWelcome.contentIntrodule)
+                Text(viewModel.contentIntrodule)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
                     .offset(x: 10)
@@ -49,36 +50,5 @@ struct WelcomeScreen1View: View {
 struct WelcomeScreen1View_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeScreen1View()
-    }
-}
-
-struct CustomButtonLoginModifier: ViewModifier {
-
-    func body(content: Content) -> some View {
-        content
-            .frame(width: 300, height: 50)
-            .background(LinearGradient(colors: [Color("LoginButtonColor"), Color(red: 254/255, green: 249/255, blue: 237/255)], startPoint: .topTrailing, endPoint: .bottomLeading))
-            .cornerRadius(20)
-            .shadow(color: Color("LoginButtonColor"), radius: 4)
-    }
-}
-
-extension View {
-    func buttonLoginModifier() -> some View {
-        self.modifier(CustomButtonLoginModifier())
-    }
-}
-
-
-struct TopViewWelcome: View {
-    var body: some View {
-        HStack(alignment: .center) {
-            Image("main_logo")
-                .resizable()
-                .frame(width: 65, height: 65)
-            Text("ThanhLam \nFoodService")
-                .font(.system(size: 37, weight: .bold, design: .monospaced))
-                .multilineTextAlignment(.center)
-        }
     }
 }

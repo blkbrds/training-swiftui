@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ListAvatarView: View {
-    var listName = ["Jack 100", "King Coman", "Leo Messi", "7 Ronaldo", "Harry Magurie", "Paul Pogba", "Mac Alise", " Mbappe", "Kevin"]
-
-    var listImage = ["jack", "coman", "M10", "ronaldo", "magurie", "pogba", "mac", "mbappe", "kevin"]
+    
+    @StateObject var viewModel = ListAvatarVM()
 
     var body: some View {
         VStack {
             ForEach(0..<3, id: \.self) { i in
                 HStack {
-                    ProfileView(indexView: (i == 0 ? i : i * 3), name: (i == 0 ? listName[i] : listName[i * 3]), image: (i == 0 ? listImage[i] : listImage[i * 3])
+                    ProfileView(indexView: (i == 0 ? i : i * 3), name: (i == 0 ? viewModel.listName[i] : viewModel.listName[i * 3]), image: (i == 0 ? viewModel.listImage[i] : viewModel.listImage[i * 3])
                         )
-                    ProfileView(indexView: (i == 0 ? i + 1 : i * 3 + 1), name: (i == 0 ? listName[i + 1] : listName[i * 3 + 1]), image: (i == 0 ? listImage[i + 1] : listImage[i * 3 + 1])
+                    ProfileView(indexView: (i == 0 ? i + 1 : i * 3 + 1), name: (i == 0 ? viewModel.listName[i + 1] : viewModel.listName[i * 3 + 1]), image: (i == 0 ? viewModel.listImage[i + 1] : viewModel.listImage[i * 3 + 1])
                         )
-                    ProfileView(indexView: (i == 0 ? i + 2 : i * 3 + 2), name: (i == 0 ? listName[i + 2] : listName[i * 3 + 2]), image: (i == 0 ? listImage[i + 2] : listImage[i * 3 + 2])
+                    ProfileView(indexView: (i == 0 ? i + 2 : i * 3 + 2), name: (i == 0 ? viewModel.listName[i + 2] : viewModel.listName[i * 3 + 2]), image: (i == 0 ? viewModel.listImage[i + 2] : viewModel.listImage[i * 3 + 2])
                         )
                     }
                 }
@@ -34,7 +33,6 @@ struct ListAvatarView_Previews: PreviewProvider {
         ListAvatarView()
     }
 }
-
 
 struct ProfileView: View {
     var indexView: Int

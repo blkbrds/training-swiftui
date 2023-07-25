@@ -11,24 +11,46 @@ struct CustomTextField: View {
     var title: String
     @State var value: String
     var isPassword: Bool
+    @State var isShowPass: Bool = false
 
     var body: some View {
         if !isPassword {
             TextField(title, text: $value)
                 .beautyTextField(isPassword: isPassword)
                 .padding()
-                .foregroundColor(isPassword == true ? .red : .blue)
+                .foregroundColor(isPassword ? .red : .blue)
         } else {
-            SecureField(title, text: $value)
-                .beautyTextField(isPassword: isPassword)
-                .padding()
-                .foregroundColor(isPassword == true ? .red : .blue)
+            if isShowPass {
+                TextField(title, text: $value)
+                    .beautyTextField(isPassword: isPassword)
+                    .padding()
+                    .foregroundColor(isPassword ? .red : .blue)
+                    .overlay(alignment: .trailing) {
+                        Button(action: {
+                            isShowPass = !isShowPass
+                        }) {
+                            Image(systemName: isShowPass ? "eye.circle" : "eye.slash.circle")
+                        }
+                        .padding(.trailing, 30)
+                        .foregroundColor(.gray)
+                        .shadow(color: .purple, radius: 10)
+                }
+            } else {
+                SecureField(title, text: $value)
+                    .beautyTextField(isPassword: isPassword)
+                    .padding()
+                    .foregroundColor(isPassword ? .red : .blue)
+                    .overlay(alignment: .trailing) {
+                        Button(action: {
+                            isShowPass = !isShowPass
+                        }) {
+                            Image(systemName: isShowPass ? "eye.circle" : "eye.slash.circle")
+                        }
+                        .padding(.trailing, 30)
+                        .foregroundColor(.gray)
+                        .shadow(color: .purple, radius: 10)
+                }
+            }
         }
-    }
-}
-
-struct CustomTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTextField(title: "TextField", value: "", isPassword: true)
     }
 }

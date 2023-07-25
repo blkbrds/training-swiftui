@@ -15,6 +15,13 @@
 		0B9C17AE2A6A26C6009715CC /* BaiTap3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17AD2A6A26C6009715CC /* BaiTap3UITests.swift */; };
 		0B9C17B02A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17AF2A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift */; };
 		0B9C17BE2A6A2711009715CC /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17BD2A6A2711009715CC /* AvatarView.swift */; };
+		0BA147272A6FB46C005BEB2C /* WelcomeViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA147262A6FB46C005BEB2C /* WelcomeViewVM.swift */; };
+		0BA1472A2A6FB4D4005BEB2C /* TopWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA147292A6FB4D4005BEB2C /* TopWelcomeView.swift */; };
+		0BA1472C2A6FB537005BEB2C /* CustomButtonLoginModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA1472B2A6FB537005BEB2C /* CustomButtonLoginModifier.swift */; };
+		0BA38EBD2A6E69820047A226 /* ListAvatarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38EBC2A6E69820047A226 /* ListAvatarVM.swift */; };
+		0BA38EC02A6E70EE0047A226 /* ModifierLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38EBF2A6E70EE0047A226 /* ModifierLoginTextField.swift */; };
+		0BA38EC22A6E718C0047A226 /* CustomLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38EC12A6E718C0047A226 /* CustomLoginTextField.swift */; };
+		0BA38EC52A6E7A6A0047A226 /* LoginFormVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38EC42A6E7A6A0047A226 /* LoginFormVM.swift */; };
 		0BEA31162A6A2C6900DB25B2 /* ListAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */; };
 		0BEA31192A6A2E1B00DB25B2 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA31182A6A2E1B00DB25B2 /* CalculatorView.swift */; };
 		0BEA311C2A6A319600DB25B2 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA311B2A6A319600DB25B2 /* SliderView.swift */; };
@@ -61,6 +68,13 @@
 		0B9C17AD2A6A26C6009715CC /* BaiTap3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITests.swift; sourceTree = "<group>"; };
 		0B9C17AF2A6A26C6009715CC /* BaiTap3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0B9C17BD2A6A2711009715CC /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		0BA147262A6FB46C005BEB2C /* WelcomeViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewVM.swift; sourceTree = "<group>"; };
+		0BA147292A6FB4D4005BEB2C /* TopWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWelcomeView.swift; sourceTree = "<group>"; };
+		0BA1472B2A6FB537005BEB2C /* CustomButtonLoginModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonLoginModifier.swift; sourceTree = "<group>"; };
+		0BA38EBC2A6E69820047A226 /* ListAvatarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAvatarVM.swift; sourceTree = "<group>"; };
+		0BA38EBF2A6E70EE0047A226 /* ModifierLoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierLoginTextField.swift; sourceTree = "<group>"; };
+		0BA38EC12A6E718C0047A226 /* CustomLoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginTextField.swift; sourceTree = "<group>"; };
+		0BA38EC42A6E7A6A0047A226 /* LoginFormVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormVM.swift; sourceTree = "<group>"; };
 		0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAvatarView.swift; sourceTree = "<group>"; };
 		0BEA31182A6A2E1B00DB25B2 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		0BEA311B2A6A319600DB25B2 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -177,10 +191,45 @@
 			path = Bai1;
 			sourceTree = "<group>";
 		};
+		0BA147252A6FB452005BEB2C /* WelcomeView-ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0BA147262A6FB46C005BEB2C /* WelcomeViewVM.swift */,
+			);
+			path = "WelcomeView-ViewModel";
+			sourceTree = "<group>";
+		};
+		0BA147282A6FB4BC005BEB2C /* CustomWelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				0BA147292A6FB4D4005BEB2C /* TopWelcomeView.swift */,
+				0BA1472B2A6FB537005BEB2C /* CustomButtonLoginModifier.swift */,
+			);
+			path = CustomWelcomeView;
+			sourceTree = "<group>";
+		};
+		0BA38EBE2A6E6B5D0047A226 /* CustomTextField-LoginForm */ = {
+			isa = PBXGroup;
+			children = (
+				0BA38EBF2A6E70EE0047A226 /* ModifierLoginTextField.swift */,
+				0BA38EC12A6E718C0047A226 /* CustomLoginTextField.swift */,
+			);
+			path = "CustomTextField-LoginForm";
+			sourceTree = "<group>";
+		};
+		0BA38EC32A6E7A4A0047A226 /* LoginForm-ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0BA38EC42A6E7A6A0047A226 /* LoginFormVM.swift */,
+			);
+			path = "LoginForm-ViewModel";
+			sourceTree = "<group>";
+		};
 		0BEA31142A6A2C4B00DB25B2 /* Bai2 */ = {
 			isa = PBXGroup;
 			children = (
 				0BEA31152A6A2C6900DB25B2 /* ListAvatarView.swift */,
+				0BA38EBC2A6E69820047A226 /* ListAvatarVM.swift */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -248,6 +297,8 @@
 		0BEA31302A6A3CBE00DB25B2 /* Bai9 */ = {
 			isa = PBXGroup;
 			children = (
+				0BA38EC32A6E7A4A0047A226 /* LoginForm-ViewModel */,
+				0BA38EBE2A6E6B5D0047A226 /* CustomTextField-LoginForm */,
 				0BEA31312A6A3CD600DB25B2 /* LoginFormView.swift */,
 			);
 			path = Bai9;
@@ -256,6 +307,8 @@
 		0BEA31332A6A3E7100DB25B2 /* Bai10 */ = {
 			isa = PBXGroup;
 			children = (
+				0BA147282A6FB4BC005BEB2C /* CustomWelcomeView */,
+				0BA147252A6FB452005BEB2C /* WelcomeView-ViewModel */,
 				0BEA313B2A6A452F00DB25B2 /* WelcomeScreen1View.swift */,
 				0BEA313D2A6A454C00DB25B2 /* WelcomeScreen2View.swift */,
 			);
@@ -407,20 +460,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BEA312F2A6A3A1A00DB25B2 /* CustomButton.swift in Sources */,
+				0BA1472C2A6FB537005BEB2C /* CustomButtonLoginModifier.swift in Sources */,
 				0BEA312A2A6A397E00DB25B2 /* ButtonBeginView.swift in Sources */,
 				0BEA31252A6A348A00DB25B2 /* ModifierTextField.swift in Sources */,
 				0B9C17952A6A26C5009715CC /* ContentView.swift in Sources */,
+				0BA147272A6FB46C005BEB2C /* WelcomeViewVM.swift in Sources */,
 				0BEA312D2A6A39F900DB25B2 /* CustomButtonModifier.swift in Sources */,
+				0BA38EC02A6E70EE0047A226 /* ModifierLoginTextField.swift in Sources */,
+				0BA38EC22A6E718C0047A226 /* CustomLoginTextField.swift in Sources */,
 				0BEA313E2A6A454C00DB25B2 /* WelcomeScreen2View.swift in Sources */,
 				0BEA31192A6A2E1B00DB25B2 /* CalculatorView.swift in Sources */,
 				0BEA31162A6A2C6900DB25B2 /* ListAvatarView.swift in Sources */,
 				0BEA31272A6A34AB00DB25B2 /* CustomTextField.swift in Sources */,
+				0BA1472A2A6FB4D4005BEB2C /* TopWelcomeView.swift in Sources */,
 				0BEA311C2A6A319600DB25B2 /* SliderView.swift in Sources */,
 				0BEA31222A6A331B00DB25B2 /* TextFieldBeginView.swift in Sources */,
 				0BEA31322A6A3CD600DB25B2 /* LoginFormView.swift in Sources */,
 				0BEA31382A6A3F1C00DB25B2 /* AppRouter.swift in Sources */,
+				0BA38EC52A6E7A6A0047A226 /* LoginFormVM.swift in Sources */,
 				0BEA313C2A6A452F00DB25B2 /* WelcomeScreen1View.swift in Sources */,
 				0B9C17BE2A6A2711009715CC /* AvatarView.swift in Sources */,
+				0BA38EBD2A6E69820047A226 /* ListAvatarVM.swift in Sources */,
 				0BEA311F2A6A326500DB25B2 /* ImageView.swift in Sources */,
 				0B9C17932A6A26C5009715CC /* BaiTap3App.swift in Sources */,
 			);

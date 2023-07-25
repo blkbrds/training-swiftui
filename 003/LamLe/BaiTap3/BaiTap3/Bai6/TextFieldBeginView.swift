@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextFieldBeginView: View {
     @State private var name: String = ""
-        @State private var passWord: String = ""
+    @State private var passWord: String = ""
         var body: some View {
             VStack(alignment: .leading) {
                 CustomTextField(title: "Enter Your Name", value: name, isPassword: false)
