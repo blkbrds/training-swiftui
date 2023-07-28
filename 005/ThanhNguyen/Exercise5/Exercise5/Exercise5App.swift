@@ -14,7 +14,8 @@ struct Exercise5App: App {
 //            BadgeNumberView() // part 1
 //            OneSquareView() // part 2-1
 //            TwoSquareView() // part 2-2
-            ThreeSquareView() // part 2-3
+//            ThreeSquareView() // part 2-3
+            ResizeView() // part 3
         }
     }
 }
