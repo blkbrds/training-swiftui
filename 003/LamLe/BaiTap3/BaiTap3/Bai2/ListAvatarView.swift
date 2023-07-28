@@ -7,19 +7,29 @@
 
 import SwiftUI
 
-struct ListAvatarView: View {
+struct ModelListAvatar {
+    var listNameAvatar: [String]
+    var listImageAvatar: [String]
     
-    @StateObject var viewModel = ListAvatarVM()
+    init(listNameAvatar: [String], listImageAvatar: [String]) {
+        self.listNameAvatar = listNameAvatar
+        self.listImageAvatar = listImageAvatar
+    }
+}
+
+struct ListAvatarView: View {
+
+    var model: ModelListAvatar = ModelListAvatar(listNameAvatar: ["Jack 100", "King Coman", "Leo Messi", "7 Ronaldo", "Harry Magurie", "Paul Pogba", "Mac Alise", " Mbappe", "Kevin"], listImageAvatar: ["jack", "coman", "M10", "ronaldo", "magurie", "pogba", "mac", "mbappe", "kevin"])
 
     var body: some View {
         VStack {
             ForEach(0..<3, id: \.self) { i in
                 HStack {
-                    ProfileView(indexView: (i == 0 ? i : i * 3), name: (i == 0 ? viewModel.listName[i] : viewModel.listName[i * 3]), image: (i == 0 ? viewModel.listImage[i] : viewModel.listImage[i * 3])
+                    ProfileView(indexView: (i == 0 ? i : i * 3), name: (i == 0 ? model.listNameAvatar[i] : model.listNameAvatar[i * 3]), image: (i == 0 ? model.listImageAvatar[i] : model.listImageAvatar[i * 3])
                         )
-                    ProfileView(indexView: (i == 0 ? i + 1 : i * 3 + 1), name: (i == 0 ? viewModel.listName[i + 1] : viewModel.listName[i * 3 + 1]), image: (i == 0 ? viewModel.listImage[i + 1] : viewModel.listImage[i * 3 + 1])
+                    ProfileView(indexView: (i == 0 ? i + 1 : i * 3 + 1), name: (i == 0 ? model.listNameAvatar[i + 1] : model.listNameAvatar[i * 3 + 1]), image: (i == 0 ? model.listImageAvatar[i + 1] : model.listImageAvatar[i * 3 + 1])
                         )
-                    ProfileView(indexView: (i == 0 ? i + 2 : i * 3 + 2), name: (i == 0 ? viewModel.listName[i + 2] : viewModel.listName[i * 3 + 2]), image: (i == 0 ? viewModel.listImage[i + 2] : viewModel.listImage[i * 3 + 2])
+                    ProfileView(indexView: (i == 0 ? i + 2 : i * 3 + 2), name: (i == 0 ? model.listNameAvatar[i + 2] : model.listNameAvatar[i * 3 + 2]), image: (i == 0 ? model.listImageAvatar[i + 2] : model.listImageAvatar[i * 3 + 2])
                         )
                     }
                 }

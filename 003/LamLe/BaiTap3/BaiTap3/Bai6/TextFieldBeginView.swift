@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TextFieldBeginView: View {
-    @State private var name: String = ""
-    @State private var passWord: String = ""
+    @State var name: String = ""
+    @State var password: String = ""
         var body: some View {
             VStack(alignment: .leading) {
                 CustomTextField(title: "Enter Your Name", value: name, isPassword: false)
@@ -22,7 +22,7 @@ struct TextFieldBeginView: View {
     //                .shadow(color: Color.gray.opacity(1.0),
     //                            radius: 3, x: 1, y: 2)
                     
-                CustomTextField(title: "Enter Your Password", value: passWord, isPassword: true)
+                CustomTextField(title: "Enter Your Password", value: password, isPassword: true)
     //                .border(Color.red, width: 2)
     //                .textFieldStyle(.automatic)
     //                .padding(30)

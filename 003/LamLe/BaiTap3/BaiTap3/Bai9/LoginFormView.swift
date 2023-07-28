@@ -14,7 +14,7 @@ struct LoginFormView: View {
     @State var loginSuccess: Bool = false
     internal var didAppear: ((Self) -> Void)?
     
-    @StateObject var viewModel = LoginFormVM()
+    @StateObject var viewModel = LoginFormViewModel()
 
     var body: some View {
         ZStack {
@@ -30,7 +30,7 @@ struct LoginFormView: View {
                             .tag("userNameTextField")
                     }
                     VStack(alignment: .leading, spacing: -8.0) {
-                        CustomLoginTextField(title: "Password", value: $viewModel.passWord, isPassword: true)
+                        CustomLoginTextField(title: "Password", value: $viewModel.password, isPassword: true)
                             .tag("passWordTextField")
                     }
                 }

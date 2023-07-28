@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+
+
 struct WelcomeScreen2View: View {
     @EnvironmentObject var appRouter: AppRouter
     let numberOfPage: Int = 3
     @State var currentPage: Int = 0
-    @StateObject private var viewModel = WelcomeViewVM()
+    @StateObject private var viewModel = WelcomeViewViewModel()
 
     var body: some View {
         ZStack {
