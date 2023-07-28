@@ -11,7 +11,10 @@ import SwiftUI
 struct Exercise5App: App {
     var body: some Scene {
         WindowGroup {
-            BadgeNumberView() // part 1
+//            BadgeNumberView() // part 1
+//            OneSquareView() // part 2-1
+//            TwoSquareView() // part 2-2
+            ThreeSquareView() // part 2-3
         }
     }
 }
