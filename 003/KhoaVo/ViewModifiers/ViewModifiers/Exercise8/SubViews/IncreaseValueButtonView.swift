@@ -19,6 +19,6 @@ struct IncreaseValueButtonView: View {
                 .font(.system(size: 20))
                 .fontWeight(.bold)
         })
-        .buttonModifier()
+        .gradientButtonModifier()
     }
 }

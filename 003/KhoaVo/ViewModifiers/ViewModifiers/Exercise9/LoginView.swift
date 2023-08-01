@@ -73,10 +73,14 @@ struct LoginView: View {
 
             VStack {
                 HStack {
-                    LoginButtonView(title: "Let's Combat!")
-                        .onButtonPress {
-                            print("Login Success !")
-                        }
+                    Button {
+                        username = ""
+                        password = ""
+                    } label: {
+                        Text("Let's Combat!")
+                            .loginButtonTextModifier()
+                    }
+                    .loginButtonModifier()
                     .disabled(isInValid)
                     .overlay {
                         if isInValid {
@@ -88,11 +92,14 @@ struct LoginView: View {
                 .frame(width: 224, height: 58)
 
                 HStack {
-                    LoginButtonView(title: "Let's Cancel!")
-                        .onButtonPress {
-                            username = ""
-                            password = ""
-                        }
+                    Button {
+                        username = ""
+                        password = ""
+                    } label: {
+                        Text("Let's Cancel!")
+                            .loginButtonTextModifier()
+                    }
+                    .loginButtonModifier()
                     .cornerRadius(29)
                 }
                 .frame(width: 224, height: 58)

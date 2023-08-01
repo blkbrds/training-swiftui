@@ -30,12 +30,15 @@ struct WelcomeView: View {
                     .normalTextLoginModifier()
                     .multilineTextAlignment(.center)
                     .frame(width: 224)
-                LoginButtonView(title: "Let's Combat!")
-                    .onButtonPress {
-                        coordinator.setScreenType(screenType: .login)
-                    }
-                    .cornerRadius(29)
-                    .frame(width: 224, height: 58)
+                Button {
+                    coordinator.setScreenType(screenType: .login)
+                } label: {
+                    Text("Let's Combat!")
+                        .loginButtonTextModifier()
+                }
+                .loginButtonModifier()
+                .cornerRadius(29)
+                .frame(width: 224, height: 58)
                 HStack {
                     ForEach(0..<numberOfPages) { index in
                         Circle()

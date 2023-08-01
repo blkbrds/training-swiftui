@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldModifier: ViewModifier {
+struct LoginTextFieldModifier: ViewModifier {
 
     var type: TextFieldType = .username
 
@@ -38,7 +38,7 @@ struct TextFieldModifier: ViewModifier {
 }
 
 extension View {
-    func textFieldModifier(type: TextFieldType) -> some View {
-        self.modifier(TextFieldModifier(type: type))
+    func loginTextFieldModifier(type: TextFieldType) -> some View {
+        self.modifier(LoginTextFieldModifier(type: type))
     }
 }

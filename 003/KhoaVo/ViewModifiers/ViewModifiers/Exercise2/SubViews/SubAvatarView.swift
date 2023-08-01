@@ -16,8 +16,6 @@ struct SubAvatarView: View {
     var viewWidth: CGFloat
     var viewHeight: CGFloat
 
-    var action: ((Int) -> Void)?
-
     var body: some View {
         VStack(spacing: 15) {
             Image("\(imageName)")
@@ -27,7 +25,7 @@ struct SubAvatarView: View {
                 .scaledToFill()
                 .shadow(radius: 10)
                 .onTapGesture {
-                    action!(index)
+                    print("Index of item is \(index)")
                 }
             Text("\(characterName)")
                 .lineLimit(2)
@@ -42,11 +40,5 @@ struct SubAvatarView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .border(.white, width: 1)
         .shadow(radius: 10)
-    }
-
-    func onAvatarPress(action: @escaping (Int) -> Void ) -> Self {
-        var copy = self
-        copy.action = action
-        return copy
     }
 }

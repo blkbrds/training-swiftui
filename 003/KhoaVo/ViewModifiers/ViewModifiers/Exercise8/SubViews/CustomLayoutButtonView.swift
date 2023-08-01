@@ -37,6 +37,6 @@ struct CustomLayoutButtonView: View {
                 }
             }
         })
-        .buttonModifier()
+        .gradientButtonModifier()
     }
 }

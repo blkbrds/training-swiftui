@@ -1,5 +1,5 @@
 //
-//  ButtonModifier.swift
+//  GradientButtonModifier.swift
 //  ViewModifiers
 //
 //  Created by Khoa Vo T.A. VN.Danang on 28/06/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonModifier: ViewModifier {
+struct GradientButtonModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
@@ -23,7 +23,7 @@ struct ButtonModifier: ViewModifier {
 }
 
 extension View {
-    func buttonModifier() -> some View {
-        self.modifier(ButtonModifier())
+    func gradientButtonModifier() -> some View {
+        self.modifier(GradientButtonModifier())
     }
 }

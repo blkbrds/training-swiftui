@@ -59,11 +59,11 @@ struct TextFieldStyleView: View {
         switch type {
         case .username:
             TextField(type.placeholder, text: $data)
-                .textFieldModifier(type: type)
+                .loginTextFieldModifier(type: type)
         case .password:
             if isShowingPassword {
                 TextField(type.placeholder, text: $data)
-                    .textFieldModifier(type: type)
+                    .loginTextFieldModifier(type: type)
                     .overlay(
                         Button(action: {
                             isShowingPassword = !isShowingPassword
@@ -71,11 +71,11 @@ struct TextFieldStyleView: View {
                             Image(systemName: isShowingPassword ? type.passwordLock : type.passwordShowing)
                                 .tint(type.tintColor)
                         }
-                            .offset(x: UIScreen.main.bounds.width / 2 - 45)
+                        .offset(x: UIScreen.main.bounds.width / 2 - 45)
                     )
             } else {
                 SecureField(type.placeholder, text: $data)
-                    .textFieldModifier(type: type)
+                    .loginTextFieldModifier(type: type)
                     .overlay(
                         Button(action: {
                             isShowingPassword = !isShowingPassword
@@ -83,7 +83,7 @@ struct TextFieldStyleView: View {
                             Image(systemName: isShowingPassword ? type.passwordLock : type.passwordShowing)
                                 .tint(type.tintColor)
                         }
-                            .offset(x: UIScreen.main.bounds.width / 2 - 45)
+                        .offset(x: UIScreen.main.bounds.width / 2 - 45)
                     )
             }
         }
