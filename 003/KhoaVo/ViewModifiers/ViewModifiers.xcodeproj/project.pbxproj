@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0A7BB12A78EEB800D0A822 /* LoginButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A7BB02A78EEB800D0A822 /* LoginButtonModifier.swift */; };
+		8A1D08C62A7A06980058C5ED /* LoginTextFieldsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1D08C52A7A06980058C5ED /* LoginTextFieldsModifier.swift */; };
 		8A2E935A2A53AB9A0042E2E6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2E93592A53AB9A0042E2E6 /* Router.swift */; };
 		8A54B1F42A4BE36C0097F6A9 /* ViewModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54B1F32A4BE36C0097F6A9 /* ViewModifiersApp.swift */; };
 		8A54B1F82A4BE3700097F6A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54B1F72A4BE3700097F6A9 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		8A0A7BB02A78EEB800D0A822 /* LoginButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonModifier.swift; sourceTree = "<group>"; };
+		8A1D08C52A7A06980058C5ED /* LoginTextFieldsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldsModifier.swift; sourceTree = "<group>"; };
 		8A2E93592A53AB9A0042E2E6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8A54B1F02A4BE36C0097F6A9 /* ViewModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewModifiers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A54B1F32A4BE36C0097F6A9 /* ViewModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiersApp.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				8A8943892A4EBA8F000BD956 /* AppColorTextLoginModifier.swift */,
 				8A0A7BB02A78EEB800D0A822 /* LoginButtonModifier.swift */,
+				8A1D08C52A7A06980058C5ED /* LoginTextFieldsModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				8A54B23F2A4BE38F0097F6A9 /* ImageFullScreenView.swift in Sources */,
 				8A54B2542A4C2B7F0097F6A9 /* GradientButtonModifier.swift in Sources */,
 				8A54B2512A4C173B0097F6A9 /* TextFieldDemoView.swift in Sources */,
+				8A1D08C62A7A06980058C5ED /* LoginTextFieldsModifier.swift in Sources */,
 				8A0A7BB12A78EEB800D0A822 /* LoginButtonModifier.swift in Sources */,
 				8A2E935A2A53AB9A0042E2E6 /* Router.swift in Sources */,
 				8A54B2412A4BE38F0097F6A9 /* TextFieldStyleView.swift in Sources */,

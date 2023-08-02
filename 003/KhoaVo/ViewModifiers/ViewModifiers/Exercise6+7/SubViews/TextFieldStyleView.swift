@@ -64,27 +64,27 @@ struct TextFieldStyleView: View {
             if isShowingPassword {
                 TextField(type.placeholder, text: $data)
                     .loginTextFieldModifier(type: type)
-                    .overlay(
+                    .overlay(alignment: .trailing, content: {
                         Button(action: {
                             isShowingPassword = !isShowingPassword
                         }) {
                             Image(systemName: isShowingPassword ? type.passwordLock : type.passwordShowing)
                                 .tint(type.tintColor)
                         }
-                        .offset(x: UIScreen.main.bounds.width / 2 - 45)
-                    )
+                        .padding(.trailing, 30)
+                    })
             } else {
                 SecureField(type.placeholder, text: $data)
                     .loginTextFieldModifier(type: type)
-                    .overlay(
+                    .overlay(alignment: .trailing, content: {
                         Button(action: {
                             isShowingPassword = !isShowingPassword
                         }) {
                             Image(systemName: isShowingPassword ? type.passwordLock : type.passwordShowing)
                                 .tint(type.tintColor)
                         }
-                        .offset(x: UIScreen.main.bounds.width / 2 - 45)
-                    )
+                        .padding(.trailing, 30)
+                    })
             }
         }
     }

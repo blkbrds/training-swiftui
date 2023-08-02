@@ -17,11 +17,7 @@ struct LoginView: View {
     @State var username: String
     @State var password: String
 
-    var screenSize: CGRect = UIScreen.main.bounds
-
     var body: some View {
-        let bannerWidth: CGFloat = screenSize.width * 323 / 375
-        let bannerHeight: CGFloat = bannerWidth * 205 / 323
         let isInValid: Bool = username.isEmpty || password.isEmpty
         VStack(alignment: .leading, spacing: 10) {
             VStack {
@@ -29,7 +25,7 @@ struct LoginView: View {
 
             Image("img-login-banner")
                 .resizable()
-                .frame(width: bannerWidth, height: bannerHeight)
+                .frame(width: 320, height: 203)
 
             VStack(alignment: .leading, spacing: 10) {
                 Text("Welcome Back!")
@@ -43,25 +39,10 @@ struct LoginView: View {
 
             VStack(spacing: 15) {
                 TextField("Username", text: $username)
-                    .padding([.leading, .trailing], 40)
-                    .submitLabel(.next)
-
-                VStack {
-
-                }
-                .frame(width: screenSize.width - 80, height: 1)
-                .background(Color(Define.loginTintColor))
+                    .loginTextFieldsModifier(submitType: .next)
 
                 SecureField("Password", text: $password)
-                    .padding([.leading, .trailing], 40)
-                    .submitLabel(.done)
-
-                VStack {
-
-                }
-                .frame(width: screenSize.width - 80, height: 1)
-                .background(Color(Define.loginTintColor))
-
+                    .loginTextFieldsModifier(submitType: .done)
                 HStack(alignment: .lastTextBaseline) {
                     Spacer()
                     Text("Forgot password?")
