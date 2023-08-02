@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2805F26C2A779F6E00D0D6AF /* CustomSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F26B2A779F6E00D0D6AF /* CustomSquareView.swift */; };
 		2805F26E2A779FF500D0D6AF /* ChangeLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805F26D2A779FF500D0D6AF /* ChangeLayoutView.swift */; };
+		282FFCB52A7A022000DF8A3F /* QueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FFCB42A7A022000DF8A3F /* QueryView.swift */; };
+		282FFCB72A7A0D8400DF8A3F /* VQueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FFCB62A7A0D8400DF8A3F /* VQueryView.swift */; };
+		2837E1202A78AB9B00C2EE37 /* ScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837E11F2A78AB9B00C2EE37 /* ScrollViewExample.swift */; };
+		2837E1222A78AE0500C2EE37 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837E1212A78AE0500C2EE37 /* TabbarView.swift */; };
 		28A6D51B2A70C34C0070419F /* Exercise5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6D51A2A70C34C0070419F /* Exercise5App.swift */; };
 		28A6D51F2A70C34E0070419F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A6D51E2A70C34E0070419F /* Assets.xcassets */; };
 		28A6D5222A70C34E0070419F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A6D5212A70C34E0070419F /* Preview Assets.xcassets */; };
@@ -45,6 +49,10 @@
 /* Begin PBXFileReference section */
 		2805F26B2A779F6E00D0D6AF /* CustomSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSquareView.swift; sourceTree = "<group>"; };
 		2805F26D2A779FF500D0D6AF /* ChangeLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLayoutView.swift; sourceTree = "<group>"; };
+		282FFCB42A7A022000DF8A3F /* QueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryView.swift; sourceTree = "<group>"; };
+		282FFCB62A7A0D8400DF8A3F /* VQueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VQueryView.swift; sourceTree = "<group>"; };
+		2837E11F2A78AB9B00C2EE37 /* ScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExample.swift; sourceTree = "<group>"; };
+		2837E1212A78AE0500C2EE37 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		28A6D5172A70C34C0070419F /* Exercise5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A6D51A2A70C34C0070419F /* Exercise5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise5App.swift; sourceTree = "<group>"; };
 		28A6D51E2A70C34E0070419F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +106,17 @@
 			path = Part4;
 			sourceTree = "<group>";
 		};
+		2837E11E2A78AB2000C2EE37 /* Part6 */ = {
+			isa = PBXGroup;
+			children = (
+				2837E11F2A78AB9B00C2EE37 /* ScrollViewExample.swift */,
+				2837E1212A78AE0500C2EE37 /* TabbarView.swift */,
+				282FFCB42A7A022000DF8A3F /* QueryView.swift */,
+				282FFCB62A7A0D8400DF8A3F /* VQueryView.swift */,
+			);
+			path = Part6;
+			sourceTree = "<group>";
+		};
 		28A6D50E2A70C34C0070419F = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +140,7 @@
 		28A6D5192A70C34C0070419F /* Exercise5 */ = {
 			isa = PBXGroup;
 			children = (
+				2837E11E2A78AB2000C2EE37 /* Part6 */,
 				28FFC1D52A77AE1C00EC67F5 /* Part5 */,
 				2805F26A2A779DC200D0D6AF /* Part4 */,
 				28E0618F2A73A47C009E59FC /* Part3 */,
@@ -324,17 +344,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2837E1202A78AB9B00C2EE37 /* ScrollViewExample.swift in Sources */,
 				2805F26C2A779F6E00D0D6AF /* CustomSquareView.swift in Sources */,
 				28E061912A73A4E2009E59FC /* ResizeView.swift in Sources */,
 				28E0618E2A73A149009E59FC /* ThreeSquareView.swift in Sources */,
 				28E0618C2A73A00D009E59FC /* TwoSquareView.swift in Sources */,
 				28E061832A73669D009E59FC /* BadgeView.swift in Sources */,
 				28E061872A736E47009E59FC /* BadgeNumberView.swift in Sources */,
+				282FFCB52A7A022000DF8A3F /* QueryView.swift in Sources */,
 				2805F26E2A779FF500D0D6AF /* ChangeLayoutView.swift in Sources */,
 				28FFC1D72A77AE7500EC67F5 /* StacksView.swift in Sources */,
 				28E061852A736ADC009E59FC /* ButtonBadgeView.swift in Sources */,
 				28A6D51B2A70C34C0070419F /* Exercise5App.swift in Sources */,
 				28E0618A2A739E94009E59FC /* OneSquareView.swift in Sources */,
+				282FFCB72A7A0D8400DF8A3F /* VQueryView.swift in Sources */,
+				2837E1222A78AE0500C2EE37 /* TabbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

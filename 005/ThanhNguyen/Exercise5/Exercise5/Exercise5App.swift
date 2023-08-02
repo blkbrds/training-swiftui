@@ -17,7 +17,8 @@ struct Exercise5App: App {
 //            ThreeSquareView() // part 2-3
 //            ResizeView() // part 3
 //            ChangeLayoutView() // part 4
-            StacksView() // part 5
+//            StacksView() // part 5
+            ScrollViewExample() // part 6
         }
     }
 }
