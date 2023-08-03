@@ -52,7 +52,7 @@ final class BaiTap3Tests: XCTestCase {
         let loginView = LoginFormView()
         let vm = loginView.viewModel
         vm.userName = "ABCD"
-        vm.passWord = "1234"
+        vm.password = "1234"
         XCTAssertFalse(vm.validationTextField())
     }
 
@@ -60,7 +60,7 @@ final class BaiTap3Tests: XCTestCase {
         let loginView = LoginFormView()
         let vm = loginView.viewModel
         vm.userName = ""
-        vm.passWord = ""
+        vm.password = ""
         XCTAssertTrue(vm.validationTextField())
     }
 }
