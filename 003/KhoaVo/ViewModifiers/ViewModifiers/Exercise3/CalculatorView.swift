@@ -27,13 +27,16 @@ enum CalculatorButtonType {
 struct CalculatorView: View {
 
     @State var input: String = ""
-    var spacing: CGFloat = 1
+    private var spacing: CGFloat = 1
+    private var isNumber: Bool {
+        return Int(input) != nil
+    }
 
     var body: some View {
         VStack(spacing: spacing) {
             Spacer(minLength: 20)
             HStack(spacing: 0) {
-                Text("0")
+                Text(isNumber ? "\(input)" : "0")
                     .font(.system(size: 80))
                     .fontWeight(.medium)
                     .foregroundColor(.white)
@@ -43,60 +46,60 @@ struct CalculatorView: View {
             .background(Color("color-input"))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             HStack(spacing: spacing) {
-                ButtonCalculatorView(title: "AC", buttonType: .tools)
+                ButtonCalculatorView(input: $input, title: "AC", buttonType: .tools)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "+/-", buttonType: .tools)
+                ButtonCalculatorView(input: $input, title: "+/-", buttonType: .tools)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "%", buttonType: .tools)
+                ButtonCalculatorView(input: $input, title: "%", buttonType: .tools)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "/", buttonType: .operation)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-            HStack(spacing: spacing) {
-                ButtonCalculatorView(title: "7", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "8", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "9", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "X", buttonType: .operation)
+                ButtonCalculatorView(input: $input, title: "/", buttonType: .operation)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             HStack(spacing: spacing) {
-                ButtonCalculatorView(title: "4", buttonType: .number)
+                ButtonCalculatorView(input: $input, title: "7", buttonType: .number)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "5", buttonType: .number)
+                ButtonCalculatorView(input: $input, title: "8", buttonType: .number)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "6", buttonType: .number)
+                ButtonCalculatorView(input: $input, title: "9", buttonType: .number)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "-", buttonType: .operation)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-            HStack(spacing: spacing) {
-                ButtonCalculatorView(title: "1", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "2", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "3", buttonType: .number)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                ButtonCalculatorView(title: "+", buttonType: .operation)
+                ButtonCalculatorView(input: $input, title: "X", buttonType: .operation)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             HStack(spacing: spacing) {
-                ButtonCalculatorView(title: "0", buttonType: .number)
+                ButtonCalculatorView(input: $input, title: "4", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "5", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "6", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "-", buttonType: .operation)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            HStack(spacing: spacing) {
+                ButtonCalculatorView(input: $input, title: "1", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "2", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "3", buttonType: .number)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                ButtonCalculatorView(input: $input, title: "+", buttonType: .operation)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            HStack(spacing: spacing) {
+                ButtonCalculatorView(input: $input, title: "0", buttonType: .number)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 HStack(spacing: spacing) {
-                    ButtonCalculatorView(title: ",", buttonType: .number)
+                    ButtonCalculatorView(input: $input, title: ",", buttonType: .number)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    ButtonCalculatorView(title: "=", buttonType: .operation)
+                    ButtonCalculatorView(input: $input, title: "=", buttonType: .operation)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
@@ -114,3 +117,4 @@ struct CalculatorView_Previews: PreviewProvider {
         CalculatorView()
     }
 }
+

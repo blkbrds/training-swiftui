@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ButtonCalculatorView: View {
 
+    @Binding var input: String
     var title: String
     var buttonType: CalculatorButtonType
 
     var body: some View {
         Button(action: {
-            print("Title of button \(title)")
+            input = title
         }, label: {
             Text("\(title)")
                 .font(.system(size: 25))
