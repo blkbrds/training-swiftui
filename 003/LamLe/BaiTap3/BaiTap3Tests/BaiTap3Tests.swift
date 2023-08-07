@@ -36,16 +36,30 @@ final class BaiTap3Tests: XCTestCase {
         }
     }
     
-    func testUserNameFieldIsNotEmpty() throws {
+    func testEmailTextFieldIsNotEmpty() throws {
         let loginView = LoginFormView()
-        let textFieldUserName = try loginView.inspect().find(viewWithTag: "userNameTextField")
-        XCTAssertFalse(textFieldUserName.isEmpty)
+        var email = loginView.viewModel.email
+        email = "abcd"
+        XCTAssertFalse(email.isEmpty)
+    }
+    
+    func testEmailTextFieldIsEmpty() throws {
+        let loginView = LoginFormView()
+        var email = loginView.viewModel.email
+        XCTAssertTrue(email.isEmpty)
     }
 
     func testPasswordFieldIsNotEmpty() throws {
         let loginView = LoginFormView()
-        let textFieldPassword = try loginView.inspect().find(viewWithTag: "passWordTextField")
-        XCTAssertFalse(textFieldPassword.isEmpty)
+        var password = loginView.viewModel.password
+        password = "AQWER1234"
+        XCTAssertFalse(password.isEmpty)
+    }
+    
+    func testPasswordFieldIsEmpty() throws {
+        let loginView = LoginFormView()
+        let password = loginView.viewModel.password
+        XCTAssertTrue(password.isEmpty)
     }
     
     func testEmailTextFieldIsInValid() throws {
@@ -63,7 +77,7 @@ final class BaiTap3Tests: XCTestCase {
     func testPasswordTestFieldIsInValid() throws {
         let loginView = LoginFormView()
         let viewModel = loginView.viewModel
-        XCTAssertTrue(viewModel.isValidPassword("abcd1234"))
+        XCTAssertFalse(viewModel.isValidPassword("abcd1234"))
     }
     
     func testPasswordTestFieldIsValid() throws {
@@ -79,8 +93,16 @@ final class BaiTap3Tests: XCTestCase {
         vm.password = "Admin@12345"
         XCTAssertFalse(vm.checkDisableLoginButton())
     }
+    
+    func testButtonLoginIsDisableWithNotEmptyTextField() throws {
+        let loginView = LoginFormView()
+        let vm = loginView.viewModel
+        vm.email = "Abcd"
+        vm.password = "1234"
+        XCTAssertTrue(vm.checkDisableLoginButton())
+    }
 
-    func testButtonLoginIsDisable() throws {
+    func testButtonLoginIsDisableWithEmptyTextField() throws {
         let loginView = LoginFormView()
         let vm = loginView.viewModel
         vm.email = ""

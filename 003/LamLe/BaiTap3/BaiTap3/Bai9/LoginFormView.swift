@@ -27,7 +27,7 @@ struct LoginFormView: View {
                 VStack(spacing: -10.0) {
                     VStack(alignment: .leading, spacing: -8.0) {
                         CustomLoginTextField(title: "Email", value: $viewModel.email, isPassword: false)
-                            .tag("userNameTextField")
+                            .tag("emailTextField")
                     }
                     VStack(alignment: .leading, spacing: -8.0) {
                         CustomLoginTextField(title: "Password", value: $viewModel.password, isPassword: true)
