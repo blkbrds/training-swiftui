@@ -19,12 +19,12 @@ struct WelcomeScreen2View: View {
         ZStack {
             VStack {
                 TopWelcomeView()
-                Image(viewModel.getImageTutorial(page: currentPage))
+                Image(viewModel.getInfoTutorial(page: currentPage).imageTutorial)
                     .resizable()
                     .frame(width: 299, height: 299)
-                Text(viewModel.getTitleTextTutorial(page: currentPage))
+                Text(viewModel.getInfoTutorial(page: currentPage).titleTextTutorial)
                     .font(.system(size: 28, weight: .bold, design: .monospaced))
-                Text(viewModel.getContentTextTutorial(page: currentPage))
+                Text(viewModel.getInfoTutorial(page: currentPage).contentTextTutorial)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
                     .offset(x: 10)

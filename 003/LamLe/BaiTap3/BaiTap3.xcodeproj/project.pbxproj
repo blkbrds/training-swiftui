@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6F22722A80D10300494D84 /* WelcomeViewKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F22712A80D10300494D84 /* WelcomeViewKey.swift */; };
 		0B9C17932A6A26C5009715CC /* BaiTap3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17922A6A26C5009715CC /* BaiTap3App.swift */; };
 		0B9C17952A6A26C5009715CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C17942A6A26C5009715CC /* ContentView.swift */; };
 		0B9C17972A6A26C6009715CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9C17962A6A26C6009715CC /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B6F22712A80D10300494D84 /* WelcomeViewKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewKey.swift; sourceTree = "<group>"; };
 		0B9C178F2A6A26C5009715CC /* BaiTap3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTap3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9C17922A6A26C5009715CC /* BaiTap3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiTap3App.swift; sourceTree = "<group>"; };
 		0B9C17942A6A26C5009715CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA147262A6FB46C005BEB2C /* WelcomeViewViewModel.swift */,
+				0B6F22712A80D10300494D84 /* WelcomeViewKey.swift */,
 			);
 			path = "WelcomeView-ViewModel";
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				0BEA31272A6A34AB00DB25B2 /* CustomTextField.swift in Sources */,
 				0BA1472A2A6FB4D4005BEB2C /* TopWelcomeView.swift in Sources */,
 				0BEA311C2A6A319600DB25B2 /* SliderView.swift in Sources */,
+				0B6F22722A80D10300494D84 /* WelcomeViewKey.swift in Sources */,
 				0BEA31222A6A331B00DB25B2 /* TextFieldBeginView.swift in Sources */,
 				0BEA31322A6A3CD600DB25B2 /* LoginFormView.swift in Sources */,
 				0BEA31382A6A3F1C00DB25B2 /* AppRouter.swift in Sources */,

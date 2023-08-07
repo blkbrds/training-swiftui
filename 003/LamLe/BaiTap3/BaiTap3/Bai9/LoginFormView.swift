@@ -26,7 +26,7 @@ struct LoginFormView: View {
                     .padding(50)
                 VStack(spacing: -10.0) {
                     VStack(alignment: .leading, spacing: -8.0) {
-                        CustomLoginTextField(title: "Username", value: $viewModel.userName, isPassword: false)
+                        CustomLoginTextField(title: "Email", value: $viewModel.email, isPassword: false)
                             .tag("userNameTextField")
                     }
                     VStack(alignment: .leading, spacing: -8.0) {
@@ -63,10 +63,10 @@ struct LoginFormView: View {
                             .font(.system(size: 20, weight: .bold, design: .serif))
                     }
                     .frame(width: 300, height: 60)
-                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(viewModel.validationTextField() ? 0.4 : 1))
+                    .background(LinearGradient(colors: [Color("LoginButtonColor"), .blue.opacity(0.7)], startPoint: .topTrailing, endPoint: .bottomLeading).opacity(viewModel.checkDisableLoginButton() ? 0.4 : 1))
                     .cornerRadius(20)
                     .shadow(color: Color("LoginButtonColor"), radius: 4)
-                    .disabled(viewModel.validationTextField())
+                    .disabled(viewModel.checkDisableLoginButton())
                     .onAppear { self.didAppear?(self) }
                 }.padding(20)
                 HStack {

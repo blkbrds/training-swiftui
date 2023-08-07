@@ -9,7 +9,6 @@ import SwiftUI
 
 struct WelcomeScreen1View: View {
     @EnvironmentObject var appRouter: AppRouter
-    @StateObject private var viewModel = WelcomeViewViewModel()
 
     var body: some View {
         ZStack {
@@ -19,12 +18,12 @@ struct WelcomeScreen1View: View {
                 .position(x: 80, y: 100)
             VStack(alignment: .center) {
                 TopWelcomeView()
-                Image(viewModel.getImageTutorial(page: 3))
+                Image(WelcomeViewKey.imageIntrodule)
                     .resizable()
                     .frame(width: 299, height: 299)
-                Text(viewModel.getTitleTextTutorial(page: 3))
+                Text(WelcomeViewKey.titleIntrodule)
                     .font(.system(size: 28, weight: .bold, design: .monospaced))
-                Text(viewModel.getContentTextTutorial(page: 3))
+                Text(WelcomeViewKey.contentIntrodule)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
                     .offset(x: 10)
