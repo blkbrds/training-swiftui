@@ -11,7 +11,6 @@ struct TriangleSliderView: View {
     // TODO: Properties
     @Binding var sliderProgress: CGFloat
     @Binding var sliderHeight: CGFloat
-    @Binding var sliderWidth: CGFloat
     @Binding var lastDragValue: CGFloat
     @Binding var numberValue: String
     var heightOfTriangle: CGFloat
@@ -21,14 +20,12 @@ struct TriangleSliderView: View {
         sliderHeight = sliderHeight > heightOfTriangle / 2 ? heightOfTriangle / 2 : sliderHeight
         sliderHeight = sliderHeight >= 0 ? sliderHeight : 0
         sliderProgress = sliderHeight / (heightOfTriangle / 2)
-        sliderWidth = sliderProgress * 100
         numberValue = "\(Int(sliderProgress * 100))"
     }
     
     func dragOnEnd() {
         sliderHeight = sliderHeight > heightOfTriangle / 2 ? heightOfTriangle / 2 : sliderHeight
         sliderHeight = sliderHeight >= 0 ? sliderHeight : 0
-        sliderWidth = sliderProgress * 100
         lastDragValue = sliderHeight
     }
     
@@ -40,7 +37,7 @@ struct TriangleSliderView: View {
             
             Triangle()
                 .fill(Color("progressSlider"))
-                .frame(width: sliderWidth, height: sliderHeight)
+                .frame(width: sliderProgress * 100, height: sliderHeight)
         }
         .frame(width: 100, height: heightOfTriangle / 2)
         .overlay(

@@ -45,18 +45,6 @@ final class MySliderViewTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
-    func testCheckSliderWidthNotEqualWhenNotDragGesture() throws {
-        var myView = MySliderView()
-        let exp = myView.on(\.didAppear) { view in
-            var sliderProgress = try view.actualView().sliderProgress
-            sliderProgress = 0.0
-            let sliderWidth = try view.actualView().sliderWidth
-            XCTAssertEqual(sliderWidth, 0.0)
-        }
-        ViewHosting.host(view: myView)
-        wait(for: [exp], timeout: 0.1)
-    }
-    
     func testCheckSliderProgressWhenEnterTextField() throws {
         var myView = MySliderView()
         let exp = myView.on(\.didAppear) { view in

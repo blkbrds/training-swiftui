@@ -11,7 +11,6 @@ struct MySliderView: View {
     
     // TODO: Properties
     @State var sliderHeight: CGFloat = 0
-    @State var sliderWidth: CGFloat = 0
     @State var sliderProgress: CGFloat = 0
     @State var lastDragValue: CGFloat = 0
     @State var numberValue: String = "0"
@@ -51,7 +50,7 @@ struct MySliderView: View {
                             handleSliderHeightProgress(numberValue: numberValue, heightOfScreen: geometry.size.height)
                         }
                 }
-                TriangleSliderView(sliderProgress: $sliderProgress, sliderHeight: $sliderHeight, sliderWidth: $sliderWidth, lastDragValue: $lastDragValue, numberValue: $numberValue, heightOfTriangle: geometry.size.height)
+                TriangleSliderView(sliderProgress: $sliderProgress, sliderHeight: $sliderHeight, lastDragValue: $lastDragValue, numberValue: $numberValue, heightOfTriangle: geometry.size.height)
                     .tag("TriangleSlider")
                     .onAppear { self.didAppear?(self) }
                 
