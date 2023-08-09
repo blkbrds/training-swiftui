@@ -18,7 +18,8 @@ struct Exercise5App: App {
 //            ResizeView() // part 3
 //            ChangeLayoutView() // part 4
 //            StacksView() // part 5
-            ScrollViewExample() // part 6
+//            ScrollViewExample() // part 6
+            ProfileView() // part 7
         }
     }
 }
