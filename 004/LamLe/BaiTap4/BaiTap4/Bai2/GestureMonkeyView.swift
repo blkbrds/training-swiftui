@@ -23,12 +23,9 @@ struct GestureMonkeyView: View {
     var magnificationGesture: some Gesture {
         MagnificationGesture()
             .onChanged { state in
-                let delta = state / lastScale
-                scale *= delta
-                lastScale = scale
+                scale = min(max(state.magnitude, minScale), maxScale)
             }
             .onEnded { state in
-                validateScaleLimit()
                 lastScale = 1.0
             }
     }
@@ -77,19 +74,6 @@ struct GestureMonkeyView: View {
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
             showMessage = false
         }
-    }
-    
-    func getMinimunScaleAllowed() -> CGFloat {
-        return max(scale, minScale)
-    }
-    
-    func getMaximunScaleAllowed() -> CGFloat {
-        return min(scale, maxScale)
-    }
-    
-    func validateScaleLimit() {
-        scale = getMinimunScaleAllowed()
-        scale = getMaximunScaleAllowed()
     }
     
     var body: some View {

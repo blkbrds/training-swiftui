@@ -123,4 +123,29 @@ final class MySliderViewTests: XCTestCase {
         wait(for: [exp], timeout: 0.1)
     }
     
+    func testCheckSliderHeightWhenEnterTextFieldSmallerZero() throws {
+        var myView = MySliderView()
+        let exp = myView.on(\.didAppear) { view in
+            var numberOfValueSlider = try view.actualView().numberValue
+            numberOfValueSlider = "-12123.0"
+            try view.actualView().handleSliderHeightProgress(numberValue: numberOfValueSlider, heightOfScreen: 100)
+            let sliderHeight = try view.actualView().sliderHeight
+            XCTAssertEqual(sliderHeight, 0.0)
+        }
+        ViewHosting.host(view: myView)
+        wait(for: [exp], timeout: 0.1)
+    }
+    
+    func testCheckSliderProgressWhenEnterTextFieldSmallerZero() throws {
+        var myView = MySliderView()
+        let exp = myView.on(\.didAppear) { view in
+            var numberOfValueSlider = try view.actualView().numberValue
+            numberOfValueSlider = "-123421.0"
+            try view.actualView().handleSliderHeightProgress(numberValue: numberOfValueSlider, heightOfScreen: 100)
+            let sliderProgress = try view.actualView().sliderProgress
+            XCTAssertEqual(sliderProgress, 0)
+        }
+        ViewHosting.host(view: myView)
+        wait(for: [exp], timeout: 0.1)
+    }
 }

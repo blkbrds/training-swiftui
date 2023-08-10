@@ -45,7 +45,7 @@ struct TriangleSliderView: View {
                 .frame(width: 100, height: 40)
                 .background(.white)
                 .padding(2)
-                .offset(y: -sliderHeight + heightOfTriangle / 4 - 25)
+                .offset(y: -sliderHeight + heightOfTriangle / 4 - 35)
                 .tag("process")
                 .gesture(DragGesture(minimumDistance: 0).onChanged({(value) in
                     dragOnchange(translation: value.translation)

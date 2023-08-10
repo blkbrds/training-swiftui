@@ -18,7 +18,7 @@ struct MySliderView: View {
     
     func handleSliderHeightProgress(numberValue : String, heightOfScreen: CGFloat) {
         if let numberValue = NumberFormatter().number(from: numberValue) {
-            let numberValue = Int(truncating: numberValue) > 100 ? 100 : numberValue
+            let numberValue = Int(truncating: numberValue) > 100 ? 100 : (Int(truncating: numberValue) < 0 ? 0 : numberValue)
             sliderProgress = CGFloat(truncating: numberValue) / 100
             sliderHeight = sliderProgress * (heightOfScreen / 2)
         }
@@ -47,6 +47,18 @@ struct MySliderView: View {
                         .keyboardType(.decimalPad)
                         .tag("numberOfSlider")
                         .onChange(of: numberValue) { newValue in
+                            let filtered = newValue.filter { "0123456789".contains($0) }
+                            if let value = Int(filtered) {
+                                if value > 100 {
+                                    self.numberValue = "100"
+                                } else if value < 0 {
+                                    self.numberValue = "0"
+                                } else {
+                                    self.numberValue = filtered
+                                }
+                            } else {
+                                self.numberValue = ""
+                            }
                             handleSliderHeightProgress(numberValue: numberValue, heightOfScreen: geometry.size.height)
                         }
                 }
