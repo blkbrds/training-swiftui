@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "879EB194-F638-4003-A6E2-0234B95889CB",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ConnectAPI.xcodeproj",
+        "identifier" : "8A2241482A4D42D6000364B6",
+        "name" : "ConnectAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}
