@@ -35,10 +35,10 @@
 		8ACB86AF2A550D210089D605 /* AsyncAwaitHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86AE2A550D210089D605 /* AsyncAwaitHandlingView.swift */; };
 		8ACB86B12A550D310089D605 /* AsyncAwaitHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86B02A550D310089D605 /* AsyncAwaitHandlingViewModel.swift */; };
 		8ACB86B82A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86B72A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift */; };
-		8ACB86BD2A566ED90089D605 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86BC2A566ED90089D605 /* DrinkCell.swift */; };
-		8ACB86BF2A566EF30089D605 /* ErrorHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86BE2A566EF30089D605 /* ErrorHandlingView.swift */; };
-		8ACB86C12A566F030089D605 /* ErrorHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86C02A566F030089D605 /* ErrorHandlingViewModel.swift */; };
 		8ACB86C32A566FB80089D605 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB86C22A566FB80089D605 /* API.swift */; };
+		8AF21C9E2A848B8E0015B5A2 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF21C9D2A848B8E0015B5A2 /* DrinkCell.swift */; };
+		8AF21CA02A848BDE0015B5A2 /* ErrorHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF21C9F2A848BDE0015B5A2 /* ErrorHandlingView.swift */; };
+		8AF21CA22A848BFF0015B5A2 /* ErrorHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF21CA12A848BFF0015B5A2 /* ErrorHandlingViewModel.swift */; };
 		A94C6467C377F703EF85B6FD /* Pods_ConnectAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA83B2AF9816022525418BE3 /* Pods_ConnectAPITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,10 +94,10 @@
 		8ACB86AE2A550D210089D605 /* AsyncAwaitHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingView.swift; sourceTree = "<group>"; };
 		8ACB86B02A550D310089D605 /* AsyncAwaitHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModel.swift; sourceTree = "<group>"; };
 		8ACB86B72A551F520089D605 /* AsyncAwaitHandlingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitHandlingViewModelTest.swift; sourceTree = "<group>"; };
-		8ACB86BC2A566ED90089D605 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
-		8ACB86BE2A566EF30089D605 /* ErrorHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingView.swift; sourceTree = "<group>"; };
-		8ACB86C02A566F030089D605 /* ErrorHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModel.swift; sourceTree = "<group>"; };
 		8ACB86C22A566FB80089D605 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8AF21C9D2A848B8E0015B5A2 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
+		8AF21C9F2A848BDE0015B5A2 /* ErrorHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingView.swift; sourceTree = "<group>"; };
+		8AF21CA12A848BFF0015B5A2 /* ErrorHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModel.swift; sourceTree = "<group>"; };
 		A18EC7B0D5453FC3751BF0E1 /* Pods_ConnectAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA83B2AF9816022525418BE3 /* Pods_ConnectAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEA99B06CB435D1DCED1554 /* Pods-ConnectAPI-ConnectAPIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectAPI-ConnectAPIUITests.debug.xcconfig"; path = "Target Support Files/Pods-ConnectAPI-ConnectAPIUITests/Pods-ConnectAPI-ConnectAPIUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,11 +158,11 @@
 		8A5DA58A2A53B2DB00774BE4 /* ConnectAPI */ = {
 			isa = PBXGroup;
 			children = (
-				8ACB86BB2A566EAD0089D605 /* 04 - Error Handling */,
-				8ACB86BA2A566EA50089D605 /* Custom cell */,
+				8AF21C9C2A848B6A0015B5A2 /* Custom */,
+				8AF21C9B2A848A000015B5A2 /* 04 - Error Handling */,
 				8ACB86B92A5520710089D605 /* MockService */,
-				8ACB86AD2A550C930089D605 /* 03 - Async Await Handling */,
 				8ACB869F2A5415060089D605 /* Model */,
+				8ACB86AD2A550C930089D605 /* 03 - Async Await Handling */,
 				8ACB869A2A54138F0089D605 /* 02 - Completion Handling */,
 				8A5DA5B52A53B35100774BE4 /* 01 - Networking */,
 				8A5DA58B2A53B2DB00774BE4 /* ConnectAPIApp.swift */,
@@ -299,21 +299,21 @@
 			path = MockService;
 			sourceTree = "<group>";
 		};
-		8ACB86BA2A566EA50089D605 /* Custom cell */ = {
+		8AF21C9B2A848A000015B5A2 /* 04 - Error Handling */ = {
 			isa = PBXGroup;
 			children = (
-				8ACB86BC2A566ED90089D605 /* DrinkCell.swift */,
-			);
-			path = "Custom cell";
-			sourceTree = "<group>";
-		};
-		8ACB86BB2A566EAD0089D605 /* 04 - Error Handling */ = {
-			isa = PBXGroup;
-			children = (
-				8ACB86BE2A566EF30089D605 /* ErrorHandlingView.swift */,
-				8ACB86C02A566F030089D605 /* ErrorHandlingViewModel.swift */,
+				8AF21C9F2A848BDE0015B5A2 /* ErrorHandlingView.swift */,
+				8AF21CA12A848BFF0015B5A2 /* ErrorHandlingViewModel.swift */,
 			);
 			path = "04 - Error Handling";
+			sourceTree = "<group>";
+		};
+		8AF21C9C2A848B6A0015B5A2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8AF21C9D2A848B8E0015B5A2 /* DrinkCell.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		A7ABF16A3C66DA13F5950CC5 /* Pods */ = {
@@ -326,7 +326,6 @@
 				349CD56F0D346FA6264511F2 /* Pods-ConnectAPITests.debug.xcconfig */,
 				3E2BFF1EC76BC724E10E1C09 /* Pods-ConnectAPITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -588,17 +587,17 @@
 			files = (
 				8A5DA5BA2A53BD0400774BE4 /* NetworkingViewModel.swift in Sources */,
 				8ACB86A12A5415120089D605 /* ApiManager.swift in Sources */,
+				8AF21CA22A848BFF0015B5A2 /* ErrorHandlingViewModel.swift in Sources */,
 				8A5DA5C62A53C4CF00774BE4 /* MockFailureDrinkService.swift in Sources */,
 				8ACB86B12A550D310089D605 /* AsyncAwaitHandlingViewModel.swift in Sources */,
 				8ACB86A42A5415400089D605 /* Cocktail.swift in Sources */,
 				8A5DA58E2A53B2DB00774BE4 /* ContentView.swift in Sources */,
-				8ACB86C12A566F030089D605 /* ErrorHandlingViewModel.swift in Sources */,
-				8ACB86BD2A566ED90089D605 /* DrinkCell.swift in Sources */,
 				8A5DA5C42A53C4BC00774BE4 /* MockSuccessDrinkService.swift in Sources */,
-				8ACB86BF2A566EF30089D605 /* ErrorHandlingView.swift in Sources */,
 				8A5DA5B72A53B37E00774BE4 /* NetworkingView.swift in Sources */,
 				8ACB86AF2A550D210089D605 /* AsyncAwaitHandlingView.swift in Sources */,
 				8ACB869E2A5413BF0089D605 /* CompletionHandlingViewModel.swift in Sources */,
+				8AF21CA02A848BDE0015B5A2 /* ErrorHandlingView.swift in Sources */,
+				8AF21C9E2A848B8E0015B5A2 /* DrinkCell.swift in Sources */,
 				8ACB869C2A5413AB0089D605 /* CompletionHandlingView.swift in Sources */,
 				8ACB86C32A566FB80089D605 /* API.swift in Sources */,
 				8A5DA58C2A53B2DB00774BE4 /* ConnectAPIApp.swift in Sources */,
