@@ -45,7 +45,7 @@ final class BaiTap3Tests: XCTestCase {
     
     func testEmailTextFieldIsEmpty() throws {
         let loginView = LoginFormView()
-        var email = loginView.viewModel.email
+        let email = loginView.viewModel.email
         XCTAssertTrue(email.isEmpty)
     }
 
@@ -65,25 +65,25 @@ final class BaiTap3Tests: XCTestCase {
     func testEmailTextFieldIsInValid() throws {
         let loginView = LoginFormView()
         let viewModel = loginView.viewModel
-        XCTAssertFalse(viewModel.isValidEmail("abcd@"))
+        XCTAssertEqual(viewModel.checkValidateFormatEmail("abcd.vb"), "Email Is Invalid")
     }
     
     func testEmailTestFieldIsValid() throws {
         let loginView = LoginFormView()
         let viewModel = loginView.viewModel
-        XCTAssertTrue(viewModel.isValidEmail("LamLe96@gmail.co"))
+        XCTAssertEqual(viewModel.checkValidateFormatEmail("LamLe96@gmail.co"), "")
     }
     
     func testPasswordTestFieldIsInValid() throws {
         let loginView = LoginFormView()
         let viewModel = loginView.viewModel
-        XCTAssertFalse(viewModel.isValidPassword("abcd1234"))
+        XCTAssertEqual(viewModel.checkValidateFormatPassword("abcd1234"), "Password Is Invalid")
     }
     
     func testPasswordTestFieldIsValid() throws {
         let loginView = LoginFormView()
         let viewModel = loginView.viewModel
-        XCTAssertTrue(viewModel.isValidPassword("Lam12$asdd"))
+        XCTAssertEqual(viewModel.checkValidateFormatPassword("Lam12$asdd"), "")
     }
 
     func testButtonLoginIsNotDisable() throws {

@@ -21,9 +21,16 @@ struct TutorialModel {
 
 final class WelcomeViewViewModel: ObservableObject {
     
-    var model: [TutorialModel] = [TutorialModel(imageTutorial: WelcomeViewKey.imageFavorite, titleTextTutorial: WelcomeViewKey.titleFavorite, contentTextTutorial: WelcomeViewKey.contentFavorite), TutorialModel(imageTutorial: WelcomeViewKey.imageDelivery, titleTextTutorial: WelcomeViewKey.titleDelivery, contentTextTutorial: WelcomeViewKey.contentDelivery), TutorialModel(imageTutorial: WelcomeViewKey.imageChoiceFood, titleTextTutorial: WelcomeViewKey.titleChoiceFood, contentTextTutorial: WelcomeViewKey.contentChoiceFood)]
+    var models: [TutorialModel] = [favoriteTutorial, deliveryTutorial, choiceFoodTutorial]
     
         func getInfoTutorial(page: Int) -> TutorialModel {
-            return model[page]
+            return models[page]
         }
+}
+
+
+extension WelcomeViewViewModel {
+    static let favoriteTutorial: TutorialModel = TutorialModel(imageTutorial: WelcomeViewKey.imageFavorite, titleTextTutorial: WelcomeViewKey.titleFavorite, contentTextTutorial: WelcomeViewKey.contentFavorite)
+    static let deliveryTutorial: TutorialModel = TutorialModel(imageTutorial: WelcomeViewKey.imageDelivery, titleTextTutorial: WelcomeViewKey.titleDelivery, contentTextTutorial: WelcomeViewKey.contentDelivery)
+    static let choiceFoodTutorial: TutorialModel = TutorialModel(imageTutorial: WelcomeViewKey.imageChoiceFood, titleTextTutorial: WelcomeViewKey.titleChoiceFood, contentTextTutorial: WelcomeViewKey.contentChoiceFood)
 }
