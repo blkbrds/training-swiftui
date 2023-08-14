@@ -19,7 +19,7 @@ struct AvatarModel {
 
 struct ListAvatarView: View {
     
-    var models: [AvatarModel] = [avatarJack, avatarComan, avatarMessi, avatarRonaldo, avatarMagurie, avatarPogba, avatarMac, avatarMbappe, avatarKevin]
+    var models: [AvatarModel] = AvatarModel.dummyAvatarModels()
     
     var body: some View {
         VStack {
@@ -65,14 +65,20 @@ struct ProfileView: View {
 }
 
 
-extension ListAvatarView {
-    static let avatarJack = AvatarModel(nameAvatar: "Jack 100", imageAvatar: "jack")
-    static let avatarComan = AvatarModel(nameAvatar: "King Coman", imageAvatar: "coman")
-    static let avatarMessi = AvatarModel(nameAvatar: "Leo Messi", imageAvatar: "M10")
-    static let avatarRonaldo = AvatarModel(nameAvatar: "7 Ronaldo", imageAvatar: "ronaldo")
-    static let avatarMagurie = AvatarModel(nameAvatar: "Harry Magurie", imageAvatar: "magurie")
-    static let avatarPogba = AvatarModel(nameAvatar: "Paul Pogba", imageAvatar: "pogba")
-    static let avatarMac = AvatarModel(nameAvatar: "Mac Alise", imageAvatar: "mac")
-    static let avatarMbappe = AvatarModel(nameAvatar: "Mbappe", imageAvatar: "mbappe")
-    static let avatarKevin = AvatarModel(nameAvatar: "Kevin", imageAvatar: "kevin")
+extension AvatarModel {
+    
+    static func dummyAvatarModels() -> [AvatarModel] {
+        return
+        [
+            AvatarModel(nameAvatar: "Jack 100", imageAvatar: "jack"),
+            AvatarModel(nameAvatar: "King Coman", imageAvatar: "coman"),
+            AvatarModel(nameAvatar: "Leo Messi", imageAvatar: "M10"),
+            AvatarModel(nameAvatar: "7 Ronaldo", imageAvatar: "ronaldo"),
+            AvatarModel(nameAvatar: "Harry Magurie", imageAvatar: "magurie"),
+            AvatarModel(nameAvatar: "Paul Pogba", imageAvatar: "pogba"),
+            AvatarModel(nameAvatar: "Mac Alise", imageAvatar: "mac"),
+            AvatarModel(nameAvatar: "Mbappe", imageAvatar: "mbappe"),
+            AvatarModel(nameAvatar: "Kevin", imageAvatar: "kevin")
+        ]
+    }
 }
