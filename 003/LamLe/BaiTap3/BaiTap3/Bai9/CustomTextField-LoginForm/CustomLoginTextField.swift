@@ -21,11 +21,11 @@ struct CustomLoginTextField: View {
         if !isPassword {
             TextField(title, text: $value)
                 .onChange(of: value) { _ in
-                    guard let checkEmptyEmail = viewModel.checkEmptyEmail(value) else {
+                    guard !viewModel.checkEmptyEmail(value).isEmpty else {
                         errorMessageEmail = viewModel.checkValidateFormatEmail(value)
                         return
                     }
-                    errorMessageEmail = checkEmptyEmail
+                    errorMessageEmail = viewModel.checkEmptyEmail(value)
                 }
                 .login(systemImageString: "person")
         } else {
@@ -44,11 +44,11 @@ struct CustomLoginTextField: View {
                         
                     }
                     .onChange(of: value) { _ in
-                        guard let checkEmptyPassword = viewModel.checkEmptyPassword(value) else {
+                        guard !viewModel.checkEmptyPassword(value).isEmpty else {
                             errorMessagePassword = viewModel.checkValidateFormatPassword(value)
                             return
                         }
-                        errorMessagePassword = checkEmptyPassword
+                        errorMessagePassword = viewModel.checkEmptyPassword(value)
                     }
             } else {
                 SecureField(title, text: $value)
@@ -65,11 +65,11 @@ struct CustomLoginTextField: View {
                         
                     }
                     .onChange(of: value) { _ in
-                        guard let checkEmptyPassword = viewModel.checkEmptyPassword(value) else {
+                        guard !viewModel.checkEmptyPassword(value).isEmpty else {
                             errorMessagePassword = viewModel.checkValidateFormatPassword(value)
                             return
                         }
-                        errorMessagePassword = checkEmptyPassword
+                        errorMessagePassword = viewModel.checkEmptyPassword(value)
                     }
             }
         }

@@ -24,12 +24,12 @@ final class LoginFormViewModel: ObservableObject {
         }
     }
     
-    func checkEmptyEmail(_ email: String) -> String? {
-        return email.isEmpty ? "Email not empty" : nil
+    func checkEmptyEmail(_ email: String) -> String {
+        return email.isEmpty ? "Email not empty" : ""
     }
     
-    func checkEmptyPassword(_ password: String) -> String? {
-        return password.isEmpty ? "Password not empty" : nil
+    func checkEmptyPassword(_ password: String) -> String {
+        return password.isEmpty ? "Password not empty" : ""
     }
     
     func checkValidateFormatEmail(_ email: String) -> String {
