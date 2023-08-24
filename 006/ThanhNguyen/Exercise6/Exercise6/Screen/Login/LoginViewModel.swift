@@ -21,22 +21,25 @@ final class LoginViewModel: ObservableObject {
     @Published var isValidate = false
     @Published var isChecked = false
     @Published var shouldShowErrorAlert = false
+    @Published var shouldShowLoading = false
     private var localStorage = LocalStorage()
 
-    func validateAccount() async {
+    @MainActor func validateAccount() async -> Bool {
         do {
-            let account: Account = .init(id: 0, email: email, password: password)
-            let isValidAccount = try await DataManager().validateAccount(account: account)
-            if isValidAccount {
-                localStorage.saveAccount(account: account)
-                print("success")
+            let account: Account = .init(id: 0, email: email, password: password, address: "", nickname: "")
+            let validAccount = try await DataManager().validateAccount(account: account)
+            if let validAccount {
+                localStorage.saveAccount(account: validAccount)
+                return true
             } else {
                 errorTitle = "Email or password is invalid"
                 shouldShowErrorAlert = true
+                return false
             }
         } catch {
             errorTitle = "Internet error, please try again later"
             shouldShowErrorAlert = true
+            return false
         }
     }
 

@@ -11,8 +11,6 @@ struct LoginView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @StateObject var viewModel: LoginViewModel = .init()
-    @State var shouldShowLoading = false
-    public var didAppear: ((Self) -> Void)?
 
     var body: some View {
         GeometryReader { geo in
@@ -52,9 +50,6 @@ struct LoginView: View {
                                 }
                                 .font(.system(size: 11, weight: .regular))
                                 .foregroundColor(Color("backgroundPink"))
-                                .onAppear {
-                                    self.didAppear?(self)
-                                }
                             }
                             .padding([.trailing, .leading], 30)
                         }
@@ -62,17 +57,21 @@ struct LoginView: View {
                         Spacer()
                         VStack(spacing: 20) {
                             Button("Login") {
-                                print("--->", viewModel.email, viewModel.password)
                                 Task {
-                                    shouldShowLoading = true
-                                    await viewModel.validateAccount()
-                                    shouldShowLoading = false
-                                    appRouter.state = .home
+                                    viewModel.shouldShowLoading = true
+                                    let isSuccess = await viewModel.validateAccount()
+                                    if isSuccess {
+                                        appRouter.state = .home
+                                    }
+                                    viewModel.shouldShowLoading = false
                                 }
                             }
                             .loginButton()
                             .padding([.trailing, .leading], 30)
                             .disabled(viewModel.isValidate == viewModel.validateSignInButton())
+                            .alert(Text("Login error"), isPresented: $viewModel.shouldShowErrorAlert) { } message: {
+                                Text(viewModel.errorTitle)
+                            }
                             HStack {
                                 Text("New member ?")
                                     .font(.system(size: 18, weight: .light))
@@ -87,7 +86,7 @@ struct LoginView: View {
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
-                if shouldShowLoading {
+                if viewModel.shouldShowLoading {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.white.shadow(.drop(radius: 6)))
                         .frame(width: 50, height: 50)

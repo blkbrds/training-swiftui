@@ -11,17 +11,28 @@ struct Account: Identifiable, Codable {
     let id: Int
     let email: String
     let password: String
+    let address: String
+    let nickname: String
 
-    init(id: Int, email: String, password: String) {
+    init(id: Int,
+         email: String,
+         password: String,
+         address: String,
+         nickname: String
+    ) {
         self.id = id
         self.email = email
         self.password = password
+        self.address = address
+        self.nickname = nickname
     }
 
     enum CodingKeys: CodingKey {
         case id
         case email
         case password
+        case address
+        case nickname
     }
 
     init(from decoder: Decoder) throws {
@@ -29,6 +40,8 @@ struct Account: Identifiable, Codable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.email = try container.decode(String.self, forKey: .email)
         self.password = try container.decode(String.self, forKey: .password)
+        self.address = try container.decode(String.self, forKey: .address)
+        self.nickname = try container.decode(String.self, forKey: .nickname)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -36,6 +49,8 @@ struct Account: Identifiable, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(email, forKey: .email)
         try container.encode(password, forKey: .password)
+        try container.encode(address, forKey: .address)
+        try container.encode(nickname, forKey: .nickname)
     }
 }
 

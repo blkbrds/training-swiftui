@@ -16,4 +16,12 @@ class LocalStorage: ObservableObject {
     public func saveAccount(account: Account) {
         savedAccountLogin = account
     }
+
+    public func getAccount() -> Account? {
+        return savedAccountLogin
+    }
+
+    public func resetAccount() {
+        savedAccountLogin = nil
+    }
 }
