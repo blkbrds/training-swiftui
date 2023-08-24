@@ -21,12 +21,14 @@
 		288B135B2A9471A100F891D3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B135A2A9471A100F891D3 /* DataManager.swift */; };
 		288B135E2A94722F00F891D3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B135D2A94722F00F891D3 /* Account.swift */; };
 		288B13602A949E9300F891D3 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B135F2A949E9300F891D3 /* LocalStorage.swift */; };
+		289C1A752A973ADE009398E0 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C1A742A973ADE009398E0 /* WelcomeViewModel.swift */; };
 		28B4C4762A95C7A300F095E9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4752A95C7A300F095E9 /* AppRouter.swift */; };
 		28B4C47A2A95E76A00F095E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4792A95E76A00F095E9 /* HomeView.swift */; };
 		28B4C47C2A95E77A00F095E9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C47B2A95E77A00F095E9 /* HomeViewModel.swift */; };
 		28B4C47F2A970CB800F095E9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C47E2A970CB800F095E9 /* EditView.swift */; };
 		28B4C4812A970CD400F095E9 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4802A970CD400F095E9 /* EditViewModel.swift */; };
 		28B4C4842A970F8F00F095E9 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4832A970F8F00F095E9 /* EditProfileView.swift */; };
+		28B4C4872A973A4500F095E9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4862A973A4500F095E9 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +66,14 @@
 		288B135A2A9471A100F891D3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		288B135D2A94722F00F891D3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		288B135F2A949E9300F891D3 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		289C1A742A973ADE009398E0 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		28B4C4752A95C7A300F095E9 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		28B4C4792A95E76A00F095E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		28B4C47B2A95E77A00F095E9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		28B4C47E2A970CB800F095E9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		28B4C4802A970CD400F095E9 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		28B4C4832A970F8F00F095E9 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		28B4C4862A973A4500F095E9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 		28B4C4772A95E4B200F095E9 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				28B4C4852A9736ED00F095E9 /* Welcome */,
 				28B4C47D2A970CA700F095E9 /* Edit */,
 				28B4C4782A95E4ED00F095E9 /* Home */,
 				288B134D2A945FEB00F891D3 /* Login */,
@@ -236,6 +241,15 @@
 				28B4C4832A970F8F00F095E9 /* EditProfileView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		28B4C4852A9736ED00F095E9 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				28B4C4862A973A4500F095E9 /* WelcomeView.swift */,
+				289C1A742A973ADE009398E0 /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,10 +385,12 @@
 				28B4C4842A970F8F00F095E9 /* EditProfileView.swift in Sources */,
 				28B4C4812A970CD400F095E9 /* EditViewModel.swift in Sources */,
 				288B13552A9460AA00F891D3 /* LoginTextFieldModifier.swift in Sources */,
+				28B4C4872A973A4500F095E9 /* WelcomeView.swift in Sources */,
 				288B13602A949E9300F891D3 /* LocalStorage.swift in Sources */,
 				288B135B2A9471A100F891D3 /* DataManager.swift in Sources */,
 				288B13512A94606000F891D3 /* LoginButtonModifier.swift in Sources */,
 				288B134F2A94603000F891D3 /* LoginView.swift in Sources */,
+				289C1A752A973ADE009398E0 /* WelcomeViewModel.swift in Sources */,
 				28B4C47A2A95E76A00F095E9 /* HomeView.swift in Sources */,
 				288B135E2A94722F00F891D3 /* Account.swift in Sources */,
 				28B4C47F2A970CB800F095E9 /* EditView.swift in Sources */,

@@ -25,8 +25,8 @@ struct Exercise6App: App {
             HomeView()
         case .login:
             LoginView()
-        case .tutorial:
-            VStack { }
+        case .welcome:
+            WelcomeView()
         }
     }
 }

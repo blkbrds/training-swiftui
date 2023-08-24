@@ -27,5 +27,3 @@ extension View {
         self.modifier(LoginButtonModifier())
     }
 }
-
-

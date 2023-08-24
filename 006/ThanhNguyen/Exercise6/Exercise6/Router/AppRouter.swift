@@ -12,8 +12,8 @@ final class AppRouter: ObservableObject {
     enum AppState: String {
         case home
         case login
-        case tutorial
+        case welcome
     }
 
-    @Published var state: AppState = .login
+    @AppStorage("appState") var state: AppState = .welcome
 }
