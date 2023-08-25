@@ -26,24 +26,24 @@ struct CustomButton: View {
         .buttonModifier(backGroupColor: backgroundColor)
         .overlay(
             ZStack {
-                if isBadgeCircle {
-                    Circle()
-                        .fill(Color.red)
-                        .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 20)
-                        .offset(x: positionX, y: postionY)
-                } else {
-                    RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .fill(Color.red)
-                        .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 10)
+                if count != 0 {
+                    if isBadgeCircle {
+                        Circle()
+                            .fill(Color.red)
+                            .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 20)
+                            .offset(x: positionX, y: postionY)
+                    } else {
+                        RoundedRectangle(cornerRadius: 4, style: .continuous)
+                            .fill(Color.red)
+                            .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 10)
+                            .offset(x: positionX, y: postionY)
+                    }
+                    Text("\(count)")
+                        .foregroundColor(.white)
+                        .font(.system(size: 12))
+                        .fontWeight(.bold)
                         .offset(x: positionX, y: postionY)
                 }
-                
-                
-                Text("\(count)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 12))
-                    .fontWeight(.bold)
-                    .offset(x: positionX, y: postionY)
             },
             alignment: alignmentOfBadge
         )
