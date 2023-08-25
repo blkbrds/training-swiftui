@@ -10,7 +10,7 @@ import SwiftUI
 struct Profile: View {
     
     var tabOptions: [String] = ["PHOTOS", "VIDEOS", "POSTS", "ABOUT"]
-    let images = ["husky1", "husky2", "husky3", "husky4", "husky5", "husky6", "husky7", "husky8", "husky9"]
+    let images = ["husky1", "husky2", "husky3", "husky4", "husky5", "husky6", "husky7", "husky8", "husky9", "husky10", "husky6", "husky1"]
     @State var isSelectedOption: Int = 0
     
     var body: some View {
@@ -111,7 +111,7 @@ struct Profile: View {
                         .padding(.horizontal)
                     
                     VStack(spacing: 5.0) {
-                        ForEach(0...2, id: \.self) { index in
+                        ForEach(0...3, id: \.self) { index in
                             HStack(spacing: 5.0) {
                                 ForEach(0...2, id: \.self) { i in
                                     Image(index == 0 ? images[i] : images[index * 3 + i])
