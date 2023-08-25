@@ -12,7 +12,7 @@ struct CustomButton: View {
     var backgroundColor: Color
     var textTitle: String
     var isBadgeCircle: Bool = false
-    var alignmentOfBadge: Alignment
+    var alignmentOfBadge: Alignment = .topLeading
     var positionX: CGFloat
     var postionY: CGFloat
     
@@ -52,6 +52,6 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(backgroundColor: .green, textTitle: "Email", alignmentOfBadge: .center, positionX: 0, postionY: -35)
+        CustomButton(backgroundColor: .green, textTitle: "Email", positionX: 0, postionY: -35)
     }
 }
