@@ -10,7 +10,6 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
 
     @Published var account: Account?
-    @State var shouldShowLoading = false
     @Published var shouldShowLogoutAlert = false
     private let localStorage: LocalStorage = .init()
 
