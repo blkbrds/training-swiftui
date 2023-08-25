@@ -11,10 +11,13 @@ import SwiftUI
 struct Exercise6App: App {
 
     @StateObject var appRouter: AppRouter = .init()
+    @AppStorage("isOnDarkMode") var isOnDarkMode: Bool = false
 
     var body: some Scene {
         WindowGroup {
-            rootView.environmentObject(appRouter)
+            rootView
+                .environmentObject(appRouter)
+                .preferredColorScheme(isOnDarkMode ? .dark : .light)
         }
     }
 

@@ -44,7 +44,7 @@ struct HomeView: View {
                         NavigationLink(destination: EditView(viewModel: .init(profileAccount: viewModel.account))) {
                             HomeButton(title: "Edit Profile")
                         }
-                        NavigationLink(destination: EditView(viewModel: .init(profileAccount: viewModel.account))) {
+                        NavigationLink(destination: SettingView()) {
                             HomeButton(title: "Setting")
                         }
                     }
@@ -87,13 +87,13 @@ struct HomeButton: View {
     var body: some View {
         Text(title)
             .font(.system(size: 20, weight: .bold))
-            .foregroundColor(.black)
+            .foregroundColor(Color("primaryColor"))
             .padding([.leading, .trailing], 20)
             .padding([.top, .bottom], 10)
             .overlay {
                 RoundedRectangle(cornerRadius: .infinity)
                     .stroke(style: .init())
-                    .fill(.black)
+                    .fill(Color("primaryColor"))
             }
     }
 }

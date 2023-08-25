@@ -8,10 +8,9 @@
 import SwiftUI
 
 class LocalStorage: ObservableObject {
-//    @AppStorage("appState") var appState: AppState = .tutorial
     @AppStorage("savedAccountLogin") var savedAccountLogin: Account? = nil
-//    @AppStorage("darkMode") var isDarkMode: Bool = false
-//    @AppStorage("nortify") var nortify: Bool = true
+    @AppStorage("isOnNotification") var isOnNotification: Bool = false
+    @AppStorage("isOnDarkMode") var isOnDarkMode: Bool = false
 
     public func saveAccount(account: Account) {
         savedAccountLogin = account
