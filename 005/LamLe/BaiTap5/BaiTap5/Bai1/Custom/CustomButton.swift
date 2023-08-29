@@ -30,15 +30,15 @@ struct CustomButton: View {
                     if isBadgeCircle {
                         Circle()
                             .fill(Color.red)
-                            .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 20)
+                            .frame(width: (count >= 30 ? 50 : CGFloat(count) + 20), height: (count >= 30 ? 50 : CGFloat(count) + 20))
                             .offset(x: positionX, y: postionY)
                     } else {
                         RoundedRectangle(cornerRadius: 4, style: .continuous)
                             .fill(Color.red)
-                            .frame(width: CGFloat(count) + 20, height: CGFloat(count) + 10)
+                            .frame(width: (count >= 30 ? 50 : CGFloat(count) + 20), height: 30)
                             .offset(x: positionX, y: postionY)
                     }
-                    Text("\(count)")
+                    Text(count >= 99 ? "99+" : "\(count)")
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                         .fontWeight(.bold)

@@ -63,7 +63,6 @@ struct CustomListHQueryView: View {
                 }
             }
             .padding(.trailing, 20.0)
-            
         }
         .frame(width: width, height: height)
         .background(backGroupColor)

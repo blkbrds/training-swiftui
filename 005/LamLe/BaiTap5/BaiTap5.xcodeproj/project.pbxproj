@@ -18,8 +18,7 @@
 		0B74DFD62A94757200D683B2 /* CustomButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFD52A94757200D683B2 /* CustomButtonModifier.swift */; };
 		0B74DFD82A9475E700D683B2 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFD72A9475E700D683B2 /* CustomButton.swift */; };
 		0B74DFDB2A949D7200D683B2 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFDA2A949D7200D683B2 /* SquareView.swift */; };
-		0B74DFDD2A94A26100D683B2 /* Square2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFDC2A94A26100D683B2 /* Square2View.swift */; };
-		0B74DFDF2A95B11200D683B2 /* SquareCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFDE2A95B11200D683B2 /* SquareCustomView.swift */; };
+		0B74DFDD2A94A26100D683B2 /* OneSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFDC2A94A26100D683B2 /* OneSquareView.swift */; };
 		0B74DFE22A95B89F00D683B2 /* ChangeSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFE12A95B89F00D683B2 /* ChangeSizeView.swift */; };
 		0B74DFE52A95BD2700D683B2 /* SquareFrameChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFE42A95BD2700D683B2 /* SquareFrameChangeView.swift */; };
 		0B74DFE82A95E70100D683B2 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFE72A95E70100D683B2 /* StackView.swift */; };
@@ -29,6 +28,8 @@
 		0B74DFF32A9704E600D683B2 /* CustomListQueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFF22A9704E600D683B2 /* CustomListQueryView.swift */; };
 		0B74DFF82A9733F400D683B2 /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFF72A9733F400D683B2 /* PolygonShape.swift */; };
 		0B74DFFA2A9734A000D683B2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFF92A9734A000D683B2 /* Profile.swift */; };
+		0BB84D712A9DE52A000F4BE0 /* TwoSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB84D702A9DE52A000F4BE0 /* TwoSquareView.swift */; };
+		0BB84D732A9DE564000F4BE0 /* ThreeSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB84D722A9DE564000F4BE0 /* ThreeSquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +64,7 @@
 		0B74DFD52A94757200D683B2 /* CustomButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonModifier.swift; sourceTree = "<group>"; };
 		0B74DFD72A9475E700D683B2 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0B74DFDA2A949D7200D683B2 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		0B74DFDC2A94A26100D683B2 /* Square2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square2View.swift; sourceTree = "<group>"; };
-		0B74DFDE2A95B11200D683B2 /* SquareCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCustomView.swift; sourceTree = "<group>"; };
+		0B74DFDC2A94A26100D683B2 /* OneSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSquareView.swift; sourceTree = "<group>"; };
 		0B74DFE12A95B89F00D683B2 /* ChangeSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSizeView.swift; sourceTree = "<group>"; };
 		0B74DFE42A95BD2700D683B2 /* SquareFrameChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareFrameChangeView.swift; sourceTree = "<group>"; };
 		0B74DFE72A95E70100D683B2 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		0B74DFF22A9704E600D683B2 /* CustomListQueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListQueryView.swift; sourceTree = "<group>"; };
 		0B74DFF72A9733F400D683B2 /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
 		0B74DFF92A9734A000D683B2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		0BB84D702A9DE52A000F4BE0 /* TwoSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareView.swift; sourceTree = "<group>"; };
+		0BB84D722A9DE564000F4BE0 /* ThreeSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				0B74DFDA2A949D7200D683B2 /* SquareView.swift */,
-				0B74DFDC2A94A26100D683B2 /* Square2View.swift */,
-				0B74DFDE2A95B11200D683B2 /* SquareCustomView.swift */,
+				0B74DFDC2A94A26100D683B2 /* OneSquareView.swift */,
+				0BB84D702A9DE52A000F4BE0 /* TwoSquareView.swift */,
+				0BB84D722A9DE564000F4BE0 /* ThreeSquareView.swift */,
 			);
 			path = Bai2;
 			sourceTree = "<group>";
@@ -383,9 +386,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B74DFFA2A9734A000D683B2 /* Profile.swift in Sources */,
-				0B74DFDF2A95B11200D683B2 /* SquareCustomView.swift in Sources */,
 				0B74DFE82A95E70100D683B2 /* StackView.swift in Sources */,
 				0B74DFF02A96F34200D683B2 /* TabBarView.swift in Sources */,
+				0BB84D712A9DE52A000F4BE0 /* TwoSquareView.swift in Sources */,
 				0B74DFD32A946F3500D683B2 /* BadgeNumberView.swift in Sources */,
 				0B74DFF32A9704E600D683B2 /* CustomListQueryView.swift in Sources */,
 				0B74DFAA2A946F1200D683B2 /* ContentView.swift in Sources */,
@@ -394,8 +397,9 @@
 				0B74DFEB2A95EDC300D683B2 /* ScrollCustomView.swift in Sources */,
 				0B74DFEE2A95F85F00D683B2 /* TabItem.swift in Sources */,
 				0B74DFE22A95B89F00D683B2 /* ChangeSizeView.swift in Sources */,
-				0B74DFDD2A94A26100D683B2 /* Square2View.swift in Sources */,
+				0B74DFDD2A94A26100D683B2 /* OneSquareView.swift in Sources */,
 				0B74DFA82A946F1200D683B2 /* BaiTap5App.swift in Sources */,
+				0BB84D732A9DE564000F4BE0 /* ThreeSquareView.swift in Sources */,
 				0B74DFDB2A949D7200D683B2 /* SquareView.swift in Sources */,
 				0B74DFD62A94757200D683B2 /* CustomButtonModifier.swift in Sources */,
 				0B74DFD82A9475E700D683B2 /* CustomButton.swift in Sources */,
