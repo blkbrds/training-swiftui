@@ -90,7 +90,7 @@ struct ScrollCustomView: View {
                         .padding(.leading, -40.0)
                     }
                 }
-                TabBarView(widthAndHeight: geometry.size.height / 15 - 5)
+                TabBarView(widthAndHeight: 50)
                     .frame(height: geometry.size.height / 15)
             }
         }

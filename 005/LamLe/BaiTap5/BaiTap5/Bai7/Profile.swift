@@ -23,18 +23,18 @@ struct Profile: View {
                             .scaledToFill()
                             .blur(radius: 15, opaque: true)
                             .frame(width: geometry.size.width, height: geometry.size.height / 3 + 100)
-                            .clipShape(PolygonShape())
+                            .clipShape(PolygonShape(height: geometry.size.height / 10))
                         Text("Profile")
                             .foregroundColor(.white)
                             .font(.system(size: 40, weight: .bold, design: .serif))
-                            .padding(.top, -(geometry.size.height / 3) + 115)
+                            .padding(.top, -(geometry.size.height / 6))
                         ZStack {
                             Image("husky_scream")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(75)
-                                .padding(.top, -(geometry.size.height / 3) + 300)
+                                .padding(.top, -(geometry.size.height / 6) + 200)
                             Button(action: {
                                 print("Show Setting")
                             }, label: {
@@ -44,7 +44,7 @@ struct Profile: View {
                                     .frame(width: 20, height: 5)
                                     .rotationEffect(.degrees(-90))
                                     .padding(.leading, geometry.size.height / 2 - 80)
-                                    .padding(.top, -(geometry.size.height / 3) + 300)
+                                    .padding(.top, -(geometry.size.height / 3) + 200)
                             })
                         }
                         .frame(width: geometry.size.width, height: geometry.size.height / 4)
@@ -52,11 +52,10 @@ struct Profile: View {
                     Text("Meka Meka")
                         .font(.system(size: 40, weight: .bold, design: .serif))
                         .foregroundColor(.blue)
-                        .padding(.top, -60.0)
                     Text("Love Meat & Meat")
                         .font(.system(size: 20, weight: .medium, design: .serif))
                         .foregroundColor(.gray.opacity(0.8))
-                    HStack(spacing: 0.0) {
+                    HStack(spacing: 30.0) {
                         Button(action: {
                             print("Show MESSAGE")
                         }, label: {
@@ -71,6 +70,7 @@ struct Profile: View {
                                         .frame(width: 120)
                                 )
                         })
+                        .frame(width: 120, alignment: .center)
                         Button(action: {
                             print("GO FOLLOW")
                         }, label: {
@@ -81,11 +81,10 @@ struct Profile: View {
                                 .padding()
                                 .foregroundColor(.black)
                         })
-                        .frame(width: 120)
+                        .frame(width: 120, alignment: .center)
                         .background(.black)
                         .cornerRadius(25)
                     }
-                    .padding(.horizontal, 40.0)
                     HStack(spacing: 30.0) {
                         InfoView(nameInfo: "Followers", number: "777k")
                         InfoView(nameInfo: "Following", number: "123")
