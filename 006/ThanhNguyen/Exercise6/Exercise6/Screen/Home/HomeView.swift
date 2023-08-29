@@ -11,6 +11,7 @@ struct HomeView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @StateObject var viewModel: HomeViewModel = .init()
+    @State var shouldShowLoading = false
 
     var body: some View {
         NavigationStack {
@@ -53,7 +54,9 @@ struct HomeView: View {
                 }
             }
             .task {
+                shouldShowLoading = true
                 await viewModel.getSavedAccount()
+                shouldShowLoading = false
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
@@ -75,6 +78,9 @@ struct HomeView: View {
                             viewModel.shouldShowLogoutAlert = true
                         }
                 }
+            }
+            if shouldShowLoading {
+                LoadingView()
             }
         }
     }

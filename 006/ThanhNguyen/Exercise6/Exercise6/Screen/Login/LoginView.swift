@@ -87,29 +87,10 @@ struct LoginView: View {
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
                 if viewModel.shouldShowLoading {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(.white.shadow(.drop(radius: 6)))
-                        .frame(width: 50, height: 50)
-                        .overlay {
-                            ProgressView()
-                                .scaleEffect(2)
-                                .frame(width: 150, height: 150)
-                        }
+                    LoadingView()
                 }
             }
         }
-    }
-}
-
-struct CheckBoxView: View {
-    @Binding var checked: Bool
-
-    var body: some View {
-        Image(systemName: checked ? "checkmark.square.fill" : "square")
-            .foregroundColor( checked ? .blue : .secondary)
-            .onTapGesture {
-                self.checked.toggle()
-            }
     }
 }
 

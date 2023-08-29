@@ -38,7 +38,7 @@ struct WelcomeView: View {
                     }
                     .moveButton()
                     Spacer()
-                    ForEach(0..<viewModel.welcomePages.count, id: \.self) { i in
+                    ForEach(0..<WelcomeData.welcomePages.count, id: \.self) { i in
                         RoundedRectangle(cornerRadius: .infinity)
                             .frame(width: 20, height: 10)
                             .foregroundColor(i == viewModel.currentPage ? Color("backgroundPink") : Color("disablePink"))
@@ -57,23 +57,6 @@ struct WelcomeView: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
         }
-    }
-}
-
-struct MoveButtonModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(width: 60, height: 60)
-            .background(.black)
-            .foregroundColor(.white)
-            .font(.system(size: 25, weight: .black, design: .serif))
-            .cornerRadius(.infinity)
-    }
-}
-
-extension View {
-    func moveButton() -> some View {
-        self.modifier(MoveButtonModifier())
     }
 }
 

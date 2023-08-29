@@ -31,6 +31,11 @@
 		28B4C4812A970CD400F095E9 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4802A970CD400F095E9 /* EditViewModel.swift */; };
 		28B4C4842A970F8F00F095E9 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4832A970F8F00F095E9 /* EditProfileView.swift */; };
 		28B4C4872A973A4500F095E9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4C4862A973A4500F095E9 /* WelcomeView.swift */; };
+		28CE7CC32A9DF252007314ED /* MoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE7CC22A9DF252007314ED /* MoveButton.swift */; };
+		28CE7CC52A9DF35D007314ED /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE7CC42A9DF35D007314ED /* CheckBoxView.swift */; };
+		28CE7CC72A9DF3BA007314ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE7CC62A9DF3BA007314ED /* Constants.swift */; };
+		28CE7CCA2A9DF48E007314ED /* StringExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE7CC92A9DF48E007314ED /* StringExts.swift */; };
+		28CE7CCC2A9EFC05007314ED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CE7CCB2A9EFC05007314ED /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		28B4C4802A970CD400F095E9 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		28B4C4832A970F8F00F095E9 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		28B4C4862A973A4500F095E9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		28CE7CC22A9DF252007314ED /* MoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveButton.swift; sourceTree = "<group>"; };
+		28CE7CC42A9DF35D007314ED /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		28CE7CC62A9DF3BA007314ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		28CE7CC92A9DF48E007314ED /* StringExts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExts.swift; sourceTree = "<group>"; };
+		28CE7CCB2A9EFC05007314ED /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,7 @@
 		280FB8572A83808200FE6B43 /* Exercise6 */ = {
 			isa = PBXGroup;
 			children = (
+				28CE7CC82A9DF423007314ED /* Extension */,
 				28B4C4772A95E4B200F095E9 /* Screen */,
 				28B4C4742A95C78300F095E9 /* Router */,
 				288B135C2A94721A00F891D3 /* Model */,
@@ -180,6 +191,8 @@
 				288B13502A94606000F891D3 /* LoginButtonModifier.swift */,
 				288B13522A94607F00F891D3 /* LoginTextField.swift */,
 				288B13542A9460AA00F891D3 /* LoginTextFieldModifier.swift */,
+				28CE7CC42A9DF35D007314ED /* CheckBoxView.swift */,
+				28CE7CCB2A9EFC05007314ED /* LoadingView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 			children = (
 				288B135D2A94722F00F891D3 /* Account.swift */,
 				288B135F2A949E9300F891D3 /* LocalStorage.swift */,
+				28CE7CC62A9DF3BA007314ED /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,10 +282,27 @@
 		28B4C4852A9736ED00F095E9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				28CE7CC12A9DF1FA007314ED /* CustomView */,
 				28B4C4862A973A4500F095E9 /* WelcomeView.swift */,
 				289C1A742A973ADE009398E0 /* WelcomeViewModel.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		28CE7CC12A9DF1FA007314ED /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				28CE7CC22A9DF252007314ED /* MoveButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		28CE7CC82A9DF423007314ED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				28CE7CC92A9DF48E007314ED /* StringExts.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,15 +436,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B4C4842A970F8F00F095E9 /* EditProfileView.swift in Sources */,
+				28CE7CC72A9DF3BA007314ED /* Constants.swift in Sources */,
 				28B4C4812A970CD400F095E9 /* EditViewModel.swift in Sources */,
 				288B13552A9460AA00F891D3 /* LoginTextFieldModifier.swift in Sources */,
 				28A8F3F72A984F6500B5EE9A /* SettingView.swift in Sources */,
+				28CE7CCC2A9EFC05007314ED /* LoadingView.swift in Sources */,
 				28B4C4872A973A4500F095E9 /* WelcomeView.swift in Sources */,
+				28CE7CCA2A9DF48E007314ED /* StringExts.swift in Sources */,
 				288B13602A949E9300F891D3 /* LocalStorage.swift in Sources */,
 				288B135B2A9471A100F891D3 /* DataManager.swift in Sources */,
+				28CE7CC52A9DF35D007314ED /* CheckBoxView.swift in Sources */,
 				288B13512A94606000F891D3 /* LoginButtonModifier.swift in Sources */,
 				288B134F2A94603000F891D3 /* LoginView.swift in Sources */,
 				289C1A752A973ADE009398E0 /* WelcomeViewModel.swift in Sources */,
+				28CE7CC32A9DF252007314ED /* MoveButton.swift in Sources */,
 				28A8F3FA2A9850EC00B5EE9A /* SettingCellView.swift in Sources */,
 				28B4C47A2A95E76A00F095E9 /* HomeView.swift in Sources */,
 				288B135E2A94722F00F891D3 /* Account.swift in Sources */,
