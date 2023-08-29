@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TabBarView: View {
+    
+    let widthAndHeight: CGFloat
+    
     var body: some View {
         GeometryReader { geometry in
            VStack (spacing: 0.0) {
@@ -32,11 +35,13 @@ struct TabBarView: View {
                     )
             }
             HStack {
-                TabItem(width: 50, height: 50, nameImage: "house")
+                TabItem(width: widthAndHeight, height: widthAndHeight, nameImage: "house")
+                    .padding(.top, -5)
                     .padding(.leading, 50.0)
                     
                 Spacer()
-                TabItem(width: 50, height: 50, nameImage: "person")
+                TabItem(width: widthAndHeight, height: widthAndHeight, nameImage: "person")
+                    .padding(.top, -5)
                     .padding(.trailing, 50.0)
             }
             .padding(.horizontal, 20)
@@ -46,7 +51,7 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarView(widthAndHeight: 50)
     }
 }
 
