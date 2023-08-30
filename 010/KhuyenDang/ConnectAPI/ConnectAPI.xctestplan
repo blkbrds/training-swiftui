@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "9A19C779-126C-4045-8095-819B8E2CE2CC",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ConnectAPI.xcodeproj",
+      "identifier" : "8A5DA5872A53B2DB00774BE4",
+      "name" : "ConnectAPI"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ConnectAPI.xcodeproj",
+        "identifier" : "8A5DA5972A53B2DC00774BE4",
+        "name" : "ConnectAPITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ConnectAPI.xcodeproj",
+        "identifier" : "8A5DA5A12A53B2DC00774BE4",
+        "name" : "ConnectAPIUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
