@@ -9,11 +9,9 @@ import SwiftUI
 
 struct TabBarView: View {
     
-    let widthAndHeight: CGFloat
-    
     var body: some View {
         GeometryReader { geometry in
-           VStack (spacing: 0.0) {
+            VStack (spacing: 0.0) {
                 TabBarShape()
                     .fill(Color.white)
                     .frame(height: 60)
@@ -33,37 +31,36 @@ struct TabBarView: View {
                         .cornerRadius(.infinity)
                         .offset(x: 0, y: -25)
                     )
+                HStack {
+                    Spacer()
+                    TabItem(width: 40, height: 40, nameImage: "house")
+                    Spacer()
+                    TabItem(width: 40, height: 40, nameImage: "person")
+                        .padding(.leading, 100.0)
+                    Spacer()
+                }
+                .padding(.top, -60)
+                .padding(.horizontal, 20)
             }
-            HStack {
-                TabItem(width: widthAndHeight, height: widthAndHeight, nameImage: "house")
-                    .padding(.top, -5)
-                    .padding(.leading, 50.0)
-                    
-                Spacer()
-                TabItem(width: widthAndHeight, height: widthAndHeight, nameImage: "person")
-                    .padding(.top, -5)
-                    .padding(.trailing, 50.0)
-            }
-            .padding(.horizontal, 20)
         }
     }
 }
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView(widthAndHeight: 50)
+        TabBarView()
     }
 }
 
 
 struct TabBarShape: Shape {
-
+    
     private enum Constants {
         static let cornerRadius: CGFloat = 20
         static let buttonRadius: CGFloat = 30
         static let buttonPadding: CGFloat = 5
     }
-
+    
     func path(in rect: CGRect) -> Path {
         return Path { path in
             path.move(to: .init(x: 0, y: rect.height))
@@ -75,7 +72,7 @@ struct TabBarShape: Shape {
                 endAngle: .radians(-CGFloat.pi / 2),
                 clockwise: false
             )
-
+            
             let lineEnd = rect.width / 2 - 2 * Constants.buttonPadding - Constants.buttonRadius
             path.addLine(to: .init(x: lineEnd, y: 0))
             path.addArc(
@@ -92,7 +89,7 @@ struct TabBarShape: Shape {
                 endAngle: .zero,
                 clockwise: true
             )
-
+            
             let lineStart = rect.width / 2 + 2 * Constants.buttonPadding + Constants.buttonRadius
             path.addArc(
                 center: .init(x: lineStart, y: Constants.buttonPadding),

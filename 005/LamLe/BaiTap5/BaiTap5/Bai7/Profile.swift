@@ -27,14 +27,14 @@ struct Profile: View {
                         Text("Profile")
                             .foregroundColor(.white)
                             .font(.system(size: 40, weight: .bold, design: .serif))
-                            .padding(.top, -(geometry.size.height / 6))
+                            .padding(.top, -(geometry.size.height / 5))
                         ZStack {
                             Image("husky_scream")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 150, height: 150)
                                 .cornerRadius(75)
-                                .padding(.top, -(geometry.size.height / 6) + 200)
+                                .padding(.top, -(geometry.size.height / 6) + 150)
                             Button(action: {
                                 print("Show Setting")
                             }, label: {
