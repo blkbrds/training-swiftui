@@ -58,19 +58,17 @@ struct LoginView: View {
                         VStack(spacing: 20) {
                             Button("Login") {
                                 Task {
-                                    viewModel.shouldShowLoading = true
-                                    let isSuccess = await viewModel.validateAccount()
-                                    if isSuccess {
+                                    await viewModel.validateAccount()
+                                    if viewModel.state == .success {
                                         appRouter.state = .home
                                     }
-                                    viewModel.shouldShowLoading = false
                                 }
                             }
                             .loginButton()
                             .padding([.trailing, .leading], 30)
-                            .disabled(viewModel.isValidate == viewModel.validateSignInButton())
+                            .disabled(!viewModel.validateSignInButton())
                             .alert(Text("Login error"), isPresented: $viewModel.shouldShowErrorAlert) { } message: {
-                                Text(viewModel.errorTitle)
+                                Text(viewModel.state.errorTitle)
                             }
                             HStack {
                                 Text("New member ?")
@@ -86,7 +84,7 @@ struct LoginView: View {
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
                 }
-                if viewModel.shouldShowLoading {
+                if viewModel.state == .loading {
                     LoadingView()
                 }
             }

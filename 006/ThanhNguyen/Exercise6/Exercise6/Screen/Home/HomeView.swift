@@ -11,7 +11,6 @@ struct HomeView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @StateObject var viewModel: HomeViewModel = .init()
-    @State var shouldShowLoading = false
 
     var body: some View {
         NavigationStack {
@@ -54,12 +53,13 @@ struct HomeView: View {
                 }
             }
             .task {
-                shouldShowLoading = true
                 await viewModel.getSavedAccount()
-                shouldShowLoading = false
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: .constant(viewModel.state == .failure)) {
+                Alert(title: Text("Load data fail!"))
+            }
             .alert(isPresented: $viewModel.shouldShowLogoutAlert) {
                 Alert(
                     title: Text("Warning"),
@@ -79,7 +79,7 @@ struct HomeView: View {
                         }
                 }
             }
-            if shouldShowLoading {
+            if viewModel.state == .loading {
                 LoadingView()
             }
         }
