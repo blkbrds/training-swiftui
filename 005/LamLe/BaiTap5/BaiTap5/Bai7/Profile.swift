@@ -27,7 +27,7 @@ struct Profile: View {
                         Text("Profile")
                             .foregroundColor(.white)
                             .font(.system(size: 40, weight: .bold, design: .serif))
-                            .padding(.top, -(geometry.size.height / 5))
+                            .padding(.top, -(geometry.size.height / 6))
                         ZStack {
                             Image("husky_scream")
                                 .resizable()
@@ -101,7 +101,7 @@ struct Profile: View {
                                 Text(tabOptions[index])
                                     .frame(minWidth: 0, maxWidth: .infinity)
                                     .foregroundColor(isSelectedOption == index ? .black : .gray)
-                                    .font(.system(size: 14, weight: .medium, design: .serif))
+                                    .font(.system(size: 12, weight: .medium, design: .serif))
                                     .padding()
                             })
                         }

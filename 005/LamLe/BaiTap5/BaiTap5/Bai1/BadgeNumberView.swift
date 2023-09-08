@@ -11,11 +11,11 @@ struct BadgeNumberView: View {
     
     var body: some View {
         VStack(spacing: 50.0) {
-            CustomButton(backgroundColor: .green, textTitle: "Email", isBadgeCircle: false ,alignmentOfBadge: .topTrailing, positionX: 5, postionY: -10)
+            CustomButton(backgroundColor: .green, textTitle: "Email", isBadgeCircle: false ,alignmentOfBadge: .topTrailing)
             
-            CustomButton(backgroundColor: .yellow, textTitle: "Friends", isBadgeCircle: false ,alignmentOfBadge: .topLeading, positionX: -5, postionY: -10)
+            CustomButton(backgroundColor: .yellow, textTitle: "Friends", isBadgeCircle: false ,alignmentOfBadge: .topLeading)
             
-            CustomButton(backgroundColor: .purple, textTitle: "Photos", isBadgeCircle: true ,alignmentOfBadge: .center, positionX: 0, postionY: -35)
+            CustomButton(backgroundColor: .purple, textTitle: "Photos", isBadgeCircle: true ,alignmentOfBadge: .top)
         }
     }
 }
