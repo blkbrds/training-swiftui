@@ -15,22 +15,13 @@ final class LoginViewModel: ObservableObject {
         case initial
         case invalid
         case internetError
-
-        var errorTitle: String {
-            switch self {
-            case .invalid:
-                return "Email or password is invalid"
-            case .internetError:
-                return "Internet error, please try again later"
-            default: return ""
-            }
-        }
     }
 
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isChecked = false
     @Published var shouldShowErrorAlert = false
+    @Published var errorTitle: String = ""
     @Published var state: LoginState = .initial {
         didSet {
             shouldShowErrorAlert = state.isOneOf(.invalid, .internetError)
@@ -48,9 +39,11 @@ final class LoginViewModel: ObservableObject {
                 localStorage.saveAccount(account: validAccount)
                 state = .success
             } else {
+                errorTitle = "Email or password is invalid"
                 state = .invalid
             }
         } catch {
+            errorTitle = "Internet error, please try again later"
             state = .internetError
         }
     }
