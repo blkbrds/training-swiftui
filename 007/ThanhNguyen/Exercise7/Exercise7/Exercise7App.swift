@@ -11,7 +11,7 @@ import SwiftUI
 struct Exercise7App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StaticListView()
         }
     }
 }
