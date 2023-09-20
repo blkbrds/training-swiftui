@@ -9,12 +9,10 @@ import SwiftUI
 
 struct SectionListView: View {
 
-    @StateObject var viewModel: SectionListViewModel = .init()
-
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.charactersData, id: \.id) { data in
+                ForEach(Characters.charactersData, id: \.id) { data in
                     Section {
                         ForEach(data.name, id: \.self) { name in
                             Text(name)

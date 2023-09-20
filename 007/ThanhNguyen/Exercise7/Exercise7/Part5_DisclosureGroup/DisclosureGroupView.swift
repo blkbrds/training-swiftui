@@ -23,7 +23,7 @@ struct DisclosureGroupView: View {
             .onTapGesture {
                 isPresented.toggle()
             }
-            .fullScreenCover(isPresented: $isPresented, content: {
+            .sheet(isPresented: $isPresented, content: {
                 DisclosureGroupListView()
             })
     }

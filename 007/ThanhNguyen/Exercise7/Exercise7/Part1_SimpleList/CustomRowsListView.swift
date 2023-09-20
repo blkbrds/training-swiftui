@@ -9,12 +9,10 @@ import SwiftUI
 
 struct CustomRowsListView: View {
 
-    @StateObject var viewModel: CustomRowsListViewModel = .init()
-
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.persons, id: \.id) { person in
+                ForEach(Person.persons, id: \.id) { person in
                     PersonCell(person: person)
                 }
             }

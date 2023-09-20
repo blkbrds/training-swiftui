@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ExpandableListView: View {
 
-    @StateObject var viewModel: ExpandableListViewModel = .init()
-
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    OutlineGroup(viewModel.items, children: \.subItems) { item in
+                    OutlineGroup(MenuItem.items, children: \.subItems) { item in
                         HStack {
                             Image(systemName: item.imageName)
                                 .resizable()

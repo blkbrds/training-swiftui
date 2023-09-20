@@ -21,6 +21,7 @@ struct DisclosureGroupListView: View {
                 .font(.system(size: 20, weight: .bold))
                 Spacer()
             }
+            .frame(minHeight: 50, alignment: .bottom)
             .padding(.horizontal)
             Rectangle()
                 .fill(.gray)
@@ -38,7 +39,6 @@ struct DisclosureGroupListView: View {
                 }
             }
             .listStyle(.plain)
-            .padding(.top)
             .onDisappear {
                 viewModel.saveListQuestion()
             }
