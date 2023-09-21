@@ -59,7 +59,6 @@ extension Optional: RawRepresentable where Wrapped: Codable {
     }
 }
 
-
 extension QandA {
     static let listQuestion: [QandA] = [
         .init(question: "Tôi phải làm gì để sử dụng Apple Pay?", answer: "Bạn có thể sử dụng Apple Pay để mua hàng tại cửa hàng, trên trang web và trong ứng dụng. Apple Pay được chấp nhận rộng rãi ở nhiều nơi và là phương thức thanh toán đơn giản, an toàn, bảo mật và riêng tư."),

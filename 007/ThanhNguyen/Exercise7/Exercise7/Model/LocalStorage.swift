@@ -10,8 +10,13 @@ import SwiftUI
 class LocalStorage: ObservableObject {
 
     @AppStorage("listQuestion") var items: [QandA]? = nil
+    @AppStorage("heros") var heros: [Hero]? = nil
 
     public func saveListQuestion(items: [QandA]) {
         self.items = items
+    }
+
+    public func saveHeros(heros: [Hero]) {
+        self.heros = heros
     }
 }
