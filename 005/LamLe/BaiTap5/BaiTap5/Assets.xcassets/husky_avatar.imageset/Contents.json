@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "husky_avatar.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
