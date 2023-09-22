@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "img-sesshomaru.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
