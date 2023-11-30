@@ -1,0 +1,14 @@
+{
+    "drinks" : [
+        {
+            "strDrink" : "Light rum",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/xvwusr1472669302.jpg",
+            "idDrink": "16108"
+        },
+        {
+            "strDrink" : "Abbey Martini",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/2mcozt1504817403.jpg",
+            "idDrink": "17223"
+        }
+    ]
+}

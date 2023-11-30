@@ -1,0 +1,10 @@
+{
+    "drinks" : [
+        {
+            "strIngredient1" : "Light rum"
+        },
+        {
+            "strIngredient1" : "Applejack"
+        }
+    ]
+}
